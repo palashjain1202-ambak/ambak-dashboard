@@ -2,1107 +2,524 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Ambak Leadership Dashboard</title>
 <style>
-  :root {
-    --brand:        #5B21B6;
-    --brand-dark:   #3B0F8C;
-    --brand-deeper: #2A0A6B;
-    --brand-light:  #EDE9FE;
-    --brand-mid:    #7C3AED;
-    --brand-soft:   #F5F3FF;
-    --bg:           #F7F6FB;
-    --surface:      #FFFFFF;
-    --border:       #E5E1F5;
-    --text:         #1C1033;
-    --muted:        #6B7280;
-    --high:         #DC2626;
-    --high-bg:      #FEF2F2;
-    --low:          #059669;
-    --low-bg:       #ECFDF5;
-    --warn:         #D97706;
-    --warn-bg:      #FFFBEB;
-    --radius:       10px;
-    --shadow:       0 1px 4px rgba(91,33,182,0.08);
-    --shadow-md:    0 4px 16px rgba(91,33,182,0.12);
-  }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); font-size: 14px; line-height: 1.5; }
-
-  /* ── Topbar ── */
-  .topbar {
-    background: linear-gradient(135deg, var(--brand-deeper) 0%, var(--brand) 60%, var(--brand-mid) 100%);
-    padding: 0 28px;
-    display: flex; align-items: center; justify-content: space-between;
-    position: sticky; top: 0; z-index: 100;
-    flex-wrap: wrap; gap: 8px;
-    min-height: 58px;
-    box-shadow: 0 2px 12px rgba(91,33,182,0.35);
-  }
-  .topbar-brand { display: flex; align-items: center; gap: 14px; }
-  .topbar-logo {
-    width: 36px; height: 36px;
-    display: flex; align-items: center; justify-content: center;
-    flex-shrink: 0;
-  }
-  .topbar-logo svg { display: block; }
-  .topbar-wordmark { color: white; font-size: 18px; font-weight: 800; letter-spacing: 0.06em; line-height: 1; }
-  .topbar-divider { width: 1px; height: 28px; background: rgba(255,255,255,0.25); flex-shrink: 0; }
-  .topbar-title { color: white; }
-  .topbar-title h1 { font-size: 15px; font-weight: 700; letter-spacing: -0.01em; }
-  .topbar-title .meta { font-size: 11px; color: rgba(255,255,255,0.6); margin-top: 1px; }
-  .topbar-right { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; padding: 10px 0; }
-  .done-pill { font-size: 11px; background: rgba(255,255,255,0.15); color: rgba(255,255,255,0.9); padding: 3px 10px; border-radius: 999px; font-weight: 600; border: 1px solid rgba(255,255,255,0.2); }
-  .tb-btn { border: none; border-radius: 7px; padding: 6px 13px; font-size: 12px; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 5px; transition: all 0.15s; }
-  .tb-btn.outline { background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.9); border: 1px solid rgba(255,255,255,0.25); }
-  .tb-btn.outline:hover { background: rgba(255,255,255,0.2); }
-  .tb-btn.solid { background: white; color: var(--brand); }
-  .tb-btn.solid:hover { background: var(--brand-light); }
-  .toast { font-size: 11px; color: rgba(255,255,255,0.8); font-weight: 600; opacity: 0; transition: opacity 0.3s; }
-  .toast.show { opacity: 1; }
-
-  /* ── Overdue Alert Banner ── */
-  .overdue-banner {
-    background: linear-gradient(135deg, #7F1D1D, #991B1B);
-    display: none; /* shown via JS when items exist */
-  }
-  .overdue-banner.has-items { display: block; }
-  .overdue-banner-inner { max-width: 1420px; margin: 0 auto; padding: 12px 28px; }
-  .overdue-banner-header { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
-  .overdue-banner-header .ob-icon { font-size: 16px; }
-  .overdue-banner-header h3 { color: white; font-size: 13px; font-weight: 700; }
-  .overdue-banner-header .ob-count { background: rgba(255,255,255,0.2); color: white; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 999px; }
-  .overdue-items-grid { display: flex; flex-wrap: wrap; gap: 8px; }
-  .overdue-card {
-    background: rgba(255,255,255,0.1);
-    border: 1px solid rgba(255,255,255,0.2);
-    border-radius: 8px;
-    padding: 8px 12px;
-    min-width: 220px; flex: 1;
-    max-width: 360px;
-  }
-  .oc-days { font-size: 10px; font-weight: 800; color: #FCA5A5; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 2px; }
-  .oc-task { font-size: 12px; color: white; font-weight: 500; line-height: 1.35; margin-bottom: 4px; }
-  .oc-meta { font-size: 10px; color: rgba(255,255,255,0.6); }
-
-  /* ── Focus Strip ── */
-  .focus-strip {
-    background: linear-gradient(135deg, var(--brand-dark), var(--brand));
-    padding: 11px 28px;
-    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
-  }
-  .focus-label { font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255,255,255,0.5); white-space: nowrap; }
-  .focus-chips { display: flex; gap: 8px; flex-wrap: wrap; }
-  .fc { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.18); border-radius: 7px; padding: 5px 11px; font-size: 11px; display: flex; align-items: center; gap: 6px; color: rgba(255,255,255,0.9); }
-  .fc .fc-owner { font-weight: 700; color: white; }
-  .fc .fc-due { font-size: 10px; padding: 1px 6px; border-radius: 999px; font-weight: 700; }
-  .fc.today .fc-due { background: #EF4444; color: white; }
-  .fc.tomorrow .fc-due { background: #F59E0B; color: white; }
-  .fc.soon .fc-due { background: rgba(255,255,255,0.2); color: rgba(255,255,255,0.85); }
-
-  /* ── KPI Grid ── */
-  .kpi-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; padding: 20px 28px 0; max-width: 1420px; margin: 0 auto; }
-  .kpi {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 14px 16px;
-    box-shadow: var(--shadow);
-    position: relative; overflow: hidden;
-  }
-  .kpi::after {
-    content: '';
-    position: absolute; bottom: 0; left: 0; right: 0;
-    height: 3px;
-    background: var(--brand-light);
-  }
-  .kpi.purple::after { background: var(--brand); }
-  .kpi.red::after    { background: var(--high); }
-  .kpi.green::after  { background: var(--low); }
-  .kpi.amber::after  { background: var(--warn); }
-  .kpi .label { font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 4px; font-weight: 600; }
-  .kpi .value { font-size: 30px; font-weight: 800; line-height: 1; color: var(--brand); }
-  .kpi.red .value   { color: var(--high); }
-  .kpi.green .value { color: var(--low); }
-  .kpi.amber .value { color: var(--warn); }
-  .kpi .sub { font-size: 10px; color: var(--muted); margin-top: 4px; }
-
-  /* ── Main wrap ── */
-  .wrap { max-width: 1420px; margin: 0 auto; padding: 20px 28px; }
-  .row { display: grid; gap: 14px; margin-bottom: 14px; }
-  .cols-2  { grid-template-columns: 1fr 1fr; }
-  .cols-3  { grid-template-columns: 1fr 1fr 1fr; }
-  .cols-3-1 { grid-template-columns: 2fr 1fr; }
-
-  /* ── Section label ── */
-  .section-label {
-    font-size: 11px; font-weight: 800; text-transform: uppercase;
-    letter-spacing: 0.08em; color: var(--brand);
-    margin: 20px 0 8px; padding-left: 1px;
-    display: flex; align-items: center; gap: 8px;
-  }
-  .section-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
-
-  /* ── Cards ── */
-  .card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); }
-  .card-header {
-    padding: 13px 16px 10px;
-    border-bottom: 1px solid var(--border);
-    display: flex; align-items: center; justify-content: space-between;
-    flex-wrap: wrap; gap: 6px;
-  }
-  .card-header h2 {
-    font-size: 11px; font-weight: 800; text-transform: uppercase;
-    letter-spacing: 0.06em; color: var(--brand);
-  }
-  .card-header-right { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
-  .card-body { padding: 14px 16px; }
-  .card-body.no-pad { padding: 0; }
-
-  /* ── Badges ── */
-  .badge { font-size: 10px; padding: 2px 8px; border-radius: 999px; font-weight: 700; background: var(--brand-light); color: var(--brand); }
-  .badge.red   { background: var(--high-bg); color: var(--high); }
-  .badge.green { background: var(--low-bg); color: var(--low); }
-  .badge.warn  { background: var(--warn-bg); color: var(--warn); }
-  .badge.dark  { background: var(--brand); color: white; }
-
-  /* ── Tables ── */
-  table { width: 100%; border-collapse: collapse; font-size: 12px; }
-  th { text-align: left; padding: 8px 12px; border-bottom: 2px solid var(--border); font-size: 10px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); font-weight: 700; background: var(--brand-soft); }
-  td { padding: 8px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
-  tr:last-child td { border-bottom: none; }
-  tr:hover td { background: var(--brand-soft); }
-  .num { text-align: right; }
-
-  /* ── Tags ── */
-  .tag-high { display: inline-flex; align-items: center; gap: 3px; font-size: 10px; background: var(--high-bg); color: var(--high); padding: 1px 7px; border-radius: 999px; font-weight: 700; }
-  .tag-low  { display: inline-flex; align-items: center; gap: 3px; font-size: 10px; background: var(--low-bg);  color: var(--low);  padding: 1px 7px; border-radius: 999px; font-weight: 700; }
-  .recurring { font-size: 10px; background: var(--brand-light); color: var(--brand); padding: 1px 7px; border-radius: 999px; font-weight: 700; }
-  .source { color: var(--muted); font-size: 11px; }
-  .owner-name { font-weight: 600; }
-
-  /* ── Two-column action items ── */
-  .actions-columns { display: grid; grid-template-columns: 1fr 1fr; }
-  .actions-col { padding: 0 16px 14px; }
-  .actions-col + .actions-col { border-left: 1px solid var(--border); }
-  .col-header { display: flex; align-items: center; justify-content: space-between; padding: 12px 0 8px; border-bottom: 2px solid var(--border); margin-bottom: 2px; }
-  .col-header h3 { font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; }
-  .col-header.high h3 { color: var(--high); }
-  .col-header.low  h3 { color: var(--low);  }
-
-  /* Action item rows */
-  .action-item { display: flex; align-items: flex-start; gap: 10px; padding: 9px 0; border-bottom: 1px solid var(--border); transition: opacity 0.2s; }
-  .action-item:last-child { border-bottom: none; }
-  .action-item.done { opacity: 0.3; }
-  .action-item.done .ai-main { text-decoration: line-through; }
-  .ai-check { margin-top: 2px; flex-shrink: 0; width: 16px; height: 16px; cursor: pointer; accent-color: var(--brand); }
-  .ai-body { flex: 1; min-width: 0; }
-  .ai-main { font-size: 12.5px; font-weight: 500; line-height: 1.4; }
-  .ai-meta { font-size: 11px; color: var(--muted); margin-top: 3px; display: flex; flex-wrap: wrap; gap: 5px; align-items: center; }
-  .ai-date { font-weight: 700; font-size: 10px; }
-  .ai-date.today    { color: var(--high); background: var(--high-bg); padding: 1px 6px; border-radius: 999px; }
-  .ai-date.tomorrow { color: var(--warn); background: var(--warn-bg); padding: 1px 6px; border-radius: 999px; }
-  .ai-date.soon     { color: var(--brand); }
-
-  /* LOW column toggle */
-  .low-toggle { font-size: 11px; background: none; border: none; color: var(--muted); cursor: pointer; display: flex; align-items: center; gap: 3px; padding: 2px 0; }
-  .low-toggle:hover { color: var(--brand); }
-  .low-items-wrap { overflow: hidden; transition: max-height 0.3s ease; }
-  .low-items-wrap.collapsed { max-height: 0 !important; }
-
-  /* Done pile */
-  .done-strip { border-top: 1px solid var(--border); padding: 10px 16px; background: var(--brand-soft); border-radius: 0 0 var(--radius) var(--radius); }
-  .done-pile-toggle { font-size: 12px; color: var(--brand); cursor: pointer; border: none; background: none; display: flex; align-items: center; gap: 4px; font-weight: 600; }
-  .done-pile-toggle:hover { text-decoration: underline; }
-  .done-pile { display: none; padding-top: 10px; }
-  .done-pile.open { display: block; }
-
-  /* ── Participation bars ── */
-  .part-row { display: flex; align-items: center; gap: 10px; padding: 8px 0; border-bottom: 1px solid var(--border); }
-  .part-row:last-child { border-bottom: none; }
-  .part-name { font-size: 12px; font-weight: 600; width: 85px; flex-shrink: 0; }
-  .part-bars { display: flex; gap: 5px; flex: 1; align-items: flex-end; height: 52px; }
-  .part-bar { display: flex; flex-direction: column; align-items: center; gap: 2px; flex: 1; justify-content: flex-end; }
-  .part-bar-fill { border-radius: 4px 4px 0 0; width: 100%; min-height: 4px; }
-  .part-bar-fill.dominant { background: linear-gradient(180deg, var(--brand-mid), var(--brand)); }
-  .part-bar-fill.minor    { background: linear-gradient(180deg, #A78BFA, var(--brand-light)); }
-  .part-bar-fill.zero     { background: var(--border); height: 4px !important; border-radius: 2px; }
-  .part-bar-label { font-size: 9px; color: var(--muted); text-align: center; line-height: 1.2; white-space: nowrap; }
-  .part-total { font-size: 14px; font-weight: 800; width: 24px; text-align: right; flex-shrink: 0; }
-  .part-total.dominant { color: var(--brand); }
-  .part-total.zero { color: var(--border); }
-
-  /* ── Dynamics ── */
-  .dyn-item { display: flex; align-items: flex-start; gap: 8px; padding: 7px 0; border-bottom: 1px solid var(--border); font-size: 12px; }
-  .dyn-item:last-child { border-bottom: none; }
-  .dyn-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; margin-top: 5px; }
-  .dyn-dot.bad  { background: var(--high); }
-  .dyn-dot.warn { background: var(--warn); }
-  .dyn-dot.ok   { background: var(--low); }
-
-  /* ── Questions ── */
-  .q-item { padding: 9px 0; border-bottom: 1px solid var(--border); }
-  .q-item:last-child { border-bottom: none; }
-  .q-text { font-size: 12px; line-height: 1.45; }
-  .q-meta { font-size: 10px; color: var(--muted); margin-top: 3px; }
-
-  /* ── Decisions table health dots ── */
-  .h-green { display: inline-block; width: 8px; height: 8px; background: var(--low);  border-radius: 50%; }
-  .h-amber { display: inline-block; width: 8px; height: 8px; background: var(--warn); border-radius: 50%; }
-  .h-red   { display: inline-block; width: 8px; height: 8px; background: var(--high); border-radius: 50%; }
-
-  /* ── Collapsible sections ── */
-  details {
-    background: var(--surface); border: 1px solid var(--border);
-    border-radius: var(--radius); box-shadow: var(--shadow); margin-bottom: 14px;
-  }
-  details summary {
-    padding: 13px 16px; cursor: pointer; list-style: none; user-select: none;
-    display: flex; align-items: center; justify-content: space-between;
-  }
-  details summary::-webkit-details-marker { display: none; }
-  details summary .sum-title { font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; color: var(--brand); }
-  details summary .sum-right { display: flex; align-items: center; gap: 8px; }
-  details summary .chevron { color: var(--brand); font-size: 12px; transition: transform 0.2s; display: inline-block; }
-  details[open] summary .chevron { transform: rotate(180deg); }
-  details > .card-body, details > .card-body.no-pad { border-top: 1px solid var(--border); }
-
-  /* ── Leadership Notes ── */
-  .notes-today {
-    width: 100%; min-height: 110px;
-    border: 1.5px solid var(--border); border-radius: 8px;
-    padding: 11px 13px; font-size: 13px; font-family: inherit;
-    resize: vertical; color: var(--text);
-    background: #FFFEF7;
-    transition: border-color 0.2s;
-  }
-  .notes-today:focus { outline: none; border-color: var(--brand); box-shadow: 0 0 0 3px rgba(91,33,182,0.08); }
-  .notes-today::placeholder { color: #C4B5FD; }
-  .notes-hint { font-size: 10px; color: var(--muted); margin-top: 6px; }
-  .notes-archive-entry { padding: 10px 0; border-bottom: 1px solid var(--border); }
-  .notes-archive-entry:last-child { border-bottom: none; }
-  .notes-archive-date { font-size: 11px; font-weight: 700; color: var(--brand); margin-bottom: 4px; }
-  .notes-archive-text { font-size: 12px; white-space: pre-wrap; background: var(--brand-soft); padding: 8px 10px; border-radius: 6px; border-left: 3px solid var(--brand-light); }
-  .notes-empty { font-size: 12px; color: var(--muted); font-style: italic; }
-  .notes-export-btn { font-size: 11px; background: none; border: 1px solid var(--border); border-radius: 6px; padding: 3px 9px; color: var(--brand); cursor: pointer; font-weight: 600; }
-  .notes-export-btn:hover { background: var(--brand-light); }
-
-  /* ── Warn box ── */
-  .warn-box { padding: 10px 14px; background: #FFF7ED; border-radius: 8px; border-left: 4px solid var(--warn); font-size: 12px; color: #92400E; line-height: 1.7; }
-
-  /* ── Themes ── */
-  .theme-row td:first-child { font-weight: 600; }
-
-  @media (max-width: 960px) {
-    .kpi-grid { grid-template-columns: repeat(3, 1fr); }
-    .actions-columns, .cols-2, .cols-3, .cols-3-1 { grid-template-columns: 1fr; }
-    .actions-col + .actions-col { border-left: none; border-top: 1px solid var(--border); }
-  }
+:root{
+  --brand:#5B21B6;--brand-dark:#3B0F8C;--brand-deeper:#2A0A6B;
+  --brand-light:#EDE9FE;--brand-mid:#7C3AED;--brand-soft:#F5F3FF;
+  --bg:#F7F6FB;--surface:#FFFFFF;--border:#E5E1F5;--text:#1C1033;
+  --muted:#6B7280;--high:#DC2626;--high-bg:#FEF2F2;
+  --low:#059669;--low-bg:#ECFDF5;--warn:#D97706;--warn-bg:#FFFBEB;
+  --radius:10px;--shadow:0 1px 4px rgba(91,33,182,.08);
+  --shadow-md:0 4px 16px rgba(91,33,182,.12);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);font-size:14px;line-height:1.5}
+.topbar{position:sticky;top:0;z-index:100;background:linear-gradient(135deg,var(--brand-deeper) 0%,var(--brand) 60%,var(--brand-mid) 100%);padding:10px 20px;display:flex;align-items:center;gap:12px;box-shadow:0 2px 12px rgba(0,0,0,.25)}
+.topbar-logo{width:36px;height:36px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.topbar-wordmark{color:#fff;font-size:18px;font-weight:800;letter-spacing:.06em;line-height:1}
+.topbar-divider{width:1px;height:28px;background:rgba(255,255,255,.25);flex-shrink:0}
+.topbar-title h1{color:#fff;font-size:15px;font-weight:700;line-height:1.2}
+.topbar-title .meta{color:rgba(255,255,255,.6);font-size:11px;margin-top:1px}
+.topbar-actions{margin-left:auto;display:flex;align-items:center;gap:8px}
+.btn-outline{background:transparent;border:1px solid rgba(255,255,255,.45);color:#fff;padding:5px 12px;border-radius:6px;cursor:pointer;font-size:12px;font-weight:600}
+.btn-outline:hover{background:rgba(255,255,255,.1)}
+.btn-solid{background:#fff;border:none;color:var(--brand);padding:5px 12px;border-radius:6px;cursor:pointer;font-size:12px;font-weight:700}
+.btn-solid:hover{background:#f0ebff}
+.done-pill{background:rgba(255,255,255,.2);color:#fff;font-size:11px;font-weight:700;padding:3px 9px;border-radius:999px}
+#toast{color:#fff;font-size:12px;font-weight:600;opacity:0;transition:opacity .4s}
+#overdue-banner{display:none;background:linear-gradient(90deg,#7f1d1d,#dc2626);color:#fff;padding:8px 20px;font-size:12px;font-weight:600;text-align:center}
+.focus-strip{background:linear-gradient(135deg,var(--brand-deeper),var(--brand-dark));padding:12px 20px}
+.focus-strip h2{color:rgba(255,255,255,.7);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px}
+.focus-items{display:flex;flex-wrap:wrap;gap:8px}
+.focus-item{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:8px;padding:7px 11px;color:#fff;font-size:12px;max-width:280px}
+.focus-item .fo{font-weight:700;font-size:10px;color:rgba(255,255,255,.6);display:block;margin-bottom:2px}
+.kpi-row{display:flex;gap:10px;padding:14px 20px;flex-wrap:wrap}
+.kpi{background:var(--surface);border-radius:var(--radius);padding:12px 16px;flex:1;min-width:120px;box-shadow:var(--shadow);border-bottom:3px solid var(--brand-light)}
+.kpi-val{font-size:26px;font-weight:800;color:var(--text)}
+.kpi-label{font-size:11px;color:var(--muted);margin-top:2px}
+.kpi.accent-red{border-bottom-color:var(--high)}
+.kpi.accent-green{border-bottom-color:var(--low)}
+.kpi.accent-warn{border-bottom-color:var(--warn)}
+.kpi.accent-brand{border-bottom-color:var(--brand)}
+.main{padding:0 20px 20px}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
+.col-card{background:var(--surface);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
+.col-header{padding:10px 14px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between}
+.col-header h3{font-size:13px;font-weight:700}
+.col-toggle{background:none;border:1px solid var(--border);border-radius:5px;padding:3px 9px;font-size:11px;cursor:pointer;color:var(--muted)}
+.item{padding:10px 14px;border-bottom:1px solid var(--border);display:flex;align-items:flex-start;gap:9px;transition:background .15s}
+.item:last-child{border-bottom:none}
+.item:hover{background:var(--brand-soft)}
+.item input[type=checkbox]{margin-top:3px;accent-color:var(--brand);cursor:pointer;flex-shrink:0;width:15px;height:15px}
+.item-body{flex:1;min-width:0}
+.item-task{font-size:13px;font-weight:500;line-height:1.4}
+.item-meta{font-size:11px;color:var(--muted);margin-top:3px;display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.badge{display:inline-flex;align-items:center;padding:1px 7px;border-radius:999px;font-size:10px;font-weight:700;white-space:nowrap}
+.badge-high{background:var(--high-bg);color:var(--high)}
+.badge-low{background:var(--low-bg);color:var(--low)}
+.badge-warn{background:var(--warn-bg);color:var(--warn)}
+.badge-overdue{background:#fef2f2;color:#dc2626;border:1px solid #fca5a5}
+.badge-today{background:#fffbeb;color:#d97706;border:1px solid #fcd34d}
+.badge-brand{background:var(--brand-light);color:var(--brand)}
+.badge-grey{background:#f3f4f6;color:#6b7280}
+.history-btn{background:none;border:none;cursor:pointer;color:var(--muted);font-size:11px;padding:0;display:inline-flex;align-items:center;gap:3px;margin-left:4px}
+.history-btn:hover{color:var(--brand)}
+.history-drawer{display:none;padding:8px 12px;background:#faf9ff;border-top:1px solid var(--border);font-size:11px}
+.history-drawer.open{display:block}
+.history-entry{display:flex;gap:6px;padding:3px 0;border-bottom:1px solid #f0ecff;align-items:flex-start}
+.history-entry:last-child{border-bottom:none}
+.hbadge{padding:1px 6px;border-radius:4px;font-size:10px;font-weight:700;flex-shrink:0}
+.hb-created{background:#ede9fe;color:#5b21b6}
+.hb-completed{background:#dcfce7;color:#166534}
+.hb-deadline_changed{background:#fef3c7;color:#92400e}
+.hb-priority_changed{background:#dbeafe;color:#1e40af}
+.hb-note{background:#f3f4f6;color:#6b7280}
+.h-detail{color:var(--text);flex:1}
+.h-date{color:var(--muted);flex-shrink:0}
+.done-section{background:var(--surface);border-radius:var(--radius);box-shadow:var(--shadow);margin-bottom:14px}
+.done-header{padding:10px 14px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;cursor:pointer}
+.done-header h3{font-size:13px;font-weight:700;color:var(--low)}
+.done-body{display:none}
+.done-body.open{display:block}
+.done-item{padding:9px 14px;border-bottom:1px solid var(--border);display:flex;gap:8px;opacity:.65}
+.done-item:last-child{border-bottom:none}
+.done-item .item-task{text-decoration:line-through;color:var(--muted);font-size:13px}
+.intel-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-bottom:14px}
+.intel-card{background:var(--surface);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
+.intel-card-header{padding:9px 14px;border-bottom:1px solid var(--border);font-size:12px;font-weight:700;color:var(--brand)}
+.intel-card-body{padding:10px 14px;max-height:240px;overflow-y:auto}
+.intel-entry{font-size:12px;padding:4px 0;border-bottom:1px solid var(--border);line-height:1.4}
+.intel-entry:last-child{border-bottom:none}
+.intel-who{font-weight:600;color:var(--brand);font-size:11px}
+.part-row{display:flex;align-items:center;gap:6px;padding:4px 0}
+.part-bar-bg{flex:1;height:6px;background:var(--border);border-radius:3px;overflow:hidden}
+.part-bar{height:100%;background:var(--brand);border-radius:3px}
+.part-name{font-size:12px;font-weight:600;min-width:80px}
+.part-num{font-size:11px;color:var(--muted);min-width:30px;text-align:right}
+.notes-section{background:var(--surface);border-radius:var(--radius);box-shadow:var(--shadow);margin-bottom:14px;overflow:hidden}
+.notes-header{padding:10px 14px;border-bottom:1px solid var(--border);font-size:13px;font-weight:700}
+.notes-body{display:grid;grid-template-columns:1fr 1fr}
+.notes-pane{padding:12px 14px}
+.notes-pane:first-child{border-right:1px solid var(--border)}
+.notes-pane h4{font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px}
+textarea.notes-ta{width:100%;border:1px solid var(--border);border-radius:6px;padding:8px;font-size:13px;font-family:inherit;resize:vertical;min-height:80px;color:var(--text)}
+textarea.notes-ta:focus{outline:none;border-color:var(--brand-mid)}
+.archive-list{max-height:150px;overflow-y:auto}
+.archive-entry{font-size:12px;padding:4px 0;border-bottom:1px solid var(--border)}
+.archive-entry:last-child{border-bottom:none}
+.archive-date{font-weight:600;color:var(--brand);font-size:11px}
+.collapsible{background:var(--surface);border-radius:var(--radius);box-shadow:var(--shadow);margin-bottom:14px;overflow:hidden}
+.coll-header{padding:11px 14px;display:flex;align-items:center;justify-content:space-between;cursor:pointer;border-bottom:1px solid var(--border)}
+.coll-header h3{font-size:13px;font-weight:700}
+.coll-body{display:none;padding:12px 14px}
+.coll-body.open{display:block}
+.caret{transition:transform .2s;color:var(--muted)}
+.caret.up{transform:rotate(180deg)}
+.scorecard-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px}
+.scorecard{background:var(--bg);border-radius:8px;padding:10px 12px;border:1px solid var(--border)}
+.sc-name{font-weight:700;font-size:13px;margin-bottom:4px}
+.sc-stats{font-size:11px;color:var(--muted)}
+.sc-bar{height:4px;background:var(--border);border-radius:2px;overflow:hidden;margin-top:5px}
+.sc-fill{height:100%;background:var(--brand);border-radius:2px}
+.q-item{padding:7px 0;border-bottom:1px solid var(--border);font-size:12px}
+.q-item:last-child{border-bottom:none}
+.q-text{font-weight:500;margin-bottom:2px}
+.q-meta{color:var(--muted);font-size:11px}
+.theme-pill{display:inline-block;background:var(--brand-light);color:var(--brand);padding:4px 10px;border-radius:999px;font-size:12px;margin:3px;font-weight:600}
+.reminder-group{margin-bottom:10px}
+.reminder-group h4{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-bottom:5px}
+.reminder-item{font-size:12px;padding:4px 8px;background:var(--bg);border-radius:5px;margin-bottom:3px;display:flex;gap:8px;align-items:flex-start}
+.reminder-item.overdue{border-left:3px solid var(--high)}
+.reminder-item.due-today{border-left:3px solid var(--warn)}
+.reminder-item.due-week{border-left:3px solid var(--brand)}
+@media(max-width:900px){.cols,.intel-row{grid-template-columns:1fr}.notes-body{grid-template-columns:1fr}.kpi-row{gap:6px}}
 </style>
 </head>
 <body>
-
-<!-- ══ TOPBAR ══ -->
 <div class="topbar">
-  <div class="topbar-brand">
-    <div class="topbar-logo">
-      <!-- Ambak "A" logomark: apex dot · two swept legs · base dot -->
-      <svg width="28" height="34" viewBox="0 0 28 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <!-- Floating dot above apex -->
-        <circle cx="14" cy="2" r="2.2" fill="white"/>
-        <!-- A shape: filled outer path minus inner counter (even-odd rule) -->
-        <path fill-rule="evenodd" fill="white" d="
-          M14 5.8
-          L0.5 28
-          Q -1 31.5 2 31
-          Q 6.5 30.5 11 27
-          Q 12 28.8 14 28.8
-          Q 16 28.8 17 27
-          Q 21.5 30.5 26 31
-          Q 29 31.5 27.5 28
-          Z
-          M14 12
-          L6.5 26
-          Q 9.8 25.5 14 23.5
-          Q 18.2 25.5 21.5 26
-          Z
-        "/>
-        <!-- Floating dot below base -->
-        <circle cx="14" cy="33" r="2" fill="white"/>
-      </svg>
-    </div>
-    <div class="topbar-wordmark">AMBAK</div>
-    <div class="topbar-divider"></div>
-    <div class="topbar-title">
-      <h1>Leadership Dashboard</h1>
-      <div class="meta">Last updated: 2026-05-26 &nbsp;·&nbsp; 3 meetings · 38 open items</div>
-    </div>
+  <div class="topbar-logo">
+    <svg width="28" height="34" viewBox="0 0 28 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="14" cy="2" r="2.2" fill="white"/>
+      <path fill-rule="evenodd" fill="white" d="M14 5.8 L0.5 28 Q -1 31.5 2 31 Q 6.5 30.5 11 27 Q 12 28.8 14 28.8 Q 16 28.8 17 27 Q 21.5 30.5 26 31 Q 29 31.5 27.5 28 Z M14 12 L6.5 26 Q 9.8 25.5 14 23.5 Q 18.2 25.5 21.5 26 Z"/>
+      <circle cx="14" cy="33" r="2" fill="white"/>
+    </svg>
   </div>
-  <div class="topbar-right">
-    <span class="done-pill" id="done-pill">0 done</span>
-    <button class="tb-btn outline" onclick="exportNotes()">
-      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-      Export Notes
-    </button>
-    <button class="tb-btn solid" onclick="exportDone()">
-      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-      Export Done
-    </button>
-    <span class="toast" id="toast"></span>
+  <div class="topbar-wordmark">AMBAK</div>
+  <div class="topbar-divider"></div>
+  <div class="topbar-title">
+    <h1>Leadership Dashboard</h1>
+    <div class="meta">Last updated: 2026-05-27 &middot; 4 meetings &middot; <span id="open-count">46</span> open items</div>
+  </div>
+  <div class="topbar-actions">
+    <button class="btn-outline" onclick="exportNotes()">Export Notes</button>
+    <button class="btn-solid" onclick="exportDone()">Export Done</button>
+    <div class="done-pill" id="done-pill">0 done</div>
+    <span id="toast"></span>
   </div>
 </div>
 
-<!-- ══ OVERDUE ALERT BANNER (hidden when 0 overdue) ══ -->
-<div class="overdue-banner" id="overdue-banner">
-  <div class="overdue-banner-inner">
-    <div class="overdue-banner-header">
-      <span class="ob-icon">🔥</span>
-      <h3>Overdue Items — Needs Immediate Attention</h3>
-      <span class="ob-count" id="ob-count">0 items</span>
-    </div>
-    <div class="overdue-items-grid" id="overdue-items-grid">
-      <!-- injected by JS when overdue items exist -->
-    </div>
-  </div>
-</div>
+<div id="overdue-banner">7 items are overdue &mdash; scroll to Reminders for details</div>
 
-<!-- ══ FOCUS STRIP ══ -->
 <div class="focus-strip">
-  <span class="focus-label">⚡ This week's focus</span>
-  <div class="focus-chips">
-    <div class="fc today"><span class="fc-owner">Prabhat</span><span>QL tracking format</span><span class="fc-due">TODAY</span></div>
-    <div class="fc today"><span class="fc-owner">Rashi</span><span>76 CR E2E comfort level</span><span class="fc-due">TODAY</span></div>
-    <div class="fc today"><span class="fc-owner">Tarun/Hitesh</span><span>Insurance waterfall by 2 PM</span><span class="fc-due">TODAY</span></div>
-    <div class="fc tomorrow"><span class="fc-owner">Raghu + Arvind</span><span>Wednesday catch-up</span><span class="fc-due">TOMORROW</span></div>
-    <div class="fc tomorrow"><span class="fc-owner">Ankit</span><span>Hacky checklist timelines</span><span class="fc-due">TOMORROW</span></div>
+  <h2>Focus Now &mdash; Top Urgent Items</h2>
+  <div class="focus-items">
+    <div class="focus-item"><span class="fo">Ankit</span>Share hacky checklist timelines + bank-wise approach &mdash; due TODAY</div>
+    <div class="focus-item"><span class="fo">Raghu/Arvind</span>Full D2C/ops/institutional/retail catch-up &mdash; due TODAY</div>
+    <div class="focus-item"><span class="fo">Vikas/Vijay/Aman/Ashish</span>Pay-in sync &amp; May scheme adjustment &mdash; due tomorrow</div>
+    <div class="focus-item"><span class="fo">Product (Mohit/Roshan)</span>Fix call timestamp (start vs end time) &mdash; immediate</div>
+    <div class="focus-item"><span class="fo">Product team</span>Missed call notification fix for FBMs &mdash; immediate</div>
   </div>
 </div>
 
-<!-- ══ KPIs ══ -->
-<div class="kpi-grid">
-  <div class="kpi purple">
-    <div class="label">Meetings (7d)</div>
-    <div class="value">3</div>
-    <div class="sub">Retail · Institutional · WBR</div>
+<div class="kpi-row">
+  <div class="kpi accent-brand"><div class="kpi-val">4</div><div class="kpi-label">Meetings Tracked</div></div>
+  <div class="kpi accent-red"><div class="kpi-val" id="kpi-open">46</div><div class="kpi-label">Open Items</div></div>
+  <div class="kpi accent-red"><div class="kpi-val" id="kpi-high">28</div><div class="kpi-label">HIGH Priority</div></div>
+  <div class="kpi accent-green"><div class="kpi-val" id="kpi-low">18</div><div class="kpi-label">LOW Priority</div></div>
+  <div class="kpi accent-warn"><div class="kpi-val">7</div><div class="kpi-label">Overdue</div></div>
+  <div class="kpi accent-brand"><div class="kpi-val">13</div><div class="kpi-label">Open Questions</div></div>
+</div>
+
+<div class="main">
+<div class="cols">
+  <div class="col-card"><div class="col-header"><h3>HIGH Priority <span class="badge badge-high" id="high-badge">28</span></h3></div><div id="high-items"></div></div>
+  <div class="col-card"><div class="col-header"><h3>LOW Priority <span class="badge badge-low" id="low-badge">18</span></h3><button class="col-toggle" onclick="toggleLowCol()">Collapse</button></div><div id="low-items"></div></div>
+</div>
+
+<div class="done-section">
+  <div class="done-header" onclick="toggleDonePile()">
+    <h3>&#10003; Done Pile (<span id="done-count-label">0</span>)</h3>
+    <span class="caret" id="done-caret">&#9660;</span>
   </div>
-  <div class="kpi purple">
-    <div class="label">Open Items</div>
-    <div class="value" id="kpi-open">38</div>
-    <div class="sub" id="kpi-open-sub">total remaining</div>
-  </div>
-  <div class="kpi red">
-    <div class="label">HIGH Priority</div>
-    <div class="value" id="kpi-high">23</div>
-    <div class="sub" id="kpi-high-sub">need action now</div>
-  </div>
-  <div class="kpi green">
-    <div class="label">LOW Priority</div>
-    <div class="value" id="kpi-low">15</div>
-    <div class="sub">when capacity allows</div>
-  </div>
-  <div class="kpi green">
-    <div class="label">% Overdue</div>
-    <div class="value" id="kpi-overdue">0%</div>
-    <div class="sub">all items on track</div>
-  </div>
-  <div class="kpi amber">
-    <div class="label">Open Questions</div>
-    <div class="value">16</div>
-    <div class="sub">across 3 meetings</div>
+  <div class="done-body" id="done-body"></div>
+</div>
+
+<div class="intel-row">
+  <div class="intel-card"><div class="intel-card-header">Decisions Log</div><div class="intel-card-body" id="decisions-log"></div></div>
+  <div class="intel-card"><div class="intel-card-header">Meeting Dynamics</div><div class="intel-card-body" id="dynamics-log"></div></div>
+  <div class="intel-card"><div class="intel-card-header">Participation Tracker</div><div class="intel-card-body" id="participation-log"></div></div>
+</div>
+
+<div class="notes-section">
+  <div class="notes-header">Leadership Notes</div>
+  <div class="notes-body">
+    <div class="notes-pane"><h4>Today's Notes</h4><textarea class="notes-ta" id="notes-today" rows="4" placeholder="Add observations from today's meetings..."></textarea></div>
+    <div class="notes-pane"><h4>Archive</h4><div class="archive-list" id="notes-archive"></div></div>
   </div>
 </div>
 
-<!-- ══ MAIN ══ -->
-<div class="wrap">
+<div class="collapsible">
+  <div class="coll-header" onclick="toggleColl(this)"><h3>Open Questions <span class="badge badge-brand">13</span></h3><span class="caret up">&#9660;</span></div>
+  <div class="coll-body open" id="questions-body"></div>
+</div>
 
-  <!-- Action Items -->
-  <div class="section-label">Action Items</div>
-  <div class="card" style="margin-bottom:14px">
-    <div class="card-header">
-      <h2>Action Items</h2>
-      <div class="card-header-right">
-        <span class="badge red" id="badge-high">23 HIGH open</span>
-        <span class="badge green" id="badge-low">15 LOW open</span>
-        <span class="badge dark" id="badge-done" style="display:none">0 done</span>
-      </div>
-    </div>
+<div class="collapsible">
+  <div class="coll-header" onclick="toggleColl(this)"><h3>Owner Scorecards</h3><span class="caret">&#9660;</span></div>
+  <div class="coll-body" id="scorecards-body"></div>
+</div>
 
-    <div class="actions-columns">
-
-      <!-- HIGH column -->
-      <div class="actions-col">
-        <div class="col-header high">
-          <h3>🔴 High Priority</h3>
-          <span class="badge red" id="high-col-count">23 open</span>
-        </div>
-        <div id="high-items-list">
-
-          <div class="action-item" data-id="prabhat-ql-format" data-priority="HIGH">
-            <input type="checkbox" class="ai-check" data-id="prabhat-ql-format" onchange="toggleDone(this)">
-            <div class="ai-body"><div class="ai-main">Update QL tracking format (central-allocated vs Lucknow vs unassigned vs self)</div>
-            <div class="ai-meta"><span class="tag-high">HIGH</span><span class="owner-name">Prabhat</span><span class="ai-date today">TODAY</span><span class="source">WBR 26 May</span></div></div>
-          </div>
-
-          <div class="action-item" data-id="vijay-ql-data" data-priority="HIGH">
-            <input type="checkbox" class="ai-check" data-id="vijay-ql-data" onchange="toggleDone(this)">
-            <div class="ai-body"><div class="ai-main">Send last 12 weeks of QL data (simple weekly numbers) to Raghu</div>
-            <div class="ai-meta"><span class="tag-high">HIGH</span><span class="owner-name">Vijay/Aditya</span><span class="ai-date today">TODAY</span><span class="source">WBR 26 May</span></div></div>
-          </div>
-
-          <div class="action-item" data-id="tarun-insurance" data-priority="HIGH">
-            <input type="checkbox" class="ai-check" data-id="tarun-insurance" onchange="toggleDone(this)">
-            <div class="ai-body"><div class="ai-main">Send insurance waterfall update (issued, pipeline, login, lead, May confidence) before 2 PM</div>
-            <div class="ai-meta"><span class="tag-high">HIGH</span><span class="owner-name">Tarun/Hitesh via Vijay</span><span class="ai-date today">TODAY</span><span class="source">WBR 26 May</span></div></div>
-          </div>
-
-          <div class="action-item" data-id="rashi-e2e-comfort" data-priority="HIGH">
-            <input type="checkbox" class="ai-check" data-id="rashi-e2e-comfort" onchange="toggleDone(this)">
-            <div class="ai-body"><div class="ai-main">Share comfort level on 76 CR E2E number to Raghu by evening</div>
-            <div class="ai-meta"><span class="tag-high">HIGH</span><span class="owner-name">Rashi</span><span class="ai-date today">TODAY</span><span class="source">WBR 26 May</span></div></div>
-          </div>
-
-          <div class="action-item" data-id="vijay-e2e-insystem" data-priority="HIGH">
-            <input type="checkbox" class="ai-check" data-id="vijay-e2e-insystem" onchange="toggleDone(this)">
-            <div class="ai-body"><div class="ai-main">Move 20 CR of out-of-system / self-tagged E2E cases into system</div>
-            <div class="ai-meta"><span class="tag-high">HIGH</span><span class="owner-name">Vijay / E2E team</span><span class="ai-date today">TODAY</span><span class="source">WBR 26 May</span></div></div>
-          </div>
-
-          <div class="action-item" data-id="raghu-arvind-catchup" data-priority="HIGH">
-            <input type="checkbox" class="ai-check" data-id="raghu-arvind-catchup" onchange="toggleDone(this)">
-            <div class="ai-body"><div class="ai-main">Wednesday catch-up: full update on D2C, ops, institutional, retail</div>
-            <div class="ai-meta"><span class="tag-high">HIGH</span><span class="owner-name">Raghu, Arvind</span><span class="ai-date tomorrow">TOMORROW</span><span class="source">Institutional 25 May</span></div></div>
-          </div>
-
-          <div class="action-item" data-id="ankit-hacky-checklist" data-priority="HIGH">
-            <input type="checkbox" class="ai-check" data-id="ankit-hacky-checklist" onchange="toggleDone(this)">
-            <div class="ai-body"><div class="ai-main">Share timelines for hacky checklist and bank-wise case handling approach</div>
-            <div class="ai-meta"><span class="tag-high">HIGH</span><span class="owner-name">Ankit</span><span class="ai-date tomorrow">TOMORROW</span><span class="source">WBR 26 May</span></div></div>
-          </div>
-
-          <div class="action-item" data-id="payin-sync" data-priority="HIGH">
-            <input type="checkbox" class="ai-check" data-id="payin-sync" onchange="toggleDone(this)">
-            <div class="ai-body"><div class="ai-main">30-min sync to align on pay-in changes and adjust schemes for May</div>
-            <div class="ai-meta"><span class="tag-high">HIGH</span><span class="owner-name">Vikas, Vijay, Aman, Ashish</span><span class="ai-date soon">28 May</span><span class="source">Retail 25 May</span></div></div>
-          </div>
-
-          <div class="action-item" data-id="rashi-extended-timeline" data-priority="HIGH">
-            <input type="checkbox" class="ai-check" data-id="rashi-extended-timeline" onchange="toggleDone(this)">
-            <div class="ai-body"><div class="ai-main">Baseline document on extended-timeline problem; consult Rishab, Khyati, Riddhi, Pankaj, Ankit, Puneet, Devjyoti</div>
-            <div class="ai-meta"><span class="tag-high">HIGH</span><span class="owner-name">Rashi</span><span class="ai-date soon">31 May</span><span class="source">WBR 26 May</span></div></div>
-          </div>
-
-          <div class="action-item" data-id="ishaan-ankit-may-targets" data-priority="HIGH">
-            <input type="checkbox" class="ai-check" data-id="ishaan-ankit-may-targets" onchange="toggleDone(this)">
-            <div class="ai-body"><div class="ai-main">Hit May commitment: 250+ logins and 110 disbursal number</div>
-            <div class="ai-meta"><span class="tag-high">HIGH</span><span class="owner-name">Ishaan, Ankit</span><span class="ai-date soon">31 May</span><span class="source">Institutional 25 May</span></div></div>
-          </div>
-
-          <div class="action-item" data-id="neerav-abm" data-priority="HIGH">
-            <input type="checkbox" class="ai-check" data-id="neerav-abm" onchange="toggleDone(this)">
-            <div class="ai-body"><div class="ai-main">Finalise ABM hire for Ahmedabad; two ABM offers going out in 1–2 days</div>
-            <div class="ai-meta"><span class="tag-high">HIGH</span><span class="owner-name">Neerav</span><span class="ai-date soon">31 May</span><span class="source">WBR 26 May</span></div></div>
-          </div>
-
-          <div class="action-item" data-id="nagesh-bangalore-hiring" data-priority="HIGH">
-            <input type="checkbox" class="ai-check" data-id="nagesh-bangalore-hiring" onchange="toggleDone(this)">
-            <div class="ai-body"><div class="ai-main">Close Bangalore hiring: city head, 2 ABMs, RMs by month end</div>
-            <div class="ai-meta"><span class="tag-high">HIGH</span><span class="owner-name">Nagesh</span><span class="ai-date soon">31 May</span><span class="source">WBR 26 May</span></div></div>
-          </div>
-
-          <div class="action-item" data-id="ankit-rishab-blr-logins" data-priority="HIGH">
-            <input type="checkbox" class="ai-check" data-id="ankit-rishab-blr-logins" onchange="toggleDone(this)">
-            <div class="ai-body"><div class="ai-main">Ensure 7 Bangalore ready-to-log files are logged this week; resolve consent and property doc pendency</div>
-            <div class="ai-meta"><span class="tag-high">HIGH</span><span class="owner-name">Ankit/Rishab</span><span class="ai-date soon">31 May</span><span class="source">WBR 26 May</span></div></div>
-          </div>
-
-          <div class="action-item" data-id="pooja-training" data-priority="HIGH">
-            <input type="checkbox" class="ai-check" data-id="pooja-training" onchange="toggleDone(this)">
-            <div class="ai-body"><div class="ai-main">Double-click this week: (1) train-the-trainer content, (2) scheduling fix, (3) assessment reliability</div>
-            <div class="ai-meta"><span class="tag-high">HIGH</span><span class="owner-name">Pooja</span><span class="ai-date soon">31 May</span><span class="source">WBR 26 May</span></div></div>
-          </div>
-
-          <div class="action-item" data-id="ankit-ishaan-joint-review" data-priority="HIGH">
-            <input type="checkbox" class="ai-check" data-id="ankit-ishaan-joint-review" onchange="toggleDone(this)">
-            <div class="ai-body"><div class="ai-main">Run joint institutional and E2E first-of-month review</div>
-            <div class="ai-meta"><span class="tag-high">HIGH</span><span class="owner-name">Ankit, Ishaan</span><span class="ai-date soon">1 Jun</span><span class="source">Institutional 25 May</span></div></div>
-          </div>
-
-          <div class="action-item" data-id="vijay-ankit-mahada" data-priority="HIGH">
-            <input type="checkbox" class="ai-check" data-id="vijay-ankit-mahada" onchange="toggleDone(this)">
-            <div class="ai-body"><div class="ai-main">Ring-fence MAHADA 2600 leads; dedicated review cadence before first-week-June delivery</div>
-            <div class="ai-meta"><span class="tag-high">HIGH</span><span class="owner-name">Vijay/Ankit</span><span class="ai-date soon">1 Jun</span><span class="source">WBR 26 May</span></div></div>
-          </div>
-
-          <div class="action-item" data-id="vijay-aman-nr-leakage" data-priority="HIGH">
-            <input type="checkbox" class="ai-check" data-id="vijay-aman-nr-leakage" onchange="toggleDone(this)">
-            <div class="ai-body"><div class="ai-main">Investigate True Home Lab, Bajaj Housing Gross ICE and ICICI category/payout misallocations; report root cause</div>
-            <div class="ai-meta"><span class="tag-high">HIGH</span><span class="owner-name">Vijay, Aman</span><span class="ai-date">No date</span><span class="source">Retail 25 May</span></div></div>
-          </div>
-
-          <div class="action-item" data-id="vikas-may-pl-levers" data-priority="HIGH">
-            <input type="checkbox" class="ai-check" data-id="vikas-may-pl-levers" onchange="toggleDone(this)">
-            <div class="ai-body"><div class="ai-main">Identify remaining May levers that can still impact the May P&L before month close</div>
-            <div class="ai-meta"><span class="tag-high">HIGH</span><span class="owner-name">Vikas, business team</span><span class="ai-date">No date</span><span class="source">Retail 25 May</span></div></div>
-          </div>
-
-          <div class="action-item" data-id="pankaj-payin-module" data-priority="HIGH">
-            <input type="checkbox" class="ai-check" data-id="pankaj-payin-module" onchange="toggleDone(this)">
-            <div class="ai-body"><div class="ai-main">Build pay-in module in-system; proxy out-of-system business to enable the three-monthly-close process</div>
-            <div class="ai-meta"><span class="tag-high">HIGH</span><span class="owner-name">Pankaj</span><span class="ai-date">No date</span><span class="source">Retail 25 May</span></div></div>
-          </div>
-
-          <div class="action-item" data-id="arshay-colending" data-priority="HIGH">
-            <input type="checkbox" class="ai-check" data-id="arshay-colending" onchange="toggleDone(this)">
-            <div class="ai-body"><div class="ai-main">Second round of people/Gypsy co-lending discussion; review product note; reach out to Vriddhi</div>
-            <div class="ai-meta"><span class="tag-high">HIGH</span><span class="owner-name">Varsha/Arshay</span><span class="ai-date">No date</span><span class="source">Retail 25 May</span></div></div>
-          </div>
-
-          <div class="action-item" data-id="ashish-colending-legal" data-priority="HIGH">
-            <input type="checkbox" class="ai-check" data-id="ashish-colending-legal" onchange="toggleDone(this)">
-            <div class="ai-body"><div class="ai-main">Complete legal review of the co-lending draft agreement</div>
-            <div class="ai-meta"><span class="tag-high">HIGH</span><span class="owner-name">Ashish</span><span class="ai-date">No date</span><span class="source">Retail 25 May</span></div></div>
-          </div>
-
-          <div class="action-item" data-id="rishabh-ql-rca" data-priority="HIGH">
-            <input type="checkbox" class="ai-check" data-id="rishabh-ql-rca" onchange="toggleDone(this)">
-            <div class="ai-body"><div class="ai-main">Complete RCA on QL-to-login falling to 25% from historic 40%; specify support required</div>
-            <div class="ai-meta"><span class="tag-high">HIGH</span><span class="owner-name">Rishabh, E2E team</span><span class="ai-date">No date</span><span class="source">Institutional 25 May</span></div></div>
-          </div>
-
-          <div class="action-item" data-id="training-team-lst" data-priority="HIGH">
-            <input type="checkbox" class="ai-check" data-id="training-team-lst" onchange="toggleDone(this)">
-            <div class="ai-body"><div class="ai-main">Close revamped LST with Vishal and Ishaan; prepare for next-month go-live</div>
-            <div class="ai-meta"><span class="tag-high">HIGH</span><span class="owner-name">Training team</span><span class="ai-date">No date</span><span class="source">Institutional 25 May</span></div></div>
-          </div>
-
-        </div><!-- #high-items-list -->
-      </div><!-- HIGH col -->
-
-      <!-- LOW column -->
-      <div class="actions-col">
-        <div class="col-header low">
-          <h3>🟢 Low Priority</h3>
-          <div style="display:flex;gap:6px;align-items:center">
-            <span class="badge green" id="low-col-count">15 open</span>
-            <button class="low-toggle" onclick="toggleLowCol()">
-              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" id="low-chevron"><polyline points="9 18 15 12 9 6"/></svg>
-              <span id="low-toggle-label">Collapse</span>
-            </button>
-          </div>
-        </div>
-        <div class="low-items-wrap" id="low-items-wrap">
-          <div id="low-items-list">
-
-            <div class="action-item" data-id="akash-lead-ids" data-priority="LOW">
-              <input type="checkbox" class="ai-check" data-id="akash-lead-ids" onchange="toggleDone(this)">
-              <div class="ai-body"><div class="ai-main">Post 2–3 lead IDs where Pune-Delhi coordination was weak to the messaging group</div>
-              <div class="ai-meta"><span class="tag-low">LOW</span><span class="owner-name">Akash</span><span class="ai-date today">TODAY</span><span class="source">WBR 26 May</span></div></div>
-            </div>
-
-            <div class="action-item" data-id="vijay-drr-track" data-priority="LOW">
-              <input type="checkbox" class="ai-check" data-id="vijay-drr-track" onchange="toggleDone(this)">
-              <div class="ai-body"><div class="ai-main">Track daily E2E DRR number alongside self-fulfillment in Aditya's tracking sheet</div>
-              <div class="ai-meta"><span class="tag-low">LOW</span><span class="owner-name">Vijay</span><span class="ai-date today">TODAY</span><span class="source">WBR 26 May</span></div></div>
-            </div>
-
-            <div class="action-item" data-id="ankit-dsa-visits" data-priority="LOW">
-              <input type="checkbox" class="ai-check" data-id="ankit-dsa-visits" onchange="toggleDone(this)">
-              <div class="ai-body"><div class="ai-main">Visit DSA partners regularly; share weekly update on learnings and bank-specific tricks</div>
-              <div class="ai-meta"><span class="tag-low">LOW</span><span class="owner-name">Ankit</span><span class="ai-date">Ongoing</span><span class="source">WBR 26 May</span></div></div>
-            </div>
-
-            <div class="action-item" data-id="adi-metrics-automate" data-priority="LOW">
-              <input type="checkbox" class="ai-check" data-id="adi-metrics-automate" onchange="toggleDone(this)">
-              <div class="ai-body"><div class="ai-main">Pick two lender-analysis metrics to automate and post regularly to BD corporate group</div>
-              <div class="ai-meta"><span class="tag-low">LOW</span><span class="owner-name">Adi</span><span class="ai-date">No date</span><span class="source">Retail 25 May</span></div></div>
-            </div>
-
-            <div class="action-item" data-id="adi-specialty-track" data-priority="LOW">
-              <input type="checkbox" class="ai-check" data-id="adi-specialty-track" onchange="toggleDone(this)">
-              <div class="ai-body"><div class="ai-main">Track activation and retention split by specialty vs non-specialty partners</div>
-              <div class="ai-meta"><span class="tag-low">LOW</span><span class="owner-name">Adi</span><span class="ai-date">No date</span><span class="source">Retail 25 May</span></div></div>
-            </div>
-
-            <div class="action-item" data-id="nitin-abb" data-priority="LOW">
-              <input type="checkbox" class="ai-check" data-id="nitin-abb" onchange="toggleDone(this)">
-              <div class="ai-body"><div class="ai-main">Create partner-facing marketing and training material for the ABB calculator</div>
-              <div class="ai-meta"><span class="tag-low">LOW</span><span class="owner-name">Nitin</span><span class="ai-date">No date</span><span class="source">Retail 25 May</span></div></div>
-            </div>
-
-            <div class="action-item" data-id="nitin-whatsapp" data-priority="LOW">
-              <input type="checkbox" class="ai-check" data-id="nitin-whatsapp" onchange="toggleDone(this)">
-              <div class="ai-body"><div class="ai-main">Pilot WhatsApp-group periscope outreach to reach partners at scale</div>
-              <div class="ai-meta"><span class="tag-low">LOW</span><span class="owner-name">Nitin, Pankaj</span><span class="ai-date">No date</span><span class="source">Retail 25 May</span></div></div>
-            </div>
-
-            <div class="action-item" data-id="nitin-qr" data-priority="LOW">
-              <input type="checkbox" class="ai-check" data-id="nitin-qr" onchange="toggleDone(this)">
-              <div class="ai-body"><div class="ai-main">Launch QR-code partner collateral for builders and brokers with partner-ID-linked attribution</div>
-              <div class="ai-meta"><span class="tag-low">LOW</span><span class="owner-name">Nitin, sales</span><span class="ai-date">No date</span><span class="source">Retail 25 May</span></div></div>
-            </div>
-
-            <div class="action-item" data-id="vijay-training-signoff" data-priority="LOW">
-              <input type="checkbox" class="ai-check" data-id="vijay-training-signoff" onchange="toggleDone(this)">
-              <div class="ai-body"><div class="ai-main">Own final sign-off on all training content and the delivery calendar</div>
-              <div class="ai-meta"><span class="tag-low">LOW</span><span class="owner-name">Vijay</span><span class="ai-date">No date</span><span class="source">Retail 25 May</span></div></div>
-            </div>
-
-            <div class="action-item" data-id="akash-repeat-partner" data-priority="LOW">
-              <input type="checkbox" class="ai-check" data-id="akash-repeat-partner" onchange="toggleDone(this)">
-              <div class="ai-body"><div class="ai-main">Double-check the 66% repeat-partner QL figure and compare April against March</div>
-              <div class="ai-meta"><span class="tag-low">LOW</span><span class="owner-name">Akash</span><span class="ai-date">No date</span><span class="source">Institutional 25 May</span></div></div>
-            </div>
-
-            <div class="action-item" data-id="raghu-rishabh-review-structure" data-priority="LOW">
-              <input type="checkbox" class="ai-check" data-id="raghu-rishabh-review-structure" onchange="toggleDone(this)">
-              <div class="ai-body"><div class="ai-main">Sit together to define what the institutional review should drive out</div>
-              <div class="ai-meta"><span class="tag-low">LOW</span><span class="owner-name">Raghu, Rishabh</span><span class="ai-date">No date</span><span class="source">Institutional 25 May</span></div></div>
-            </div>
-
-            <div class="action-item" data-id="pankaj-cam-crm" data-priority="LOW">
-              <input type="checkbox" class="ai-check" data-id="pankaj-cam-crm" onchange="toggleDone(this)">
-              <div class="ai-body"><div class="ai-main">Build CAM-style large-partner tracking structure with a requisition form in the CRM</div>
-              <div class="ai-meta"><span class="tag-low">LOW</span><span class="owner-name">Pankaj, institutional team</span><span class="ai-date">No date</span><span class="source">Institutional 25 May</span></div></div>
-            </div>
-
-            <div class="action-item" data-id="cam-ops-framework" data-priority="LOW">
-              <input type="checkbox" class="ai-check" data-id="cam-ops-framework" onchange="toggleDone(this)">
-              <div class="ai-body"><div class="ai-main">Finalise CAM roles-and-responsibilities framework with named owner, lead, and cadence</div>
-              <div class="ai-meta"><span class="tag-low">LOW</span><span class="owner-name">CAM / Ops Lead</span><span class="ai-date">No date</span><span class="source">Institutional 25 May</span></div></div>
-            </div>
-
-            <div class="action-item" data-id="inst-mktg-lift" data-priority="LOW">
-              <input type="checkbox" class="ai-check" data-id="inst-mktg-lift" onchange="toggleDone(this)">
-              <div class="ai-body"><div class="ai-main">Track 2-month business lift in logins and disbursals after RM events</div>
-              <div class="ai-meta"><span class="tag-low">LOW</span><span class="owner-name">Institutional Marketing</span><span class="ai-date">No date</span><span class="source">Institutional 25 May</span></div></div>
-            </div>
-
-            <div class="action-item" data-id="inst-mktg-linkedin" data-priority="LOW">
-              <input type="checkbox" class="ai-check" data-id="inst-mktg-linkedin" onchange="toggleDone(this)">
-              <div class="ai-body"><div class="ai-main">Amplify 12 high-impact stories and build LinkedIn plan for large B2B partnerships</div>
-              <div class="ai-meta"><span class="tag-low">LOW</span><span class="owner-name">Institutional Marketing</span><span class="ai-date">No date</span><span class="source">Institutional 25 May</span></div></div>
-            </div>
-
-          </div><!-- #low-items-list -->
-        </div><!-- .low-items-wrap -->
-      </div><!-- LOW col -->
-
-    </div><!-- .actions-columns -->
-
-    <!-- Done pile -->
-    <div class="done-strip" id="done-strip" style="display:none">
-      <button class="done-pile-toggle" onclick="toggleDonePile()">
-        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
-        <span id="done-toggle-label">Show 0 completed</span>
-      </button>
-      <div class="done-pile" id="done-pile"></div>
-    </div>
-  </div><!-- /action items card -->
-
-  <!-- Decisions · Dynamics · Participation -->
-  <div class="section-label">Meeting Intelligence</div>
-  <div class="row cols-3" style="margin-bottom:14px">
-
-    <!-- Decisions -->
-    <div class="card">
-      <div class="card-header"><h2>Decisions Log</h2><span class="badge dark">12 decisions</span></div>
-      <div class="card-body no-pad">
-        <table>
-          <tr><th>Date</th><th>Decision</th><th>Theme</th><th></th></tr>
-          <tr><td style="font-size:11px;white-space:nowrap;color:var(--muted)">26 May</td><td>Rashi owns QL tracking format; Prabhat implements splits today</td><td><span style="font-size:10px;color:var(--muted)">Ops</span></td><td><span class="h-green"></span></td></tr>
-          <tr><td style="font-size:11px;white-space:nowrap;color:var(--muted)">26 May</td><td>Rashi to baseline extended-timeline problem; wider session next week</td><td><span style="font-size:10px;color:var(--muted)">Product</span></td><td><span class="h-green"></span></td></tr>
-          <tr><td style="font-size:11px;white-space:nowrap;color:var(--muted)">26 May</td><td>Post-WBR alignment call to reconcile 76 CR E2E case by case</td><td><span style="font-size:10px;color:var(--muted)">E2E</span></td><td><span class="h-green"></span></td></tr>
-          <tr><td style="font-size:11px;white-space:nowrap;color:var(--muted)">26 May</td><td>E2E DRR tracked in Aditya's sheet; 20 CR out-of-system to move in today</td><td><span style="font-size:10px;color:var(--muted)">Tracking</span></td><td><span class="h-amber"></span></td></tr>
-          <tr><td style="font-size:11px;white-space:nowrap;color:var(--muted)">25 May</td><td>Institutional and E2E move to joint first-of-month review</td><td><span style="font-size:10px;color:var(--muted)">Structure</span></td><td><span class="h-amber"></span></td></tr>
-          <tr><td style="font-size:11px;white-space:nowrap;color:var(--muted)">25 May</td><td>MBR flow reversed — lead with P&L and drivers before initiatives</td><td><span style="font-size:10px;color:var(--muted)">Process</span></td><td><span class="h-green"></span></td></tr>
-          <tr><td style="font-size:11px;white-space:nowrap;color:var(--muted)">25 May</td><td>HDFC Gross scheme likely removed next month</td><td><span style="font-size:10px;color:var(--muted)">Product</span></td><td><span class="h-amber"></span></td></tr>
-          <tr><td style="font-size:11px;white-space:nowrap;color:var(--muted)">25 May</td><td>Payout autonomy stays with retail; Aman = pay-in info utility only</td><td><span style="font-size:10px;color:var(--muted)">GTM</span></td><td><span class="h-green"></span></td></tr>
-          <tr><td style="font-size:11px;white-space:nowrap;color:var(--muted)">25 May</td><td>Universal scheme to 6 slabs (Jun); special-scheme quota from May</td><td><span style="font-size:10px;color:var(--muted)">Product</span></td><td><span class="h-green"></span></td></tr>
-          <tr><td style="font-size:11px;white-space:nowrap;color:var(--muted)">25 May</td><td>16 of 19 flagged underperformers move to exit / performance</td><td><span style="font-size:10px;color:var(--muted)">HR</span></td><td><span class="h-green"></span></td></tr>
-          <tr><td style="font-size:11px;white-space:nowrap;color:var(--muted)">25 May</td><td>Three monthly P&L closes: first-of-month, 95%-confidence, mid-month</td><td><span style="font-size:10px;color:var(--muted)">Finance</span></td><td><span class="h-amber"></span></td></tr>
-          <tr><td style="font-size:11px;white-space:nowrap;color:var(--muted)">25 May</td><td>Retail training team rebranded to Business Enablement</td><td><span style="font-size:10px;color:var(--muted)">Ops</span></td><td><span class="h-green"></span></td></tr>
-        </table>
-        <div style="padding:8px 12px;font-size:10px;color:var(--muted);border-top:1px solid var(--border)">
-          <span class="h-green"></span> Owner + date confirmed &nbsp;
-          <span class="h-amber"></span> Partial &nbsp;
-          <span class="h-red"></span> No owner / no date
-        </div>
-      </div>
-    </div>
-
-    <!-- Dynamics -->
-    <div class="card">
-      <div class="card-header"><h2>Meeting Dynamics</h2><span class="badge warn">Recurring patterns</span></div>
-      <div class="card-body">
-        <div class="dyn-item"><div class="dyn-dot bad"></div><div>Raghu is the sole probing engine across all three meetings. Every challenge comes from him. Third consecutive meeting with this pattern.</div></div>
-        <div class="dyn-item"><div class="dyn-dot warn"></div><div>Marketing and ops present activity metrics every time; Raghu redirects to outcome metrics every time. Not self-correcting.</div></div>
-        <div class="dyn-item"><div class="dyn-dot warn"></div><div>Key product ideas (QR codes, WhatsApp periscope, ABB enablement, extended-timeline) originated from Raghu, not functional owners.</div></div>
-        <div class="dyn-item"><div class="dyn-dot warn"></div><div>Commitments without firm owners recur: joint E2E review, WBR/MBR restructure, CAM framework.</div></div>
-        <div class="dyn-item"><div class="dyn-dot bad"></div><div>City heads largely passive in WBR — each spoke under 2 minutes, never raised concerns or resource asks.</div></div>
-        <div class="dyn-item"><div class="dyn-dot bad"></div><div>Ahmedabad discussed across multiple cycles with no post-mortem on root cause.</div></div>
-        <div class="dyn-item"><div class="dyn-dot bad"></div><div>(Retail) Aman/business-team accountability dispute required CEO intervention two years in.</div></div>
-        <div class="dyn-item"><div class="dyn-dot warn"></div><div>(Institutional) Ishaan rated meeting 2/10 for insight — acknowledged but not resolved.</div></div>
-      </div>
-    </div>
-
-    <!-- Participation -->
-    <div class="card">
-      <div class="card-header"><h2>Participation Tracker</h2><span class="badge red">Questions raised per person</span></div>
-      <div class="card-body">
-        <p style="font-size:11px;color:var(--muted);margin-bottom:12px">Questions raised across 3 meetings. Raghuveer wants broader proactivity from the team.</p>
-
-        <div class="part-row">
-          <span class="part-name">Raghu</span>
-          <div class="part-bars">
-            <div class="part-bar"><div class="part-bar-fill dominant" style="height:46px"></div><div class="part-bar-label">WBR<br><b>4</b></div></div>
-            <div class="part-bar"><div class="part-bar-fill dominant" style="height:56px"></div><div class="part-bar-label">Inst<br><b>5</b></div></div>
-            <div class="part-bar"><div class="part-bar-fill dominant" style="height:46px"></div><div class="part-bar-label">Retail<br><b>4</b></div></div>
-          </div>
-          <span class="part-total dominant">13</span>
-        </div>
-        <div class="part-row">
-          <span class="part-name">Rashi</span>
-          <div class="part-bars">
-            <div class="part-bar"><div class="part-bar-fill zero"></div><div class="part-bar-label">WBR<br>0</div></div>
-            <div class="part-bar"><div class="part-bar-fill minor" style="height:14px"></div><div class="part-bar-label">Inst<br><b>1</b></div></div>
-            <div class="part-bar"><div class="part-bar-fill zero"></div><div class="part-bar-label">Retail<br>0</div></div>
-          </div>
-          <span class="part-total" style="color:var(--muted)">1</span>
-        </div>
-        <div class="part-row">
-          <span class="part-name">Ashish</span>
-          <div class="part-bars">
-            <div class="part-bar"><div class="part-bar-fill zero"></div><div class="part-bar-label">WBR<br>0</div></div>
-            <div class="part-bar"><div class="part-bar-fill zero"></div><div class="part-bar-label">Inst<br>0</div></div>
-            <div class="part-bar"><div class="part-bar-fill minor" style="height:14px"></div><div class="part-bar-label">Retail<br><b>1</b></div></div>
-          </div>
-          <span class="part-total" style="color:var(--muted)">1</span>
-        </div>
-        <div class="part-row">
-          <span class="part-name">Vikas</span>
-          <div class="part-bars">
-            <div class="part-bar"><div class="part-bar-fill zero"></div><div class="part-bar-label">WBR<br>0</div></div>
-            <div class="part-bar"><div class="part-bar-fill zero"></div><div class="part-bar-label">Inst<br>0</div></div>
-            <div class="part-bar"><div class="part-bar-fill minor" style="height:14px"></div><div class="part-bar-label">Retail<br><b>1</b></div></div>
-          </div>
-          <span class="part-total" style="color:var(--muted)">1</span>
-        </div>
-        <div class="part-row">
-          <span class="part-name">Others (7+)</span>
-          <div class="part-bars">
-            <div class="part-bar"><div class="part-bar-fill zero"></div><div class="part-bar-label">WBR<br>0</div></div>
-            <div class="part-bar"><div class="part-bar-fill zero"></div><div class="part-bar-label">Inst<br>0</div></div>
-            <div class="part-bar"><div class="part-bar-fill zero"></div><div class="part-bar-label">Retail<br>0</div></div>
-          </div>
-          <span class="part-total zero">0</span>
-        </div>
-        <p style="font-size:11px;margin-top:10px;padding:8px 10px;background:var(--high-bg);border-radius:6px;color:var(--high);font-weight:600">81% of questions from one person across 3 meetings.</p>
-      </div>
-    </div>
-
-  </div><!-- /meeting intelligence row -->
-
-  <!-- Leadership Notes -->
-  <div class="section-label">Leadership Notes</div>
-  <div class="row cols-3-1" style="margin-bottom:14px">
-    <div class="card">
-      <div class="card-header">
-        <h2>Today's Notes</h2>
-        <div class="card-header-right">
-          <span class="badge" id="notes-date-badge"></span>
-          <button class="notes-export-btn" onclick="exportNotes()">Export to Claude</button>
-        </div>
-      </div>
-      <div class="card-body">
-        <textarea class="notes-today" id="today-notes" placeholder="Write today's observations, priorities, or flags here. Auto-saved. Cleared each morning and archived below. Click 'Export to Claude' to share with the automation for context in the next report."></textarea>
-        <div class="notes-hint">Auto-saved to this browser · Resets each day · Previous days archived →</div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-header"><h2>Previous Notes</h2><span class="badge">Archive</span></div>
-      <div class="card-body" id="notes-archive-body">
-        <p class="notes-empty">No previous notes yet.</p>
-      </div>
-    </div>
+<div class="collapsible">
+  <div class="coll-header" onclick="toggleColl(this)"><h3>Themes Across Meetings</h3><span class="caret">&#9660;</span></div>
+  <div class="coll-body" id="themes-body">
+    <span class="theme-pill">Funnel Conversion</span><span class="theme-pill">Login Drop RCA</span><span class="theme-pill">Capacity Planning</span><span class="theme-pill">Training &amp; AOP</span><span class="theme-pill">Pay-in / Revenue</span><span class="theme-pill">Co-lending</span><span class="theme-pill">E2E Visibility</span><span class="theme-pill">City Scale</span><span class="theme-pill">Hiring</span><span class="theme-pill">Number Whitelisting</span><span class="theme-pill">Lead Data Quality</span><span class="theme-pill">Cross-pitch</span><span class="theme-pill">MAHADA Leads</span><span class="theme-pill">Bangalore Expansion</span>
   </div>
+</div>
 
-  <!-- Collapsible: Critical / No-date HIGHs -->
-  <details open>
-    <summary>
-      <span class="sum-title">Critical &amp; No-Date Items</span>
-      <span class="sum-right"><span class="badge green">0 overdue</span><span class="badge warn">7 no-date HIGH</span><span class="chevron">▾</span></span>
-    </summary>
-    <div class="card-body">
-      <p style="font-size:13px;color:var(--muted);margin-bottom:10px">No overdue items as of 26 May 2026.</p>
-      <div class="warn-box">
-        <strong>No-date HIGH items — set deadlines or these drift forever:</strong><br>
-        Vijay, Aman — NR leakage investigation (True Home Lab, Bajaj, ICICI)<br>
-        Vikas, business team — May P&L levers before month close<br>
-        Pankaj — Pay-in module in-system build<br>
-        Varsha/Arshay — People/Gypsy co-lending second round + Vriddhi outreach<br>
-        Ashish — Co-lending legal review<br>
-        Rishabh, E2E team — QL-to-login RCA (25% vs historic 40%)<br>
-        Training team — LST revamp close with Vishal and Ishaan
-      </div>
-    </div>
-  </details>
-
-  <!-- Collapsible: Owner Scorecards -->
-  <details>
-    <summary>
-      <span class="sum-title">Owner Scorecards</span>
-      <span class="sum-right"><span class="badge">38 total items</span><span class="chevron">▾</span></span>
-    </summary>
-    <div class="card-body no-pad">
-      <table>
-        <tr><th>Owner</th><th class="num">HIGH</th><th class="num">LOW</th><th class="num">Due This Week</th><th class="num">No Date</th><th>Earliest Due</th></tr>
-        <tr><td class="owner-name">Ankit</td><td class="num"><span class="tag-high">3</span></td><td class="num"><span class="tag-low">1</span></td><td class="num">3</td><td class="num">1</td><td style="font-size:11px">27 May</td></tr>
-        <tr><td class="owner-name">Vijay</td><td class="num"><span class="tag-high">2</span></td><td class="num"><span class="tag-low">2</span></td><td class="num">4</td><td class="num">1</td><td style="font-size:11px">26 May</td></tr>
-        <tr><td class="owner-name">Rashi</td><td class="num"><span class="tag-high">2</span></td><td class="num">–</td><td class="num">2</td><td class="num">0</td><td style="font-size:11px">26 May</td></tr>
-        <tr><td class="owner-name">Pankaj</td><td class="num"><span class="tag-high">1</span></td><td class="num"><span class="tag-low">1</span></td><td class="num">0</td><td class="num">2</td><td style="font-size:11px">–</td></tr>
-        <tr><td class="owner-name">Ashish</td><td class="num"><span class="tag-high">1</span></td><td class="num">–</td><td class="num">0</td><td class="num">1</td><td style="font-size:11px">–</td></tr>
-        <tr><td class="owner-name">Varsha/Arshay</td><td class="num"><span class="tag-high">1</span></td><td class="num">–</td><td class="num">0</td><td class="num">1</td><td style="font-size:11px">–</td></tr>
-        <tr><td class="owner-name">Rishabh, E2E team</td><td class="num"><span class="tag-high">1</span></td><td class="num">–</td><td class="num">0</td><td class="num">1</td><td style="font-size:11px">–</td></tr>
-        <tr><td class="owner-name">Training team</td><td class="num"><span class="tag-high">1</span></td><td class="num">–</td><td class="num">0</td><td class="num">1</td><td style="font-size:11px">–</td></tr>
-        <tr><td class="owner-name">Vikas, business team</td><td class="num"><span class="tag-high">1</span></td><td class="num">–</td><td class="num">0</td><td class="num">1</td><td style="font-size:11px">–</td></tr>
-        <tr><td class="owner-name">Vijay, Aman</td><td class="num"><span class="tag-high">1</span></td><td class="num">–</td><td class="num">0</td><td class="num">1</td><td style="font-size:11px">–</td></tr>
-        <tr><td class="owner-name">Neerav</td><td class="num"><span class="tag-high">1</span></td><td class="num">–</td><td class="num">1</td><td class="num">0</td><td style="font-size:11px">31 May</td></tr>
-        <tr><td class="owner-name">Nagesh</td><td class="num"><span class="tag-high">1</span></td><td class="num">–</td><td class="num">1</td><td class="num">0</td><td style="font-size:11px">31 May</td></tr>
-        <tr><td class="owner-name">Pooja</td><td class="num"><span class="tag-high">1</span></td><td class="num">–</td><td class="num">1</td><td class="num">0</td><td style="font-size:11px">31 May</td></tr>
-        <tr><td class="owner-name">Adi</td><td class="num">–</td><td class="num"><span class="tag-low">2</span></td><td class="num">0</td><td class="num">2</td><td style="font-size:11px">–</td></tr>
-        <tr><td class="owner-name">Nitin</td><td class="num">–</td><td class="num"><span class="tag-low">3</span></td><td class="num">0</td><td class="num">3</td><td style="font-size:11px">–</td></tr>
-        <tr><td class="owner-name">Akash</td><td class="num">–</td><td class="num"><span class="tag-low">2</span></td><td class="num">1</td><td class="num">1</td><td style="font-size:11px">26 May</td></tr>
-        <tr><td class="owner-name">Institutional Marketing</td><td class="num">–</td><td class="num"><span class="tag-low">2</span></td><td class="num">0</td><td class="num">2</td><td style="font-size:11px">–</td></tr>
-      </table>
-    </div>
-  </details>
-
-  <!-- Collapsible: Open Questions -->
-  <details>
-    <summary>
-      <span class="sum-title">Open Questions Backlog</span>
-      <span class="sum-right"><span class="badge red">16 open</span><span class="chevron">▾</span></span>
-    </summary>
-    <div class="card-body">
-      <div class="q-item"><div class="q-text">Why is retail QL achievement in Delhi stuck at 34% despite weekly pipeline discussions?</div><div class="q-meta">Raised by Raghu · Owner: Ankit, Rashi · WBR 26 May</div></div>
-      <div class="q-item"><div class="q-text">Why is Ahmedabad not shaping up despite above-market salary and most aggressive incentives?</div><div class="q-meta">Raised by Raghu · Owner: Neerav, Pooja · WBR 26 May</div></div>
-      <div class="q-item"><div class="q-text">When will insurance data tracking be delivered daily (waterfall, issued, pipeline, login, lead stage)?</div><div class="q-meta">Raised by Raghu · Owner: Tarun/Hitesh/Vijay · WBR 26 May</div></div>
-      <div class="q-item"><div class="q-text">What is the correct attribution model for E2E business sourced by one city but fulfilled by another?</div><div class="q-meta">Raised by Rashi · Owner: Pankaj/Aditya · WBR 26 May</div></div>
-      <div class="q-item"><div class="q-text">How does Ambak compound beyond 2026 AOP — when do strategic accounts and builder relationships dominate? <span class="recurring">RECURRING</span></div><div class="q-meta">Raised by Raghu · Owner: Raghu, Rishab, Pranav · Institutional 25 May</div></div>
-      <div class="q-item"><div class="q-text">Will the institutional and E2E joint first-of-month review happen with a real format and named owner? <span class="recurring">RECURRING</span></div><div class="q-meta">Raised by Raghu · Owner: Ankit, Ishaan · Institutional 25 May</div></div>
-      <div class="q-item"><div class="q-text">Why is net revenue not increasing when QLs are on track and the product is good?</div><div class="q-meta">Raised by Raghu · Owner: Ankit, Ishaan · Institutional 25 May</div></div>
-      <div class="q-item"><div class="q-text">Why did E2E QL-to-login fall to 25% from a historic 40%?</div><div class="q-meta">Raised by Raghu · Owner: Rishabh, E2E team · Institutional 25 May</div></div>
-      <div class="q-item"><div class="q-text">Why are repeat partners flat at 52–56 while active partners grew ~25%?</div><div class="q-meta">Raised by Raghu · Owner: Institutional onboarding lead · Institutional 25 May</div></div>
-      <div class="q-item"><div class="q-text">Will new joiners be capable enough after training to pitch confidently to a customer or partner?</div><div class="q-meta">Raised by Raghu · Owner: Arvind, Training team · Institutional 25 May</div></div>
-      <div class="q-item"><div class="q-text">What is the right structure and ownership for the cross-team E2E review?</div><div class="q-meta">Raised by Raghu · Owner: Ankit, Ishaan · Institutional 25 May</div></div>
-      <div class="q-item"><div class="q-text">Why did ICICI Bank dilute pay-in so much at that volume and what could have prevented it?</div><div class="q-meta">Raised by Raghu · Owner: Vijay, Aman · Retail 25 May</div></div>
-      <div class="q-item"><div class="q-text">Why was Bombay self payout 99 bps vs 93 bps planned, and what changes for May?</div><div class="q-meta">Raised by Raghu · Owner: Vikas · Retail 25 May</div></div>
-      <div class="q-item"><div class="q-text">How do we structurally fix NCR HL and LAP being a persistent NR drag at 5–6% ICICI share?</div><div class="q-meta">Raised by Raghu · Owner: Vikas · Retail 25 May</div></div>
-      <div class="q-item"><div class="q-text">For RMs with 12+ months of vintage, should NR carry a higher rating weightage?</div><div class="q-meta">Raised by Ashish · Owner: Vikas, Ashish · Retail 25 May</div></div>
-      <div class="q-item"><div class="q-text">How do we build the July–October E2E AOP throughput of ~200 crore/month?</div><div class="q-meta">Raised by Vikas · Owner: Vikas, business team · Retail 25 May</div></div>
-    </div>
-  </details>
-
-  <!-- Collapsible: Themes -->
-  <details>
-    <summary>
-      <span class="sum-title">Themes &amp; Topics</span>
-      <span class="sum-right"><span class="badge">10 themes</span><span class="chevron">▾</span></span>
-    </summary>
-    <div class="card-body no-pad">
-      <table>
-        <tr><th>Topic</th><th class="num"># Meetings</th><th class="num">HIGH Items</th><th class="num">Open Questions</th></tr>
-        <tr class="theme-row"><td>E2E / Disbursement</td><td class="num">3</td><td class="num">6</td><td class="num">4</td></tr>
-        <tr class="theme-row"><td>Training / Enablement</td><td class="num">3</td><td class="num">3</td><td class="num">1</td></tr>
-        <tr class="theme-row"><td>City Team Build</td><td class="num">2</td><td class="num">4</td><td class="num">2</td></tr>
-        <tr class="theme-row"><td>QL / Login Tracking</td><td class="num">2</td><td class="num">4</td><td class="num">2</td></tr>
-        <tr class="theme-row"><td>Pay-in / NR</td><td class="num">2</td><td class="num">4</td><td class="num">3</td></tr>
-        <tr class="theme-row"><td>Co-lending / Partnerships</td><td class="num">1</td><td class="num">2</td><td class="num">0</td></tr>
-        <tr class="theme-row"><td>Insurance</td><td class="num">1</td><td class="num">1</td><td class="num">1</td></tr>
-        <tr class="theme-row"><td>Systems / CRM</td><td class="num">2</td><td class="num">2</td><td class="num">0</td></tr>
-        <tr class="theme-row"><td>MAHADA Leads</td><td class="num">1</td><td class="num">1</td><td class="num">0</td></tr>
-        <tr class="theme-row"><td>Marketing / Distribution</td><td class="num">1</td><td class="num">0</td><td class="num">0</td></tr>
-      </table>
-    </div>
-  </details>
-
-  <!-- Collapsible: Reminders -->
-  <details>
-    <summary>
-      <span class="sum-title">Reminders Overview</span>
-      <span class="sum-right"><span class="badge">Included in 26 May reports</span><span class="chevron">▾</span></span>
-    </summary>
-    <div class="card-body no-pad">
-      <table>
-        <tr><th>Owner</th><th>Task</th><th>Due</th><th>Source</th><th>Priority</th></tr>
-        <tr><td>Raghu, Arvind</td><td>Wednesday catch-up: D2C, ops, institutional, retail</td><td style="font-size:11px">27 May</td><td class="source">Institutional</td><td><span class="tag-high">HIGH</span></td></tr>
-        <tr><td>Vikas, Vijay, Aman, Ashish</td><td>30-min pay-in sync; adjust schemes for May</td><td style="font-size:11px">28 May</td><td class="source">Retail</td><td><span class="tag-high">HIGH</span></td></tr>
-        <tr><td>Ishaan, Ankit</td><td>Hit May commitment: 250+ logins and 110 disbursal</td><td style="font-size:11px">31 May</td><td class="source">Institutional</td><td><span class="tag-high">HIGH</span></td></tr>
-        <tr><td>Ankit, Ishaan</td><td>Run joint institutional and E2E first-of-month review</td><td style="font-size:11px">1 Jun</td><td class="source">Institutional</td><td><span class="tag-high">HIGH</span></td></tr>
-      </table>
-    </div>
-  </details>
-
-</div><!-- .wrap -->
+<div class="collapsible">
+  <div class="coll-header" onclick="toggleColl(this)"><h3>Reminders &amp; Overdue Tracker</h3><span class="caret up">&#9660;</span></div>
+  <div class="coll-body open" id="reminders-body"></div>
+</div>
+</div>
 
 <script>
-  const DONE_KEY          = 'ambak_done_items';
-  const TODAY             = new Date().toISOString().split('T')[0];
-  const NOTES_TODAY_KEY   = 'ambak_notes_' + TODAY;
-  const NOTES_ARCHIVE_KEY = 'ambak_notes_archive';
-  const TOTAL_HIGH = 23, TOTAL_LOW = 15, TOTAL = 38;
+const TODAY='2026-05-27';
+const DONE_KEY='ambak_done_items';
+const NOTE_KEY=()=>'ambak_notes_'+TODAY;
+const ARCH_KEY='ambak_notes_archive';
 
-  // Date badge
-  document.getElementById('notes-date-badge').textContent = new Date().toLocaleDateString('en-IN', {day:'numeric',month:'short',year:'numeric'});
+const ITEMS=[
+{id:'i1',owner:'Vikas, Vijay, Aman, Ashish',task:'Hold 30-min sync to align on pay-in changes and adjust schemes for May',due:'2026-05-28',topic:'Pay-in alignment',meeting:'Retail Review',priority:'HIGH',history:[{date:'2026-05-25',meeting:'Retail Review',type:'created',detail:'First captured from Retail Review on 2026-05-25'}]},
+{id:'i2',owner:'Vijay, Aman',task:'Investigate True Home Lab, Bajaj Housing Gross ICE and ICICI payout misallocations and report cause',due:'',topic:'Net revenue leakage',meeting:'Retail Review',priority:'HIGH',history:[{date:'2026-05-25',meeting:'Retail Review',type:'created',detail:'First captured from Retail Review on 2026-05-25'}]},
+{id:'i3',owner:'Vikas, business team',task:'Identify May levers that can still impact the May P&L',due:'',topic:'May P&L recovery',meeting:'Retail Review',priority:'HIGH',history:[{date:'2026-05-25',meeting:'Retail Review',type:'created',detail:'First captured from Retail Review on 2026-05-25'}]},
+{id:'i4',owner:'Pankaj',task:'Build pay-in module in-system, proxy out-of-system business, enable real-time pay-in calculation for three monthly closes',due:'',topic:'Systems',meeting:'Retail Review',priority:'HIGH',history:[{date:'2026-05-25',meeting:'Retail Review',type:'created',detail:'First captured from Retail Review on 2026-05-25'}]},
+{id:'i5',owner:'Varsha/Arshay',task:'Run second round of Gypsy co-lending discussion, review product note with Rashi and Pankaj, reach out to Vriddhi',due:'',topic:'Co-lending',meeting:'Retail Review',priority:'HIGH',history:[{date:'2026-05-25',meeting:'Retail Review',type:'created',detail:'First captured from Retail Review on 2026-05-25'}]},
+{id:'i6',owner:'Ashish',task:'Complete legal review of the co-lending draft agreement',due:'',topic:'Co-lending',meeting:'Retail Review',priority:'HIGH',history:[{date:'2026-05-25',meeting:'Retail Review',type:'created',detail:'First captured from Retail Review on 2026-05-25'}]},
+{id:'i7',owner:'Ankit, Ishaan',task:'Run joint institutional and E2E review of full funnel on first of the month',due:'2026-06-01',topic:'One-team model',meeting:'Institutional Review',priority:'HIGH',history:[{date:'2026-05-25',meeting:'Institutional Review',type:'created',detail:'First captured from Institutional Review on 2026-05-25'}]},
+{id:'i8',owner:'Rishabh, E2E team',task:'Complete RCA on QL-to-login falling to 25% from historic 40% and specify support required',due:'',topic:'Funnel conversion',meeting:'Institutional Review',priority:'HIGH',history:[{date:'2026-05-25',meeting:'Institutional Review',type:'created',detail:'First captured from Institutional Review on 2026-05-25'},{date:'2026-05-27',meeting:'April Funnel Review',type:'note',detail:'RCA appears delivered via May 27 meeting. Recommend manual mark-done if satisfied.'}]},
+{id:'i9',owner:'Ishaan, Ankit',task:'Hit May commitment of 250-plus logins and the 110 number',due:'2026-05-31',topic:'May targets',meeting:'Institutional Review',priority:'HIGH',history:[{date:'2026-05-25',meeting:'Institutional Review',type:'created',detail:'First captured from Institutional Review on 2026-05-25'}]},
+{id:'i10',owner:'Raghu, Arvind',task:'Catch up for full update on D2C, ops, institutional and retail',due:'2026-05-27',topic:'Cross-function review',meeting:'Institutional Review',priority:'HIGH',history:[{date:'2026-05-25',meeting:'Institutional Review',type:'created',detail:'First captured from Institutional Review on 2026-05-25'}]},
+{id:'i11',owner:'Training team',task:'Close revamped LST with Vishal and Ishaan and prepare next-month go-live',due:'',topic:'Training rollout',meeting:'Institutional Review',priority:'HIGH',history:[{date:'2026-05-25',meeting:'Institutional Review',type:'created',detail:'First captured from Institutional Review on 2026-05-25'}]},
+{id:'i12',owner:'Prabhat',task:'Update QL tracking format to show central-allocated vs Lucknow vs unassigned vs self',due:'2026-05-26',topic:'QL tracking',meeting:'Ambak WBR',priority:'HIGH',history:[{date:'2026-05-26',meeting:'Ambak WBR',type:'created',detail:'First captured from Ambak WBR on 2026-05-26'}]},
+{id:'i13',owner:'Rashi',task:'Create baseline document on extended-timeline problem (property finalisation, registry delays, customer WIP)',due:'2026-05-31',topic:'Extended-timeline',meeting:'Ambak WBR',priority:'HIGH',history:[{date:'2026-05-26',meeting:'Ambak WBR',type:'created',detail:'First captured from Ambak WBR on 2026-05-26'}]},
+{id:'i14',owner:'Vijay/Aditya',task:'Send last 12 weeks of QL data (simple weekly numbers) to Raghu',due:'2026-05-26',topic:'QL tracking',meeting:'Ambak WBR',priority:'HIGH',history:[{date:'2026-05-26',meeting:'Ambak WBR',type:'created',detail:'First captured from Ambak WBR on 2026-05-26'}]},
+{id:'i15',owner:'Ankit',task:'Share timelines for hacky checklist and bank-wise case handling approach by today',due:'2026-05-27',topic:'DSA intelligence',meeting:'Ambak WBR',priority:'HIGH',history:[{date:'2026-05-26',meeting:'Ambak WBR',type:'created',detail:'First captured from Ambak WBR on 2026-05-26'}]},
+{id:'i16',owner:'Vijay/Ankit',task:'Ring-fence MAHADA 2600 leads; ensure Aman and banker coordination before first-week-June delivery',due:'2026-06-01',topic:'MAHADA leads',meeting:'Ambak WBR',priority:'HIGH',history:[{date:'2026-05-26',meeting:'Ambak WBR',type:'created',detail:'First captured from Ambak WBR on 2026-05-26'}]},
+{id:'i17',owner:'Tarun/Hitesh (via Vijay)',task:'Send Raghu insurance waterfall update (issued, pipeline, login stage, lead stage, May confidence)',due:'2026-05-26',topic:'Insurance tracking',meeting:'Ambak WBR',priority:'HIGH',history:[{date:'2026-05-26',meeting:'Ambak WBR',type:'created',detail:'First captured from Ambak WBR on 2026-05-26'}]},
+{id:'i18',owner:'Rashi',task:'Share comfort level on 76 CR E2E number to Raghu',due:'2026-05-26',topic:'E2E pipeline',meeting:'Ambak WBR',priority:'HIGH',history:[{date:'2026-05-26',meeting:'Ambak WBR',type:'created',detail:'First captured from Ambak WBR on 2026-05-26'}]},
+{id:'i19',owner:'Vijay/E2E team',task:'Move 20 CR of E2E cases (self-tagged or out-of-system) into system today',due:'2026-05-26',topic:'E2E in-system tracking',meeting:'Ambak WBR',priority:'HIGH',history:[{date:'2026-05-26',meeting:'Ambak WBR',type:'created',detail:'First captured from Ambak WBR on 2026-05-26'}]},
+{id:'i20',owner:'Neerav',task:'Finalize ABM hire for Ahmedabad; two ABM offers going out in 1-2 days',due:'2026-05-31',topic:'Ahmedabad hiring',meeting:'Ambak WBR',priority:'HIGH',history:[{date:'2026-05-26',meeting:'Ambak WBR',type:'created',detail:'First captured from Ambak WBR on 2026-05-26'}]},
+{id:'i21',owner:'Nagesh',task:'Close Bangalore hiring (city head, 2 ABMs, RMs) by month end',due:'2026-05-31',topic:'Bangalore hiring',meeting:'Ambak WBR',priority:'HIGH',history:[{date:'2026-05-26',meeting:'Ambak WBR',type:'created',detail:'First captured from Ambak WBR on 2026-05-26'}]},
+{id:'i22',owner:'Ankit/Rishab',task:'Ensure 7 Bangalore ready-to-log files are logged this week; resolve consent and property doc pendency',due:'2026-05-31',topic:'Bangalore logins',meeting:'Ambak WBR',priority:'HIGH',history:[{date:'2026-05-26',meeting:'Ambak WBR',type:'created',detail:'First captured from Ambak WBR on 2026-05-26'}]},
+{id:'i23',owner:'Pooja',task:'Double-click on: train-the-trainer content, scheduling consistency fix, assessment reliability',due:'2026-05-31',topic:'Training quality',meeting:'Ambak WBR',priority:'HIGH',history:[{date:'2026-05-26',meeting:'Ambak WBR',type:'created',detail:'First captured from Ambak WBR on 2026-05-26'}]},
+{id:'i24',owner:'Ankita',task:'Review complete May data with Himang; present RCA, initiative performance and June targets to city heads by June 1',due:'2026-06-01',topic:'Monthly target planning',meeting:'April Funnel Review',priority:'HIGH',history:[{date:'2026-05-27',meeting:'April Funnel Review',type:'created',detail:'First captured from April Funnel/Login RCA on 2026-05-27'}]},
+{id:'i25',owner:'Product (Mohit/Roshan)',task:'Fix call timestamp to use call start time (not end time) in first-call follow-up reports',due:'',topic:'Reporting accuracy',meeting:'April Funnel Review',priority:'HIGH',history:[{date:'2026-05-27',meeting:'April Funnel Review',type:'created',detail:'First captured from April Funnel/Login RCA on 2026-05-27'}]},
+{id:'i26',owner:'Product team',task:'Implement immediate fix: show missed call notifications to FBMs in real-time on system ID',due:'',topic:'Missed call visibility',meeting:'April Funnel Review',priority:'HIGH',history:[{date:'2026-05-27',meeting:'April Funnel Review',type:'created',detail:'First captured from April Funnel/Login RCA on 2026-05-27'}]},
+{id:'i27',owner:'Telecom/Ops',task:'Receive DID mobile numbers from vendor, configure in system, roll out by Thursday June 4',due:'2026-06-04',topic:'Number whitelisting',meeting:'April Funnel Review',priority:'HIGH',history:[{date:'2026-05-27',meeting:'April Funnel Review',type:'created',detail:'First captured from April Funnel/Login RCA on 2026-05-27'}]},
+{id:'i28',owner:'Rishabh',task:'Meet Mada/partner on Monday; understand lead data quality gap (missing allotment/booking dates); report back with conversion prediction',due:'2026-06-02',topic:'Lead data quality',meeting:'April Funnel Review',priority:'HIGH',history:[{date:'2026-05-27',meeting:'April Funnel Review',type:'created',detail:'First captured from April Funnel/Login RCA on 2026-05-27'}]},
+{id:'i29',owner:'Darshan',task:'Sit for joint re-audit of deal cancel/postpone cases across cities; validate 28% figure and identify root causes',due:'',topic:'Funnel drop-off audit',meeting:'April Funnel Review',priority:'HIGH',history:[{date:'2026-05-27',meeting:'April Funnel Review',type:'created',detail:'First captured from April Funnel/Login RCA on 2026-05-27'}]},
+{id:'i30',owner:'Adi',task:'Pick two metrics from lender analysis to automate and report regularly on BD corporate group',due:'',topic:'Tracking discipline',meeting:'Retail Review',priority:'LOW',history:[{date:'2026-05-25',meeting:'Retail Review',type:'created',detail:'First captured from Retail Review on 2026-05-25'}]},
+{id:'i31',owner:'Adi',task:'Track activation and retention split by specialty versus non-specialty partners',due:'',topic:'Net revenue analysis',meeting:'Retail Review',priority:'LOW',history:[{date:'2026-05-25',meeting:'Retail Review',type:'created',detail:'First captured from Retail Review on 2026-05-25'}]},
+{id:'i32',owner:'Nitin',task:'Create partner-facing marketing and training material for the ABB calculator',due:'',topic:'Product enablement',meeting:'Retail Review',priority:'LOW',history:[{date:'2026-05-25',meeting:'Retail Review',type:'created',detail:'First captured from Retail Review on 2026-05-25'}]},
+{id:'i33',owner:'Nitin, Pankaj',task:'Pilot WhatsApp-group periscope outreach to reach partners at scale',due:'',topic:'Marketing distribution',meeting:'Retail Review',priority:'LOW',history:[{date:'2026-05-25',meeting:'Retail Review',type:'created',detail:'First captured from Retail Review on 2026-05-25'}]},
+{id:'i34',owner:'Nitin, sales',task:'Launch QR-code partner collateral for builders and brokers',due:'',topic:'Marketing',meeting:'Retail Review',priority:'LOW',history:[{date:'2026-05-25',meeting:'Retail Review',type:'created',detail:'First captured from Retail Review on 2026-05-25'}]},
+{id:'i35',owner:'Vijay',task:'Own final sign-off on training content and delivery calendar',due:'',topic:'Business Enablement',meeting:'Retail Review',priority:'LOW',history:[{date:'2026-05-25',meeting:'Retail Review',type:'created',detail:'First captured from Retail Review on 2026-05-25'}]},
+{id:'i36',owner:'Akash',task:'Double-check 66% repeat-partner QL figure and compare April against March numbers',due:'',topic:'Retention metrics',meeting:'Institutional Review',priority:'LOW',history:[{date:'2026-05-25',meeting:'Institutional Review',type:'created',detail:'First captured from Institutional Review on 2026-05-25'}]},
+{id:'i37',owner:'Raghu, Rishabh',task:'Sit together to define what the institutional review should drive out',due:'',topic:'Review structure',meeting:'Institutional Review',priority:'LOW',history:[{date:'2026-05-25',meeting:'Institutional Review',type:'created',detail:'First captured from Institutional Review on 2026-05-25'}]},
+{id:'i38',owner:'Pankaj, institutional team',task:'Build CAM-style large-partner tracking structure with requisition form in CRM',due:'',topic:'Large-partner tracking',meeting:'Institutional Review',priority:'LOW',history:[{date:'2026-05-25',meeting:'Institutional Review',type:'created',detail:'First captured from Institutional Review on 2026-05-25'}]},
+{id:'i39',owner:'CAM / Ops Lead',task:'Finalise CAM roles-and-responsibilities framework with named owner, lead and cadence',due:'',topic:'CAM governance',meeting:'Institutional Review',priority:'LOW',history:[{date:'2026-05-25',meeting:'Institutional Review',type:'created',detail:'First captured from Institutional Review on 2026-05-25'}]},
+{id:'i40',owner:'Institutional Marketing Lead',task:'Track 2-month business lift in logins and disbursals after RM events',due:'',topic:'Marketing measurement',meeting:'Institutional Review',priority:'LOW',history:[{date:'2026-05-25',meeting:'Institutional Review',type:'created',detail:'First captured from Institutional Review on 2026-05-25'}]},
+{id:'i41',owner:'Institutional Marketing Lead',task:'Amplify 12 high-impact stories and build LinkedIn plan for large B2B partnerships',due:'',topic:'Marketing',meeting:'Institutional Review',priority:'LOW',history:[{date:'2026-05-25',meeting:'Institutional Review',type:'created',detail:'First captured from Institutional Review on 2026-05-25'}]},
+{id:'i42',owner:'Ankit',task:'Visit DSA partners regularly and share weekly update on learnings (hacky solutions, bank-specific tricks)',due:'',topic:'DSA understanding',meeting:'Ambak WBR',priority:'LOW',history:[{date:'2026-05-26',meeting:'Ambak WBR',type:'created',detail:'First captured from Ambak WBR on 2026-05-26'}]},
+{id:'i43',owner:'Akash',task:'Post 2-3 lead IDs from last 3-4 days where Pune-Delhi coordination was weak to messaging group',due:'2026-05-26',topic:'Pune-Delhi coordination',meeting:'Ambak WBR',priority:'LOW',history:[{date:'2026-05-26',meeting:'Ambak WBR',type:'created',detail:'First captured from Ambak WBR on 2026-05-26'}]},
+{id:'i44',owner:'Vijay',task:"Track daily E2E DRR number alongside self-fulfillment in Aditya's existing self-tracking sheet",due:'2026-05-26',topic:'E2E daily tracking',meeting:'Ambak WBR',priority:'LOW',history:[{date:'2026-05-26',meeting:'Ambak WBR',type:'created',detail:'First captured from Ambak WBR on 2026-05-26'}]},
+{id:'i45',owner:'Avinash',task:"Audit 'logged with another bank' cases for cross-pitch attempts; check if agents pitch competitive rates vs SBI; identify training gaps",due:'',topic:'Cross-pitch audit',meeting:'April Funnel Review',priority:'LOW',history:[{date:'2026-05-27',meeting:'April Funnel Review',type:'created',detail:'First captured from April Funnel/Login RCA on 2026-05-27'}]},
+{id:'i46',owner:'Arpit/Training team',task:'Launch June plan: communication + art of report + people mgmt workshops; e-learning in NHT; buddy program; call audits for new joiners; cross-function mock calls; Learning Premier League on Kahoot',due:'2026-06-30',topic:'June training rollout',meeting:'April Funnel Review',priority:'LOW',history:[{date:'2026-05-27',meeting:'April Funnel Review',type:'created',detail:'First captured from April Funnel/Login RCA on 2026-05-27'}]}
+];
 
-  // ── Notes ──
-  const todayArea = document.getElementById('today-notes');
-  todayArea.value = localStorage.getItem(NOTES_TODAY_KEY) || '';
-  todayArea.addEventListener('input', () => {
-    localStorage.setItem(NOTES_TODAY_KEY, todayArea.value);
-    const arch = getArchive();
-    if (todayArea.value.trim()) arch[TODAY] = todayArea.value; else delete arch[TODAY];
-    localStorage.setItem(NOTES_ARCHIVE_KEY, JSON.stringify(arch));
+const DECISIONS=[
+  {m:'Retail Review',t:'Pay-in module to be built in-system; proxy out-of-system business for three monthly closes'},
+  {m:'Retail Review',t:'Co-lending product note to be reviewed by Rashi and Pankaj before second round with Gypsy'},
+  {m:'Institutional Review',t:'Joint E2E and institutional funnel review to happen on June 1'},
+  {m:'Institutional Review',t:'CAM framework to be formalised with named owner and cadence'},
+  {m:'Ambak WBR',t:'QL tracking format updated to show central-allocated vs Lucknow vs unassigned vs self'},
+  {m:'Ambak WBR',t:'MAHADA leads ring-fenced with dedicated Aman/banker review cadence'},
+  {m:'Ambak WBR',t:'Ahmedabad ABM offers going out; Bangalore hiring to close May 31'},
+  {m:'April Funnel Review',t:'DID numbers to be configured and rolled out by June 4 once vendor delivers'},
+  {m:'April Funnel Review',t:'Planning review on May 27 with Himang; June targets to city heads on June 1'},
+  {m:'April Funnel Review',t:'Auto-dialer to remain live across all channels; routed to inbound Mada leads'},
+  {m:'April Funnel Review',t:'Bulk/cold calling lead data to be handled separately from regular FBM queue'}
+];
+
+const DYNAMICS=[
+  {m:'Retail Review',t:'Revenue conversations stayed high-level; city-level decomposition missing from most discussions'},
+  {m:'Institutional Review',t:'Raghu drove all diagnostic probing; others largely in response mode'},
+  {m:'Institutional Review',t:'Cross-sell and retention concerns raised but no specific owners or timelines'},
+  {m:'Ambak WBR',t:'Raghu repeatedly pushed for specificity; "hawa mein" mentioned when timelines felt vague'},
+  {m:'Ambak WBR',t:'Training section presented well but AOP gap was not stress-tested'},
+  {m:'April Funnel Review',t:'FBM productivity miss (8.11 vs 14 AOP) received minimal discussion - biggest gap on the board'},
+  {m:'April Funnel Review',t:'Cause-and-effect not always closed - drop-off causes identified without confirmed owners/timelines'}
+];
+
+const PARTICIPATION=[
+  {name:'Raghu',q:14,m:'April Funnel Review'},
+  {name:'Ankita',q:6,m:'April Funnel Review'},
+  {name:'Rashi',q:3,m:'April Funnel Review'},
+  {name:'Pranav (WBR)',q:8,m:'Ambak WBR'},
+  {name:'Vijay (WBR)',q:4,m:'Ambak WBR'},
+  {name:'Arpit',q:2,m:'April Funnel Review'},
+  {name:'Rishabh',q:2,m:'April Funnel Review'},
+  {name:'Ankit',q:1,m:'April Funnel Review'}
+];
+
+const QUESTIONS=[
+  {q:"What is the real root cause of 28% deal cancel/postpone? Split by city needed.",raised:'Raghu, Rashi',owner:'Darshan + Ankita (joint audit)',m:'April Funnel Review'},
+  {q:"Why has Mada partner data quality dropped - missing allotment/booking date for 2-3 months?",raised:'Ankita',owner:'Rishabh',m:'April Funnel Review'},
+  {q:"Are FBMs actively cross-pitching customers already logged with another bank (SBI)?",raised:'Rashi',owner:'Avinash',m:'April Funnel Review'},
+  {q:"What is the measurable impact of DRE/BRE automation on FBM productivity?",raised:'Raghu',owner:'Product/Ops',m:'April Funnel Review'},
+  {q:"What is Ambak's differentiated value proposition beyond rate arbitrage?",raised:'Raghu',owner:'Leadership',m:'Institutional Review'},
+  {q:"How do we move from DSA to a platform guiding the entire homebuying journey?",raised:'Raghu',owner:'Product/Strategy',m:'Institutional Review'},
+  {q:"What will make the E2E conversion model defensible and replicable at scale?",raised:'Raghu',owner:'Rashi, Vijay',m:'Institutional Review'},
+  {q:"Why are some partners activating and others not - product, onboarding or support?",raised:'Adi',owner:'BD team',m:'Retail Review'},
+  {q:"What is the realistic timeline to make the pay-in module fully in-system?",raised:'Leadership',owner:'Pankaj',m:'Retail Review'},
+  {q:"Can MAHADA leads deliver as projected given previous stale-data issues?",raised:'Vijay',owner:'Vijay/Ankit',m:'Ambak WBR'},
+  {q:"How do we fix E2E self-reporting to get 20 CR of out-of-system cases into system?",raised:'Raghu',owner:'Vijay/E2E',m:'Ambak WBR'},
+  {q:"What is Ahmedabad conversion potential if ABM is onboarded next week?",raised:'Neerav',owner:'Neerav',m:'Ambak WBR'},
+  {q:"Why is M1 login rate still not clearly improving despite multiple levers?",raised:'Meeting',owner:'Ankita',m:'April Funnel Review'}
+];
+
+const OVERDUE_IDS=['i12','i14','i17','i18','i19','i43','i44'];
+
+function getDone(){try{return JSON.parse(localStorage.getItem(DONE_KEY)||'[]')}catch{return[]}}
+function setDone(a){localStorage.setItem(DONE_KEY,JSON.stringify(a))}
+function getNote(){return localStorage.getItem(NOTE_KEY())||''}
+function getArchive(){try{return JSON.parse(localStorage.getItem(ARCH_KEY)||'[]')}catch{return[]}}
+
+function dateBadge(due){
+  if(!due)return'';
+  if(due<TODAY)return'<span class="badge badge-overdue">OVERDUE</span>';
+  if(due===TODAY)return'<span class="badge badge-today">TODAY</span>';
+  const d=Math.round((new Date(due)-new Date(TODAY))/86400000);
+  if(d<=2)return`<span class="badge badge-today">Due ${due}</span>`;
+  return`<span class="badge badge-grey">Due ${due}</span>`;
+}
+
+function histHTML(item){
+  if(!item.history||!item.history.length)return'';
+  return item.history.map(h=>`<div class="history-entry"><span class="hbadge hb-${h.type}">${h.type.replace(/_/g,' ')}</span><span class="h-detail">${h.detail}</span><span class="h-date">${h.date}</span></div>`).join('');
+}
+
+function renderItem(item){
+  const done=getDone();
+  const chk=done.includes(item.id)?'checked':'';
+  return`<div class="item" id="row-${item.id}"><input type="checkbox" ${chk} onchange="toggleDone('${item.id}',this)"><div class="item-body"><div class="item-task">${item.task}</div><div class="item-meta"><span class="badge badge-${item.priority.toLowerCase()}">${item.priority}</span><span>${item.owner}</span>${dateBadge(item.due)}<span class="badge badge-grey">${item.meeting}</span><button class="history-btn" onclick="toggleHistory('${item.id}')">&#9679; history</button></div></div></div><div class="history-drawer" id="hist-${item.id}">${histHTML(item)}</div>`;
+}
+
+function render(){
+  const done=getDone();
+  let hH='',lH='',dH='',hC=0,lC=0;
+  ITEMS.forEach(item=>{
+    if(done.includes(item.id)){
+      dH+=`<div class="done-item"><div class="item-body"><div class="item-task">${item.task}</div><div class="item-meta"><span>${item.owner}</span><span class="badge badge-grey">${item.meeting}</span></div></div></div>`;
+    }else if(item.priority==='HIGH'){hH+=renderItem(item);hC++;}
+    else{lH+=renderItem(item);lC++;}
   });
+  document.getElementById('high-items').innerHTML=hH||'<div class="item"><div class="item-body" style="color:var(--muted)">All HIGH items completed.</div></div>';
+  document.getElementById('low-items').innerHTML=lH||'<div class="item"><div class="item-body" style="color:var(--muted)">All LOW items completed.</div></div>';
+  document.getElementById('done-body').innerHTML=dH||'<div style="padding:12px 14px;color:var(--muted);font-size:13px">No items marked done yet.</div>';
+  const dc=done.length;
+  document.getElementById('done-count-label').textContent=dc;
+  document.getElementById('done-pill').textContent=dc+' done';
+  document.getElementById('open-count').textContent=ITEMS.length-dc;
+  document.getElementById('kpi-open').textContent=ITEMS.length-dc;
+  document.getElementById('kpi-high').textContent=hC;
+  document.getElementById('kpi-low').textContent=lC;
+  document.getElementById('high-badge').textContent=hC;
+  document.getElementById('low-badge').textContent=lC;
+  const ov=OVERDUE_IDS.filter(id=>!done.includes(id));
+  const ob=document.getElementById('overdue-banner');
+  ob.style.display=ov.length?'block':'none';
+  if(ov.length)ob.textContent=ov.length+' items are overdue — scroll to Reminders for details';
+}
 
-  function getArchive() { try { return JSON.parse(localStorage.getItem(NOTES_ARCHIVE_KEY) || '{}'); } catch { return {}; } }
+function renderIntel(){
+  document.getElementById('decisions-log').innerHTML=DECISIONS.map(d=>`<div class="intel-entry"><span class="intel-who">${d.m}</span> ${d.t}</div>`).join('');
+  document.getElementById('dynamics-log').innerHTML=DYNAMICS.map(d=>`<div class="intel-entry"><span class="intel-who">${d.m}</span> ${d.t}</div>`).join('');
+  const mx=Math.max(...PARTICIPATION.map(p=>p.q));
+  document.getElementById('participation-log').innerHTML=PARTICIPATION.map(p=>`<div class="part-row"><span class="part-name">${p.name}</span><div class="part-bar-bg"><div class="part-bar" style="width:${Math.round(p.q/mx*100)}%"></div></div><span class="part-num">${p.q}</span></div>`).join('');
+}
 
-  function renderArchive() {
-    const arch = getArchive();
-    const body = document.getElementById('notes-archive-body');
-    const entries = Object.entries(arch).filter(([d]) => d !== TODAY).sort(([a],[b]) => b.localeCompare(a));
-    if (!entries.length) { body.innerHTML = '<p class="notes-empty">No previous notes yet. Notes you write today will appear here tomorrow.</p>'; return; }
-    body.innerHTML = entries.map(([date, text]) =>
-      `<div class="notes-archive-entry"><div class="notes-archive-date">${date}</div><div class="notes-archive-text">${text.replace(/</g,'&lt;')}</div></div>`
-    ).join('');
-  }
-  renderArchive();
+function renderQuestions(){
+  document.getElementById('questions-body').innerHTML=QUESTIONS.map(q=>`<div class="q-item"><div class="q-text">${q.q}</div><div class="q-meta">Raised by: <strong>${q.raised}</strong> &middot; Owner: <strong>${q.owner}</strong> &middot; ${q.m}</div></div>`).join('');
+}
 
-  // ── Done items ──
-  function getDone() { try { return JSON.parse(localStorage.getItem(DONE_KEY) || '{}'); } catch { return {}; } }
-  function saveDone(o) { localStorage.setItem(DONE_KEY, JSON.stringify(o)); }
+function renderScorecards(){
+  const owners={};
+  ITEMS.forEach(item=>{
+    const k=item.owner.split(/[,\/]/)[0].trim();
+    if(!owners[k])owners[k]={total:0,high:0,low:0};
+    owners[k].total++;
+    if(item.priority==='HIGH')owners[k].high++;else owners[k].low++;
+  });
+  const sorted=Object.entries(owners).sort((a,b)=>b[1].total-a[1].total).slice(0,12);
+  document.getElementById('scorecards-body').innerHTML=`<div class="scorecard-grid">${sorted.map(([n,s])=>`<div class="scorecard"><div class="sc-name">${n}</div><div class="sc-stats">${s.total} item${s.total!==1?'s':''} &middot; ${s.high} HIGH &middot; ${s.low} LOW</div><div class="sc-bar"><div class="sc-fill" style="width:${Math.round(s.high/s.total*100)}%"></div></div></div>`).join('')}</div>`;
+}
 
-  function updateCounts() {
-    const done = getDone();
-    const doneIds = Object.keys(done);
-    const doneCount = doneIds.length;
-    const doneHigh = doneIds.filter(id => done[id].priority === 'HIGH').length;
-    const doneLow  = doneCount - doneHigh;
-    const openHigh = TOTAL_HIGH - doneHigh;
-    const openLow  = TOTAL_LOW  - doneLow;
-    const open     = TOTAL - doneCount;
+function renderReminders(){
+  const overdue=[
+    {o:'Prabhat',t:'Update QL tracking format',d:'2026-05-26',m:'Ambak WBR',p:'HIGH'},
+    {o:'Vijay/Aditya',t:'Send 12 weeks QL data to Raghu',d:'2026-05-26',m:'Ambak WBR',p:'HIGH'},
+    {o:'Tarun/Hitesh (via Vijay)',t:'Send insurance waterfall update by 2 PM',d:'2026-05-26',m:'Ambak WBR',p:'HIGH'},
+    {o:'Rashi',t:'Share comfort on 76 CR E2E number',d:'2026-05-26',m:'Ambak WBR',p:'HIGH'},
+    {o:'Vijay/E2E',t:'Move 20 CR cases into system',d:'2026-05-26',m:'Ambak WBR',p:'HIGH'},
+    {o:'Akash',t:'Post 2-3 Pune-Delhi coordination lead IDs',d:'2026-05-26',m:'Ambak WBR',p:'LOW'},
+    {o:'Vijay',t:'Track daily E2E DRR in self-tracking sheet',d:'2026-05-26',m:'Ambak WBR',p:'LOW'}
+  ];
+  const todayDue=[
+    {o:'Ankit',t:'Share hacky checklist timelines + bank-wise approach',d:'2026-05-27',m:'Ambak WBR',p:'HIGH'},
+    {o:'Raghu/Arvind',t:'Full catch-up on D2C, ops, institutional, retail',d:'2026-05-27',m:'Institutional Review',p:'HIGH'}
+  ];
+  const thisWeek=[
+    {o:'Vikas/Vijay/Aman/Ashish',t:'Pay-in sync + May scheme adjustment',d:'2026-05-28',m:'Retail Review',p:'HIGH'},
+    {o:'Ishaan, Ankit',t:'Hit May commitment: 250+ logins and 110 number',d:'2026-05-31',m:'Institutional Review',p:'HIGH'},
+    {o:'Rashi',t:'Create baseline document on extended-timeline problem',d:'2026-05-31',m:'Ambak WBR',p:'HIGH'},
+    {o:'Neerav',t:'Finalize Ahmedabad ABM hire',d:'2026-05-31',m:'Ambak WBR',p:'HIGH'},
+    {o:'Nagesh',t:'Close Bangalore hiring (city head, 2 ABMs, RMs)',d:'2026-05-31',m:'Ambak WBR',p:'HIGH'},
+    {o:'Ankit/Rishab',t:'Log 7 Bangalore files; resolve consent + property docs',d:'2026-05-31',m:'Ambak WBR',p:'HIGH'},
+    {o:'Pooja',t:'Train-the-trainer content + scheduling + assessment fix',d:'2026-05-31',m:'Ambak WBR',p:'HIGH'},
+    {o:'Ankita',t:'Present June targets to city heads',d:'2026-06-01',m:'April Funnel Review',p:'HIGH'},
+    {o:'Ankit, Ishaan',t:'Run joint institutional and E2E funnel review',d:'2026-06-01',m:'Institutional Review',p:'HIGH'},
+    {o:'Vijay/Ankit',t:'Ring-fence MAHADA 2600 leads with banker coordination',d:'2026-06-01',m:'Ambak WBR',p:'HIGH'},
+    {o:'Rishabh',t:'Meet Mada/partner + report back on lead data gap',d:'2026-06-02',m:'April Funnel Review',p:'HIGH'},
+    {o:'Telecom/Ops',t:'DID numbers configured and rolled out',d:'2026-06-04',m:'April Funnel Review',p:'HIGH'}
+  ];
+  let html='';
+  if(overdue.length){html+='<div class="reminder-group"><h4>Overdue (due yesterday or earlier)</h4>'+overdue.map(r=>`<div class="reminder-item overdue"><span class="badge badge-high">${r.p}</span><span><strong>${r.o}</strong> &mdash; ${r.t} &mdash; was due ${r.d} &mdash; ${r.m}</span></div>`).join('')+'</div>';}
+  if(todayDue.length){html+='<div class="reminder-group"><h4>Due Today</h4>'+todayDue.map(r=>`<div class="reminder-item due-today"><span class="badge badge-warn">${r.p}</span><span><strong>${r.o}</strong> &mdash; ${r.t} &mdash; ${r.m}</span></div>`).join('')+'</div>';}
+  if(thisWeek.length){html+='<div class="reminder-group"><h4>Due This Week (May 28 &ndash; June 4)</h4>'+thisWeek.map(r=>`<div class="reminder-item due-week"><span class="badge badge-brand">${r.p}</span><span><strong>${r.o}</strong> &mdash; ${r.t} &mdash; due ${r.d} &mdash; ${r.m}</span></div>`).join('')+'</div>';}
+  document.getElementById('reminders-body').innerHTML=html;
+}
 
-    document.getElementById('kpi-open').textContent  = open;
-    document.getElementById('kpi-high').textContent  = openHigh;
-    document.getElementById('kpi-high-sub').textContent = openHigh + ' remaining';
-    document.getElementById('kpi-low').textContent   = openLow;
-    document.getElementById('badge-high').textContent = openHigh + ' HIGH open';
-    document.getElementById('badge-low').textContent  = openLow + ' LOW open';
-    document.getElementById('high-col-count').textContent = openHigh + ' open';
-    document.getElementById('low-col-count').textContent  = openLow + ' open';
-    document.getElementById('done-pill').textContent = doneCount === 0 ? '0 done' : doneCount + ' done';
-    const doneBadge = document.getElementById('badge-done');
-    if (doneCount > 0) { doneBadge.style.display = 'inline-block'; doneBadge.textContent = doneCount + ' done'; }
-    else { doneBadge.style.display = 'none'; }
+function renderNotes(){
+  const ta=document.getElementById('notes-today');
+  ta.value=getNote();
+  ta.oninput=()=>localStorage.setItem(NOTE_KEY(),ta.value);
+  const arch=getArchive();
+  const el=document.getElementById('notes-archive');
+  if(!arch.length){el.innerHTML='<div style="color:var(--muted);font-size:12px">No archived notes yet.</div>';return;}
+  el.innerHTML=arch.slice().reverse().map(a=>`<div class="archive-entry"><span class="archive-date">${a.date}</span> &mdash; ${a.note.substring(0,120)}${a.note.length>120?'...':''}</div>`).join('');
+}
 
-    const strip = document.getElementById('done-strip');
-    if (doneCount > 0) {
-      strip.style.display = 'block';
-      const isOpen = document.getElementById('done-pile').classList.contains('open');
-      document.getElementById('done-toggle-label').textContent = (isOpen ? 'Hide ' : 'Show ') + doneCount + ' completed';
-    } else { strip.style.display = 'none'; }
+function toggleDone(id,cb){
+  const done=getDone();
+  if(cb.checked){if(!done.includes(id))done.push(id);}
+  else{const i=done.indexOf(id);if(i>-1)done.splice(i,1);}
+  setDone(done);render();showToast(cb.checked?'Marked done':'Reopened');
+}
 
-    // Overdue banner (static for now; JS-driven in future when dates are live)
-    // document.getElementById('overdue-banner').classList.toggle('has-items', overdueCount > 0);
-  }
+function toggleHistory(id){const el=document.getElementById('hist-'+id);if(el)el.classList.toggle('open');}
 
-  function toggleDone(checkbox) {
-    const id = checkbox.dataset.id;
-    const item = checkbox.closest('.action-item');
-    const done = getDone();
-    if (checkbox.checked) {
-      const main = item.querySelector('.ai-main').textContent.trim();
-      const ownerEl = item.querySelector('.owner-name');
-      done[id] = { task: main, owner: ownerEl ? ownerEl.textContent.trim() : '', priority: item.dataset.priority, doneAt: new Date().toISOString() };
-      saveDone(done);
-      item.classList.add('done');
-      setTimeout(() => document.getElementById('done-pile').appendChild(item), 260);
-    } else {
-      delete done[id]; saveDone(done);
-      item.classList.remove('done');
-      document.getElementById(item.dataset.priority === 'HIGH' ? 'high-items-list' : 'low-items-list').appendChild(item);
-    }
-    updateCounts();
-  }
+function toggleLowCol(){
+  const el=document.getElementById('low-items');
+  const btn=document.querySelector('.col-toggle');
+  if(el.style.display==='none'){el.style.display='';btn.textContent='Collapse';}
+  else{el.style.display='none';btn.textContent='Expand';}
+}
 
-  function toggleDonePile() {
-    document.getElementById('done-pile').classList.toggle('open');
-    updateCounts();
-  }
+function toggleDonePile(){
+  const b=document.getElementById('done-body');
+  const c=document.getElementById('done-caret');
+  b.classList.toggle('open');
+  c.style.transform=b.classList.contains('open')?'rotate(180deg)':'';
+}
 
-  let lowCollapsed = false;
-  function toggleLowCol() {
-    lowCollapsed = !lowCollapsed;
-    const wrap = document.getElementById('low-items-wrap');
-    const label = document.getElementById('low-toggle-label');
-    const chev  = document.getElementById('low-chevron');
-    if (lowCollapsed) {
-      wrap.style.maxHeight = wrap.scrollHeight + 'px';
-      requestAnimationFrame(() => wrap.classList.add('collapsed'));
-      label.textContent = 'Expand';
-      chev.style.transform = 'rotate(0deg)';
-    } else {
-      wrap.classList.remove('collapsed');
-      wrap.style.maxHeight = wrap.scrollHeight + 'px';
-      setTimeout(() => wrap.style.maxHeight = '', 320);
-      label.textContent = 'Collapse';
-      chev.style.transform = 'rotate(90deg)';
-    }
-  }
+function toggleColl(h){
+  const b=h.nextElementSibling;
+  const c=h.querySelector('.caret');
+  b.classList.toggle('open');
+  c.classList.toggle('up');
+}
 
-  function exportDone() {
-    const done = getDone(); const ids = Object.keys(done);
-    const toast = document.getElementById('toast');
-    if (!ids.length) { showToast('Nothing checked off yet.'); return; }
-    const lines = ids.map(id => { const d = done[id]; return '- [x] ' + d.owner + ' - ' + d.task + ' (done: ' + d.doneAt.split('T')[0] + ')'; });
-    const out = ['AMBAK COMPLETED ITEMS - ' + TODAY, 'Paste this to Claude to sync with _actions_db.json and stop reminders.', '', ...lines, '', '--- end ---'].join('\n');
-    navigator.clipboard.writeText(out).then(() => showToast('Copied ' + ids.length + ' item' + (ids.length === 1 ? '' : 's') + '!'));
-  }
+function showToast(msg){
+  const t=document.getElementById('toast');
+  t.textContent=msg;t.style.opacity='1';
+  setTimeout(()=>t.style.opacity='0',2000);
+}
 
-  function exportNotes() {
-    const arch = getArchive(); const today = todayArea.value.trim();
-    if (!today && !Object.keys(arch).length) { showToast('No notes to export yet.'); return; }
-    const lines = ['AMBAK LEADERSHIP NOTES - exported ' + TODAY, 'Paste this to Claude for context in the next report analysis.', ''];
-    if (today) { lines.push('=== ' + TODAY + ' (today) ==='); lines.push(today); lines.push(''); }
-    Object.entries(arch).filter(([d]) => d !== TODAY).sort(([a],[b]) => b.localeCompare(a)).forEach(([date, text]) => { lines.push('=== ' + date + ' ==='); lines.push(text); lines.push(''); });
-    lines.push('--- end ---');
-    navigator.clipboard.writeText(lines.join('\n')).then(() => showToast('Notes copied!'));
-  }
+function exportDone(){
+  const done=getDone();
+  if(!done.length){showToast('Nothing done yet');return;}
+  const di=ITEMS.filter(i=>done.includes(i.id));
+  let txt=`AMBAK COMPLETED ITEMS - ${TODAY}\nPaste this to Claude to sync with _actions_db.json and stop reminders.\n\n`;
+  txt+=di.map(i=>`- [x] ${i.owner} - ${i.task} (done: ${TODAY})`).join('\n');
+  txt+='\n--- end ---';
+  navigator.clipboard.writeText(txt).then(()=>showToast('Copied!')).catch(()=>alert(txt));
+}
 
-  function showToast(msg) {
-    const t = document.getElementById('toast'); t.textContent = msg; t.classList.add('show');
-    setTimeout(() => t.classList.remove('show'), 3000);
-  }
+function exportNotes(){
+  const note=getNote().trim();
+  if(!note){showToast('No notes today');return;}
+  const arch=getArchive();
+  const ex=arch.findIndex(a=>a.date===TODAY);
+  if(ex>-1)arch[ex].note=note;else arch.push({date:TODAY,note});
+  localStorage.setItem(ARCH_KEY,JSON.stringify(arch));
+  let txt=`AMBAK LEADERSHIP NOTES - exported ${TODAY}\n\n${note}\n--- end ---`;
+  navigator.clipboard.writeText(txt).then(()=>showToast('Notes exported & archived')).catch(()=>alert(txt));
+  renderNotes();
+}
 
-  function restoreDoneState() {
-    const done = getDone();
-    if (!Object.keys(done).length) return;
-    const pile = document.getElementById('done-pile');
-    Object.keys(done).forEach(id => {
-      const cb = document.querySelector(`input.ai-check[data-id="${id}"]`);
-      if (!cb) return;
-      cb.checked = true;
-      const item = cb.closest('.action-item');
-      if (!item) return;
-      item.classList.add('done');
-      pile.appendChild(item);
-    });
-    updateCounts();
-  }
-
-  restoreDoneState();
+render();renderIntel();renderQuestions();renderScorecards();renderReminders();renderNotes();
 </script>
 </body>
 </html>
-<!-- Wed May 27 10:29:57 UTC 2026 -->
