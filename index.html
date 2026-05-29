@@ -519,7 +519,29 @@ function exportNotes(){
   renderNotes();
 }
 
-render();renderIntel();renderQuestions();renderScorecards();renderReminders();renderNotes();
+window.onerror = function(msg, src, line, col, err) {
+  var el = document.getElementById('high-items');
+  if(el) el.innerHTML = '<div style="padding:20px;color:red;font-size:13px;font-weight:bold">JS ERROR: ' + msg + ' (line ' + line + ')</div>';
+  return false;
+};
+function initDashboard() {
+  try {
+    render();
+    renderIntel();
+    renderQuestions();
+    renderScorecards();
+    renderReminders();
+    renderNotes();
+  } catch(e) {
+    var el = document.getElementById('high-items');
+    if(el) el.innerHTML = '<div style="padding:20px;color:red;font-size:13px;font-weight:bold">RENDER ERROR: ' + e.message + '<br>' + (e.stack||'') + '</div>';
+  }
+}
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initDashboard);
+} else {
+  initDashboard();
+}
 </script>
 </body>
 </html>
