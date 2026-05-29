@@ -341,7 +341,7 @@ const QUESTIONS=[
 
 const OVERDUE_IDS=['i12','i14','i17','i18','i19','i43','i44'];
 
-function getDone(){try{return JSON.parse(localStorage.getItem(DONE_KEY)||'[]')}catch{return[]}}
+function getDone(){try{const v=JSON.parse(localStorage.getItem(DONE_KEY)||'[]');return Array.isArray(v)?v:[];}catch{return[]}}
 function setDone(a){localStorage.setItem(DONE_KEY,JSON.stringify(a))}
 function getNote(){return localStorage.getItem(NOTE_KEY())||''}
 function getArchive(){try{return JSON.parse(localStorage.getItem(ARCH_KEY)||'[]')}catch{return[]}}
