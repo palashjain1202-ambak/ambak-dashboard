@@ -173,7 +173,7 @@ function card(it,done){
   return '<div class="card'+(done?' dc':'')+'" id="c'+it.id+'">'+
     '<div class="itop"><input type="checkbox" class="icb"'+(done?' checked':'')+' onchange="td(\''+it.id+'\',this.checked)">'+
     '<div class="ib"><div class="iown">'+it.owner+'</div>'+
-    '<div class="itk'+(done?' dt':'")>'+it.task+'</div>'+
+    '<div class="itk'+(done?' dt':'')+'">'+it.task+'</div>'+
     '<div class="im"><span class="badge '+(it.priority==='HIGH'?'bh':'bl2')+'">'+it.priority+'</span>'+
     (it.due?'<span class="badge bd">'+(ov?'OVERDUE: ':'Due: ')+it.due+'</span>':'')+
     (it.topic?'<span class="badge bt">'+it.topic+'</span>':'')+
