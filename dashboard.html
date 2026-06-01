@@ -1,320 +1,256 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Ambak Leadership Dashboard</title>
 <style>
-:root{--brand:#5B21B6;--brand-dark:#3B0F8C;--brand-deeper:#2A0A6B;--brand-light:#EDE9FE;--brand-mid:#7C3AED;--brand-soft:#F5F3FF;--bg:#F7F6FB;--surface:#FFFFFF;--border:#E5E1F5;--text:#1C1033;--muted:#6B7280;--high:#DC2626;--high-bg:#FEF2F2;--low:#059669;--low-bg:#ECFDF5;--warn:#D97706;--warn-bg:#FFFBEB;--radius:10px;--shadow:0 1px 4px rgba(91,33,182,0.08);--shadow-md:0 4px 16px rgba(91,33,182,0.12);}
+:root{--brand:#5B21B6;--brand-dark:#3B0F8C;--brand-deeper:#2A0A6B;--brand-light:#EDE9FE;--brand-mid:#7C3AED;--brand-soft:#F5F3FF;--bg:#F7F6FB;--surface:#FFF;--border:#E5E1F5;--text:#1C1033;--muted:#6B7280;--high:#DC2626;--high-bg:#FEF2F2;--low:#059669;--low-bg:#ECFDF5;--warn:#D97706;--warn-bg:#FFFBEB;--r:10px;--sh:0 1px 4px rgba(91,33,182,.08);--shm:0 4px 16px rgba(91,33,182,.12);}
 *{box-sizing:border-box;margin:0;padding:0;}
 body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:14px;line-height:1.5;}
-#topbar{position:sticky;top:0;z-index:100;background:linear-gradient(135deg,var(--brand-deeper) 0%,var(--brand) 60%,var(--brand-mid) 100%);padding:0 24px;height:60px;display:flex;align-items:center;justify-content:space-between;box-shadow:0 2px 12px rgba(0,0,0,0.2);}
-#topbar-left{display:flex;align-items:center;gap:12px;}
-#wordmark{color:#fff;font-size:18px;font-weight:800;letter-spacing:0.06em;}
-#topbar-divider{width:1px;height:28px;background:rgba(255,255,255,0.25);}
-#topbar-title{display:flex;flex-direction:column;}
-#topbar-title span:first-child{color:#fff;font-size:15px;font-weight:700;}
-#topbar-meta{color:rgba(255,255,255,0.6);font-size:11px;}
-#topbar-right{display:flex;align-items:center;gap:10px;}
-.btn-outline{background:transparent;border:1.5px solid rgba(255,255,255,0.7);color:#fff;padding:6px 14px;border-radius:6px;cursor:pointer;font-size:13px;font-weight:600;}
-.btn-solid{background:#fff;border:none;color:var(--brand);padding:6px 14px;border-radius:6px;cursor:pointer;font-size:13px;font-weight:700;}
-#done-pill{background:var(--brand-light);color:var(--brand);border-radius:20px;padding:3px 10px;font-size:12px;font-weight:700;}
-#toast{color:rgba(255,255,255,0.9);font-size:12px;opacity:0;transition:opacity 0.3s;}
-#overdue-banner{display:none;background:linear-gradient(90deg,#7f1d1d,#DC2626);color:#fff;padding:10px 24px;font-size:13px;font-weight:600;}
-#focus-strip{background:linear-gradient(135deg,var(--brand-deeper),var(--brand-dark));padding:14px 24px;display:flex;gap:10px;flex-wrap:wrap;}
-.focus-chip{background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);border-radius:8px;padding:8px 12px;color:#fff;font-size:12px;flex:1;min-width:200px;}
-.focus-chip .fc-owner{font-weight:700;font-size:11px;opacity:0.7;text-transform:uppercase;}
-.focus-chip .fc-task{margin-top:2px;font-size:13px;}
-.focus-chip .fc-due{margin-top:4px;font-size:11px;opacity:0.6;}
-#kpi-row{display:flex;gap:12px;padding:20px 24px 0;flex-wrap:wrap;}
-.kpi{background:var(--surface);border-radius:var(--radius);box-shadow:var(--shadow);padding:16px 20px;flex:1;min-width:120px;position:relative;overflow:hidden;}
+#tb{position:sticky;top:0;z-index:100;background:linear-gradient(135deg,var(--brand-deeper) 0%,var(--brand) 60%,var(--brand-mid) 100%);padding:0 24px;height:60px;display:flex;align-items:center;justify-content:space-between;box-shadow:0 2px 12px rgba(0,0,0,.2);}
+#tbl{display:flex;align-items:center;gap:12px;}
+#wm{color:#fff;font-size:18px;font-weight:800;letter-spacing:.06em;}
+.tdiv{width:1px;height:28px;background:rgba(255,255,255,.25);}
+#tt{display:flex;flex-direction:column;}
+.tt1{color:#fff;font-size:15px;font-weight:700;}
+.tt2{color:rgba(255,255,255,.6);font-size:11px;}
+#tbr{display:flex;align-items:center;gap:10px;}
+.bol{background:transparent;border:1.5px solid rgba(255,255,255,.7);color:#fff;padding:6px 14px;border-radius:6px;cursor:pointer;font-size:13px;font-weight:600;}
+.bsl{background:#fff;border:none;color:var(--brand);padding:6px 14px;border-radius:6px;cursor:pointer;font-size:13px;font-weight:700;}
+#dpill{background:var(--brand-light);color:var(--brand);border-radius:20px;padding:3px 10px;font-size:12px;font-weight:700;}
+#toast{color:rgba(255,255,255,.9);font-size:12px;opacity:0;transition:opacity .3s;}
+#obanner{display:none;background:linear-gradient(90deg,#7f1d1d,#DC2626);color:#fff;padding:10px 24px;font-size:13px;font-weight:600;}
+#fs{background:linear-gradient(135deg,var(--brand-deeper),var(--brand-dark));padding:14px 24px;display:flex;gap:10px;flex-wrap:wrap;min-height:52px;}
+.fc{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:8px;padding:8px 12px;color:#fff;font-size:12px;flex:1;min-width:180px;}
+.fco{font-weight:700;font-size:11px;opacity:.7;text-transform:uppercase;}
+.fct{margin-top:2px;font-size:13px;}
+.fcd{margin-top:3px;font-size:11px;opacity:.6;}
+#kpi{display:flex;gap:12px;padding:20px 24px 0;flex-wrap:wrap;}
+.kpi{background:var(--surface);border-radius:var(--r);box-shadow:var(--sh);padding:16px 20px;flex:1;min-width:110px;position:relative;overflow:hidden;}
 .kpi::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;}
-.kpi-v{font-size:28px;font-weight:800;}
-.kpi-l{font-size:11px;color:var(--muted);margin-top:2px;text-transform:uppercase;letter-spacing:0.05em;}
-.kpi.meetings::after{background:var(--brand);}
-.kpi.opn::after{background:var(--brand-mid);}
-.kpi.hcount::after{background:var(--high);}
-.kpi.lcount::after{background:var(--low);}
-.kpi.ovpct::after{background:var(--warn);}
-.kpi.qcount::after{background:#0891b2;}
+.kv{font-size:26px;font-weight:800;}.kl{font-size:11px;color:var(--muted);margin-top:2px;text-transform:uppercase;letter-spacing:.05em;}
+.k1::after{background:var(--brand);}.k2::after{background:var(--brand-mid);}.k3::after{background:var(--high);}.k4::after{background:var(--low);}.k5::after{background:var(--warn);}.k6::after{background:#0891b2;}
 #main{padding:20px 24px;display:grid;grid-template-columns:1fr 1fr;gap:20px;}
-.col-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;}
-.col-header h2{font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;}
-.col-header h2.hl{color:var(--high);}
-.col-header h2.ll{color:var(--low);}
-.toggle-btn{background:none;border:1px solid var(--border);color:var(--muted);padding:3px 10px;border-radius:5px;cursor:pointer;font-size:12px;}
-.item-card{background:var(--surface);border-radius:var(--radius);box-shadow:var(--shadow);margin-bottom:10px;border:1px solid var(--border);}
-.item-card.done-card{opacity:0.5;border-style:dashed;}
-.item-top{display:flex;align-items:flex-start;gap:10px;padding:12px 14px 8px;}
-.item-cb{margin-top:2px;width:16px;height:16px;cursor:pointer;accent-color:var(--brand);}
-.item-body{flex:1;}
-.item-owner{font-size:11px;font-weight:700;color:var(--brand);text-transform:uppercase;letter-spacing:0.04em;}
-.item-task{font-size:13px;margin-top:2px;line-height:1.4;}
-.item-task.done-text{text-decoration:line-through;color:var(--muted);}
-.item-meta{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px;}
+.ch{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;}
+.ch h2{font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;}
+.ch h2.hl{color:var(--high);}.ch h2.ll{color:var(--low);}
+.tbtn{background:none;border:1px solid var(--border);color:var(--muted);padding:3px 10px;border-radius:5px;cursor:pointer;font-size:12px;}
+.card{background:var(--surface);border-radius:var(--r);box-shadow:var(--sh);margin-bottom:10px;border:1px solid var(--border);}
+.card.dc{opacity:.5;border-style:dashed;}
+.itop{display:flex;align-items:flex-start;gap:10px;padding:12px 14px 8px;}
+.icb{margin-top:2px;width:16px;height:16px;cursor:pointer;accent-color:var(--brand);}
+.ib{flex:1;min-width:0;}
+.iown{font-size:11px;font-weight:700;color:var(--brand);text-transform:uppercase;letter-spacing:.04em;}
+.itk{font-size:13px;margin-top:2px;line-height:1.4;}
+.itk.dt{text-decoration:line-through;color:var(--muted);}
+.im{display:flex;gap:5px;flex-wrap:wrap;margin-top:6px;}
 .badge{display:inline-block;padding:2px 7px;border-radius:4px;font-size:11px;font-weight:600;}
-.badge.high{background:var(--high-bg);color:var(--high);}
-.badge.low{background:var(--low-bg);color:var(--low);}
-.badge.due{background:var(--warn-bg);color:var(--warn);}
-.badge.topic{background:var(--brand-soft);color:var(--brand);}
-.badge.mtg{background:#f0f9ff;color:#0369a1;}
-.history-btn{background:none;border:1px solid var(--border);color:var(--muted);padding:2px 8px;border-radius:4px;cursor:pointer;font-size:11px;margin-left:auto;white-space:nowrap;}
-.history-drawer{display:none;border-top:1px solid var(--border);padding:10px 14px;background:var(--bg);border-radius:0 0 var(--radius) var(--radius);}
-.history-drawer.open{display:block;}
-.hist-entry{display:flex;gap:8px;padding:4px 0;border-bottom:1px solid var(--border);font-size:12px;}
-.hist-entry:last-child{border-bottom:none;}
-.hist-date{color:var(--muted);white-space:nowrap;}
-.hb{padding:1px 6px;border-radius:3px;font-size:10px;font-weight:700;white-space:nowrap;}
-.hb-created{background:#ede9fe;color:#5B21B6;}
-.hb-completed{background:#d1fae5;color:#065f46;}
-.hb-deadline_changed{background:#fef3c7;color:#92400e;}
-#done-section{grid-column:1/-1;}
-#done-pile{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
-#intel-row{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;padding:0 24px 20px;}
-.intel-card{background:var(--surface);border-radius:var(--radius);box-shadow:var(--shadow);padding:16px;border:1px solid var(--border);}
-.intel-card h3{font-size:13px;font-weight:700;color:var(--brand);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:10px;}
-.intel-item{padding:7px 0;border-bottom:1px solid var(--border);font-size:12px;line-height:1.4;}
-.intel-item:last-child{border-bottom:none;}
-.intel-item .mtag{font-size:10px;color:var(--muted);display:block;margin-top:2px;}
-.part-row{display:flex;align-items:center;gap:8px;padding:5px 0;border-bottom:1px solid var(--border);}
-.part-row:last-child{border-bottom:none;}
-.part-name{font-size:12px;font-weight:600;width:100px;}
-.part-bar-bg{flex:1;background:var(--brand-light);border-radius:4px;height:8px;overflow:hidden;}
-.part-bar{background:var(--brand);height:8px;border-radius:4px;}
-.part-count{font-size:11px;color:var(--muted);width:24px;text-align:right;}
-#notes-section{padding:0 24px 20px;}
-.notes-card{background:var(--surface);border-radius:var(--radius);box-shadow:var(--shadow);padding:16px;border:1px solid var(--border);}
-.notes-card h3{font-size:13px;font-weight:700;color:var(--brand);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:10px;}
-#notes-today{width:100%;min-height:80px;border:1px solid var(--border);border-radius:6px;padding:8px;font-size:13px;resize:vertical;font-family:inherit;}
-.archive-entry{padding:8px;border:1px solid var(--border);border-radius:6px;margin:6px 0;font-size:12px;background:var(--bg);}
-.arc-date{font-size:11px;font-weight:700;color:var(--muted);margin-bottom:4px;}
-.section-wrap{padding:0 24px 16px;}
-.section-header{display:flex;align-items:center;justify-content:space-between;cursor:pointer;padding:10px 14px;background:var(--surface);border-radius:var(--radius);border:1px solid var(--border);margin-bottom:8px;user-select:none;}
-.section-header h3{font-size:13px;font-weight:700;color:var(--brand);text-transform:uppercase;letter-spacing:0.05em;}
-.chevron{color:var(--muted);transition:transform 0.2s;font-size:12px;}
-.chevron.open{transform:rotate(180deg);}
-.section-body{display:none;}
-.section-body.open{display:block;}
-.oq-item{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:10px 14px;margin-bottom:8px;}
-.oq-q{font-size:13px;font-weight:600;margin-bottom:4px;}
-.oq-meta{font-size:11px;color:var(--muted);}
-.score-row{display:flex;align-items:center;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border);font-size:13px;}
-.score-row:last-child{border-bottom:none;}
-.score-count{font-weight:700;color:var(--brand);}
-.theme-chip{display:inline-block;background:var(--brand-light);color:var(--brand);padding:4px 12px;border-radius:20px;font-size:12px;font-weight:600;margin:4px;}
+.bh{background:var(--high-bg);color:var(--high);}.bl2{background:var(--low-bg);color:var(--low);}.bd{background:var(--warn-bg);color:var(--warn);}.bt{background:var(--brand-soft);color:var(--brand);}.bm{background:#f0f9ff;color:#0369a1;}
+.hbtn{background:none;border:1px solid var(--border);color:var(--muted);padding:2px 8px;border-radius:4px;cursor:pointer;font-size:11px;margin-left:auto;flex-shrink:0;}
+.hd{display:none;border-top:1px solid var(--border);padding:10px 14px;background:var(--bg);border-radius:0 0 var(--r) var(--r);}
+.hd.open{display:block;}
+.hr2{display:flex;gap:8px;padding:4px 0;border-bottom:1px solid var(--border);font-size:11px;align-items:baseline;}
+.hr2:last-child{border-bottom:none;}
+.hdate{color:var(--muted);white-space:nowrap;}
+.hb2{padding:1px 6px;border-radius:3px;font-size:10px;font-weight:700;white-space:nowrap;}
+.hb2.c1{background:#ede9fe;color:#5B21B6;}.hb2.c2{background:#d1fae5;color:#065f46;}.hb2.c3{background:#fef3c7;color:#92400e;}
+#dsec{grid-column:1/-1;display:none;}
+#dpile{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+#ir{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;padding:0 24px 20px;}
+.ic{background:var(--surface);border-radius:var(--r);box-shadow:var(--sh);padding:16px;border:1px solid var(--border);max-height:440px;overflow-y:auto;}
+.ic h3{font-size:13px;font-weight:700;color:var(--brand);text-transform:uppercase;letter-spacing:.05em;margin-bottom:10px;position:sticky;top:0;background:var(--surface);padding-bottom:6px;border-bottom:1px solid var(--border);}
+.ii{padding:7px 0;border-bottom:1px solid var(--border);font-size:12px;line-height:1.4;}
+.ii:last-child{border-bottom:none;}
+.itag{font-size:10px;color:var(--muted);display:block;margin-top:2px;}
+.pr{display:flex;align-items:center;gap:8px;padding:4px 0;border-bottom:1px solid var(--border);}
+.pr:last-child{border-bottom:none;}
+.pn{font-size:12px;font-weight:600;width:100px;}
+.pbg{flex:1;background:var(--brand-light);border-radius:4px;height:8px;overflow:hidden;}
+.pb{background:var(--brand);height:8px;border-radius:4px;}
+.pc{font-size:11px;color:var(--muted);width:24px;text-align:right;}
+#ns{padding:0 24px 20px;}
+.nc{background:var(--surface);border-radius:var(--r);box-shadow:var(--sh);padding:16px;border:1px solid var(--border);}
+.nc h3{font-size:13px;font-weight:700;color:var(--brand);text-transform:uppercase;letter-spacing:.05em;margin-bottom:10px;}
+#nt{width:100%;min-height:80px;border:1px solid var(--border);border-radius:6px;padding:8px;font-size:13px;resize:vertical;font-family:inherit;}
+.ae{padding:8px;border:1px solid var(--border);border-radius:6px;margin:6px 0;font-size:12px;background:var(--bg);}
+.ad{font-size:11px;font-weight:700;color:var(--muted);margin-bottom:4px;}
+.sw{padding:0 24px 16px;}
+.sh{display:flex;align-items:center;justify-content:space-between;cursor:pointer;padding:10px 14px;background:var(--surface);border-radius:var(--r);border:1px solid var(--border);margin-bottom:8px;user-select:none;}
+.sh h3{font-size:13px;font-weight:700;color:var(--brand);text-transform:uppercase;letter-spacing:.05em;}
+.cv{color:var(--muted);transition:transform .2s;font-size:12px;}
+.cv.open{transform:rotate(180deg);}
+.sb{display:none;}.sb.open{display:block;}
+.oqi{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:10px 14px;margin-bottom:8px;}
+.oqq{font-size:13px;font-weight:600;margin-bottom:4px;}
+.oqm{font-size:11px;color:var(--muted);}
+.sr{display:flex;align-items:center;justify-content:space-between;padding:7px 0;border-bottom:1px solid var(--border);font-size:13px;}
+.sr:last-child{border-bottom:none;}
+.sc{font-weight:700;color:var(--brand);font-size:12px;}
+.tc{display:inline-block;background:var(--brand-light);color:var(--brand);padding:4px 12px;border-radius:20px;font-size:12px;font-weight:600;margin:4px;}
+.mi{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:10px 14px;margin-bottom:8px;display:flex;gap:12px;align-items:flex-start;}
+.mdate{font-size:11px;font-weight:700;color:var(--brand);white-space:nowrap;}
+.mname{font-size:13px;font-weight:600;}
+.mcnt{font-size:11px;color:var(--muted);margin-top:3px;}
+@media(max-width:900px){#main,#ir,#dpile{grid-template-columns:1fr;}}
 </style>
 </head>
 <body>
-<div id="topbar">
-  <div id="topbar-left">
+<div id="tb">
+  <div id="tbl">
     <svg width="28" height="34" viewBox="0 0 28 34" fill="none"><circle cx="14" cy="2" r="2.2" fill="white"/><path fill-rule="evenodd" fill="white" d="M14 5.8 L0.5 28 Q -1 31.5 2 31 Q 6.5 30.5 11 27 Q 12 28.8 14 28.8 Q 16 28.8 17 27 Q 21.5 30.5 26 31 Q 29 31.5 27.5 28 Z M14 12 L6.5 26 Q 9.8 25.5 14 23.5 Q 18.2 25.5 21.5 26 Z"/><circle cx="14" cy="33" r="2" fill="white"/></svg>
-    <span id="wordmark">AMBAK</span>
-    <div id="topbar-divider"></div>
-    <div id="topbar-title">
-      <span>Leadership Dashboard</span>
-      <span id="topbar-meta">Last updated 2026-06-01 13:16 IST &nbsp;|&nbsp; 1 meeting &nbsp;|&nbsp; <span id="meta-open">--</span> open items</span>
+    <span id="wm">AMBAK</span><div class="tdiv"></div>
+    <div id="tt">
+      <span class="tt1">Leadership Dashboard</span>
+      <span class="tt2">Last updated 2026-06-01 &#x2022; 6 meetings &#x2022; <span id="mo">--</span> open items</span>
     </div>
   </div>
-  <div id="topbar-right">
-    <button class="btn-outline" onclick="exportNotes()">Export Notes</button>
-    <button class="btn-solid" onclick="exportDone()">Export Done</button>
-    <span id="done-pill">0 done</span>
-    <span id="toast"></span>
+  <div id="tbr">
+    <button class="bol" onclick="exportNotes()">Export Notes</button>
+    <button class="bsl" onclick="exportDone()">Export Done</button>
+    <span id="dpill">0 done</span><span id="toast"></span>
   </div>
 </div>
-<div id="overdue-banner">&#9888; Overdue items detected - check the action tracker below</div>
-<div id="focus-strip"></div>
-<div id="kpi-row">
-  <div class="kpi meetings"><div class="kpi-v">1</div><div class="kpi-l">Meetings (7d)</div></div>
-  <div class="kpi opn"><div class="kpi-v" id="kpi-open">20</div><div class="kpi-l">Open Items</div></div>
-  <div class="kpi hcount"><div class="kpi-v" id="kpi-high">14</div><div class="kpi-l">HIGH Priority</div></div>
-  <div class="kpi lcount"><div class="kpi-v" id="kpi-low">6</div><div class="kpi-l">LOW Priority</div></div>
-  <div class="kpi ovpct"><div class="kpi-v" id="kpi-overdue">0%</div><div class="kpi-l">% Overdue</div></div>
-  <div class="kpi qcount"><div class="kpi-v">7</div><div class="kpi-l">Open Questions</div></div>
+<div id="obanner">&#9888; Overdue items - scroll to action tracker</div>
+<div id="fs"></div>
+<div id="kpi">
+  <div class="kpi k1"><div class="kv">5</div><div class="kl">Meetings (7d)</div></div>
+  <div class="kpi k2"><div class="kv" id="ko">66</div><div class="kl">Open Items</div></div>
+  <div class="kpi k3"><div class="kv" id="kh">43</div><div class="kl">HIGH Priority</div></div>
+  <div class="kpi k4"><div class="kv" id="kl2">23</div><div class="kl">LOW Priority</div></div>
+  <div class="kpi k5"><div class="kv" id="kp">24%</div><div class="kl">% Overdue</div></div>
+  <div class="kpi k6"><div class="kv">29</div><div class="kl">Open Questions</div></div>
 </div>
 <div id="main">
-  <div id="high-col">
-    <div class="col-header"><h2 class="hl">HIGH Priority</h2></div>
-    <div id="high-items"></div>
-  </div>
-  <div id="low-col">
-    <div class="col-header"><h2 class="ll">LOW Priority</h2><button class="toggle-btn" onclick="toggleLowCol(this)">Collapse</button></div>
-    <div id="low-items"></div>
-  </div>
-  <div id="done-section" style="display:none;">
-    <div class="col-header"><h2 style="color:var(--muted)">Completed</h2></div>
-    <div id="done-pile"></div>
-  </div>
+  <div><div class="ch"><h2 class="hl">HIGH Priority</h2></div><div id="hi"></div></div>
+  <div><div class="ch"><h2 class="ll">LOW Priority</h2><button class="tbtn" onclick="toggleLow(this)">Collapse</button></div><div id="lo"></div></div>
+  <div id="dsec"><div class="ch"><h2 style="color:var(--muted)">Completed</h2></div><div id="dpile"></div></div>
 </div>
-<div id="intel-row">
-  <div class="intel-card"><h3>Decisions Log</h3><div id="decisions-list"></div></div>
-  <div class="intel-card"><h3>Meeting Dynamics</h3><div id="dynamics-list"></div></div>
-  <div class="intel-card"><h3>Participation Tracker</h3><div id="participation-list"></div></div>
+<div id="ir">
+  <div class="ic"><h3>Decisions (25)</h3><div id="dl"></div></div>
+  <div class="ic"><h3>Meeting Dynamics</h3><div id="dyl"></div></div>
+  <div class="ic"><h3>Participation Tracker</h3><div id="pl"></div></div>
 </div>
-<div id="notes-section">
-  <div class="notes-card">
-    <h3>Leadership Notes</h3>
-    <textarea id="notes-today" placeholder="Today's notes (auto-saved, resets daily)..."></textarea>
-    <div id="notes-archive"></div>
-  </div>
+<div id="ns"><div class="nc"><h3>Leadership Notes</h3>
+  <textarea id="nt" placeholder="Today's notes (auto-saved, resets daily)..."></textarea>
+  <div id="na"></div>
+</div></div>
+<div class="sw">
+  <div class="sh" onclick="tSec('oqb','oqc')"><h3>Open Questions (29)</h3><span class="cv open" id="oqc">&#9660;</span></div>
+  <div class="sb open" id="oqb"><div id="oql"></div></div>
 </div>
-<div class="section-wrap">
-  <div class="section-header" onclick="toggleSection('oq-body','oq-chev')">
-    <h3>Open Questions (7)</h3><span class="chevron open" id="oq-chev">&#9660;</span>
-  </div>
-  <div class="section-body open" id="oq-body"><div id="oq-list"></div></div>
+<div class="sw">
+  <div class="sh" onclick="tSec('mb','mc')"><h3>All Meetings (6)</h3><span class="cv open" id="mc">&#9660;</span></div>
+  <div class="sb open" id="mb"><div id="ml"></div></div>
 </div>
-<div class="section-wrap">
-  <div class="section-header" onclick="toggleSection('score-body','score-chev')">
-    <h3>Owner Scorecards</h3><span class="chevron" id="score-chev">&#9660;</span>
-  </div>
-  <div class="section-body" id="score-body">
-    <div class="intel-card"><div id="scorecard-list"></div></div>
-  </div>
+<div class="sw">
+  <div class="sh" onclick="tSec('scb','scc')"><h3>Owner Scorecards</h3><span class="cv" id="scc">&#9660;</span></div>
+  <div class="sb" id="scb"><div class="ic"><div id="scl"></div></div></div>
 </div>
-<div class="section-wrap">
-  <div class="section-header" onclick="toggleSection('themes-body','themes-chev')">
-    <h3>Key Themes</h3><span class="chevron" id="themes-chev">&#9660;</span>
-  </div>
-  <div class="section-body" id="themes-body">
-    <div style="padding:12px 0;">
-      <span class="theme-chip">Sanction Conversion</span><span class="theme-chip">Partial Login Fix</span>
-      <span class="theme-chip">Pune Accountability</span><span class="theme-chip">Delhi NCR Execution</span>
-      <span class="theme-chip">E2E vs High Margin</span><span class="theme-chip">CAM Structure</span>
-      <span class="theme-chip">Mahada Pipeline</span><span class="theme-chip">Insurance Scaling</span>
-      <span class="theme-chip">Weekly Cadence</span><span class="theme-chip">Google/Meta Budget Shift</span>
-    </div>
-  </div>
+<div class="sw">
+  <div class="sh" onclick="tSec('thb','thc')"><h3>Key Themes</h3><span class="cv" id="thc">&#9660;</span></div>
+  <div class="sb" id="thb"><div style="padding:12px 0;">
+    <span class="tc">Sanction Conversion</span><span class="tc">Partial Login Fix</span><span class="tc">Pune Accountability</span>
+    <span class="tc">Delhi NCR Execution</span><span class="tc">E2E vs High Margin</span><span class="tc">CAM Structure</span>
+    <span class="tc">Mahada Pipeline</span><span class="tc">Insurance Scaling</span><span class="tc">QL Training</span>
+    <span class="tc">Pay-in Module</span><span class="tc">Co-lending</span><span class="tc">Institutional Review</span>
+  </div></div>
 </div>
 <script>
-var DONE_KEY='ambak_done_items';
-var TODAY='2026-06-01';
-var ITEMS=[
-  {id:'a1',owner:'Ankit',task:'Review 25 planned sanctions from last week and identify root cause of only 4 completions',due:'',topic:'Sanction conversion',meeting:'May Funnel Review',priority:'HIGH',history:[{date:'2026-06-01',type:'created',detail:'First captured from May Funnel Review on 2026-06-01'}]},
-  {id:'a2',owner:'Ankit',task:'Sit with Avinash today to solve FBM-RM coordination gap for Noida cases',due:'2026-06-01',topic:'Delhi NCR execution',meeting:'May Funnel Review',priority:'HIGH',history:[{date:'2026-06-01',type:'created',detail:'First captured from May Funnel Review on 2026-06-01'}]},
-  {id:'a3',owner:'Ankit',task:'Circle off all confirmed May disbursement numbers by end of today',due:'2026-06-01',topic:'May disbursement close',meeting:'May Funnel Review',priority:'HIGH',history:[{date:'2026-06-01',type:'created',detail:'First captured from May Funnel Review on 2026-06-01'}]},
-  {id:'a4',owner:'Ishant',task:'Set up June 11 meeting with Pranav, Pooja, Ankit, and Rashi for Delhi three-point plan review',due:'2026-06-02',topic:'Delhi NCR follow-up',meeting:'May Funnel Review',priority:'HIGH',history:[{date:'2026-06-01',type:'created',detail:'First captured from May Funnel Review on 2026-06-01'}]},
-  {id:'a5',owner:'Rashi',task:'Convene cross-team Pune accountability session (Rishab, Ankit, Ishant, Vikas, Shalesh)',due:'',topic:'Pune resolution',meeting:'May Funnel Review',priority:'HIGH',history:[{date:'2026-06-01',type:'created',detail:'First captured from May Funnel Review on 2026-06-01'}]},
-  {id:'a6',owner:'Aman',task:'Get banker scheme clarity from Easy IFL, Vasu, and IIC for Mahada leads',due:'2026-06-03',topic:'Mahada project',meeting:'May Funnel Review',priority:'HIGH',history:[{date:'2026-06-01',type:'created',detail:'First captured from May Funnel Review on 2026-06-01'}]},
-  {id:'a7',owner:'Devesh',task:'Close pending Rs 1.25 CR Mahada disbursal case by Saturday',due:'2026-06-07',topic:'Mahada pipeline',meeting:'May Funnel Review',priority:'HIGH',history:[{date:'2026-06-01',type:'created',detail:'First captured from May Funnel Review on 2026-06-01'}]},
-  {id:'a8',owner:'Vikas',task:'Confirm final May E2E disbursement number (Rs 68 CR target) and resolve Naveen 6 CR confirmation today',due:'2026-06-01',topic:'E2E disbursement close',meeting:'May Funnel Review',priority:'HIGH',history:[{date:'2026-06-01',type:'created',detail:'First captured from May Funnel Review on 2026-06-01'}]},
-  {id:'a9',owner:'Tarun and Vijay',task:'Send insurance sales collateral to all RMs and partners',due:'2026-06-01',topic:'Insurance scaling',meeting:'May Funnel Review',priority:'HIGH',history:[{date:'2026-06-01',type:'created',detail:'First captured from May Funnel Review on 2026-06-01'}]},
-  {id:'a10',owner:'Abdullah',task:'Prepare answers to four CAM structure questions by end of week: SLA, live client report, NPS mechanism, product-tech value prop',due:'2026-06-05',topic:'CAM structure',meeting:'May Funnel Review',priority:'HIGH',history:[{date:'2026-06-01',type:'created',detail:'First captured from May Funnel Review on 2026-06-01'}]},
-  {id:'a11',owner:'Pranav',task:'Own sourcing of city-wise builder/project/unit/delivery date data from real estate analyst firms',due:'',topic:'Micro-market targeting',meeting:'May Funnel Review',priority:'HIGH',history:[{date:'2026-06-01',type:'created',detail:'First captured from May Funnel Review on 2026-06-01'}]},
-  {id:'a12',owner:'Vikas, Rashi, Ankit, Hitesh',task:'Set up insurance kickoff call for E2E channel this week',due:'2026-06-05',topic:'Insurance in E2E',meeting:'May Funnel Review',priority:'HIGH',history:[{date:'2026-06-01',type:'created',detail:'First captured from May Funnel Review on 2026-06-01'}]},
-  {id:'a13',owner:'Vijay',task:'Coordinate with Rashi on insurance payout process streamlining',due:'2026-06-05',topic:'Insurance payout',meeting:'May Funnel Review',priority:'HIGH',history:[{date:'2026-06-01',type:'created',detail:'First captured from May Funnel Review on 2026-06-01'}]},
-  {id:'a14',owner:'Ankit and Ishant',task:'Finalise June disbursement targets with M0/M1/M2 pipeline visibility and share with Rashi',due:'2026-06-01',topic:'June planning',meeting:'May Funnel Review',priority:'HIGH',history:[{date:'2026-06-01',type:'created',detail:'First captured from May Funnel Review on 2026-06-01'}]},
-  {id:'b1',owner:'Arpit',task:'Increase refresher training session frequency for 3-month+ RMs',due:'',topic:'RM productivity',meeting:'May Funnel Review',priority:'LOW',history:[{date:'2026-06-01',type:'created',detail:'First captured from May Funnel Review on 2026-06-01'}]},
-  {id:'b2',owner:'Ankit',task:'Create structured weekly call audit format with pod owners (5 calls/week each)',due:'2026-06-07',topic:'Call quality',meeting:'May Funnel Review',priority:'LOW',history:[{date:'2026-06-01',type:'created',detail:'First captured from May Funnel Review on 2026-06-01'}]},
-  {id:'b3',owner:'Ankit / Sunny',task:'Share training calendar with sales team and start weekly master class sessions',due:'2026-06-07',topic:'Training cadence',meeting:'May Funnel Review',priority:'LOW',history:[{date:'2026-06-01',type:'created',detail:'First captured from May Funnel Review on 2026-06-01'}]},
-  {id:'b4',owner:'Avinash and Ishant/Rishabh',task:'Conduct 3-day partner activation sprint for Delhi in first 10 days of June',due:'2026-06-10',topic:'Delhi activation',meeting:'May Funnel Review',priority:'LOW',history:[{date:'2026-06-01',type:'created',detail:'First captured from May Funnel Review on 2026-06-01'}]},
-  {id:'b5',owner:'Prabhat',task:'Update unassigned QL tracking format to include all cities including Lucknow with conversion breakup',due:'2026-06-01',topic:'QL reporting',meeting:'May Funnel Review',priority:'LOW',history:[{date:'2026-06-01',type:'created',detail:'First captured from May Funnel Review on 2026-06-01'}]},
-  {id:'b6',owner:'Devesh / Pankaj / Rameshwar',task:'Continue building CAM account process and tech for large client (2-3 month horizon)',due:'',topic:'CAM development',meeting:'May Funnel Review',priority:'LOW',history:[{date:'2026-06-01',type:'created',detail:'First captured from May Funnel Review on 2026-06-01'}]}
-];
-var DECISIONS=[
-  {text:'Weekly partial login tracking cadence - Rashi and Ankit to run weekly E2E funnel call',m:'May Funnel Review'},
-  {text:'Delhi three-point plan: FBM-RM coordination fix for Noida + hiring review + 3-day partner sprint. Review June 11.',m:'May Funnel Review'},
-  {text:'QL incentives for next quarter gated on QL-to-login AOP target achievement per city',m:'May Funnel Review'},
-  {text:'Product to build three-column disbursal tray (self / high margin / pure E2E) by June second week',m:'May Funnel Review'},
-  {text:'Pranav to own sourcing of city-wise builder/project/unit data from real estate analyst firms',m:'May Funnel Review'},
-  {text:'Insurance sales collateral to go out today; E2E insurance kickoff call this week',m:'May Funnel Review'},
-  {text:'Cross-team Pune resolution session: Rashi to convene Rishab, Ankit, Ishant, Vikas, Shalesh',m:'May Funnel Review'}
-];
-var DYNAMICS=[
-  'Raghuveer carried almost all analytical weight - functional leads responded reactively rather than proactively',
-  '"We started this last week" was the default defence across multiple issues - no structural fix proposed',
-  'Pune has had no single named owner for 6 months - "who is taking charge" had no clear answer',
-  'Avinash and Abdullah asked to reconcile city-level discrepancies mid-meeting without data at hand',
-  'Rashi had limited airtime despite her ops/distribution role - perspective filtered largely through Ankit',
-  'Insurance discussion was shallow given Rs 60 lakh June target and known payout process problems'
-];
-var PARTICIPATION=[{name:'Raghuveer',q:22},{name:'Rashi',q:3},{name:'Ankit',q:2},{name:'Ishant',q:1},{name:'Vikas',q:1},{name:'Devjyoti',q:0},{name:'Avinash',q:0},{name:'Abdullah',q:0},{name:'Vijay',q:0},{name:'Devesh',q:0}];
-var OPEN_QUESTIONS=[
-  {q:'What is the exact composition and conversion rate of the 45 unassigned QLs by city and pipeline stage?',by:'Raghuveer',owner:'Ankit / Prabhat'},
-  {q:'Why is onboarding-to-activation so low in Delhi despite 100+ partner onboardings in April/early May?',by:'Raghuveer',owner:'Ishant / Rishabh / Avinash'},
-  {q:"What did Ankit's team do on the 7th, 14th, and 21st of May to prevent the month-end sanction shortfall?",by:'Raghuveer',owner:'Ankit'},
-  {q:'Is the national call center pilot in Pune showing any early positive signals after 15 days?',by:'Raghuveer',owner:'Vikas / Ankit'},
-  {q:'What is the correct boundary between high margin and pure E2E cases for investor reporting?',by:'Rashi',owner:'Vikas / Rashi / Raghuveer'},
-  {q:"What is DDA's updated lead format and who is the correct contact after the leadership change?",by:'Ankit',owner:'Raghuveer / Ankit'},
-  {q:'What is the June insurance pipeline from BM and partner leads?',by:'Raghuveer',owner:'Vijay / Tarun'}
-];
-function getDone(){try{var v=JSON.parse(localStorage.getItem(DONE_KEY)||'[]');return Array.isArray(v)?v:[];}catch{return[];}}
-function saveDone(a){localStorage.setItem(DONE_KEY,JSON.stringify(a));}
-function isOverdue(d){return d&&d<TODAY;}
-function hbadge(t){var m={created:'hb-created',completed:'hb-completed',deadline_changed:'hb-deadline_changed'};var l={created:'Created',completed:'Completed',deadline_changed:'Deadline Changed'};return '<span class="hb '+(m[t]||'hb-created')+'">'+(l[t]||t)+'</span>';}
-function itemCard(item,done){
-  var ov=isOverdue(item.due);
-  var cls='item-card'+(done?' done-card':'');
-  var tc='item-task'+(done?' done-text':'');
-  var db=item.due?'<span class="badge due">'+(ov?'OVERDUE: ':'Due: ')+item.due+'</span>':'';
-  var hr=(item.history||[]).map(function(h){return '<div class="hist-entry"><span class="hist-date">'+h.date+'</span>'+hbadge(h.type)+'<span>'+h.detail+'</span></div>';}).join('');
-  return '<div class="'+cls+'" id="card-'+item.id+'"><div class="item-top"><input type="checkbox" class="item-cb"'+(done?' checked':'')+' onchange="toggleDone(\''+item.id+'\',this.checked)"><div class="item-body"><div class="item-owner">'+item.owner+'</div><div class="'+tc+'">'+item.task+'</div><div class="item-meta"><span class="badge '+(item.priority==='HIGH'?'high':'low')+'">'+item.priority+'</span>'+db+'<span class="badge topic">'+item.topic+'</span><span class="badge mtg">'+item.meeting+'</span></div></div><button class="history-btn" onclick="toggleHistory(\''+item.id+'\')">&#128337; History</button></div><div class="history-drawer" id="hist-'+item.id+'">'+(hr||'<span style="font-size:12px;color:var(--muted)">No history.</span>')+'</div></div>';
+var DK='ambak_done_items',TODAY='2026-06-01';
+var ITEMS=[{"id": "i0", "owner": "Vikas, Vijay, Aman, Ashish", "task": "Hold a 30-minute sync to align on pay-in changes and adjust schemes for May", "due": "2026-05-28", "topic": "Pay-in and payout alignment", "meeting": "Retail Review", "priority": "HIGH", "completed": false, "history": [{"date": "2026-05-25", "meeting": "Retail Review", "type": "created", "detail": "First captured from Retail Review on 2026-05-25"}]}, {"id": "i1", "owner": "Vijay, Aman", "task": "Investigate the True Home Lab, Bajaj Housing Gross ICE and ICICI category and payout misallocations and report the cause", "due": "", "topic": "Net revenue leakage", "meeting": "Retail Review", "priority": "HIGH", "completed": false, "history": [{"date": "2026-05-25", "meeting": "Retail Review", "type": "created", "detail": "First captured from Retail Review on 2026-05-25"}]}, {"id": "i2", "owner": "Vikas, business team", "task": "Identify May levers that can still impact the May P&L", "due": "", "topic": "May P&L recovery", "meeting": "Retail Review", "priority": "HIGH", "completed": false, "history": [{"date": "2026-05-25", "meeting": "Retail Review", "type": "created", "detail": "First captured from Retail Review on 2026-05-25"}]}, {"id": "i3", "owner": "Pankaj", "task": "Build the pay-in module in-system, proxy out-of-system business and enable real-time pay-in calculation to support the three monthly closes", "due": "", "topic": "Systems and tracking", "meeting": "Retail Review", "priority": "HIGH", "completed": false, "history": [{"date": "2026-05-25", "meeting": "Retail Review", "type": "created", "detail": "First captured from Retail Review on 2026-05-25"}]}, {"id": "i4", "owner": "Varsha/Arshay", "task": "Run the second round of the people/Gypsy co-lending discussion, review the product note with Rashi and Pankaj, and reach out to Vriddhi", "due": "", "topic": "Co-lending partnerships", "meeting": "Retail Review", "priority": "HIGH", "completed": false, "history": [{"date": "2026-05-25", "meeting": "Retail Review", "type": "created", "detail": "First captured from Retail Review on 2026-05-25"}]}, {"id": "i5", "owner": "Ashish", "task": "Complete legal review of the co-lending draft agreement", "due": "", "topic": "Co-lending partnerships", "meeting": "Retail Review", "priority": "HIGH", "completed": false, "history": [{"date": "2026-05-25", "meeting": "Retail Review", "type": "created", "detail": "First captured from Retail Review on 2026-05-25"}]}, {"id": "i6", "owner": "Adi", "task": "Pick two metrics from the lender analysis to automate and report regularly on the BD corporate group", "due": "", "topic": "Tracking discipline", "meeting": "Retail Review", "priority": "LOW", "completed": false, "history": [{"date": "2026-05-25", "meeting": "Retail Review", "type": "created", "detail": "First captured from Retail Review on 2026-05-25"}]}, {"id": "i7", "owner": "Adi", "task": "Track activation and retention split by specialty versus non-specialty partners", "due": "", "topic": "Net revenue analysis", "meeting": "Retail Review", "priority": "LOW", "completed": false, "history": [{"date": "2026-05-25", "meeting": "Retail Review", "type": "created", "detail": "First captured from Retail Review on 2026-05-25"}]}, {"id": "i8", "owner": "Nitin", "task": "Create partner-facing marketing and training material for the ABB calculator", "due": "", "topic": "Product enablement", "meeting": "Retail Review", "priority": "LOW", "completed": false, "history": [{"date": "2026-05-25", "meeting": "Retail Review", "type": "created", "detail": "First captured from Retail Review on 2026-05-25"}]}, {"id": "i9", "owner": "Nitin, Pankaj", "task": "Pilot the WhatsApp-group periscope outreach to reach partners at scale", "due": "", "topic": "Marketing distribution", "meeting": "Retail Review", "priority": "LOW", "completed": false, "history": [{"date": "2026-05-25", "meeting": "Retail Review", "type": "created", "detail": "First captured from Retail Review on 2026-05-25"}]}, {"id": "i10", "owner": "Nitin, sales", "task": "Launch QR-code partner collateral for builders and brokers", "due": "", "topic": "Marketing distribution", "meeting": "Retail Review", "priority": "LOW", "completed": false, "history": [{"date": "2026-05-25", "meeting": "Retail Review", "type": "created", "detail": "First captured from Retail Review on 2026-05-25"}]}, {"id": "i11", "owner": "Vijay", "task": "Own final sign-off on training content and the delivery calendar", "due": "", "topic": "Business Enablement", "meeting": "Retail Review", "priority": "LOW", "completed": false, "history": [{"date": "2026-05-25", "meeting": "Retail Review", "type": "created", "detail": "First captured from Retail Review on 2026-05-25"}]}, {"id": "i12", "owner": "Ankit, Ishaan", "task": "Run a joint institutional and E2E review of the full funnel on the first of the month", "due": "2026-06-01", "topic": "One-team operating model", "meeting": "Institutional Review", "priority": "HIGH", "completed": false, "history": [{"date": "2026-05-25", "meeting": "Institutional Review", "type": "created", "detail": "First captured from Institutional Review on 2026-05-25"}]}, {"id": "i13", "owner": "Rishabh, E2E team", "task": "Complete an RCA on QL-to-login falling to 25% from a historic 40% and specify the support required", "due": "", "topic": "Funnel conversion", "meeting": "Institutional Review", "priority": "HIGH", "completed": false, "history": [{"date": "2026-05-25", "meeting": "Institutional Review", "type": "created", "detail": "First captured from Institutional Review on 2026-05-25"}, {"date": "2026-05-27", "meeting": "April Funnel Conversion Review - Login RCA - Training AOP", "type": "note", "detail": "RCA appears delivered via this meeting presentation; no explicit verbal confirmation given. Recommend manual review and mark done if satisfied."}]}, {"id": "i14", "owner": "Ishaan, Ankit", "task": "Hit the May commitment of 250-plus logins and the 110 number", "due": "2026-05-31", "topic": "May targets", "meeting": "Institutional Review", "priority": "HIGH", "completed": false, "history": [{"date": "2026-05-25", "meeting": "Institutional Review", "type": "created", "detail": "First captured from Institutional Review on 2026-05-25"}]}, {"id": "i15", "owner": "Raghu, Arvind", "task": "Catch up next Wednesday for a full update on D2C, ops, institutional and retail", "due": "2026-05-27", "topic": "Cross-function review", "meeting": "Institutional Review", "priority": "HIGH", "completed": false, "history": [{"date": "2026-05-25", "meeting": "Institutional Review", "type": "created", "detail": "First captured from Institutional Review on 2026-05-25"}]}, {"id": "i16", "owner": "Training team", "task": "Close the revamped LST with Vishal and Ishaan and prepare the next-month go-live", "due": "", "topic": "Training rollout", "meeting": "Institutional Review", "priority": "HIGH", "completed": false, "history": [{"date": "2026-05-25", "meeting": "Institutional Review", "type": "created", "detail": "First captured from Institutional Review on 2026-05-25"}]}, {"id": "i17", "owner": "Akash", "task": "Double-check the 66% repeat-partner QL figure and compare April against March numbers", "due": "", "topic": "Retention metrics", "meeting": "Institutional Review", "priority": "LOW", "completed": false, "history": [{"date": "2026-05-25", "meeting": "Institutional Review", "type": "created", "detail": "First captured from Institutional Review on 2026-05-25"}]}, {"id": "i18", "owner": "Raghu, Rishabh", "task": "Sit together to define what the institutional review should drive out", "due": "", "topic": "Review structure", "meeting": "Institutional Review", "priority": "LOW", "completed": false, "history": [{"date": "2026-05-25", "meeting": "Institutional Review", "type": "created", "detail": "First captured from Institutional Review on 2026-05-25"}]}, {"id": "i19", "owner": "Pankaj, institutional team", "task": "Build a CAM-style large-partner tracking structure with a requisition form in the CRM", "due": "", "topic": "Large-partner tracking", "meeting": "Institutional Review", "priority": "LOW", "completed": false, "history": [{"date": "2026-05-25", "meeting": "Institutional Review", "type": "created", "detail": "First captured from Institutional Review on 2026-05-25"}]}, {"id": "i20", "owner": "CAM / Ops Lead", "task": "Finalise the CAM roles-and-responsibilities framework with named owner, lead and cadence", "due": "", "topic": "CAM governance", "meeting": "Institutional Review", "priority": "LOW", "completed": false, "history": [{"date": "2026-05-25", "meeting": "Institutional Review", "type": "created", "detail": "First captured from Institutional Review on 2026-05-25"}]}, {"id": "i21", "owner": "Institutional Marketing Lead", "task": "Track the 2-month business lift in logins and disbursals after RM events", "due": "", "topic": "Marketing measurement", "meeting": "Institutional Review", "priority": "LOW", "completed": false, "history": [{"date": "2026-05-25", "meeting": "Institutional Review", "type": "created", "detail": "First captured from Institutional Review on 2026-05-25"}]}, {"id": "i22", "owner": "Institutional Marketing Lead", "task": "Amplify the 12 high-impact stories and build the LinkedIn plan for large B2B partnerships", "due": "", "topic": "Marketing", "meeting": "Institutional Review", "priority": "LOW", "completed": false, "history": [{"date": "2026-05-25", "meeting": "Institutional Review", "type": "created", "detail": "First captured from Institutional Review on 2026-05-25"}]}, {"id": "i23", "owner": "Prabhat", "task": "Update QL tracking format to show central-allocated vs Lucknow vs unassigned vs self; implement today", "due": "2026-05-26", "topic": "QL tracking format", "meeting": "Ambak WBR - Training, QL, E2E, City Scal", "priority": "HIGH", "completed": false, "history": [{"date": "2026-05-26", "meeting": "Ambak WBR - Training, QL, E2E, City Scale", "type": "created", "detail": "First captured from Ambak WBR on 2026-05-26"}]}, {"id": "i24", "owner": "Rashi", "task": "Create baseline document on extended-timeline problem (property finalization, registry delays, customer WIP); consult Rishab, Khyati, Riddhi, Pankaj, Ankit, Puneet, Devjyoti this week; wider group session next week", "due": "2026-05-31", "topic": "Extended-timeline product and comms problem", "meeting": "Ambak WBR - Training, QL, E2E, City Scal", "priority": "HIGH", "completed": false, "history": [{"date": "2026-05-26", "meeting": "Ambak WBR - Training, QL, E2E, City Scale", "type": "created", "detail": "First captured from Ambak WBR on 2026-05-26"}]}, {"id": "i25", "owner": "Vijay/Aditya", "task": "Send last 12 weeks of QL data (simple weekly numbers) to Raghu", "due": "2026-05-26", "topic": "QL tracking", "meeting": "Ambak WBR - Training, QL, E2E, City Scal", "priority": "HIGH", "completed": false, "history": [{"date": "2026-05-26", "meeting": "Ambak WBR - Training, QL, E2E, City Scale", "type": "created", "detail": "First captured from Ambak WBR on 2026-05-26"}]}, {"id": "i26", "owner": "Ankit", "task": "Share timelines by tomorrow for hacky checklist and bank-wise case handling approach (what to offer first, what documents to send, when to escalate to banker, at what stage to stop on a customer)", "due": "2026-05-27", "topic": "DSA-level execution intelligence", "meeting": "Ambak WBR - Training, QL, E2E, City Scal", "priority": "HIGH", "completed": false, "history": [{"date": "2026-05-26", "meeting": "Ambak WBR - Training, QL, E2E, City Scale", "type": "created", "detail": "First captured from Ambak WBR on 2026-05-26"}]}, {"id": "i27", "owner": "Vijay/Ankit", "task": "Ring-fence MAHADA 2600 leads; ensure Aman and banker coordination in place with dedicated review cadence before first-week-June delivery", "due": "2026-06-01", "topic": "MAHADA leads", "meeting": "Ambak WBR - Training, QL, E2E, City Scal", "priority": "HIGH", "completed": false, "history": [{"date": "2026-05-26", "meeting": "Ambak WBR - Training, QL, E2E, City Scale", "type": "created", "detail": "First captured from Ambak WBR on 2026-05-26"}]}, {"id": "i28", "owner": "Tarun/Hitesh (via Vijay)", "task": "Send Raghu insurance waterfall update (issued, pipeline, login stage, lead stage, May confidence) by 2 PM today", "due": "2026-05-26", "topic": "Insurance tracking", "meeting": "Ambak WBR - Training, QL, E2E, City Scal", "priority": "HIGH", "completed": false, "history": [{"date": "2026-05-26", "meeting": "Ambak WBR - Training, QL, E2E, City Scale", "type": "created", "detail": "First captured from Ambak WBR on 2026-05-26"}]}, {"id": "i29", "owner": "Rashi", "task": "Share comfort level on 76 CR E2E number to Raghu by evening today", "due": "2026-05-26", "topic": "E2E pipeline confirmation", "meeting": "Ambak WBR - Training, QL, E2E, City Scal", "priority": "HIGH", "completed": false, "history": [{"date": "2026-05-26", "meeting": "Ambak WBR - Training, QL, E2E, City Scale", "type": "created", "detail": "First captured from Ambak WBR on 2026-05-26"}]}, {"id": "i30", "owner": "Vijay/E2E team", "task": "Move 20 CR of E2E cases (currently self-tagged or out-of-system) into system today", "due": "2026-05-26", "topic": "E2E in-system tracking", "meeting": "Ambak WBR - Training, QL, E2E, City Scal", "priority": "HIGH", "completed": false, "history": [{"date": "2026-05-26", "meeting": "Ambak WBR - Training, QL, E2E, City Scale", "type": "created", "detail": "First captured from Ambak WBR on 2026-05-26"}]}, {"id": "i31", "owner": "Neerav", "task": "Finalize ABM hire for Ahmedabad this week; two ABM offers going out in next 1-2 days", "due": "2026-05-31", "topic": "Ahmedabad team build", "meeting": "Ambak WBR - Training, QL, E2E, City Scal", "priority": "HIGH", "completed": false, "history": [{"date": "2026-05-26", "meeting": "Ambak WBR - Training, QL, E2E, City Scale", "type": "created", "detail": "First captured from Ambak WBR on 2026-05-26"}]}, {"id": "i32", "owner": "Nagesh", "task": "Close Bangalore hiring (city head, 2 ABMs, RMs) by month end", "due": "2026-05-31", "topic": "Bangalore team build", "meeting": "Ambak WBR - Training, QL, E2E, City Scal", "priority": "HIGH", "completed": false, "history": [{"date": "2026-05-26", "meeting": "Ambak WBR - Training, QL, E2E, City Scale", "type": "created", "detail": "First captured from Ambak WBR on 2026-05-26"}]}, {"id": "i33", "owner": "Ankit/Rishab", "task": "Ensure 7 Bangalore ready-to-log files are logged this week; resolve consent and property doc pendency", "due": "2026-05-31", "topic": "Bangalore logins", "meeting": "Ambak WBR - Training, QL, E2E, City Scal", "priority": "HIGH", "completed": false, "history": [{"date": "2026-05-26", "meeting": "Ambak WBR - Training, QL, E2E, City Scale", "type": "created", "detail": "First captured from Ambak WBR on 2026-05-26"}]}, {"id": "i34", "owner": "Pooja", "task": "Double-click this week on three training areas: (1) train-the-trainer content and city-specific nuances, (2) scheduling consistency fix, (3) assessment reliability", "due": "2026-05-31", "topic": "Training quality", "meeting": "Ambak WBR - Training, QL, E2E, City Scal", "priority": "HIGH", "completed": false, "history": [{"date": "2026-05-26", "meeting": "Ambak WBR - Training, QL, E2E, City Scale", "type": "created", "detail": "First captured from Ambak WBR on 2026-05-26"}]}, {"id": "i35", "owner": "Ankit", "task": "Visit DSA partners regularly and share weekly update on learnings (what they do differently, hacky solutions, bank-specific tricks that help close cases faster)", "due": "", "topic": "DSA-level understanding", "meeting": "Ambak WBR - Training, QL, E2E, City Scal", "priority": "LOW", "completed": false, "history": [{"date": "2026-05-26", "meeting": "Ambak WBR - Training, QL, E2E, City Scale", "type": "created", "detail": "First captured from Ambak WBR on 2026-05-26"}]}, {"id": "i36", "owner": "Akash", "task": "Post 2-3 lead IDs from last 3-4 days where Pune-Delhi coordination was weak to the messaging group", "due": "2026-05-26", "topic": "Pune-Delhi coordination", "meeting": "Ambak WBR - Training, QL, E2E, City Scal", "priority": "LOW", "completed": false, "history": [{"date": "2026-05-26", "meeting": "Ambak WBR - Training, QL, E2E, City Scale", "type": "created", "detail": "First captured from Ambak WBR on 2026-05-26"}]}, {"id": "i37", "owner": "Vijay", "task": "Track daily E2E DRR number alongside self-fulfillment in Aditya's existing self-tracking sheet", "due": "2026-05-26", "topic": "E2E daily tracking", "meeting": "Ambak WBR - Training, QL, E2E, City Scal", "priority": "LOW", "completed": false, "history": [{"date": "2026-05-26", "meeting": "Ambak WBR - Training, QL, E2E, City Scale", "type": "created", "detail": "First captured from Ambak WBR on 2026-05-26"}]}, {"id": "i38", "owner": "Ankita", "task": "Review complete May data with Himang today (May 27); present RCA, initiative performance and June targets to city heads by June 1", "due": "2026-06-01", "topic": "Monthly target planning", "meeting": "April Funnel Conversion Review - Login R", "priority": "HIGH", "completed": false, "history": [{"date": "2026-05-27", "meeting": "April Funnel Conversion Review - Login RCA - Training AOP", "type": "created", "detail": "First captured from April Funnel/Login RCA meeting on 2026-05-27"}]}, {"id": "i39", "owner": "Product (Mohit/Roshan)", "task": "Fix call timestamp to use call start time (not end time) in first-call follow-up reports", "due": "", "topic": "Reporting accuracy", "meeting": "April Funnel Conversion Review - Login R", "priority": "HIGH", "completed": false, "history": [{"date": "2026-05-27", "meeting": "April Funnel Conversion Review - Login RCA - Training AOP", "type": "created", "detail": "First captured from April Funnel/Login RCA meeting on 2026-05-27"}]}, {"id": "i40", "owner": "Product team", "task": "Implement immediate fix: show missed call notifications to FBMs in real-time on system ID so they can call back without missing customer", "due": "", "topic": "Missed call visibility", "meeting": "April Funnel Conversion Review - Login R", "priority": "HIGH", "completed": false, "history": [{"date": "2026-05-27", "meeting": "April Funnel Conversion Review - Login RCA - Training AOP", "type": "created", "detail": "First captured from April Funnel/Login RCA meeting on 2026-05-27"}]}, {"id": "i41", "owner": "Telecom/Ops", "task": "Receive DID mobile numbers from vendor (2-3 days), configure in system within 1 day, roll out by Thursday June 4", "due": "2026-06-04", "topic": "Number whitelisting", "meeting": "April Funnel Conversion Review - Login R", "priority": "HIGH", "completed": false, "history": [{"date": "2026-05-27", "meeting": "April Funnel Conversion Review - Login RCA - Training AOP", "type": "created", "detail": "First captured from April Funnel/Login RCA meeting on 2026-05-27"}]}, {"id": "i42", "owner": "Rishabh", "task": "Meet Mada/partner on Monday to understand lead data quality gap (missing allotment/booking dates in new format); report back with prediction on conversion potential", "due": "2026-06-02", "topic": "Lead data quality", "meeting": "April Funnel Conversion Review - Login R", "priority": "HIGH", "completed": false, "history": [{"date": "2026-05-27", "meeting": "April Funnel Conversion Review - Login RCA - Training AOP", "type": "created", "detail": "First captured from April Funnel/Login RCA meeting on 2026-05-27"}]}, {"id": "i43", "owner": "Darshan", "task": "Sit for joint re-audit of deal cancel/postpone cases across cities; validate 28% figure and identify major contribution cities and root causes", "due": "", "topic": "Funnel drop-off audit", "meeting": "April Funnel Conversion Review - Login R", "priority": "HIGH", "completed": false, "history": [{"date": "2026-05-27", "meeting": "April Funnel Conversion Review - Login RCA - Training AOP", "type": "created", "detail": "First captured from April Funnel/Login RCA meeting on 2026-05-27"}]}, {"id": "i44", "owner": "Avinash", "task": "Audit 'logged with another bank' cases for cross-pitch attempts; check if agents are pitching competitive rates vs SBI and identify pitch training gaps", "due": "", "topic": "Cross-pitch audit", "meeting": "April Funnel Conversion Review - Login R", "priority": "LOW", "completed": false, "history": [{"date": "2026-05-27", "meeting": "April Funnel Conversion Review - Login RCA - Training AOP", "type": "created", "detail": "First captured from April Funnel/Login RCA meeting on 2026-05-27"}]}, {"id": "i45", "owner": "Arpit/Training team", "task": "Launch June plan: communication + art of report + people management workshops (nomination-based); introduce e-learning in NHT, buddy program, call audits for new joiners; cross-function mock calls; Learning Premier League on Kahoot", "due": "2026-06-30", "topic": "June training rollout", "meeting": "April Funnel Conversion Review - Login R", "priority": "LOW", "completed": false, "history": [{"date": "2026-05-27", "meeting": "April Funnel Conversion Review - Login RCA - Training AOP", "type": "created", "detail": "First captured from April Funnel/Login RCA meeting on 2026-05-27"}]}, {"id": "i46", "owner": "Ankit", "task": "Review 25 planned sanctions from last week and identify root cause of only 4 completions", "due": "", "topic": "Sanction conversion accountability", "meeting": "May Funnel Review: Google Shift, Login-t", "priority": "HIGH", "completed": false, "history": [{"date": "2026-06-01", "meeting": "May Funnel Review: Google Shift, Login-to-Disbursal Gaps, and City-Level Execution", "type": "created", "detail": "First captured from May Funnel Review on 2026-06-01"}]}, {"id": "i47", "owner": "Ankit", "task": "Sit with Avinash to solve FBM-RM coordination gap for Noida cases", "due": "2026-06-01", "topic": "Delhi NCR execution", "meeting": "May Funnel Review: Google Shift, Login-t", "priority": "HIGH", "completed": false, "history": [{"date": "2026-06-01", "meeting": "May Funnel Review: Google Shift, Login-to-Disbursal Gaps, and City-Level Execution", "type": "created", "detail": "First captured from May Funnel Review on 2026-06-01"}]}, {"id": "i48", "owner": "Ankit", "task": "Circle off all confirmed May disbursement numbers by end of today", "due": "2026-06-01", "topic": "May disbursement close", "meeting": "May Funnel Review: Google Shift, Login-t", "priority": "HIGH", "completed": false, "history": [{"date": "2026-06-01", "meeting": "May Funnel Review: Google Shift, Login-to-Disbursal Gaps, and City-Level Execution", "type": "created", "detail": "First captured from May Funnel Review on 2026-06-01"}]}, {"id": "i49", "owner": "Ishant", "task": "Set up June 11 meeting with Pranav, Pooja, Ankit, and Rashi for Delhi three-point plan review", "due": "2026-06-02", "topic": "Delhi NCR follow-up", "meeting": "May Funnel Review: Google Shift, Login-t", "priority": "HIGH", "completed": false, "history": [{"date": "2026-06-01", "meeting": "May Funnel Review: Google Shift, Login-to-Disbursal Gaps, and City-Level Execution", "type": "created", "detail": "First captured from May Funnel Review on 2026-06-01"}]}, {"id": "i50", "owner": "Rashi", "task": "Convene cross-team Pune accountability session (Rishab, Ankit, Ishant, Vikas, Shalesh)", "due": "", "topic": "Pune resolution", "meeting": "May Funnel Review: Google Shift, Login-t", "priority": "HIGH", "completed": false, "history": [{"date": "2026-06-01", "meeting": "May Funnel Review: Google Shift, Login-to-Disbursal Gaps, and City-Level Execution", "type": "created", "detail": "First captured from May Funnel Review on 2026-06-01"}]}, {"id": "i51", "owner": "Aman", "task": "Get banker scheme clarity from Easy IFL, Vasu, and IIC for Mahada leads", "due": "2026-06-03", "topic": "Mahada project", "meeting": "May Funnel Review: Google Shift, Login-t", "priority": "HIGH", "completed": false, "history": [{"date": "2026-06-01", "meeting": "May Funnel Review: Google Shift, Login-to-Disbursal Gaps, and City-Level Execution", "type": "created", "detail": "First captured from May Funnel Review on 2026-06-01"}]}, {"id": "i52", "owner": "Devesh", "task": "Close pending Rs 1.25 CR Mahada disbursal case by Saturday", "due": "2026-06-07", "topic": "Mahada pipeline", "meeting": "May Funnel Review: Google Shift, Login-t", "priority": "HIGH", "completed": false, "history": [{"date": "2026-06-01", "meeting": "May Funnel Review: Google Shift, Login-to-Disbursal Gaps, and City-Level Execution", "type": "created", "detail": "First captured from May Funnel Review on 2026-06-01"}]}, {"id": "i53", "owner": "Vikas", "task": "Confirm final May E2E disbursement number (Rs 68 CR target) and resolve Naveen confirmation today", "due": "2026-06-01", "topic": "E2E disbursement close", "meeting": "May Funnel Review: Google Shift, Login-t", "priority": "HIGH", "completed": false, "history": [{"date": "2026-06-01", "meeting": "May Funnel Review: Google Shift, Login-to-Disbursal Gaps, and City-Level Execution", "type": "created", "detail": "First captured from May Funnel Review on 2026-06-01"}]}, {"id": "i54", "owner": "Tarun and Vijay", "task": "Send insurance sales collateral to all RMs and partners", "due": "2026-06-01", "topic": "Insurance scaling", "meeting": "May Funnel Review: Google Shift, Login-t", "priority": "HIGH", "completed": false, "history": [{"date": "2026-06-01", "meeting": "May Funnel Review: Google Shift, Login-to-Disbursal Gaps, and City-Level Execution", "type": "created", "detail": "First captured from May Funnel Review on 2026-06-01"}]}, {"id": "i55", "owner": "Abdullah", "task": "Prepare answers to four CAM structure questions by end of week: SLA for onsite/offsite resources, live client report sample, NPS mechanism, product-tech value prop", "due": "2026-06-05", "topic": "CAM structure", "meeting": "May Funnel Review: Google Shift, Login-t", "priority": "HIGH", "completed": false, "history": [{"date": "2026-06-01", "meeting": "May Funnel Review: Google Shift, Login-to-Disbursal Gaps, and City-Level Execution", "type": "created", "detail": "First captured from May Funnel Review on 2026-06-01"}]}, {"id": "i56", "owner": "Pranav", "task": "Own sourcing of city-wise builder/project/unit/delivery date data from real estate analyst firms", "due": "", "topic": "Micro-market targeting", "meeting": "May Funnel Review: Google Shift, Login-t", "priority": "HIGH", "completed": false, "history": [{"date": "2026-06-01", "meeting": "May Funnel Review: Google Shift, Login-to-Disbursal Gaps, and City-Level Execution", "type": "created", "detail": "First captured from May Funnel Review on 2026-06-01"}]}, {"id": "i57", "owner": "Vikas, Rashi, Ankit, Hitesh", "task": "Set up insurance kickoff call for E2E channel this week", "due": "2026-06-05", "topic": "Insurance in E2E", "meeting": "May Funnel Review: Google Shift, Login-t", "priority": "HIGH", "completed": false, "history": [{"date": "2026-06-01", "meeting": "May Funnel Review: Google Shift, Login-to-Disbursal Gaps, and City-Level Execution", "type": "created", "detail": "First captured from May Funnel Review on 2026-06-01"}]}, {"id": "i58", "owner": "Vijay", "task": "Coordinate with Rashi on insurance payout process streamlining", "due": "2026-06-05", "topic": "Insurance payout", "meeting": "May Funnel Review: Google Shift, Login-t", "priority": "HIGH", "completed": false, "history": [{"date": "2026-06-01", "meeting": "May Funnel Review: Google Shift, Login-to-Disbursal Gaps, and City-Level Execution", "type": "created", "detail": "First captured from May Funnel Review on 2026-06-01"}]}, {"id": "i59", "owner": "Ankit and Ishant", "task": "Finalise June disbursement targets with M0/M1/M2 pipeline visibility and share with Rashi", "due": "2026-06-01", "topic": "June planning", "meeting": "May Funnel Review: Google Shift, Login-t", "priority": "HIGH", "completed": false, "history": [{"date": "2026-06-01", "meeting": "May Funnel Review: Google Shift, Login-to-Disbursal Gaps, and City-Level Execution", "type": "created", "detail": "First captured from May Funnel Review on 2026-06-01"}]}, {"id": "i60", "owner": "Arpit", "task": "Increase refresher training session frequency for 3-month+ RMs", "due": "", "topic": "RM productivity", "meeting": "May Funnel Review: Google Shift, Login-t", "priority": "LOW", "completed": false, "history": [{"date": "2026-06-01", "meeting": "May Funnel Review: Google Shift, Login-to-Disbursal Gaps, and City-Level Execution", "type": "created", "detail": "First captured from May Funnel Review on 2026-06-01"}]}, {"id": "i61", "owner": "Ankit", "task": "Create structured weekly call audit format with pod owners (5 calls/week each, feedback loop to sales)", "due": "2026-06-07", "topic": "Call quality program", "meeting": "May Funnel Review: Google Shift, Login-t", "priority": "LOW", "completed": false, "history": [{"date": "2026-06-01", "meeting": "May Funnel Review: Google Shift, Login-to-Disbursal Gaps, and City-Level Execution", "type": "created", "detail": "First captured from May Funnel Review on 2026-06-01"}]}, {"id": "i62", "owner": "Ankit / Sunny", "task": "Share training calendar with sales team and start weekly master class sessions across three verticals", "due": "2026-06-07", "topic": "Training cadence", "meeting": "May Funnel Review: Google Shift, Login-t", "priority": "LOW", "completed": false, "history": [{"date": "2026-06-01", "meeting": "May Funnel Review: Google Shift, Login-to-Disbursal Gaps, and City-Level Execution", "type": "created", "detail": "First captured from May Funnel Review on 2026-06-01"}]}, {"id": "i63", "owner": "Avinash and Ishant/Rishabh", "task": "Conduct 3-day partner activation sprint for Delhi in first 10 days of June", "due": "2026-06-10", "topic": "Delhi activation", "meeting": "May Funnel Review: Google Shift, Login-t", "priority": "LOW", "completed": false, "history": [{"date": "2026-06-01", "meeting": "May Funnel Review: Google Shift, Login-to-Disbursal Gaps, and City-Level Execution", "type": "created", "detail": "First captured from May Funnel Review on 2026-06-01"}]}, {"id": "i64", "owner": "Prabhat", "task": "Update unassigned QL tracking format to include all cities including Lucknow with conversion breakup", "due": "2026-06-01", "topic": "QL reporting clarity", "meeting": "May Funnel Review: Google Shift, Login-t", "priority": "LOW", "completed": false, "history": [{"date": "2026-06-01", "meeting": "May Funnel Review: Google Shift, Login-to-Disbursal Gaps, and City-Level Execution", "type": "created", "detail": "First captured from May Funnel Review on 2026-06-01"}]}, {"id": "i65", "owner": "Devesh / Pankaj / Rameshwar", "task": "Continue building CAM account process and tech for the large client (2-3 month horizon)", "due": "", "topic": "CAM development", "meeting": "May Funnel Review: Google Shift, Login-t", "priority": "LOW", "completed": false, "history": [{"date": "2026-06-01", "meeting": "May Funnel Review: Google Shift, Login-to-Disbursal Gaps, and City-Level Execution", "type": "created", "detail": "First captured from May Funnel Review on 2026-06-01"}]}];
+var DECISIONS=[{"text": "Institutional and E2E move to a joint first-of-month review; WBR and MBR framework to be restructured.", "meeting": "Institutional Review Transcript", "date": "2026-05-25"}, {"text": "MBR flow reversed to lead with P&L and drivers before initiatives.", "meeting": "Institutional Review Transcript", "date": "2026-05-25"}, {"text": "HDFC Gross scheme likely to be removed next month.", "meeting": "Institutional Review Transcript", "date": "2026-05-25"}, {"text": "Payout autonomy and NR ownership stay with the retail business team; pay-in structure unchanged.", "meeting": "Retail Review Transcript", "date": "2026-05-25"}, {"text": "Universal scheme rationalised from 3 to 6 slabs, effective June.", "meeting": "Retail Review Transcript", "date": "2026-05-25"}, {"text": "Special-scheme quota system implemented from May.", "meeting": "Retail Review Transcript", "date": "2026-05-25"}, {"text": "16 of 19 flagged underperformers move into exit and performance conversations.", "meeting": "Retail Review Transcript", "date": "2026-05-25"}, {"text": "Adopt three monthly P&L closes: first-of-month, 95%-confidence, and mid-month 16th.", "meeting": "Retail Review Transcript", "date": "2026-05-25"}, {"text": "Retail training team to be rebranded Business Enablement.", "meeting": "Retail Review Transcript", "date": "2026-05-25"}, {"text": "Rashi takes final ownership of the QL tracking format; Prabhat to implement central-allocated vs Lucknow vs unassigned vs self split view today.", "meeting": "Ambak Weekly Business Review  Training G", "date": "2026-05-26"}, {"text": "Rashi to create baseline this week on extended-timeline problem (property finalization, registry delays) and convene wider stakeholder session next week.", "meeting": "Ambak Weekly Business Review  Training G", "date": "2026-05-26"}, {"text": "Post-WBR alignment call at 11:30 between Rashi, Vijay, and Ankit to reconcile the 76 CR E2E pipeline case by case.", "meeting": "Ambak Weekly Business Review  Training G", "date": "2026-05-26"}, {"text": "E2E DRR daily number to be tracked alongside self-fulfillment in Aditya's existing self-tracking sheet.", "meeting": "Ambak Weekly Business Review  Training G", "date": "2026-05-26"}, {"text": "20 CR of E2E out-of-system or self-tagged cases to be moved in-system today.", "meeting": "Ambak Weekly Business Review  Training G", "date": "2026-05-26"}, {"text": "DID numbers to be configured and rolled out by June 4 once vendor delivers", "meeting": "April Funnel Conversion Review  Login Dro", "date": "2026-05-27"}, {"text": "Monthly planning review on May 27 with Himang; June targets to be presented to city heads on June 1", "meeting": "April Funnel Conversion Review  Login Dro", "date": "2026-05-27"}, {"text": "Auto-dialer to remain live across all channels; routed to inbound Mada leads while partner data is stale", "meeting": "April Funnel Conversion Review  Login Dro", "date": "2026-05-27"}, {"text": "Bulk/cold calling lead data to be handled separately from regular FBM queue going forward", "meeting": "April Funnel Conversion Review  Login Dro", "date": "2026-05-27"}, {"text": "Weekly tracking of partial login percentage. Rashi and Ankit to run a weekly cadence call on the E2E funnel.", "meeting": "May Funnel Review On Google Shift Login ", "date": "2026-06-01"}, {"text": "Delhi three-point plan: FBM-RM coordination fix for Noida (Ankit+Avinash), hiring review with Pooja, 3-day partner sprint. Review meeting June 11.", "meeting": "May Funnel Review On Google Shift Login ", "date": "2026-06-01"}, {"text": "QL incentives for next quarter to be gated on QL-to-login AOP target achievement per city.", "meeting": "May Funnel Review On Google Shift Login ", "date": "2026-06-01"}, {"text": "Product to build three-column disbursal tray (self / high margin / pure E2E) by June second week.", "meeting": "May Funnel Review On Google Shift Login ", "date": "2026-06-01"}, {"text": "Pranav to own research on city-wise builder/project/unit data from real estate analyst firms.", "meeting": "May Funnel Review On Google Shift Login ", "date": "2026-06-01"}, {"text": "Insurance sales collateral to go out today. E2E insurance kickoff call this week.", "meeting": "May Funnel Review On Google Shift Login ", "date": "2026-06-01"}, {"text": "Cross-team Pune resolution session: Rashi to convene Rishab, Ankit, Ishant, Vikas, Shalesh.", "meeting": "May Funnel Review On Google Shift Login ", "date": "2026-06-01"}];
+var DYNAMICS=[{"text": "Raghu carried nearly all the probing and the push for structural change; functional leads were largely reactive.", "meeting": "Institutional Review Transcript", "date": "2026-05-25"}, {"text": "Ishaan's live 2/10 insight rating was the most candid self-assessment in the meeting - acknowledged but not resolved in-room.", "meeting": "Institutional Review Transcript", "date": "2026-05-25"}, {"text": "The institutional-vs-E2E divide surfaced repeatedly as competing narratives and was deferred to a future restructure.", "meeting": "Institutional Review Transcript", "date": "2026-05-25"}, {"text": "Joint review and WBR/MBR restructure agreed in principle without a firm owner, format, or transition plan.", "meeting": "Institutional Review Transcript", "date": "2026-05-25"}, {"text": "Marketing presented output metrics enthusiastically; Raghu redirected to business lift measurement - same pattern as retail review.", "meeting": "Institutional Review Transcript", "date": "2026-05-25"}, {"text": "Several large-partner and CAM items discussed at length and parked without named owners.", "meeting": "Institutional Review Transcript", "date": "2026-05-25"}, {"text": "Raghu was the sole probing engine - every substantive question, challenge, and redirect came from him.", "meeting": "Retail Review Transcript", "date": "2026-05-25"}, {"text": "The Aman/business-team accountability dispute required CEO intervention to settle - should have been resolved internally two years in.", "meeting": "Retail Review Transcript", "date": "2026-05-25"}, {"text": "Vijay admitted to learning pay-in slabs after the fact without it being treated as a serious accountability failure.", "meeting": "Retail Review Transcript", "date": "2026-05-25"}, {"text": "Marketing presented activity metrics throughout; Raghu redirected to outcome metrics each time.", "meeting": "Retail Review Transcript", "date": "2026-05-25"}, {"text": "Key distribution ideas (QR codes, WhatsApp periscope, ABB enablement) originated from Raghu, not the functional owners.", "meeting": "Retail Review Transcript", "date": "2026-05-25"}, {"text": "Training presented confidently but offered no before/after evidence of RM capability improvement.", "meeting": "Retail Review Transcript", "date": "2026-05-25"}, {"text": "Several items landed without owners or dates until Raghu explicitly pressed for accountability.", "meeting": "Retail Review Transcript", "date": "2026-05-25"}, {"text": "Raghu carried all critical probing for 80+ minutes; functional leads and city heads were reactive, not proactive - third straight meeting with this pattern.", "meeting": "Ambak Weekly Business Review  Training G", "date": "2026-05-26"}, {"text": "E2E pipeline reconciliation consumed 30+ minutes without in-room resolution; 76 CR target should not require a manual case-by-case review 2 weeks before month end.", "meeting": "Ambak Weekly Business Review  Training G", "date": "2026-05-26"}, {"text": "Raghu's direct critique of Ankit ('efforts are kam, understanding is weak') was unusually personal and specific; Ankit's response pattern (partial acknowledgment + reference to ongoing actions) was mild deflection.", "meeting": "Ambak Weekly Business Review  Training G", "date": "2026-05-26"}, {"text": "Neerav gave consistent reassurance on Ahmedabad without structural solutions; ABM hiring has been discussed for multiple cycles with no post-mortem on why it has not closed.", "meeting": "Ambak Weekly Business Review  Training G", "date": "2026-05-26"}, {"text": "Insurance was visibly unready - Tarun and Hitesh were not added to the call; no one owned this preparation failure.", "meeting": "Ambak Weekly Business Review  Training G", "date": "2026-05-26"}, {"text": "MAHADA 2600 leads received fewer than 5 minutes of discussion despite Raghu flagging it as an insanely large opportunity; bandwidth concerns were raised without escalation or resolution.", "meeting": "Ambak Weekly Business Review  Training G", "date": "2026-05-26"}, {"text": "Raghu drove all the tough diagnostic follow-ups; other seniors were largely in response mode", "meeting": "April Funnel Conversion Review  Login Dro", "date": "2026-05-27"}, {"text": "Cause-and-effect not always closed - multiple drop-off causes identified but few with confirmed owners and timelines", "meeting": "April Funnel Conversion Review  Login Dro", "date": "2026-05-27"}, {"text": "FBM productivity miss (8.11 vs 14 AOP) received minimal discussion despite being the most significant AOP gap", "meeting": "April Funnel Conversion Review  Login Dro", "date": "2026-05-27"}, {"text": "Training presenter presented well but the AOP score gap was not stress-tested in the room", "meeting": "April Funnel Conversion Review  Login Dro", "date": "2026-05-27"}, {"text": "Rishabh's Monday outcome was accepted without defining what decision would follow the partner meeting", "meeting": "April Funnel Conversion Review  Login Dro", "date": "2026-05-27"}, {"text": "Raghuveer carried almost all analytical weight - reading charts, identifying correlations, drawing conclusions. Functional leads responded reactively rather than surfacing patterns proactively.", "meeting": "May Funnel Review On Google Shift Login ", "date": "2026-06-01"}, {"text": "Pattern of starting corrective initiatives in the final week of the month is recurring and was explicitly called out - no structural fix was proposed by anyone.", "meeting": "May Funnel Review On Google Shift Login ", "date": "2026-06-01"}, {"text": "Pune has had no single named owner for six months - Raghuveer asked directly and the answer was diffuse across multiple people.", "meeting": "May Funnel Review On Google Shift Login ", "date": "2026-06-01"}, {"text": "Avinash and Abdullah asked to reconcile city-level discrepancies mid-meeting without data at hand - monthly reviews should not be the first time pod owners face these numbers.", "meeting": "May Funnel Review On Google Shift Login ", "date": "2026-06-01"}, {"text": "Rashi had limited airtime relative to her role - ops perspective was largely filtered through Ankit.", "meeting": "May Funnel Review On Google Shift Login ", "date": "2026-06-01"}, {"text": "Insurance discussion was shallow given the steep June target (Rs 60 lakh) and known payout process problems.", "meeting": "May Funnel Review On Google Shift Login ", "date": "2026-06-01"}];
+var PART=[{"name": "Raghuveer", "q": 22}, {"name": "Raghu", "q": 14}, {"name": "Ankita", "q": 6}, {"name": "Rashi", "q": 6}, {"name": "Ankit", "q": 3}, {"name": "Arpit", "q": 2}, {"name": "Rishabh", "q": 2}, {"name": "Darshan", "q": 1}, {"name": "Ishant", "q": 1}, {"name": "Vikas", "q": 1}, {"name": "Avinash", "q": 0}, {"name": "Devjyoti", "q": 0}, {"name": "Abdullah", "q": 0}, {"name": "Vijay", "q": 0}, {"name": "Devesh", "q": 0}, {"name": "Pooja", "q": 0}, {"name": "Pranav", "q": 0}];
+var OQS=[{"q": "How do you define a perfect role as a human?", "by": "Student attendee in chat", "owner": "Unknown A (facilitator), to address by end of session", "meeting": "Resume Storytelling Framework For Placem", "date": "2026-05-19"}, {"q": "Which specific resume bullets pass the recruiter lens test?", "by": "Implicit across attendees", "owner": "Unknown A, via the live placecom walkthrough", "meeting": "Resume Storytelling Framework For Placem", "date": "2026-05-19"}, {"q": "Why is net revenue not increasing when QLs are on track and the product is good?", "by": "Raghu", "owner": "Ankit and Ishaan", "meeting": "Institutional Review Transcript", "date": "2026-05-25"}, {"q": "Why did E2E QL-to-login fall to 25% from a historic 40%?", "by": "Raghu", "owner": "Rishabh and the E2E team", "meeting": "Institutional Review Transcript", "date": "2026-05-25"}, {"q": "Why are repeat partners flat at 52-56 while active partners grew ~25%?", "by": "Raghu", "owner": "Institutional onboarding lead", "meeting": "Institutional Review Transcript", "date": "2026-05-25"}, {"q": "What is the right structure and ownership for the cross-team E2E review?", "by": "Raghu", "owner": "Ankit and Ishaan", "meeting": "Institutional Review Transcript", "date": "2026-05-25"}, {"q": "Will new joiners be capable enough after training to pitch confidently to a customer or partner?", "by": "Raghu", "owner": "Arvind and the training team", "meeting": "Institutional Review Transcript", "date": "2026-05-25"}, {"q": "Why did ICICI Bank dilute pay-in so much at that volume and what could have prevented it?", "by": "Raghu", "owner": "Vijay and Aman", "meeting": "Retail Review Transcript", "date": "2026-05-25"}, {"q": "Why was Bombay self payout 99 bps vs 93 bps planned, and what changes for May?", "by": "Raghu", "owner": "Vikas", "meeting": "Retail Review Transcript", "date": "2026-05-25"}, {"q": "How do we structurally fix NCR HL and LAP being a persistent NR drag at 5-6% ICICI share?", "by": "Raghu", "owner": "Vikas", "meeting": "Retail Review Transcript", "date": "2026-05-25"}, {"q": "For RMs with 12+ months of vintage, should NR carry a higher rating weightage?", "by": "Ashish", "owner": "Vikas and Ashish", "meeting": "Retail Review Transcript", "date": "2026-05-25"}, {"q": "How do we build the July-October E2E AOP throughput of ~200 crore/month?", "by": "Vikas", "owner": "Vikas and the business team", "meeting": "Retail Review Transcript", "date": "2026-05-25"}, {"q": "Why is retail QL achievement in Delhi stuck at 34% despite pipeline discussions every week?", "by": "Raghu", "owner": "Ankit and Rashi", "meeting": "Ambak Weekly Business Review  Training G", "date": "2026-05-26"}, {"q": "Why is Ahmedabad business not shaping up despite above-market salary, most aggressive incentives, and Neerav's experience? What is the root cause?", "by": "Raghu", "owner": "Neerav and Pooja", "meeting": "Ambak Weekly Business Review  Training G", "date": "2026-05-26"}, {"q": "When will insurance data tracking be consistently delivered daily (waterfall, issued, pipeline, login, lead stage)?", "by": "Raghu", "owner": "Tarun/Hitesh/Vijay", "meeting": "Ambak Weekly Business Review  Training G", "date": "2026-05-26"}, {"q": "What is the correct model for E2E business sourced by one city but fulfilled by another - how should it be attributed in reporting?", "by": "Rashi", "owner": "Pankaj/Aditya", "meeting": "Ambak Weekly Business Review  Training G", "date": "2026-05-26"}, {"q": "How does Ambak compound beyond the 2026 AOP targets - when do strategic accounts and builder relationships become the dominant revenue driver?", "by": "Raghu", "owner": "Raghu, Rishab, Pranav", "meeting": "Ambak Weekly Business Review  Training G", "date": "2026-05-26"}, {"q": "Will the institutional and E2E joint first-of-month review (decided yesterday) actually happen with a format and owner?", "by": "Raghu (in prior meeting)", "owner": "Ankit and Ishant", "meeting": "Ambak Weekly Business Review  Training G", "date": "2026-05-26"}, {"q": "What is the actual root cause of 28% deal cancel/postpone, split by city?", "by": "Raghu, Rashi", "owner": "Darshan (joint audit with Ankita)", "meeting": "April Funnel Conversion Review  Login Dro", "date": "2026-05-27"}, {"q": "Why has partner (Mada) data quality dropped - missing allotment/booking dates for 2-3 months?", "by": "Ankita (Avinash flagged)", "owner": "Rishabh", "meeting": "April Funnel Conversion Review  Login Dro", "date": "2026-05-27"}, {"q": "Are FBMs actively cross-pitching customers already logged with another bank? What is the pitch success rate?", "by": "Rashi", "owner": "Avinash", "meeting": "April Funnel Conversion Review  Login Dro", "date": "2026-05-27"}, {"q": "What is the measurable impact of DRE/BRE automation on FBM productivity?", "by": "Raghu", "owner": "Product/Ops team", "meeting": "April Funnel Conversion Review  Login Dro", "date": "2026-05-27"}, {"q": "What is the exact composition and conversion rate of the 45 unassigned QLs by city and pipeline stage?", "by": "Raghuveer", "owner": "Ankit / Prabhat", "meeting": "May Funnel Review On Google Shift Login ", "date": "2026-06-01"}, {"q": "Why is onboarding-to-activation so low in Delhi despite 100+ partner onboardings in April/early May? What is missing in the pitch post-onboarding?", "by": "Raghuveer", "owner": "Ishant / Rishabh / Avinash", "meeting": "May Funnel Review On Google Shift Login ", "date": "2026-06-01"}, {"q": "What did Ankit's team do on the 7th, 14th, and 21st of May to prevent the month-end sanction shortfall?", "by": "Raghuveer", "owner": "Ankit", "meeting": "May Funnel Review On Google Shift Login ", "date": "2026-06-01"}, {"q": "Is the national call center pilot in Pune showing any early positive signals after 15 days? What data exists?", "by": "Raghuveer", "owner": "Vikas / Ankit", "meeting": "May Funnel Review On Google Shift Login ", "date": "2026-06-01"}, {"q": "What is the correct boundary definition between high margin and pure E2E cases for investor reporting?", "by": "Rashi", "owner": "Vikas / Rashi / Raghuveer", "meeting": "May Funnel Review On Google Shift Login ", "date": "2026-06-01"}, {"q": "What is DDA's updated lead format and who is the correct contact for alignment after the leadership change there?", "by": "Ankit", "owner": "Raghuveer / Ankit", "meeting": "May Funnel Review On Google Shift Login ", "date": "2026-06-01"}, {"q": "What is the June insurance pipeline from BM and partner leads (visibility expected end of week)?", "by": "Raghuveer", "owner": "Vijay / Tarun", "meeting": "May Funnel Review On Google Shift Login ", "date": "2026-06-01"}];
+var MTGS=[{"date": "2026-05-19", "name": "Resume Storytelling Framework For Placem", "actions": 4, "decisions": 0, "questions": 2}, {"date": "2026-05-25", "name": "Institutional Review Transcript", "actions": 11, "decisions": 3, "questions": 5}, {"date": "2026-05-25", "name": "Retail Review Transcript", "actions": 12, "decisions": 6, "questions": 5}, {"date": "2026-05-26", "name": "Ambak Weekly Business Review  Training G", "actions": 15, "decisions": 5, "questions": 6}, {"date": "2026-05-27", "name": "April Funnel Conversion Review  Login Dro", "actions": 8, "decisions": 4, "questions": 4}, {"date": "2026-06-01", "name": "May Funnel Review On Google Shift Login ", "actions": 20, "decisions": 7, "questions": 7}];
+function gd(){try{var v=JSON.parse(localStorage.getItem(DK)||'[]');return Array.isArray(v)?v:[];}catch{return[];}}
+function sd(a){localStorage.setItem(DK,JSON.stringify(a));}
+function isOv(d){return d&&d<TODAY;}
+function hbadge(t){var m={'created':'c1','completed':'c2','deadline_changed':'c3'};var l={'created':'Created','completed':'Completed','deadline_changed':'Deadline Changed'};return '<span class="hb2 '+(m[t]||'c1')+'">'+(l[t]||t)+'</span>';}
+function card(it,done){
+  var ov=isOv(it.due);
+  var hr=(it.history||[]).map(function(h){return '<div class="hr2"><span class="hdate">'+h.date+'</span>'+hbadge(h.type||'created')+'<span>'+(h.detail||'').slice(0,90)+'</span></div>';}).join('');
+  return '<div class="card'+(done?' dc':'')+'" id="c'+it.id+'">'+
+    '<div class="itop"><input type="checkbox" class="icb"'+(done?' checked':'')+' onchange="td(\''+it.id+'\',this.checked)">'+
+    '<div class="ib"><div class="iown">'+it.owner+'</div>'+
+    '<div class="itk'+(done?' dt':'")>'+it.task+'</div>'+
+    '<div class="im"><span class="badge '+(it.priority==='HIGH'?'bh':'bl2')+'">'+it.priority+'</span>'+
+    (it.due?'<span class="badge bd">'+(ov?'OVERDUE: ':'Due: ')+it.due+'</span>':'')+
+    (it.topic?'<span class="badge bt">'+it.topic+'</span>':'')+
+    '<span class="badge bm">'+(it.meeting||'').slice(0,32)+'</span></div></div>'+
+    '<button class="hbtn" onclick="th(\''+it.id+'\')">&#128337;</button></div>'+
+    '<div class="hd" id="h'+it.id+'">'+(hr||'<span style="font-size:11px;color:var(--muted)">No history.</span>')+'</div></div>';
 }
-function toggleHistory(id){var d=document.getElementById('hist-'+id);if(d)d.classList.toggle('open');}
-function toggleDone(id,checked){var done=getDone();if(checked&&!done.includes(id))done.push(id);else if(!checked){var i=done.indexOf(id);if(i>-1)done.splice(i,1);}saveDone(done);render();showToast(checked?'Moved to done pile':'Restored to open');}
-function toggleLowCol(btn){var el=document.getElementById('low-items');if(el.style.display==='none'){el.style.display='';btn.textContent='Collapse';}else{el.style.display='none';btn.textContent='Expand';}}
-function showToast(msg){var t=document.getElementById('toast');t.textContent=msg;t.style.opacity='1';setTimeout(function(){t.style.opacity='0';},2000);}
+function th(id){var d=document.getElementById('h'+id);if(d)d.classList.toggle('open');}
+function td(id,chk){var d=gd();if(chk&&!d.includes(id))d.push(id);else{var i=d.indexOf(id);if(i>-1)d.splice(i,1);}sd(d);render();toast(chk?'Done':'Restored');}
+function toggleLow(b){var el=document.getElementById('lo');el.style.display=el.style.display==='none'?'':'none';b.textContent=el.style.display==='none'?'Expand':'Collapse';}
+function toast(m){var t=document.getElementById('toast');t.textContent=m;t.style.opacity='1';setTimeout(function(){t.style.opacity='0';},2000);}
 function render(){
-  var done=getDone();
-  var hi=ITEMS.filter(function(i){return i.priority==='HIGH'&&!done.includes(i.id);});
-  var lo=ITEMS.filter(function(i){return i.priority==='LOW'&&!done.includes(i.id);});
-  var di=ITEMS.filter(function(i){return done.includes(i.id);});
-  document.getElementById('high-items').innerHTML=hi.map(function(i){return itemCard(i,false);}).join('')||'<div style="padding:20px;color:var(--muted);font-size:13px">All HIGH items completed!</div>';
-  document.getElementById('low-items').innerHTML=lo.map(function(i){return itemCard(i,false);}).join('')||'<div style="padding:20px;color:var(--muted);font-size:13px">All LOW items completed!</div>';
-  document.getElementById('done-pile').innerHTML=di.map(function(i){return itemCard(i,true);}).join('');
-  document.getElementById('done-section').style.display=di.length?'block':'none';
-  var open=hi.length+lo.length;
-  document.getElementById('kpi-open').textContent=open;
-  document.getElementById('kpi-high').textContent=hi.length;
-  document.getElementById('kpi-low').textContent=lo.length;
-  document.getElementById('meta-open').textContent=open;
-  document.getElementById('done-pill').textContent=di.length+' done';
-  var ov=ITEMS.filter(function(i){return !done.includes(i.id)&&isOverdue(i.due);});
-  document.getElementById('kpi-overdue').textContent=open>0?Math.round(ov.length/open*100)+'%':'0%';
-  document.getElementById('overdue-banner').style.display=ov.length?'block':'none';
-  var focus=hi.slice(0,5);
-  document.getElementById('focus-strip').innerHTML=focus.map(function(i){return '<div class="focus-chip"><div class="fc-owner">'+i.owner+'</div><div class="fc-task">'+(i.task.length>80?i.task.slice(0,77)+'...':i.task)+'</div>'+(i.due?'<div class="fc-due">Due '+i.due+'</div>':'')+'</div>';}).join('');
+  var done=gd();
+  var hi=ITEMS.filter(function(i){return i.priority==='HIGH'&&!i.completed&&!done.includes(i.id);});
+  var lo=ITEMS.filter(function(i){return i.priority==='LOW'&&!i.completed&&!done.includes(i.id);});
+  var di=ITEMS.filter(function(i){return i.completed||done.includes(i.id);});
+  document.getElementById('hi').innerHTML=hi.map(function(i){return card(i,false);}).join('')||'<div style="padding:20px;color:var(--muted);font-size:13px">All HIGH items done!</div>';
+  document.getElementById('lo').innerHTML=lo.map(function(i){return card(i,false);}).join('')||'<div style="padding:20px;color:var(--muted);font-size:13px">All LOW items done!</div>';
+  document.getElementById('dpile').innerHTML=di.map(function(i){return card(i,true);}).join('');
+  document.getElementById('dsec').style.display=di.length?'block':'none';
+  var op=hi.length+lo.length;
+  document.getElementById('ko').textContent=op;document.getElementById('kh').textContent=hi.length;
+  document.getElementById('kl2').textContent=lo.length;document.getElementById('mo').textContent=op;
+  document.getElementById('dpill').textContent=di.length+' done';
+  var ov=ITEMS.filter(function(i){return !i.completed&&!done.includes(i.id)&&isOv(i.due);});
+  document.getElementById('kp').textContent=op>0?Math.round(ov.length/op*100)+'%':'0%';
+  document.getElementById('obanner').style.display=ov.length?'block':'none';
+  document.getElementById('fs').innerHTML=hi.slice(0,5).map(function(i){
+    return '<div class="fc"><div class="fco">'+i.owner+'</div><div class="fct">'+(i.task.length>75?i.task.slice(0,72)+'...':i.task)+'</div>'+(i.due?'<div class="fcd">Due '+i.due+'</div>':'')+'</div>';
+  }).join('');
 }
 function renderIntel(){
-  document.getElementById('decisions-list').innerHTML=DECISIONS.map(function(d){return '<div class="intel-item">'+d.text+'<span class="mtag">'+d.m+' - 2026-06-01</span></div>';}).join('');
-  document.getElementById('dynamics-list').innerHTML=DYNAMICS.map(function(d){return '<div class="intel-item">'+d+'</div>';}).join('');
-  var max=Math.max.apply(null,PARTICIPATION.map(function(p){return p.q;}));
-  document.getElementById('participation-list').innerHTML=PARTICIPATION.map(function(p){return '<div class="part-row"><span class="part-name">'+p.name+'</span><div class="part-bar-bg"><div class="part-bar" style="width:'+(max>0?Math.round(p.q/max*100):0)+'%"></div></div><span class="part-count">'+p.q+'</span></div>';}).join('');
+  document.getElementById('dl').innerHTML=DECISIONS.map(function(d){return '<div class="ii">'+d.text+'<span class="itag">'+d.meeting+' - '+d.date+'</span></div>';}).join('');
+  document.getElementById('dyl').innerHTML=DYNAMICS.map(function(d){return '<div class="ii">'+d.text+'<span class="itag">'+d.meeting+' - '+d.date+'</span></div>';}).join('');
+  var mx=Math.max.apply(null,PART.map(function(p){return p.q;})||[1]);if(mx<1)mx=1;
+  document.getElementById('pl').innerHTML=PART.map(function(p){
+    return '<div class="pr"><span class="pn">'+p.name+'</span><div class="pbg"><div class="pb" style="width:'+Math.round(p.q/mx*100)+'%"></div></div><span class="pc">'+p.q+'</span></div>';
+  }).join('');
 }
-function renderQuestions(){
-  document.getElementById('oq-list').innerHTML=OPEN_QUESTIONS.map(function(q){return '<div class="oq-item"><div class="oq-q">'+q.q+'</div><div class="oq-meta">Raised by: '+q.by+' | Expected owner: '+q.owner+'</div></div>';}).join('');
+function renderQ(){
+  document.getElementById('oql').innerHTML=OQS.map(function(q){
+    return '<div class="oqi"><div class="oqq">'+q.q+'</div><div class="oqm">Raised by: '+q.by+' | Owner: '+q.owner+'<span style="margin-left:8px;background:var(--brand-soft);color:var(--brand);padding:1px 6px;border-radius:4px;font-size:10px;font-weight:600">'+q.meeting+'</span></div></div>';
+  }).join('');
 }
-function renderScorecards(){
-  var m={};ITEMS.forEach(function(i){if(!m[i.owner])m[i.owner]={t:0,h:0};m[i.owner].t++;if(i.priority==='HIGH')m[i.owner].h++;});
-  document.getElementById('scorecard-list').innerHTML=Object.entries(m).sort(function(a,b){return b[1].h-a[1].h;}).map(function(e){return '<div class="score-row"><span>'+e[0]+'</span><span class="score-count">'+e[1].t+' items ('+e[1].h+' HIGH)</span></div>';}).join('');
+function renderMtg(){
+  document.getElementById('ml').innerHTML=MTGS.map(function(m){
+    return '<div class="mi"><div class="mdate">'+m.date+'</div><div><div class="mname">'+m.name+'</div><div class="mcnt">'+m.actions+' actions &nbsp;&#x2022;&nbsp; '+m.decisions+' decisions &nbsp;&#x2022;&nbsp; '+m.questions+' questions</div></div></div>';
+  }).join('');
+}
+function renderSc(){
+  var mp={};ITEMS.forEach(function(i){if(!mp[i.owner])mp[i.owner]={t:0,h:0,ov:0};mp[i.owner].t++;if(i.priority==='HIGH')mp[i.owner].h++;if(isOv(i.due)&&!i.completed)mp[i.owner].ov++;});
+  document.getElementById('scl').innerHTML=Object.entries(mp).sort(function(a,b){return b[1].h-a[1].h;}).map(function(e){
+    return '<div class="sr"><span>'+e[0]+'</span><span class="sc">'+e[1].t+' items ('+e[1].h+' HIGH'+(e[1].ov?' <span style="color:var(--high)">'+e[1].ov+' overdue</span>':'')+')&nbsp;</span></div>';
+  }).join('');
 }
 function renderNotes(){
-  var dateKey='ambak_notes_'+TODAY;var archiveKey='ambak_notes_archive';
-  var ta=document.getElementById('notes-today');ta.value=localStorage.getItem(dateKey)||'';
-  ta.addEventListener('input',function(){localStorage.setItem(dateKey,ta.value);});
-  var archive={};try{archive=JSON.parse(localStorage.getItem(archiveKey)||'{}');}catch{}
-  var entries=Object.entries(archive).filter(function(e){return e[0]!==TODAY;}).sort(function(a,b){return b[0].localeCompare(a[0]);}).slice(0,5);
-  document.getElementById('notes-archive').innerHTML=entries.map(function(e){return '<div class="archive-entry"><div class="arc-date">'+e[0]+'</div>'+e[1]+'</div>';}).join('');
+  var dk='ambak_notes_'+TODAY,ak='ambak_notes_archive';
+  var ta=document.getElementById('nt');ta.value=localStorage.getItem(dk)||'';
+  ta.oninput=function(){localStorage.setItem(dk,ta.value);};
+  var arc={};try{arc=JSON.parse(localStorage.getItem(ak)||'{}');}catch{}
+  document.getElementById('na').innerHTML=Object.entries(arc).filter(function(e){return e[0]!==TODAY;}).sort(function(a,b){return b[0].localeCompare(a[0]);}).slice(0,5).map(function(e){return '<div class="ae"><div class="ad">'+e[0]+'</div>'+e[1]+'</div>';}).join('');
 }
 function exportDone(){
-  var done=getDone();if(!done.length){showToast('No completed items yet');return;}
+  var done=gd();if(!done.length){toast('Nothing done yet');return;}
   var di=ITEMS.filter(function(i){return done.includes(i.id);});
-  var lines=di.map(function(i){return '- [x] '+i.owner+' - '+i.task+' (done: '+TODAY+')';}).join('\n');
-  var out='AMBAK COMPLETED ITEMS - '+TODAY+'\nPaste this to Claude to sync with _actions_db.json and stop reminders.\n\n'+lines+'\n--- end ---';
-  navigator.clipboard.writeText(out).then(function(){showToast('Copied to clipboard!');}).catch(function(){showToast('Copy failed - see console');console.log(out);});
+  var out='AMBAK COMPLETED ITEMS - '+TODAY+'\nPaste this to Claude to sync with _actions_db.json.\n\n'+di.map(function(i){return '- [x] '+i.owner+' - '+i.task+' (done: '+TODAY+')';}).join('\n')+'\n--- end ---';
+  navigator.clipboard.writeText(out).then(function(){toast('Copied!');}).catch(function(){console.log(out);toast('See console');});
 }
 function exportNotes(){
-  var dateKey='ambak_notes_'+TODAY;var archiveKey='ambak_notes_archive';
-  var notes=localStorage.getItem(dateKey)||'';if(!notes.trim()){showToast('No notes today');return;}
-  var archive={};try{archive=JSON.parse(localStorage.getItem(archiveKey)||'{}');}catch{}
-  archive[TODAY]=notes;localStorage.setItem(archiveKey,JSON.stringify(archive));
-  var out='AMBAK LEADERSHIP NOTES - exported '+TODAY+'\n\n'+notes+'\n--- end ---';
-  navigator.clipboard.writeText(out).then(function(){showToast('Notes exported!');}).catch(function(){console.log(out);});
+  var dk='ambak_notes_'+TODAY,ak='ambak_notes_archive';
+  var notes=localStorage.getItem(dk)||'';if(!notes.trim()){toast('No notes today');return;}
+  var arc={};try{arc=JSON.parse(localStorage.getItem(ak)||'{}');}catch{}
+  arc[TODAY]=notes;localStorage.setItem(ak,JSON.stringify(arc));
+  navigator.clipboard.writeText('AMBAK LEADERSHIP NOTES - exported '+TODAY+'\n\n'+notes+'\n--- end ---').then(function(){toast('Exported!');});
 }
-function toggleSection(b,c){document.getElementById(b).classList.toggle('open');document.getElementById(c).classList.toggle('open');}
-window.onerror=function(msg,src,line,col,err){var el=document.getElementById('high-items');if(el)el.innerHTML='<div style="padding:20px;color:red;font-size:13px;font-weight:bold">JS ERROR: '+msg+' (line '+line+')</div>';return false;};
-function initDashboard(){try{render();renderIntel();renderQuestions();renderScorecards();renderNotes();}catch(e){var el=document.getElementById('high-items');if(el)el.innerHTML='<div style="padding:20px;color:red;font-size:13px;font-weight:bold">RENDER ERROR: '+e.message+'</div>';}}
-if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',initDashboard);}else{initDashboard();}
-</script>
-</body>
-</html>
+function tSec(b,c){document.getElementById(b).classList.toggle('open');document.getElementById(c).classList.toggle('open');}
+window.onerror=function(msg,src,line){var el=document.getElementById('hi');if(el)el.innerHTML='<div style="padding:20px;color:red;font-weight:bold">JS ERROR: '+msg+' (line '+line+')</div>';return false;};
+function init(){try{render();renderIntel();renderQ();renderMtg();renderSc();renderNotes();}catch(e){var el=document.getElementById('hi');if(el)el.innerHTML='<div style="padding:20px;color:red;font-weight:bold">RENDER ERROR: '+e.message+'</div>';}}
+if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init);}else{init();}
+</script></body></html>
