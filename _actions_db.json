@@ -1,0 +1,1462 @@
+{
+  "items": [
+    {
+      "owner": "Vikas, Vijay, Aman, Ashish",
+      "task": "Hold a 30-minute sync to align on pay-in changes and adjust schemes for May",
+      "due_date": "2026-05-28",
+      "related_topic": "Pay-in and payout alignment",
+      "source_meeting": "Retail Review",
+      "source_meeting_date": "2026-05-25",
+      "priority": "HIGH",
+      "created_at": "2026-05-25T10:42:54Z",
+      "last_reminded_at": "2026-05-26",
+      "completed": null,
+      "completed_at": null,
+      "history": [
+        {
+          "date": "2026-05-25",
+          "meeting": "Retail Review",
+          "type": "created",
+          "detail": "First captured from Retail Review on 2026-05-25"
+        }
+      ],
+      "id": "i0"
+    },
+    {
+      "owner": "Vijay, Aman",
+      "task": "Investigate the True Home Lab, Bajaj Housing Gross ICE and ICICI category and payout misallocations and report the cause",
+      "due_date": "",
+      "related_topic": "Net revenue leakage",
+      "source_meeting": "Retail Review",
+      "source_meeting_date": "2026-05-25",
+      "priority": "HIGH",
+      "created_at": "2026-05-25T10:42:54Z",
+      "last_reminded_at": null,
+      "completed": null,
+      "completed_at": null,
+      "history": [
+        {
+          "date": "2026-05-25",
+          "meeting": "Retail Review",
+          "type": "created",
+          "detail": "First captured from Retail Review on 2026-05-25"
+        }
+      ],
+      "id": "i1"
+    },
+    {
+      "owner": "Vikas, business team",
+      "task": "Identify May levers that can still impact the May P&L",
+      "due_date": "",
+      "related_topic": "May P&L recovery",
+      "source_meeting": "Retail Review",
+      "source_meeting_date": "2026-05-25",
+      "priority": "HIGH",
+      "created_at": "2026-05-25T10:42:54Z",
+      "last_reminded_at": null,
+      "completed": null,
+      "completed_at": null,
+      "history": [
+        {
+          "date": "2026-05-25",
+          "meeting": "Retail Review",
+          "type": "created",
+          "detail": "First captured from Retail Review on 2026-05-25"
+        }
+      ],
+      "id": "i2"
+    },
+    {
+      "owner": "Pankaj",
+      "task": "Build the pay-in module in-system, proxy out-of-system business and enable real-time pay-in calculation to support the three monthly closes",
+      "due_date": "",
+      "related_topic": "Systems and tracking",
+      "source_meeting": "Retail Review",
+      "source_meeting_date": "2026-05-25",
+      "priority": "HIGH",
+      "created_at": "2026-05-25T10:42:54Z",
+      "last_reminded_at": null,
+      "completed": null,
+      "completed_at": null,
+      "history": [
+        {
+          "date": "2026-05-25",
+          "meeting": "Retail Review",
+          "type": "created",
+          "detail": "First captured from Retail Review on 2026-05-25"
+        }
+      ],
+      "id": "i3"
+    },
+    {
+      "owner": "Varsha/Arshay",
+      "task": "Run the second round of the people/Gypsy co-lending discussion, review the product note with Rashi and Pankaj, and reach out to Vriddhi",
+      "due_date": "",
+      "related_topic": "Co-lending partnerships",
+      "source_meeting": "Retail Review",
+      "source_meeting_date": "2026-05-25",
+      "priority": "HIGH",
+      "created_at": "2026-05-25T10:42:54Z",
+      "last_reminded_at": null,
+      "completed": null,
+      "completed_at": null,
+      "history": [
+        {
+          "date": "2026-05-25",
+          "meeting": "Retail Review",
+          "type": "created",
+          "detail": "First captured from Retail Review on 2026-05-25"
+        }
+      ],
+      "id": "i4"
+    },
+    {
+      "owner": "Ashish",
+      "task": "Complete legal review of the co-lending draft agreement",
+      "due_date": "",
+      "related_topic": "Co-lending partnerships",
+      "source_meeting": "Retail Review",
+      "source_meeting_date": "2026-05-25",
+      "priority": "HIGH",
+      "created_at": "2026-05-25T10:42:54Z",
+      "last_reminded_at": null,
+      "completed": null,
+      "completed_at": null,
+      "history": [
+        {
+          "date": "2026-05-25",
+          "meeting": "Retail Review",
+          "type": "created",
+          "detail": "First captured from Retail Review on 2026-05-25"
+        }
+      ],
+      "id": "i5"
+    },
+    {
+      "owner": "Adi",
+      "task": "Pick two metrics from the lender analysis to automate and report regularly on the BD corporate group",
+      "due_date": "",
+      "related_topic": "Tracking discipline",
+      "source_meeting": "Retail Review",
+      "source_meeting_date": "2026-05-25",
+      "priority": "LOW",
+      "created_at": "2026-05-25T10:42:54Z",
+      "last_reminded_at": null,
+      "completed": null,
+      "completed_at": null,
+      "history": [
+        {
+          "date": "2026-05-25",
+          "meeting": "Retail Review",
+          "type": "created",
+          "detail": "First captured from Retail Review on 2026-05-25"
+        }
+      ],
+      "id": "i6"
+    },
+    {
+      "owner": "Adi",
+      "task": "Track activation and retention split by specialty versus non-specialty partners",
+      "due_date": "",
+      "related_topic": "Net revenue analysis",
+      "source_meeting": "Retail Review",
+      "source_meeting_date": "2026-05-25",
+      "priority": "LOW",
+      "created_at": "2026-05-25T10:42:54Z",
+      "last_reminded_at": null,
+      "completed": null,
+      "completed_at": null,
+      "history": [
+        {
+          "date": "2026-05-25",
+          "meeting": "Retail Review",
+          "type": "created",
+          "detail": "First captured from Retail Review on 2026-05-25"
+        }
+      ],
+      "id": "i7"
+    },
+    {
+      "owner": "Nitin",
+      "task": "Create partner-facing marketing and training material for the ABB calculator",
+      "due_date": "",
+      "related_topic": "Product enablement",
+      "source_meeting": "Retail Review",
+      "source_meeting_date": "2026-05-25",
+      "priority": "LOW",
+      "created_at": "2026-05-25T10:42:54Z",
+      "last_reminded_at": null,
+      "completed": null,
+      "completed_at": null,
+      "history": [
+        {
+          "date": "2026-05-25",
+          "meeting": "Retail Review",
+          "type": "created",
+          "detail": "First captured from Retail Review on 2026-05-25"
+        }
+      ],
+      "id": "i8"
+    },
+    {
+      "owner": "Nitin, Pankaj",
+      "task": "Pilot the WhatsApp-group periscope outreach to reach partners at scale",
+      "due_date": "",
+      "related_topic": "Marketing distribution",
+      "source_meeting": "Retail Review",
+      "source_meeting_date": "2026-05-25",
+      "priority": "LOW",
+      "created_at": "2026-05-25T10:42:54Z",
+      "last_reminded_at": null,
+      "completed": null,
+      "completed_at": null,
+      "history": [
+        {
+          "date": "2026-05-25",
+          "meeting": "Retail Review",
+          "type": "created",
+          "detail": "First captured from Retail Review on 2026-05-25"
+        }
+      ],
+      "id": "i9"
+    },
+    {
+      "owner": "Nitin, sales",
+      "task": "Launch QR-code partner collateral for builders and brokers",
+      "due_date": "",
+      "related_topic": "Marketing distribution",
+      "source_meeting": "Retail Review",
+      "source_meeting_date": "2026-05-25",
+      "priority": "LOW",
+      "created_at": "2026-05-25T10:42:54Z",
+      "last_reminded_at": null,
+      "completed": null,
+      "completed_at": null,
+      "history": [
+        {
+          "date": "2026-05-25",
+          "meeting": "Retail Review",
+          "type": "created",
+          "detail": "First captured from Retail Review on 2026-05-25"
+        }
+      ],
+      "id": "i10"
+    },
+    {
+      "owner": "Vijay",
+      "task": "Own final sign-off on training content and the delivery calendar",
+      "due_date": "",
+      "related_topic": "Business Enablement",
+      "source_meeting": "Retail Review",
+      "source_meeting_date": "2026-05-25",
+      "priority": "LOW",
+      "created_at": "2026-05-25T10:42:54Z",
+      "last_reminded_at": null,
+      "completed": null,
+      "completed_at": null,
+      "history": [
+        {
+          "date": "2026-05-25",
+          "meeting": "Retail Review",
+          "type": "created",
+          "detail": "First captured from Retail Review on 2026-05-25"
+        }
+      ],
+      "id": "i11"
+    },
+    {
+      "owner": "Ankit, Ishaan",
+      "task": "Run a joint institutional and E2E review of the full funnel on the first of the month",
+      "due_date": "2026-06-01",
+      "related_topic": "One-team operating model",
+      "source_meeting": "Institutional Review",
+      "source_meeting_date": "2026-05-25",
+      "priority": "HIGH",
+      "created_at": "2026-05-25T10:42:54Z",
+      "last_reminded_at": "2026-05-27",
+      "completed": null,
+      "completed_at": null,
+      "history": [
+        {
+          "date": "2026-05-25",
+          "meeting": "Institutional Review",
+          "type": "created",
+          "detail": "First captured from Institutional Review on 2026-05-25"
+        }
+      ],
+      "id": "i12"
+    },
+    {
+      "owner": "Rishabh, E2E team",
+      "task": "Complete an RCA on QL-to-login falling to 25% from a historic 40% and specify the support required",
+      "due_date": "",
+      "related_topic": "Funnel conversion",
+      "source_meeting": "Institutional Review",
+      "source_meeting_date": "2026-05-25",
+      "priority": "HIGH",
+      "created_at": "2026-05-25T10:42:54Z",
+      "last_reminded_at": null,
+      "completed": null,
+      "completed_at": null,
+      "history": [
+        {
+          "date": "2026-05-25",
+          "meeting": "Institutional Review",
+          "type": "created",
+          "detail": "First captured from Institutional Review on 2026-05-25"
+        },
+        {
+          "date": "2026-05-27",
+          "meeting": "April Funnel Conversion Review - Login RCA - Training AOP",
+          "type": "note",
+          "detail": "RCA appears delivered via this meeting presentation; no explicit verbal confirmation given. Recommend manual review and mark done if satisfied."
+        }
+      ],
+      "id": "i13"
+    },
+    {
+      "owner": "Ishaan, Ankit",
+      "task": "Hit the May commitment of 250-plus logins and the 110 number",
+      "due_date": "2026-05-31",
+      "related_topic": "May targets",
+      "source_meeting": "Institutional Review",
+      "source_meeting_date": "2026-05-25",
+      "priority": "HIGH",
+      "created_at": "2026-05-25T10:42:54Z",
+      "last_reminded_at": "2026-05-27",
+      "completed": null,
+      "completed_at": null,
+      "history": [
+        {
+          "date": "2026-05-25",
+          "meeting": "Institutional Review",
+          "type": "created",
+          "detail": "First captured from Institutional Review on 2026-05-25"
+        }
+      ],
+      "id": "i14"
+    },
+    {
+      "owner": "Raghu, Arvind",
+      "task": "Catch up next Wednesday for a full update on D2C, ops, institutional and retail",
+      "due_date": "2026-05-27",
+      "related_topic": "Cross-function review",
+      "source_meeting": "Institutional Review",
+      "source_meeting_date": "2026-05-25",
+      "priority": "HIGH",
+      "created_at": "2026-05-25T10:42:54Z",
+      "last_reminded_at": "2026-05-27",
+      "completed": null,
+      "completed_at": null,
+      "history": [
+        {
+          "date": "2026-05-25",
+          "meeting": "Institutional Review",
+          "type": "created",
+          "detail": "First captured from Institutional Review on 2026-05-25"
+        }
+      ],
+      "id": "i15"
+    },
+    {
+      "owner": "Training team",
+      "task": "Close the revamped LST with Vishal and Ishaan and prepare the next-month go-live",
+      "due_date": "",
+      "related_topic": "Training rollout",
+      "source_meeting": "Institutional Review",
+      "source_meeting_date": "2026-05-25",
+      "priority": "HIGH",
+      "created_at": "2026-05-25T10:42:54Z",
+      "last_reminded_at": null,
+      "completed": null,
+      "completed_at": null,
+      "history": [
+        {
+          "date": "2026-05-25",
+          "meeting": "Institutional Review",
+          "type": "created",
+          "detail": "First captured from Institutional Review on 2026-05-25"
+        }
+      ],
+      "id": "i16"
+    },
+    {
+      "owner": "Akash",
+      "task": "Double-check the 66% repeat-partner QL figure and compare April against March numbers",
+      "due_date": "",
+      "related_topic": "Retention metrics",
+      "source_meeting": "Institutional Review",
+      "source_meeting_date": "2026-05-25",
+      "priority": "LOW",
+      "created_at": "2026-05-25T10:42:54Z",
+      "last_reminded_at": null,
+      "completed": null,
+      "completed_at": null,
+      "history": [
+        {
+          "date": "2026-05-25",
+          "meeting": "Institutional Review",
+          "type": "created",
+          "detail": "First captured from Institutional Review on 2026-05-25"
+        }
+      ],
+      "id": "i17"
+    },
+    {
+      "owner": "Raghu, Rishabh",
+      "task": "Sit together to define what the institutional review should drive out",
+      "due_date": "",
+      "related_topic": "Review structure",
+      "source_meeting": "Institutional Review",
+      "source_meeting_date": "2026-05-25",
+      "priority": "LOW",
+      "created_at": "2026-05-25T10:42:54Z",
+      "last_reminded_at": null,
+      "completed": null,
+      "completed_at": null,
+      "history": [
+        {
+          "date": "2026-05-25",
+          "meeting": "Institutional Review",
+          "type": "created",
+          "detail": "First captured from Institutional Review on 2026-05-25"
+        }
+      ],
+      "id": "i18"
+    },
+    {
+      "owner": "Pankaj, institutional team",
+      "task": "Build a CAM-style large-partner tracking structure with a requisition form in the CRM",
+      "due_date": "",
+      "related_topic": "Large-partner tracking",
+      "source_meeting": "Institutional Review",
+      "source_meeting_date": "2026-05-25",
+      "priority": "LOW",
+      "created_at": "2026-05-25T10:42:54Z",
+      "last_reminded_at": null,
+      "completed": null,
+      "completed_at": null,
+      "history": [
+        {
+          "date": "2026-05-25",
+          "meeting": "Institutional Review",
+          "type": "created",
+          "detail": "First captured from Institutional Review on 2026-05-25"
+        }
+      ],
+      "id": "i19"
+    },
+    {
+      "owner": "CAM / Ops Lead",
+      "task": "Finalise the CAM roles-and-responsibilities framework with named owner, lead and cadence",
+      "due_date": "",
+      "related_topic": "CAM governance",
+      "source_meeting": "Institutional Review",
+      "source_meeting_date": "2026-05-25",
+      "priority": "LOW",
+      "created_at": "2026-05-25T10:42:54Z",
+      "last_reminded_at": null,
+      "completed": null,
+      "completed_at": null,
+      "history": [
+        {
+          "date": "2026-05-25",
+          "meeting": "Institutional Review",
+          "type": "created",
+          "detail": "First captured from Institutional Review on 2026-05-25"
+        }
+      ],
+      "id": "i20"
+    },
+    {
+      "owner": "Institutional Marketing Lead",
+      "task": "Track the 2-month business lift in logins and disbursals after RM events",
+      "due_date": "",
+      "related_topic": "Marketing measurement",
+      "source_meeting": "Institutional Review",
+      "source_meeting_date": "2026-05-25",
+      "priority": "LOW",
+      "created_at": "2026-05-25T10:42:54Z",
+      "last_reminded_at": null,
+      "completed": null,
+      "completed_at": null,
+      "history": [
+        {
+          "date": "2026-05-25",
+          "meeting": "Institutional Review",
+          "type": "created",
+          "detail": "First captured from Institutional Review on 2026-05-25"
+        }
+      ],
+      "id": "i21"
+    },
+    {
+      "owner": "Institutional Marketing Lead",
+      "task": "Amplify the 12 high-impact stories and build the LinkedIn plan for large B2B partnerships",
+      "due_date": "",
+      "related_topic": "Marketing",
+      "source_meeting": "Institutional Review",
+      "source_meeting_date": "2026-05-25",
+      "priority": "LOW",
+      "created_at": "2026-05-25T10:42:54Z",
+      "last_reminded_at": null,
+      "completed": null,
+      "completed_at": null,
+      "history": [
+        {
+          "date": "2026-05-25",
+          "meeting": "Institutional Review",
+          "type": "created",
+          "detail": "First captured from Institutional Review on 2026-05-25"
+        }
+      ],
+      "id": "i22"
+    },
+    {
+      "owner": "Prabhat",
+      "task": "Update QL tracking format to show central-allocated vs Lucknow vs unassigned vs self; implement today",
+      "due_date": "2026-05-26",
+      "related_topic": "QL tracking format",
+      "source_meeting": "Ambak WBR - Training, QL, E2E, City Scale",
+      "source_meeting_date": "2026-05-26",
+      "priority": "HIGH",
+      "created_at": "2026-05-26T05:20:23Z",
+      "last_reminded_at": "2026-05-27",
+      "completed": null,
+      "completed_at": null,
+      "history": [
+        {
+          "date": "2026-05-26",
+          "meeting": "Ambak WBR - Training, QL, E2E, City Scale",
+          "type": "created",
+          "detail": "First captured from Ambak WBR on 2026-05-26"
+        }
+      ],
+      "id": "i23"
+    },
+    {
+      "owner": "Rashi",
+      "task": "Create baseline document on extended-timeline problem (property finalization, registry delays, customer WIP); consult Rishab, Khyati, Riddhi, Pankaj, Ankit, Puneet, Devjyoti this week; wider group session next week",
+      "due_date": "2026-05-31",
+      "related_topic": "Extended-timeline product and comms problem",
+      "source_meeting": "Ambak WBR - Training, QL, E2E, City Scale",
+      "source_meeting_date": "2026-05-26",
+      "priority": "HIGH",
+      "created_at": "2026-05-26T05:20:23Z",
+      "last_reminded_at": "2026-05-27",
+      "completed": null,
+      "completed_at": null,
+      "history": [
+        {
+          "date": "2026-05-26",
+          "meeting": "Ambak WBR - Training, QL, E2E, City Scale",
+          "type": "created",
+          "detail": "First captured from Ambak WBR on 2026-05-26"
+        }
+      ],
+      "id": "i24"
+    },
+    {
+      "owner": "Vijay/Aditya",
+      "task": "Send last 12 weeks of QL data (simple weekly numbers) to Raghu",
+      "due_date": "2026-05-26",
+      "related_topic": "QL tracking",
+      "source_meeting": "Ambak WBR - Training, QL, E2E, City Scale",
+      "source_meeting_date": "2026-05-26",
+      "priority": "HIGH",
+      "created_at": "2026-05-26T05:20:23Z",
+      "last_reminded_at": "2026-05-27",
+      "completed": null,
+      "completed_at": null,
+      "history": [
+        {
+          "date": "2026-05-26",
+          "meeting": "Ambak WBR - Training, QL, E2E, City Scale",
+          "type": "created",
+          "detail": "First captured from Ambak WBR on 2026-05-26"
+        }
+      ],
+      "id": "i25"
+    },
+    {
+      "owner": "Ankit",
+      "task": "Share timelines by tomorrow for hacky checklist and bank-wise case handling approach (what to offer first, what documents to send, when to escalate to banker, at what stage to stop on a customer)",
+      "due_date": "2026-05-27",
+      "related_topic": "DSA-level execution intelligence",
+      "source_meeting": "Ambak WBR - Training, QL, E2E, City Scale",
+      "source_meeting_date": "2026-05-26",
+      "priority": "HIGH",
+      "created_at": "2026-05-26T05:20:23Z",
+      "last_reminded_at": "2026-05-27",
+      "completed": null,
+      "completed_at": null,
+      "history": [
+        {
+          "date": "2026-05-26",
+          "meeting": "Ambak WBR - Training, QL, E2E, City Scale",
+          "type": "created",
+          "detail": "First captured from Ambak WBR on 2026-05-26"
+        }
+      ],
+      "id": "i26"
+    },
+    {
+      "owner": "Vijay/Ankit",
+      "task": "Ring-fence MAHADA 2600 leads; ensure Aman and banker coordination in place with dedicated review cadence before first-week-June delivery",
+      "due_date": "2026-06-01",
+      "related_topic": "MAHADA leads",
+      "source_meeting": "Ambak WBR - Training, QL, E2E, City Scale",
+      "source_meeting_date": "2026-05-26",
+      "priority": "HIGH",
+      "created_at": "2026-05-26T05:20:23Z",
+      "last_reminded_at": "2026-05-27",
+      "completed": null,
+      "completed_at": null,
+      "history": [
+        {
+          "date": "2026-05-26",
+          "meeting": "Ambak WBR - Training, QL, E2E, City Scale",
+          "type": "created",
+          "detail": "First captured from Ambak WBR on 2026-05-26"
+        }
+      ],
+      "id": "i27"
+    },
+    {
+      "owner": "Tarun/Hitesh (via Vijay)",
+      "task": "Send Raghu insurance waterfall update (issued, pipeline, login stage, lead stage, May confidence) by 2 PM today",
+      "due_date": "2026-05-26",
+      "related_topic": "Insurance tracking",
+      "source_meeting": "Ambak WBR - Training, QL, E2E, City Scale",
+      "source_meeting_date": "2026-05-26",
+      "priority": "HIGH",
+      "created_at": "2026-05-26T05:20:23Z",
+      "last_reminded_at": "2026-05-27",
+      "completed": null,
+      "completed_at": null,
+      "history": [
+        {
+          "date": "2026-05-26",
+          "meeting": "Ambak WBR - Training, QL, E2E, City Scale",
+          "type": "created",
+          "detail": "First captured from Ambak WBR on 2026-05-26"
+        }
+      ],
+      "id": "i28"
+    },
+    {
+      "owner": "Rashi",
+      "task": "Share comfort level on 76 CR E2E number to Raghu by evening today",
+      "due_date": "2026-05-26",
+      "related_topic": "E2E pipeline confirmation",
+      "source_meeting": "Ambak WBR - Training, QL, E2E, City Scale",
+      "source_meeting_date": "2026-05-26",
+      "priority": "HIGH",
+      "created_at": "2026-05-26T05:20:23Z",
+      "last_reminded_at": "2026-05-27",
+      "completed": null,
+      "completed_at": null,
+      "history": [
+        {
+          "date": "2026-05-26",
+          "meeting": "Ambak WBR - Training, QL, E2E, City Scale",
+          "type": "created",
+          "detail": "First captured from Ambak WBR on 2026-05-26"
+        }
+      ],
+      "id": "i29"
+    },
+    {
+      "owner": "Vijay/E2E team",
+      "task": "Move 20 CR of E2E cases (currently self-tagged or out-of-system) into system today",
+      "due_date": "2026-05-26",
+      "related_topic": "E2E in-system tracking",
+      "source_meeting": "Ambak WBR - Training, QL, E2E, City Scale",
+      "source_meeting_date": "2026-05-26",
+      "priority": "HIGH",
+      "created_at": "2026-05-26T05:20:23Z",
+      "last_reminded_at": "2026-05-27",
+      "completed": null,
+      "completed_at": null,
+      "history": [
+        {
+          "date": "2026-05-26",
+          "meeting": "Ambak WBR - Training, QL, E2E, City Scale",
+          "type": "created",
+          "detail": "First captured from Ambak WBR on 2026-05-26"
+        }
+      ],
+      "id": "i30"
+    },
+    {
+      "owner": "Neerav",
+      "task": "Finalize ABM hire for Ahmedabad this week; two ABM offers going out in next 1-2 days",
+      "due_date": "2026-05-31",
+      "related_topic": "Ahmedabad team build",
+      "source_meeting": "Ambak WBR - Training, QL, E2E, City Scale",
+      "source_meeting_date": "2026-05-26",
+      "priority": "HIGH",
+      "created_at": "2026-05-26T05:20:23Z",
+      "last_reminded_at": "2026-05-27",
+      "completed": null,
+      "completed_at": null,
+      "history": [
+        {
+          "date": "2026-05-26",
+          "meeting": "Ambak WBR - Training, QL, E2E, City Scale",
+          "type": "created",
+          "detail": "First captured from Ambak WBR on 2026-05-26"
+        }
+      ],
+      "id": "i31"
+    },
+    {
+      "owner": "Nagesh",
+      "task": "Close Bangalore hiring (city head, 2 ABMs, RMs) by month end",
+      "due_date": "2026-05-31",
+      "related_topic": "Bangalore team build",
+      "source_meeting": "Ambak WBR - Training, QL, E2E, City Scale",
+      "source_meeting_date": "2026-05-26",
+      "priority": "HIGH",
+      "created_at": "2026-05-26T05:20:23Z",
+      "last_reminded_at": "2026-05-27",
+      "completed": null,
+      "completed_at": null,
+      "history": [
+        {
+          "date": "2026-05-26",
+          "meeting": "Ambak WBR - Training, QL, E2E, City Scale",
+          "type": "created",
+          "detail": "First captured from Ambak WBR on 2026-05-26"
+        }
+      ],
+      "id": "i32"
+    },
+    {
+      "owner": "Ankit/Rishab",
+      "task": "Ensure 7 Bangalore ready-to-log files are logged this week; resolve consent and property doc pendency",
+      "due_date": "2026-05-31",
+      "related_topic": "Bangalore logins",
+      "source_meeting": "Ambak WBR - Training, QL, E2E, City Scale",
+      "source_meeting_date": "2026-05-26",
+      "priority": "HIGH",
+      "created_at": "2026-05-26T05:20:23Z",
+      "last_reminded_at": "2026-05-27",
+      "completed": null,
+      "completed_at": null,
+      "history": [
+        {
+          "date": "2026-05-26",
+          "meeting": "Ambak WBR - Training, QL, E2E, City Scale",
+          "type": "created",
+          "detail": "First captured from Ambak WBR on 2026-05-26"
+        }
+      ],
+      "id": "i33"
+    },
+    {
+      "owner": "Pooja",
+      "task": "Double-click this week on three training areas: (1) train-the-trainer content and city-specific nuances, (2) scheduling consistency fix, (3) assessment reliability",
+      "due_date": "2026-05-31",
+      "related_topic": "Training quality",
+      "source_meeting": "Ambak WBR - Training, QL, E2E, City Scale",
+      "source_meeting_date": "2026-05-26",
+      "priority": "HIGH",
+      "created_at": "2026-05-26T05:20:23Z",
+      "last_reminded_at": "2026-05-27",
+      "completed": null,
+      "completed_at": null,
+      "history": [
+        {
+          "date": "2026-05-26",
+          "meeting": "Ambak WBR - Training, QL, E2E, City Scale",
+          "type": "created",
+          "detail": "First captured from Ambak WBR on 2026-05-26"
+        }
+      ],
+      "id": "i34"
+    },
+    {
+      "owner": "Ankit",
+      "task": "Visit DSA partners regularly and share weekly update on learnings (what they do differently, hacky solutions, bank-specific tricks that help close cases faster)",
+      "due_date": "",
+      "related_topic": "DSA-level understanding",
+      "source_meeting": "Ambak WBR - Training, QL, E2E, City Scale",
+      "source_meeting_date": "2026-05-26",
+      "priority": "LOW",
+      "created_at": "2026-05-26T05:20:23Z",
+      "last_reminded_at": null,
+      "completed": null,
+      "completed_at": null,
+      "history": [
+        {
+          "date": "2026-05-26",
+          "meeting": "Ambak WBR - Training, QL, E2E, City Scale",
+          "type": "created",
+          "detail": "First captured from Ambak WBR on 2026-05-26"
+        }
+      ],
+      "id": "i35"
+    },
+    {
+      "owner": "Akash",
+      "task": "Post 2-3 lead IDs from last 3-4 days where Pune-Delhi coordination was weak to the messaging group",
+      "due_date": "2026-05-26",
+      "related_topic": "Pune-Delhi coordination",
+      "source_meeting": "Ambak WBR - Training, QL, E2E, City Scale",
+      "source_meeting_date": "2026-05-26",
+      "priority": "LOW",
+      "created_at": "2026-05-26T05:20:23Z",
+      "last_reminded_at": "2026-05-27",
+      "completed": null,
+      "completed_at": null,
+      "history": [
+        {
+          "date": "2026-05-26",
+          "meeting": "Ambak WBR - Training, QL, E2E, City Scale",
+          "type": "created",
+          "detail": "First captured from Ambak WBR on 2026-05-26"
+        }
+      ],
+      "id": "i36"
+    },
+    {
+      "owner": "Vijay",
+      "task": "Track daily E2E DRR number alongside self-fulfillment in Aditya's existing self-tracking sheet",
+      "due_date": "2026-05-26",
+      "related_topic": "E2E daily tracking",
+      "source_meeting": "Ambak WBR - Training, QL, E2E, City Scale",
+      "source_meeting_date": "2026-05-26",
+      "priority": "LOW",
+      "created_at": "2026-05-26T05:20:23Z",
+      "last_reminded_at": "2026-05-27",
+      "completed": null,
+      "completed_at": null,
+      "history": [
+        {
+          "date": "2026-05-26",
+          "meeting": "Ambak WBR - Training, QL, E2E, City Scale",
+          "type": "created",
+          "detail": "First captured from Ambak WBR on 2026-05-26"
+        }
+      ],
+      "id": "i37"
+    },
+    {
+      "owner": "Ankita",
+      "task": "Review complete May data with Himang today (May 27); present RCA, initiative performance and June targets to city heads by June 1",
+      "due_date": "2026-06-01",
+      "related_topic": "Monthly target planning",
+      "source_meeting": "April Funnel Conversion Review - Login RCA - Training AOP",
+      "source_meeting_date": "2026-05-27",
+      "priority": "HIGH",
+      "created_at": "2026-05-27T11:04:00Z",
+      "last_reminded_at": null,
+      "completed": null,
+      "completed_at": null,
+      "history": [
+        {
+          "date": "2026-05-27",
+          "meeting": "April Funnel Conversion Review - Login RCA - Training AOP",
+          "type": "created",
+          "detail": "First captured from April Funnel/Login RCA meeting on 2026-05-27"
+        }
+      ],
+      "id": "i38"
+    },
+    {
+      "owner": "Product (Mohit/Roshan)",
+      "task": "Fix call timestamp to use call start time (not end time) in first-call follow-up reports",
+      "due_date": "",
+      "related_topic": "Reporting accuracy",
+      "source_meeting": "April Funnel Conversion Review - Login RCA - Training AOP",
+      "source_meeting_date": "2026-05-27",
+      "priority": "HIGH",
+      "created_at": "2026-05-27T11:04:00Z",
+      "last_reminded_at": null,
+      "completed": null,
+      "completed_at": null,
+      "history": [
+        {
+          "date": "2026-05-27",
+          "meeting": "April Funnel Conversion Review - Login RCA - Training AOP",
+          "type": "created",
+          "detail": "First captured from April Funnel/Login RCA meeting on 2026-05-27"
+        }
+      ],
+      "id": "i39"
+    },
+    {
+      "owner": "Product team",
+      "task": "Implement immediate fix: show missed call notifications to FBMs in real-time on system ID so they can call back without missing customer",
+      "due_date": "",
+      "related_topic": "Missed call visibility",
+      "source_meeting": "April Funnel Conversion Review - Login RCA - Training AOP",
+      "source_meeting_date": "2026-05-27",
+      "priority": "HIGH",
+      "created_at": "2026-05-27T11:04:00Z",
+      "last_reminded_at": null,
+      "completed": null,
+      "completed_at": null,
+      "history": [
+        {
+          "date": "2026-05-27",
+          "meeting": "April Funnel Conversion Review - Login RCA - Training AOP",
+          "type": "created",
+          "detail": "First captured from April Funnel/Login RCA meeting on 2026-05-27"
+        }
+      ],
+      "id": "i40"
+    },
+    {
+      "owner": "Telecom/Ops",
+      "task": "Receive DID mobile numbers from vendor (2-3 days), configure in system within 1 day, roll out by Thursday June 4",
+      "due_date": "2026-06-04",
+      "related_topic": "Number whitelisting",
+      "source_meeting": "April Funnel Conversion Review - Login RCA - Training AOP",
+      "source_meeting_date": "2026-05-27",
+      "priority": "HIGH",
+      "created_at": "2026-05-27T11:04:00Z",
+      "last_reminded_at": null,
+      "completed": null,
+      "completed_at": null,
+      "history": [
+        {
+          "date": "2026-05-27",
+          "meeting": "April Funnel Conversion Review - Login RCA - Training AOP",
+          "type": "created",
+          "detail": "First captured from April Funnel/Login RCA meeting on 2026-05-27"
+        }
+      ],
+      "id": "i41"
+    },
+    {
+      "owner": "Rishabh",
+      "task": "Meet Mada/partner on Monday to understand lead data quality gap (missing allotment/booking dates in new format); report back with prediction on conversion potential",
+      "due_date": "2026-06-02",
+      "related_topic": "Lead data quality",
+      "source_meeting": "April Funnel Conversion Review - Login RCA - Training AOP",
+      "source_meeting_date": "2026-05-27",
+      "priority": "HIGH",
+      "created_at": "2026-05-27T11:04:00Z",
+      "last_reminded_at": null,
+      "completed": null,
+      "completed_at": null,
+      "history": [
+        {
+          "date": "2026-05-27",
+          "meeting": "April Funnel Conversion Review - Login RCA - Training AOP",
+          "type": "created",
+          "detail": "First captured from April Funnel/Login RCA meeting on 2026-05-27"
+        }
+      ],
+      "id": "i42"
+    },
+    {
+      "owner": "Darshan",
+      "task": "Sit for joint re-audit of deal cancel/postpone cases across cities; validate 28% figure and identify major contribution cities and root causes",
+      "due_date": "",
+      "related_topic": "Funnel drop-off audit",
+      "source_meeting": "April Funnel Conversion Review - Login RCA - Training AOP",
+      "source_meeting_date": "2026-05-27",
+      "priority": "HIGH",
+      "created_at": "2026-05-27T11:04:00Z",
+      "last_reminded_at": null,
+      "completed": null,
+      "completed_at": null,
+      "history": [
+        {
+          "date": "2026-05-27",
+          "meeting": "April Funnel Conversion Review - Login RCA - Training AOP",
+          "type": "created",
+          "detail": "First captured from April Funnel/Login RCA meeting on 2026-05-27"
+        }
+      ],
+      "id": "i43"
+    },
+    {
+      "owner": "Avinash",
+      "task": "Audit 'logged with another bank' cases for cross-pitch attempts; check if agents are pitching competitive rates vs SBI and identify pitch training gaps",
+      "due_date": "",
+      "related_topic": "Cross-pitch audit",
+      "source_meeting": "April Funnel Conversion Review - Login RCA - Training AOP",
+      "source_meeting_date": "2026-05-27",
+      "priority": "LOW",
+      "created_at": "2026-05-27T11:04:00Z",
+      "last_reminded_at": null,
+      "completed": null,
+      "completed_at": null,
+      "history": [
+        {
+          "date": "2026-05-27",
+          "meeting": "April Funnel Conversion Review - Login RCA - Training AOP",
+          "type": "created",
+          "detail": "First captured from April Funnel/Login RCA meeting on 2026-05-27"
+        }
+      ],
+      "id": "i44"
+    },
+    {
+      "owner": "Arpit/Training team",
+      "task": "Launch June plan: communication + art of report + people management workshops (nomination-based); introduce e-learning in NHT, buddy program, call audits for new joiners; cross-function mock calls; Learning Premier League on Kahoot",
+      "due_date": "2026-06-30",
+      "related_topic": "June training rollout",
+      "source_meeting": "April Funnel Conversion Review - Login RCA - Training AOP",
+      "source_meeting_date": "2026-05-27",
+      "priority": "LOW",
+      "created_at": "2026-05-27T11:04:00Z",
+      "last_reminded_at": null,
+      "completed": null,
+      "completed_at": null,
+      "history": [
+        {
+          "date": "2026-05-27",
+          "meeting": "April Funnel Conversion Review - Login RCA - Training AOP",
+          "type": "created",
+          "detail": "First captured from April Funnel/Login RCA meeting on 2026-05-27"
+        }
+      ],
+      "id": "i45"
+    },
+    {
+      "owner": "Ankit",
+      "task": "Review 25 planned sanctions from last week and identify root cause of only 4 completions",
+      "due_date": "",
+      "related_topic": "Sanction conversion accountability",
+      "source_meeting": "May Funnel Review: Google Shift, Login-to-Disbursal Gaps, and City-Level Execution",
+      "source_meeting_date": "2026-06-01",
+      "priority": "HIGH",
+      "created_at": "2026-06-01",
+      "last_reminded_at": null,
+      "completed": null,
+      "completed_at": null,
+      "history": [
+        {
+          "date": "2026-06-01",
+          "meeting": "May Funnel Review: Google Shift, Login-to-Disbursal Gaps, and City-Level Execution",
+          "type": "created",
+          "detail": "First captured from May Funnel Review on 2026-06-01"
+        }
+      ],
+      "id": "i46"
+    },
+    {
+      "owner": "Ankit",
+      "task": "Sit with Avinash to solve FBM-RM coordination gap for Noida cases",
+      "due_date": "2026-06-01",
+      "related_topic": "Delhi NCR execution",
+      "source_meeting": "May Funnel Review: Google Shift, Login-to-Disbursal Gaps, and City-Level Execution",
+      "source_meeting_date": "2026-06-01",
+      "priority": "HIGH",
+      "created_at": "2026-06-01",
+      "last_reminded_at": "2026-06-01",
+      "completed": null,
+      "completed_at": null,
+      "history": [
+        {
+          "date": "2026-06-01",
+          "meeting": "May Funnel Review: Google Shift, Login-to-Disbursal Gaps, and City-Level Execution",
+          "type": "created",
+          "detail": "First captured from May Funnel Review on 2026-06-01"
+        }
+      ],
+      "id": "i47"
+    },
+    {
+      "owner": "Ankit",
+      "task": "Circle off all confirmed May disbursement numbers by end of today",
+      "due_date": "2026-06-01",
+      "related_topic": "May disbursement close",
+      "source_meeting": "May Funnel Review: Google Shift, Login-to-Disbursal Gaps, and City-Level Execution",
+      "source_meeting_date": "2026-06-01",
+      "priority": "HIGH",
+      "created_at": "2026-06-01",
+      "last_reminded_at": "2026-06-01",
+      "completed": null,
+      "completed_at": null,
+      "history": [
+        {
+          "date": "2026-06-01",
+          "meeting": "May Funnel Review: Google Shift, Login-to-Disbursal Gaps, and City-Level Execution",
+          "type": "created",
+          "detail": "First captured from May Funnel Review on 2026-06-01"
+        }
+      ],
+      "id": "i48"
+    },
+    {
+      "owner": "Ishant",
+      "task": "Set up June 11 meeting with Pranav, Pooja, Ankit, and Rashi for Delhi three-point plan review",
+      "due_date": "2026-06-02",
+      "related_topic": "Delhi NCR follow-up",
+      "source_meeting": "May Funnel Review: Google Shift, Login-to-Disbursal Gaps, and City-Level Execution",
+      "source_meeting_date": "2026-06-01",
+      "priority": "HIGH",
+      "created_at": "2026-06-01",
+      "last_reminded_at": null,
+      "completed": null,
+      "completed_at": null,
+      "history": [
+        {
+          "date": "2026-06-01",
+          "meeting": "May Funnel Review: Google Shift, Login-to-Disbursal Gaps, and City-Level Execution",
+          "type": "created",
+          "detail": "First captured from May Funnel Review on 2026-06-01"
+        }
+      ],
+      "id": "i49"
+    },
+    {
+      "owner": "Rashi",
+      "task": "Convene cross-team Pune accountability session (Rishab, Ankit, Ishant, Vikas, Shalesh)",
+      "due_date": "",
+      "related_topic": "Pune resolution",
+      "source_meeting": "May Funnel Review: Google Shift, Login-to-Disbursal Gaps, and City-Level Execution",
+      "source_meeting_date": "2026-06-01",
+      "priority": "HIGH",
+      "created_at": "2026-06-01",
+      "last_reminded_at": null,
+      "completed": null,
+      "completed_at": null,
+      "history": [
+        {
+          "date": "2026-06-01",
+          "meeting": "May Funnel Review: Google Shift, Login-to-Disbursal Gaps, and City-Level Execution",
+          "type": "created",
+          "detail": "First captured from May Funnel Review on 2026-06-01"
+        }
+      ],
+      "id": "i50"
+    },
+    {
+      "owner": "Aman",
+      "task": "Get banker scheme clarity from Easy IFL, Vasu, and IIC for Mahada leads",
+      "due_date": "2026-06-03",
+      "related_topic": "Mahada project",
+      "source_meeting": "May Funnel Review: Google Shift, Login-to-Disbursal Gaps, and City-Level Execution",
+      "source_meeting_date": "2026-06-01",
+      "priority": "HIGH",
+      "created_at": "2026-06-01",
+      "last_reminded_at": null,
+      "completed": null,
+      "completed_at": null,
+      "history": [
+        {
+          "date": "2026-06-01",
+          "meeting": "May Funnel Review: Google Shift, Login-to-Disbursal Gaps, and City-Level Execution",
+          "type": "created",
+          "detail": "First captured from May Funnel Review on 2026-06-01"
+        }
+      ],
+      "id": "i51"
+    },
+    {
+      "owner": "Devesh",
+      "task": "Close pending Rs 1.25 CR Mahada disbursal case by Saturday",
+      "due_date": "2026-06-07",
+      "related_topic": "Mahada pipeline",
+      "source_meeting": "May Funnel Review: Google Shift, Login-to-Disbursal Gaps, and City-Level Execution",
+      "source_meeting_date": "2026-06-01",
+      "priority": "HIGH",
+      "created_at": "2026-06-01",
+      "last_reminded_at": null,
+      "completed": null,
+      "completed_at": null,
+      "history": [
+        {
+          "date": "2026-06-01",
+          "meeting": "May Funnel Review: Google Shift, Login-to-Disbursal Gaps, and City-Level Execution",
+          "type": "created",
+          "detail": "First captured from May Funnel Review on 2026-06-01"
+        }
+      ],
+      "id": "i52"
+    },
+    {
+      "owner": "Vikas",
+      "task": "Confirm final May E2E disbursement number (Rs 68 CR target) and resolve Naveen confirmation today",
+      "due_date": "2026-06-01",
+      "related_topic": "E2E disbursement close",
+      "source_meeting": "May Funnel Review: Google Shift, Login-to-Disbursal Gaps, and City-Level Execution",
+      "source_meeting_date": "2026-06-01",
+      "priority": "HIGH",
+      "created_at": "2026-06-01",
+      "last_reminded_at": "2026-06-01",
+      "completed": null,
+      "completed_at": null,
+      "history": [
+        {
+          "date": "2026-06-01",
+          "meeting": "May Funnel Review: Google Shift, Login-to-Disbursal Gaps, and City-Level Execution",
+          "type": "created",
+          "detail": "First captured from May Funnel Review on 2026-06-01"
+        }
+      ],
+      "id": "i53"
+    },
+    {
+      "owner": "Tarun and Vijay",
+      "task": "Send insurance sales collateral to all RMs and partners",
+      "due_date": "2026-06-01",
+      "related_topic": "Insurance scaling",
+      "source_meeting": "May Funnel Review: Google Shift, Login-to-Disbursal Gaps, and City-Level Execution",
+      "source_meeting_date": "2026-06-01",
+      "priority": "HIGH",
+      "created_at": "2026-06-01",
+      "last_reminded_at": "2026-06-01",
+      "completed": null,
+      "completed_at": null,
+      "history": [
+        {
+          "date": "2026-06-01",
+          "meeting": "May Funnel Review: Google Shift, Login-to-Disbursal Gaps, and City-Level Execution",
+          "type": "created",
+          "detail": "First captured from May Funnel Review on 2026-06-01"
+        }
+      ],
+      "id": "i54"
+    },
+    {
+      "owner": "Abdullah",
+      "task": "Prepare answers to four CAM structure questions by end of week: SLA for onsite/offsite resources, live client report sample, NPS mechanism, product-tech value prop",
+      "due_date": "2026-06-05",
+      "related_topic": "CAM structure",
+      "source_meeting": "May Funnel Review: Google Shift, Login-to-Disbursal Gaps, and City-Level Execution",
+      "source_meeting_date": "2026-06-01",
+      "priority": "HIGH",
+      "created_at": "2026-06-01",
+      "last_reminded_at": null,
+      "completed": null,
+      "completed_at": null,
+      "history": [
+        {
+          "date": "2026-06-01",
+          "meeting": "May Funnel Review: Google Shift, Login-to-Disbursal Gaps, and City-Level Execution",
+          "type": "created",
+          "detail": "First captured from May Funnel Review on 2026-06-01"
+        }
+      ],
+      "id": "i55"
+    },
+    {
+      "owner": "Pranav",
+      "task": "Own sourcing of city-wise builder/project/unit/delivery date data from real estate analyst firms",
+      "due_date": "",
+      "related_topic": "Micro-market targeting",
+      "source_meeting": "May Funnel Review: Google Shift, Login-to-Disbursal Gaps, and City-Level Execution",
+      "source_meeting_date": "2026-06-01",
+      "priority": "HIGH",
+      "created_at": "2026-06-01",
+      "last_reminded_at": null,
+      "completed": null,
+      "completed_at": null,
+      "history": [
+        {
+          "date": "2026-06-01",
+          "meeting": "May Funnel Review: Google Shift, Login-to-Disbursal Gaps, and City-Level Execution",
+          "type": "created",
+          "detail": "First captured from May Funnel Review on 2026-06-01"
+        }
+      ],
+      "id": "i56"
+    },
+    {
+      "owner": "Vikas, Rashi, Ankit, Hitesh",
+      "task": "Set up insurance kickoff call for E2E channel this week",
+      "due_date": "2026-06-05",
+      "related_topic": "Insurance in E2E",
+      "source_meeting": "May Funnel Review: Google Shift, Login-to-Disbursal Gaps, and City-Level Execution",
+      "source_meeting_date": "2026-06-01",
+      "priority": "HIGH",
+      "created_at": "2026-06-01",
+      "last_reminded_at": null,
+      "completed": null,
+      "completed_at": null,
+      "history": [
+        {
+          "date": "2026-06-01",
+          "meeting": "May Funnel Review: Google Shift, Login-to-Disbursal Gaps, and City-Level Execution",
+          "type": "created",
+          "detail": "First captured from May Funnel Review on 2026-06-01"
+        }
+      ],
+      "id": "i57"
+    },
+    {
+      "owner": "Vijay",
+      "task": "Coordinate with Rashi on insurance payout process streamlining",
+      "due_date": "2026-06-05",
+      "related_topic": "Insurance payout",
+      "source_meeting": "May Funnel Review: Google Shift, Login-to-Disbursal Gaps, and City-Level Execution",
+      "source_meeting_date": "2026-06-01",
+      "priority": "HIGH",
+      "created_at": "2026-06-01",
+      "last_reminded_at": null,
+      "completed": null,
+      "completed_at": null,
+      "history": [
+        {
+          "date": "2026-06-01",
+          "meeting": "May Funnel Review: Google Shift, Login-to-Disbursal Gaps, and City-Level Execution",
+          "type": "created",
+          "detail": "First captured from May Funnel Review on 2026-06-01"
+        }
+      ],
+      "id": "i58"
+    },
+    {
+      "owner": "Ankit and Ishant",
+      "task": "Finalise June disbursement targets with M0/M1/M2 pipeline visibility and share with Rashi",
+      "due_date": "2026-06-01",
+      "related_topic": "June planning",
+      "source_meeting": "May Funnel Review: Google Shift, Login-to-Disbursal Gaps, and City-Level Execution",
+      "source_meeting_date": "2026-06-01",
+      "priority": "HIGH",
+      "created_at": "2026-06-01",
+      "last_reminded_at": "2026-06-01",
+      "completed": null,
+      "completed_at": null,
+      "history": [
+        {
+          "date": "2026-06-01",
+          "meeting": "May Funnel Review: Google Shift, Login-to-Disbursal Gaps, and City-Level Execution",
+          "type": "created",
+          "detail": "First captured from May Funnel Review on 2026-06-01"
+        }
+      ],
+      "id": "i59"
+    },
+    {
+      "owner": "Arpit",
+      "task": "Increase refresher training session frequency for 3-month+ RMs",
+      "due_date": "",
+      "related_topic": "RM productivity",
+      "source_meeting": "May Funnel Review: Google Shift, Login-to-Disbursal Gaps, and City-Level Execution",
+      "source_meeting_date": "2026-06-01",
+      "priority": "LOW",
+      "created_at": "2026-06-01",
+      "last_reminded_at": null,
+      "completed": null,
+      "completed_at": null,
+      "history": [
+        {
+          "date": "2026-06-01",
+          "meeting": "May Funnel Review: Google Shift, Login-to-Disbursal Gaps, and City-Level Execution",
+          "type": "created",
+          "detail": "First captured from May Funnel Review on 2026-06-01"
+        }
+      ],
+      "id": "i60"
+    },
+    {
+      "owner": "Ankit",
+      "task": "Create structured weekly call audit format with pod owners (5 calls/week each, feedback loop to sales)",
+      "due_date": "2026-06-07",
+      "related_topic": "Call quality program",
+      "source_meeting": "May Funnel Review: Google Shift, Login-to-Disbursal Gaps, and City-Level Execution",
+      "source_meeting_date": "2026-06-01",
+      "priority": "LOW",
+      "created_at": "2026-06-01",
+      "last_reminded_at": null,
+      "completed": null,
+      "completed_at": null,
+      "history": [
+        {
+          "date": "2026-06-01",
+          "meeting": "May Funnel Review: Google Shift, Login-to-Disbursal Gaps, and City-Level Execution",
+          "type": "created",
+          "detail": "First captured from May Funnel Review on 2026-06-01"
+        }
+      ],
+      "id": "i61"
+    },
+    {
+      "owner": "Ankit / Sunny",
+      "task": "Share training calendar with sales team and start weekly master class sessions across three verticals",
+      "due_date": "2026-06-07",
+      "related_topic": "Training cadence",
+      "source_meeting": "May Funnel Review: Google Shift, Login-to-Disbursal Gaps, and City-Level Execution",
+      "source_meeting_date": "2026-06-01",
+      "priority": "LOW",
+      "created_at": "2026-06-01",
+      "last_reminded_at": null,
+      "completed": null,
+      "completed_at": null,
+      "history": [
+        {
+          "date": "2026-06-01",
+          "meeting": "May Funnel Review: Google Shift, Login-to-Disbursal Gaps, and City-Level Execution",
+          "type": "created",
+          "detail": "First captured from May Funnel Review on 2026-06-01"
+        }
+      ],
+      "id": "i62"
+    },
+    {
+      "owner": "Avinash and Ishant/Rishabh",
+      "task": "Conduct 3-day partner activation sprint for Delhi in first 10 days of June",
+      "due_date": "2026-06-10",
+      "related_topic": "Delhi activation",
+      "source_meeting": "May Funnel Review: Google Shift, Login-to-Disbursal Gaps, and City-Level Execution",
+      "source_meeting_date": "2026-06-01",
+      "priority": "LOW",
+      "created_at": "2026-06-01",
+      "last_reminded_at": null,
+      "completed": null,
+      "completed_at": null,
+      "history": [
+        {
+          "date": "2026-06-01",
+          "meeting": "May Funnel Review: Google Shift, Login-to-Disbursal Gaps, and City-Level Execution",
+          "type": "created",
+          "detail": "First captured from May Funnel Review on 2026-06-01"
+        }
+      ],
+      "id": "i63"
+    },
+    {
+      "owner": "Prabhat",
+      "task": "Update unassigned QL tracking format to include all cities including Lucknow with conversion breakup",
+      "due_date": "2026-06-01",
+      "related_topic": "QL reporting clarity",
+      "source_meeting": "May Funnel Review: Google Shift, Login-to-Disbursal Gaps, and City-Level Execution",
+      "source_meeting_date": "2026-06-01",
+      "priority": "LOW",
+      "created_at": "2026-06-01",
+      "last_reminded_at": "2026-06-01",
+      "completed": null,
+      "completed_at": null,
+      "history": [
+        {
+          "date": "2026-06-01",
+          "meeting": "May Funnel Review: Google Shift, Login-to-Disbursal Gaps, and City-Level Execution",
+          "type": "created",
+          "detail": "First captured from May Funnel Review on 2026-06-01"
+        }
+      ],
+      "id": "i64"
+    },
+    {
+      "owner": "Devesh / Pankaj / Rameshwar",
+      "task": "Continue building CAM account process and tech for the large client (2-3 month horizon)",
+      "due_date": "",
+      "related_topic": "CAM development",
+      "source_meeting": "May Funnel Review: Google Shift, Login-to-Disbursal Gaps, and City-Level Execution",
+      "source_meeting_date": "2026-06-01",
+      "priority": "LOW",
+      "created_at": "2026-06-01",
+      "last_reminded_at": null,
+      "completed": null,
+      "completed_at": null,
+      "history": [
+        {
+          "date": "2026-06-01",
+          "meeting": "May Funnel Review: Google Shift, Login-to-Disbursal Gaps, and City-Level Execution",
+          "type": "created",
+          "detail": "First captured from May Funnel Review on 2026-06-01"
+        }
+      ],
+      "id": "i65"
+    }
+  ]
+}
