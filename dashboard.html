@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Ambak Leadership Dashboard</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box;margin:0;padding:0;}
@@ -19,210 +18,161 @@
   --radius:14px;--radius-sm:8px;
   --shadow:0 1px 3px rgba(91,33,182,0.07),0 1px 2px rgba(0,0,0,0.04);
   --shadow-md:0 4px 20px rgba(91,33,182,0.13),0 2px 6px rgba(0,0,0,0.05);
-  --shadow-lg:0 8px 32px rgba(91,33,182,0.16),0 2px 8px rgba(0,0,0,0.06);
 }
-body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;-webkit-font-smoothing:antialiased;background:var(--bg);color:var(--text);min-height:100vh;}
-
-/* TOPBAR */
-.topbar{position:sticky;top:0;z-index:100;background:linear-gradient(135deg,var(--brand-deeper) 0%,var(--brand) 60%,var(--brand-mid) 100%);padding:0 24px;display:flex;align-items:center;gap:16px;height:56px;box-shadow:0 2px 12px rgba(0,0,0,0.25);}
-.tb-logo{display:flex;align-items:center;gap:10px;}
-.tb-wordmark{color:#fff;font-size:18px;font-weight:800;letter-spacing:0.06em;}
-.tb-div{width:1px;height:24px;background:rgba(255,255,255,0.25);}
-.tb-title{color:#fff;font-size:15px;font-weight:700;}
-.tb-meta{color:rgba(255,255,255,0.6);font-size:11px;margin-left:4px;}
-.tb-right{margin-left:auto;display:flex;align-items:center;gap:8px;}
-.tab-btn{background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.25);color:rgba(255,255,255,0.85);padding:6px 14px;border-radius:100px;font-size:12px;font-weight:600;cursor:pointer;transition:all 0.15s;}
+body{font-family:'Inter',-apple-system,sans-serif;-webkit-font-smoothing:antialiased;background:var(--bg);color:var(--text);}
+.topbar{position:sticky;top:0;z-index:100;background:linear-gradient(135deg,var(--brand-deeper) 0%,var(--brand) 60%,var(--brand-mid) 100%);padding:0 20px;display:flex;align-items:center;gap:12px;height:54px;box-shadow:0 2px 12px rgba(0,0,0,0.25);}
+.tb-wordmark{color:#fff;font-size:17px;font-weight:800;letter-spacing:0.06em;}
+.tb-div{width:1px;height:22px;background:rgba(255,255,255,0.25);flex-shrink:0;}
+.tb-title{color:#fff;font-size:14px;font-weight:700;}
+.tb-meta{color:rgba(255,255,255,0.55);font-size:11px;}
+.tb-right{margin-left:auto;display:flex;align-items:center;gap:7px;flex-wrap:nowrap;}
+.tab-btn{background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.25);color:rgba(255,255,255,0.85);padding:5px 13px;border-radius:100px;font-size:12px;font-weight:600;cursor:pointer;}
 .tab-btn.active{background:#fff;color:var(--brand);border-color:#fff;}
-.tab-btn:hover:not(.active){background:rgba(255,255,255,0.25);}
-.btn-outline{background:transparent;border:1px solid rgba(255,255,255,0.45);color:#fff;padding:6px 14px;border-radius:100px;font-size:12px;font-weight:600;cursor:pointer;transition:all 0.15s;}
-.btn-outline:hover{background:rgba(255,255,255,0.15);}
-.btn-solid{background:#fff;border:1px solid #fff;color:var(--brand);padding:6px 14px;border-radius:100px;font-size:12px;font-weight:700;cursor:pointer;}
-.done-pill{background:rgba(110,231,183,0.25);color:#6EE7B7;padding:4px 10px;border-radius:100px;font-size:11px;font-weight:700;}
-#toast{position:fixed;bottom:24px;right:24px;background:var(--brand);color:#fff;padding:10px 18px;border-radius:100px;font-size:13px;font-weight:600;opacity:0;transition:opacity 0.3s;pointer-events:none;z-index:9999;}
-
-/* ALERT BANNER */
-#alert-banner{display:none;background:linear-gradient(90deg,#7f1d1d,#b91c1c);color:#fff;padding:10px 24px;font-size:13px;font-weight:600;text-align:center;}
-
-/* FOCUS STRIP */
-.focus-strip{background:linear-gradient(135deg,var(--brand-deeper),var(--brand));padding:12px 24px;display:flex;gap:8px;overflow-x:auto;}
-.focus-strip::-webkit-scrollbar{height:4px;}
+.btn-outline{background:transparent;border:1px solid rgba(255,255,255,0.4);color:#fff;padding:5px 12px;border-radius:100px;font-size:12px;font-weight:600;cursor:pointer;}
+.btn-solid{background:#fff;border:none;color:var(--brand);padding:5px 12px;border-radius:100px;font-size:12px;font-weight:700;cursor:pointer;}
+.done-pill{background:rgba(110,231,183,0.2);color:#6EE7B7;padding:3px 10px;border-radius:100px;font-size:11px;font-weight:700;}
+#toast{position:fixed;bottom:20px;right:20px;background:var(--brand);color:#fff;padding:9px 16px;border-radius:100px;font-size:13px;font-weight:600;opacity:0;transition:opacity 0.3s;pointer-events:none;z-index:9999;}
+#alert-banner{display:none;background:linear-gradient(90deg,#7f1d1d,#b91c1c);color:#fff;padding:9px 20px;font-size:13px;font-weight:600;text-align:center;}
+.focus-strip{background:linear-gradient(135deg,var(--brand-deeper),var(--brand));padding:10px 20px;display:flex;gap:8px;overflow-x:auto;}
+.focus-strip::-webkit-scrollbar{height:3px;}
 .focus-strip::-webkit-scrollbar-thumb{background:rgba(255,255,255,0.3);border-radius:2px;}
-.focus-card{background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);border-radius:10px;padding:10px 14px;min-width:220px;flex-shrink:0;}
-.focus-card .fc-owner{color:rgba(255,255,255,0.7);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:4px;}
-.focus-card .fc-task{color:#fff;font-size:12px;font-weight:500;line-height:1.4;}
-
-/* KPI ROW */
-.kpi-row{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;padding:16px 24px;}
+.focus-card{background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);border-radius:10px;padding:9px 13px;min-width:210px;flex-shrink:0;}
+.fc-owner{color:rgba(255,255,255,0.65);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:3px;}
+.fc-task{color:#fff;font-size:12px;font-weight:500;line-height:1.4;}
+.kpi-row{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;padding:14px 20px;}
 @media(max-width:900px){.kpi-row{grid-template-columns:repeat(3,1fr);}}
-.kpi{background:var(--surface);border-radius:var(--radius);padding:14px 16px;box-shadow:var(--shadow);border-top:3px solid var(--brand);transition:transform 0.15s,box-shadow 0.15s;cursor:default;}
-.kpi:hover{transform:translateY(-2px);box-shadow:var(--shadow-md);}
-.kpi .kl{font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:6px;}
-.kpi .kv{font-size:30px;font-weight:900;color:var(--brand);line-height:1;}
-.kpi .ks{font-size:11px;color:var(--muted);margin-top:4px;}
-
-/* MAIN CONTENT */
-.content{padding:0 24px 40px;}
-.section{background:var(--surface);border-radius:var(--radius);box-shadow:var(--shadow);margin-bottom:16px;overflow:hidden;}
-.sec-hdr{display:flex;align-items:center;gap:10px;padding:15px 20px;border-bottom:1px solid var(--border);cursor:pointer;user-select:none;}
+.kpi{background:var(--surface);border-radius:var(--radius);padding:13px 15px;box-shadow:var(--shadow);border-top:3px solid var(--brand);cursor:default;}
+.kpi:hover{transform:translateY(-1px);box-shadow:var(--shadow-md);}
+.kl{font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:5px;}
+.kv{font-size:28px;font-weight:900;color:var(--brand);line-height:1;}
+.ks{font-size:11px;color:var(--muted);margin-top:3px;}
+.content{padding:0 20px 40px;}
+.section{background:var(--surface);border-radius:var(--radius);box-shadow:var(--shadow);margin-bottom:14px;overflow:hidden;}
+.sec-hdr{display:flex;align-items:center;gap:10px;padding:13px 18px;border-bottom:1px solid var(--border);cursor:pointer;user-select:none;}
 .sec-hdr:hover{background:var(--brand-soft);}
-.sec-title{font-size:14px;font-weight:700;color:var(--text);}
-.sec-badge{background:var(--brand-light);color:var(--brand);padding:3px 10px;border-radius:100px;font-size:11px;font-weight:700;}
-.sec-badge.red{background:#FEE2E2;color:var(--high);}
-.sec-badge.green{background:#D1FAE5;color:var(--low);}
+.sec-title{font-size:14px;font-weight:700;}
+.sec-badge{background:var(--brand-light);color:var(--brand);padding:2px 9px;border-radius:100px;font-size:11px;font-weight:700;}
 .sec-badge.amber{background:var(--warn-bg);color:var(--warn);}
-.sec-toggle{margin-left:auto;color:var(--muted);font-size:18px;transition:transform 0.2s;}
-.sec-body{padding:16px 20px;}
+.sec-toggle{margin-left:auto;color:var(--muted);font-size:16px;transition:transform 0.2s;}
+.sec-body{padding:14px 18px;}
 .collapsed .sec-toggle{transform:rotate(-90deg);}
 .collapsed .sec-body{display:none;}
-
-/* FILTER BAR */
-.filter-bar{padding:10px 20px;display:flex;gap:6px;flex-wrap:wrap;border-bottom:1px solid var(--border);}
-.fb-btn{background:var(--brand-soft);border:1px solid var(--border);color:var(--brand);padding:5px 12px;border-radius:100px;font-size:11px;font-weight:600;cursor:pointer;transition:all 0.15s;}
+.filter-bar{padding:8px 18px;display:flex;gap:5px;flex-wrap:wrap;border-bottom:1px solid var(--border);}
+.fb-btn{background:var(--brand-soft);border:1px solid var(--border);color:var(--brand);padding:4px 11px;border-radius:100px;font-size:11px;font-weight:600;cursor:pointer;}
 .fb-btn:hover{background:var(--brand-light);}
 .fb-btn.active{background:var(--brand);color:#fff;border-color:var(--brand);}
-
-/* ACTION ITEMS */
-.cols{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px;}
 @media(max-width:700px){.cols{grid-template-columns:1fr;}}
-.col-header{display:flex;align-items:center;gap:8px;margin-bottom:10px;}
+.col-header{display:flex;align-items:center;gap:8px;margin-bottom:9px;}
 .col-label{font-size:13px;font-weight:700;}
 .col-label.high{color:var(--high);}
 .col-label.low{color:var(--low);}
-.col-count{background:var(--brand-light);color:var(--brand);padding:2px 10px;border-radius:100px;font-size:11px;font-weight:700;}
+.col-count{padding:2px 9px;border-radius:100px;font-size:11px;font-weight:700;}
 .col-count.red{background:#FEE2E2;color:var(--high);}
 .col-count.green{background:#D1FAE5;color:var(--low);}
 .col-expand{margin-left:auto;background:none;border:1px solid var(--border);padding:3px 10px;border-radius:100px;font-size:11px;color:var(--muted);cursor:pointer;}
-
-/* CARDS */
-.card{background:var(--surface);border:1px solid var(--border);border-left:4px solid var(--border);border-radius:var(--radius);padding:13px 14px;margin-bottom:8px;transition:transform 0.15s,box-shadow 0.15s;box-shadow:var(--shadow);}
+.card{background:var(--surface);border:1px solid var(--border);border-left:4px solid var(--border);border-radius:var(--radius);padding:12px 13px;margin-bottom:7px;box-shadow:var(--shadow);}
 .card:hover{transform:translateY(-1px);box-shadow:var(--shadow-md);}
-.card.hi-card{border-left-color:var(--high-mid);background:linear-gradient(135deg,#fff 0%,#FFF8F8 100%);}
-.card.lo-card{border-left-color:var(--low);background:linear-gradient(135deg,#fff 0%,#F8FFF9 100%);}
-.card.done-card{border-left-color:var(--done-border);background:var(--done-bg);opacity:0.85;}
-.card-top{display:flex;align-items:flex-start;gap:8px;margin-bottom:6px;}
-.card-cb{width:16px;height:16px;flex-shrink:0;margin-top:2px;accent-color:var(--brand);cursor:pointer;}
+.card.hi-card{border-left-color:var(--high-mid);background:linear-gradient(135deg,#fff,#FFF8F8);}
+.card.lo-card{border-left-color:var(--low);background:linear-gradient(135deg,#fff,#F8FFF9);}
+.card.done-card{border-left-color:var(--done-border);background:var(--done-bg);opacity:0.82;}
+.card-top{display:flex;align-items:flex-start;gap:8px;margin-bottom:5px;}
+.card-cb{width:15px;height:15px;flex-shrink:0;margin-top:3px;accent-color:var(--brand);cursor:pointer;}
 .card-owner{font-weight:800;color:var(--brand-mid);font-size:11px;text-transform:uppercase;letter-spacing:0.06em;}
-.card-task{font-weight:500;font-size:13px;line-height:1.5;color:var(--text);}
+.card-task{font-weight:500;font-size:13px;line-height:1.5;}
 .card-task.done-text{text-decoration:line-through;color:var(--muted);}
-.badges{display:flex;flex-wrap:wrap;gap:4px;margin-top:6px;}
-.badge{padding:2px 8px;border-radius:100px;font-size:10px;font-weight:700;border:1px solid transparent;}
+.badges{display:flex;flex-wrap:wrap;gap:4px;margin-top:5px;}
+.badge{padding:2px 7px;border-radius:100px;font-size:10px;font-weight:700;border:1px solid transparent;}
 .b-high{background:var(--high-bg);color:var(--high);border-color:rgba(197,29,29,0.2);}
 .b-low{background:var(--low-bg);color:var(--low);border-color:rgba(10,124,82,0.2);}
 .b-over{background:#FEF3C7;color:#92400E;border-color:rgba(146,64,14,0.2);}
 .b-date{background:var(--brand-soft);color:var(--brand);border-color:rgba(91,33,182,0.15);}
 .b-topic{background:#F0F9FF;color:#0369A1;border-color:rgba(3,105,161,0.15);}
 .b-mtg{background:#FDF4FF;color:#7E22CE;border-color:rgba(126,34,206,0.15);}
-.b-leader{font-size:10px;font-weight:700;}
-.card-actions{display:flex;align-items:center;gap:6px;margin-top:6px;}
-.btn-hist{background:none;border:none;cursor:pointer;color:var(--muted);padding:2px 6px;border-radius:6px;font-size:11px;transition:color 0.15s;}
+.card-actions{display:flex;align-items:center;gap:6px;margin-top:5px;}
+.btn-hist{background:none;border:none;cursor:pointer;color:var(--muted);padding:2px 6px;border-radius:6px;font-size:11px;}
 .btn-hist:hover,.btn-hist.active{color:var(--brand);}
-.btn-undo{background:none;border:1px solid var(--done-border);color:var(--done-text);padding:3px 10px;border-radius:100px;font-size:11px;font-weight:600;cursor:pointer;}
-.hist-drawer{display:none;margin-top:8px;padding-top:8px;border-top:1px solid var(--border);}
+.btn-undo{background:none;border:1px solid var(--done-border);color:var(--done-text);padding:2px 9px;border-radius:100px;font-size:11px;font-weight:600;cursor:pointer;}
+.hist-drawer{display:none;margin-top:7px;padding-top:7px;border-top:1px solid var(--border);}
 .hist-drawer.open{display:block;}
-.hist-entry{font-size:11px;color:var(--muted);margin-bottom:4px;display:flex;gap:6px;}
-.hist-type{padding:1px 6px;border-radius:4px;font-weight:700;font-size:10px;}
+.hist-entry{font-size:11px;color:var(--muted);margin-bottom:3px;display:flex;gap:6px;align-items:flex-start;}
+.hist-type{padding:1px 5px;border-radius:4px;font-weight:700;font-size:10px;flex-shrink:0;}
 .ht-created{background:var(--brand-light);color:var(--brand);}
 .ht-completed{background:#D1FAE5;color:var(--low);}
 .ht-deadline_changed{background:#FEF3C7;color:var(--warn);}
 .ht-note{background:#F3F4F6;color:#6B7280;}
-
-/* DONE PILE */
 #done-sec{display:none;}
-
-/* DECISIONS + INTEL */
-.dec-grid{display:grid;gap:8px;}
-.dec-item{background:var(--brand-soft);border:1px solid var(--brand-light);border-radius:var(--radius-sm);padding:12px 14px;}
-.dec-text{font-size:13px;font-weight:500;color:var(--text);margin-bottom:6px;}
-.dec-tags{display:flex;gap:6px;flex-wrap:wrap;}
-
-/* NOTES */
-.notes-sub{margin-bottom:16px;}
-.notes-sub-title{font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;}
-textarea.notes-ta{width:100%;min-height:90px;border:1px solid var(--border);border-radius:var(--radius-sm);padding:10px 12px;font-family:inherit;font-size:13px;color:var(--text);resize:vertical;outline:none;}
+.dec-grid{display:grid;gap:7px;}
+.dec-item{background:var(--brand-soft);border:1px solid var(--brand-light);border-radius:var(--radius-sm);padding:11px 13px;}
+.dec-text{font-size:13px;font-weight:500;margin-bottom:5px;}
+.dec-tags{display:flex;gap:5px;flex-wrap:wrap;}
+.notes-sub{margin-bottom:14px;}
+.notes-label{font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:7px;}
+textarea.notes-ta{width:100%;min-height:85px;border:1px solid var(--border);border-radius:var(--radius-sm);padding:9px 11px;font-family:inherit;font-size:13px;resize:vertical;outline:none;}
 textarea.notes-ta:focus{border-color:var(--brand);box-shadow:0 0 0 3px rgba(91,33,182,0.1);}
-.past-note-item{padding:8px 0;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:10px;cursor:pointer;}
-.past-note-item:hover .pn-date{color:var(--brand);text-decoration:underline;}
-.pn-date{font-size:13px;font-weight:600;color:var(--text);}
-.pn-preview{font-size:12px;color:var(--muted);flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.past-item{padding:7px 0;border-bottom:1px solid var(--border);display:flex;gap:10px;cursor:pointer;align-items:center;}
+.past-item:hover .past-date{color:var(--brand);text-decoration:underline;}
+.past-date{font-size:13px;font-weight:600;}
+.past-preview{font-size:12px;color:var(--muted);flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
 .modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:200;align-items:center;justify-content:center;}
 .modal-overlay.open{display:flex;}
-.modal-box{background:#fff;border-radius:var(--radius);padding:24px;max-width:560px;width:90%;max-height:80vh;overflow-y:auto;box-shadow:var(--shadow-lg);}
-.modal-title{font-size:15px;font-weight:700;margin-bottom:12px;}
-.modal-body{font-size:13px;color:var(--text);white-space:pre-wrap;line-height:1.6;}
-.modal-close{margin-top:16px;background:var(--brand);color:#fff;border:none;padding:8px 20px;border-radius:100px;font-size:13px;font-weight:600;cursor:pointer;}
-
-/* REMINDERS */
-.rem-group{margin-bottom:16px;}
-.rem-group-title{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;padding:4px 10px;border-radius:100px;display:inline-block;margin-bottom:8px;}
+.modal-box{background:#fff;border-radius:var(--radius);padding:22px;max-width:540px;width:90%;max-height:80vh;overflow-y:auto;box-shadow:0 8px 32px rgba(0,0,0,0.2);}
+.modal-title{font-size:15px;font-weight:700;margin-bottom:11px;}
+.modal-body{font-size:13px;white-space:pre-wrap;line-height:1.6;}
+.modal-close{margin-top:14px;background:var(--brand);color:#fff;border:none;padding:7px 18px;border-radius:100px;font-size:13px;font-weight:600;cursor:pointer;}
+.rem-group{margin-bottom:14px;}
+.rem-group-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;padding:3px 9px;border-radius:100px;display:inline-block;margin-bottom:7px;}
 .rgt-red{background:#FEE2E2;color:var(--high);}
 .rgt-amber{background:#FEF3C7;color:var(--warn);}
 .rgt-blue{background:#EFF6FF;color:#1D4ED8;}
 .rgt-purple{background:var(--brand-light);color:var(--brand);}
-.rem-item{padding:8px 0;border-bottom:1px solid var(--border);font-size:13px;}
+.rem-item{padding:7px 0;border-bottom:1px solid var(--border);font-size:13px;}
 .rem-item:last-child{border-bottom:none;}
-
-/* SCORECARDS */
-.sc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;}
+.sc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;}
 @media(max-width:800px){.sc-grid{grid-template-columns:repeat(2,1fr);}}
-.sc-card{border:1px solid var(--border);border-radius:var(--radius-sm);padding:12px 14px;background:var(--brand-soft);}
-.sc-name{font-size:14px;font-weight:800;color:var(--brand);margin-bottom:2px;}
-.sc-role{font-size:10px;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;}
+.sc-card{border:1px solid var(--border);border-radius:var(--radius-sm);padding:11px 13px;}
+.sc-name{font-size:14px;font-weight:800;margin-bottom:1px;}
+.sc-role{font-size:10px;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:7px;}
 .sc-stats{display:flex;gap:10px;}
-.sc-stat{text-align:center;}
-.sc-stat .sv{font-size:20px;font-weight:900;color:var(--text);}
+.sc-stat .sv{font-size:19px;font-weight:900;}
 .sc-stat .sl{font-size:10px;color:var(--muted);}
-
-/* QUESTIONS */
-.q-item{padding:10px 0;border-bottom:1px solid var(--border);}
+.q-item{padding:9px 0;border-bottom:1px solid var(--border);}
 .q-item:last-child{border-bottom:none;}
-.q-text{font-size:13px;font-weight:500;color:var(--text);margin-bottom:4px;}
+.q-text{font-size:13px;font-weight:500;margin-bottom:3px;}
 .q-meta{font-size:11px;color:var(--muted);}
-
-/* MEETINGS TABLE */
 .mtg-table{width:100%;border-collapse:collapse;font-size:13px;}
-.mtg-table th{text-align:left;padding:8px 10px;border-bottom:2px solid var(--border);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);}
-.mtg-table td{padding:8px 10px;border-bottom:1px solid var(--border);}
+.mtg-table th{text-align:left;padding:7px 9px;border-bottom:2px solid var(--border);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;color:var(--muted);}
+.mtg-table td{padding:7px 9px;border-bottom:1px solid var(--border);}
 .mtg-table tr:last-child td{border-bottom:none;}
 .mtg-table tr:hover td{background:var(--brand-soft);}
-
-/* INTELLIGENCE TAB */
-.intel-section{margin-bottom:20px;}
-.intel-hdr{font-size:15px;font-weight:800;color:var(--text);padding:0 0 10px;border-bottom:2px solid var(--border);margin-bottom:14px;}
-
-/* Decision Anatomy */
-.da-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:14px 16px;margin-bottom:10px;box-shadow:var(--shadow);}
-.da-decision{font-size:13px;font-weight:600;color:var(--text);margin-bottom:8px;line-height:1.45;}
-.da-mtg-tag{font-size:10px;font-weight:700;background:var(--brand-light);color:var(--brand);padding:2px 8px;border-radius:100px;display:inline-block;margin-bottom:8px;}
-.da-roles{display:flex;flex-wrap:wrap;gap:6px;}
-.da-role-chip{padding:3px 10px;border-radius:100px;font-size:11px;font-weight:700;}
+.da-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:13px 15px;margin-bottom:9px;box-shadow:var(--shadow);}
+.da-mtg-tag{font-size:10px;font-weight:700;background:var(--brand-light);color:var(--brand);padding:2px 7px;border-radius:100px;display:inline-block;margin-bottom:7px;}
+.da-decision{font-size:13px;font-weight:600;margin-bottom:8px;line-height:1.45;}
+.da-roles{display:flex;flex-wrap:wrap;gap:5px;}
+.da-chip{padding:3px 9px;border-radius:100px;font-size:11px;font-weight:700;}
 .dr-decider{background:#EDE9FE;color:#4B1FA3;}
 .dr-problem{background:#FEF3C7;color:#92400E;}
 .dr-contributor{background:#EFF6FF;color:#1D4ED8;}
 .dr-silent{background:#F3F4F6;color:#6B7280;}
-
-/* Meeting Dynamics */
-.mtg-detail-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:16px;margin-bottom:12px;box-shadow:var(--shadow);}
-.mdc-title{font-size:14px;font-weight:700;color:var(--text);margin-bottom:4px;}
-.mdc-date{font-size:11px;color:var(--muted);margin-bottom:12px;}
-.part-bars{margin-bottom:12px;}
-.part-row{display:flex;align-items:center;gap:8px;margin-bottom:5px;}
-.part-name{width:100px;font-size:11px;font-weight:600;color:var(--text);flex-shrink:0;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;}
-.part-bar-wrap{flex:1;background:#F3F4F6;border-radius:100px;height:8px;overflow:hidden;}
-.part-bar{height:8px;border-radius:100px;background:var(--brand-mid);}
-.part-q{font-size:11px;color:var(--muted);width:24px;text-align:right;flex-shrink:0;}
+.mdc-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:15px;margin-bottom:11px;box-shadow:var(--shadow);}
+.mdc-title{font-size:14px;font-weight:700;margin-bottom:2px;}
+.mdc-date{font-size:11px;color:var(--muted);margin-bottom:11px;}
+.part-row{display:flex;align-items:center;gap:7px;margin-bottom:4px;}
+.part-name{width:95px;font-size:11px;font-weight:600;flex-shrink:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.part-bar-wrap{flex:1;background:#F3F4F6;border-radius:100px;height:7px;overflow:hidden;}
+.part-bar{height:7px;border-radius:100px;background:var(--brand-mid);}
+.part-q{font-size:11px;color:var(--muted);width:22px;text-align:right;flex-shrink:0;}
 .dyn-list{list-style:none;padding:0;}
-.dyn-list li{font-size:12px;color:var(--muted);padding:4px 0 4px 14px;position:relative;border-bottom:1px solid var(--border);}
+.dyn-list li{font-size:12px;color:var(--muted);padding:3px 0 3px 13px;position:relative;border-bottom:1px solid var(--border);}
 .dyn-list li:last-child{border-bottom:none;}
-.dyn-list li::before{content:"•";position:absolute;left:0;color:var(--brand-mid);}
+.dyn-list li::before{content:"\2022";position:absolute;left:0;color:var(--brand-mid);}
 </style>
 </head>
 <body>
 
 <div class="topbar">
-  <div class="tb-logo">
-    <svg width="28" height="34" viewBox="0 0 28 34" fill="none"><circle cx="14" cy="2" r="2.2" fill="white"/><path fill-rule="evenodd" fill="white" d="M14 5.8 L0.5 28 Q -1 31.5 2 31 Q 6.5 30.5 11 27 Q 12 28.8 14 28.8 Q 16 28.8 17 27 Q 21.5 30.5 26 31 Q 29 31.5 27.5 28 Z M14 12 L6.5 26 Q 9.8 25.5 14 23.5 Q 18.2 25.5 21.5 26 Z"/><circle cx="14" cy="33" r="2" fill="white"/></svg>
-    <span class="tb-wordmark">AMBAK</span>
-  </div>
+  <svg width="26" height="32" viewBox="0 0 28 34" fill="none" style="flex-shrink:0"><circle cx="14" cy="2" r="2.2" fill="white"/><path fill-rule="evenodd" fill="white" d="M14 5.8 L0.5 28 Q -1 31.5 2 31 Q 6.5 30.5 11 27 Q 12 28.8 14 28.8 Q 16 28.8 17 27 Q 21.5 30.5 26 31 Q 29 31.5 27.5 28 Z M14 12 L6.5 26 Q 9.8 25.5 14 23.5 Q 18.2 25.5 21.5 26 Z"/><circle cx="14" cy="33" r="2" fill="white"/></svg>
+  <span class="tb-wordmark">AMBAK</span>
   <div class="tb-div"></div>
   <span class="tb-title">Leadership Dashboard</span>
   <span class="tb-meta" id="tb-meta"></span>
@@ -234,173 +184,151 @@ textarea.notes-ta:focus{border-color:var(--brand);box-shadow:0 0 0 3px rgba(91,3
     <span class="done-pill" id="done-pill-top">0 done</span>
   </div>
 </div>
-
 <span id="toast"></span>
+<div id="alert-banner">You have overdue action items</div>
 
-<div id="alert-banner">⚠️ You have overdue action items — review below</div>
-
-<!-- TAB 1: OPERATIONS -->
 <div id="tab-ops">
+  <div class="focus-strip" id="focus-strip"></div>
+  <div class="kpi-row" id="kpi-row"></div>
+  <div class="content">
 
-<div class="focus-strip" id="focus-strip"></div>
-
-<div class="kpi-row" id="kpi-row"></div>
-
-<div class="content">
-
-<!-- Action Items -->
-<div class="section">
-  <div class="sec-hdr" onclick="toggleSec(this)">
-    <span class="sec-title">Action Items</span>
-    <span class="sec-badge" id="ai-count-badge">0</span>
-    <span class="sec-toggle">▾</span>
-  </div>
-  <div class="filter-bar" id="ai-filter-bar">
-    <button class="fb-btn active" onclick="setAiFilter('all',this)">All Leaders</button>
-  </div>
-  <div class="sec-body">
-    <div class="cols">
-      <div>
-        <div class="col-header">
-          <span class="col-label high">HIGH PRIORITY</span>
-          <span class="col-count red" id="hi-cnt">0</span>
-        </div>
-        <div id="hi"></div>
+    <div class="section">
+      <div class="sec-hdr" onclick="toggleSec(this)">
+        <span class="sec-title">Action Items</span>
+        <span class="sec-badge" id="ai-badge">0</span>
+        <span class="sec-toggle">&#9660;</span>
       </div>
-      <div>
-        <div class="col-header">
-          <span class="col-label low">LOW PRIORITY</span>
-          <span class="col-count green" id="lo-cnt">0</span>
-          <button class="col-expand" id="lo-expand-btn" onclick="toggleLow()">Collapse</button>
-        </div>
-        <div id="lo"></div>
+      <div class="filter-bar" id="ai-filter-bar">
+        <button class="fb-btn active" onclick="setAiFilter('all',this)">All Leaders</button>
       </div>
-    </div>
-    <!-- Done pile -->
-    <div id="done-sec">
-      <div style="border-top:2px solid var(--done-border);padding-top:14px;margin-top:4px;">
-        <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;">
-          <span style="font-size:13px;font-weight:700;color:var(--done-text);">Completed</span>
-          <span style="background:#D1FAE5;color:var(--done-text);padding:2px 10px;border-radius:100px;font-size:11px;font-weight:700;" id="done-badge">0</span>
+      <div class="sec-body">
+        <div class="cols">
+          <div>
+            <div class="col-header">
+              <span class="col-label high">HIGH PRIORITY</span>
+              <span class="col-count red" id="hi-cnt">0</span>
+            </div>
+            <div id="hi"></div>
+          </div>
+          <div>
+            <div class="col-header">
+              <span class="col-label low">LOW PRIORITY</span>
+              <span class="col-count green" id="lo-cnt">0</span>
+              <button class="col-expand" id="lo-btn" onclick="toggleLow()">Collapse</button>
+            </div>
+            <div id="lo"></div>
+          </div>
         </div>
-        <div id="done-list"></div>
+        <div id="done-sec">
+          <div style="border-top:2px solid var(--done-border);padding-top:13px;margin-top:4px;">
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:9px;">
+              <span style="font-size:13px;font-weight:700;color:var(--done-text);">Completed</span>
+              <span id="done-badge" style="background:#D1FAE5;color:var(--done-text);padding:2px 9px;border-radius:100px;font-size:11px;font-weight:700;">0</span>
+            </div>
+            <div id="done-list"></div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
 
-<!-- Decisions -->
-<div class="section">
-  <div class="sec-hdr" onclick="toggleSec(this)">
-    <span class="sec-title">Decisions Log</span>
-    <span class="sec-badge" id="dec-badge">0</span>
-    <span class="sec-toggle">▾</span>
-  </div>
-  <div class="sec-body">
-    <div class="dec-grid" id="dec-list"></div>
-  </div>
-</div>
-
-<!-- Leadership Notes -->
-<div class="section">
-  <div class="sec-hdr" onclick="toggleSec(this)">
-    <span class="sec-title">Leadership Notes</span>
-    <span class="sec-toggle">▾</span>
-  </div>
-  <div class="sec-body">
-    <div class="notes-sub">
-      <div class="notes-sub-title">Today's Notes</div>
-      <textarea class="notes-ta" id="notes-ta" placeholder="Private notes — auto-saved..." oninput="saveNotes()"></textarea>
+    <div class="section">
+      <div class="sec-hdr" onclick="toggleSec(this)">
+        <span class="sec-title">Decisions Log</span>
+        <span class="sec-badge" id="dec-badge">0</span>
+        <span class="sec-toggle">&#9660;</span>
+      </div>
+      <div class="sec-body"><div class="dec-grid" id="dec-list"></div></div>
     </div>
-    <div class="notes-sub">
-      <div class="notes-sub-title">Past Notes</div>
-      <div id="past-notes-list"></div>
+
+    <div class="section">
+      <div class="sec-hdr" onclick="toggleSec(this)">
+        <span class="sec-title">Leadership Notes</span>
+        <span class="sec-toggle">&#9660;</span>
+      </div>
+      <div class="sec-body">
+        <div class="notes-sub">
+          <div class="notes-label">Today's Notes</div>
+          <textarea class="notes-ta" id="notes-ta" placeholder="Private notes — auto-saved..." oninput="saveNotes()"></textarea>
+        </div>
+        <div class="notes-sub">
+          <div class="notes-label">Past Notes</div>
+          <div id="past-list"></div>
+        </div>
+      </div>
     </div>
+
+    <div class="section">
+      <div class="sec-hdr" onclick="toggleSec(this)">
+        <span class="sec-title">Reminders &amp; Upcoming Deadlines</span>
+        <span class="sec-badge amber" id="rem-badge">0</span>
+        <span class="sec-toggle">&#9660;</span>
+      </div>
+      <div class="filter-bar" id="rem-filter-bar">
+        <button class="fb-btn active" onclick="setRemFilter('all',this)">All Leaders</button>
+      </div>
+      <div class="sec-body" id="rem-body"></div>
+    </div>
+
+    <div class="section collapsed">
+      <div class="sec-hdr" onclick="toggleSec(this)">
+        <span class="sec-title">Owner Scorecards</span>
+        <span class="sec-badge">8 leaders</span>
+        <span class="sec-toggle">&#9660;</span>
+      </div>
+      <div class="sec-body"><div class="sc-grid" id="sc-grid"></div></div>
+    </div>
+
+    <div class="section collapsed">
+      <div class="sec-hdr" onclick="toggleSec(this)">
+        <span class="sec-title">Open Questions</span>
+        <span class="sec-badge" id="q-badge">0</span>
+        <span class="sec-toggle">&#9660;</span>
+      </div>
+      <div class="sec-body" id="q-body"></div>
+    </div>
+
+    <div class="section">
+      <div class="sec-hdr" onclick="toggleSec(this)">
+        <span class="sec-title">All Meetings</span>
+        <span class="sec-badge" id="mtg-badge">0</span>
+        <span class="sec-toggle">&#9660;</span>
+      </div>
+      <div class="sec-body">
+        <table class="mtg-table"><thead><tr><th>Date</th><th>Meeting</th><th>Actions</th><th>Decisions</th><th>Questions</th></tr></thead>
+        <tbody id="mtg-tbody"></tbody></table>
+      </div>
+    </div>
+
   </div>
 </div>
 
-<!-- Reminders -->
-<div class="section">
-  <div class="sec-hdr" onclick="toggleSec(this)">
-    <span class="sec-title">Reminders &amp; Upcoming Deadlines</span>
-    <span class="sec-badge amber" id="rem-badge">0</span>
-    <span class="sec-toggle">▾</span>
-  </div>
-  <div class="filter-bar" id="rem-filter-bar">
-    <button class="fb-btn active" onclick="setRemFilter('all',this)">All Leaders</button>
-  </div>
-  <div class="sec-body" id="rem-body"></div>
-</div>
-
-<!-- Scorecards -->
-<div class="section collapsed">
-  <div class="sec-hdr" onclick="toggleSec(this)">
-    <span class="sec-title">Owner Scorecards</span>
-    <span class="sec-badge" id="sc-badge">8 leaders</span>
-    <span class="sec-toggle">▾</span>
-  </div>
-  <div class="sec-body">
-    <div class="sc-grid" id="sc-grid"></div>
-  </div>
-</div>
-
-<!-- Open Questions -->
-<div class="section collapsed">
-  <div class="sec-hdr" onclick="toggleSec(this)">
-    <span class="sec-title">Open Questions</span>
-    <span class="sec-badge" id="q-badge">0</span>
-    <span class="sec-toggle">▾</span>
-  </div>
-  <div class="sec-body" id="q-list"></div>
-</div>
-
-<!-- All Meetings -->
-<div class="section">
-  <div class="sec-hdr" onclick="toggleSec(this)">
-    <span class="sec-title">All Meetings</span>
-    <span class="sec-badge" id="mtg-badge">0</span>
-    <span class="sec-toggle">▾</span>
-  </div>
-  <div class="sec-body">
-    <table class="mtg-table" id="mtg-table">
-      <thead><tr><th>Date</th><th>Meeting</th><th>Actions</th><th>Decisions</th><th>Questions</th></tr></thead>
-      <tbody></tbody>
-    </table>
-  </div>
-</div>
-
-</div><!-- /content -->
-</div><!-- /tab-ops -->
-
-<!-- TAB 2: INTELLIGENCE -->
 <div id="tab-intel" style="display:none;">
-<div class="content" style="padding-top:20px;">
+  <div class="content" style="padding-top:18px;">
 
-<div class="section">
-  <div class="sec-hdr" onclick="toggleSec(this)">
-    <span class="sec-title">Decision Anatomy</span>
-    <span class="sec-badge" id="da-badge">0</span>
-    <span class="sec-toggle">▾</span>
+    <div class="section">
+      <div class="sec-hdr" onclick="toggleSec(this)">
+        <span class="sec-title">Decision Anatomy</span>
+        <span class="sec-badge" id="da-badge">0</span>
+        <span class="sec-toggle">&#9660;</span>
+      </div>
+      <div class="filter-bar" id="da-filter-bar">
+        <button class="fb-btn active" onclick="setDaFilter('all',this)">All Meetings</button>
+      </div>
+      <div class="sec-body" id="da-body"></div>
+    </div>
+
+    <div class="section">
+      <div class="sec-hdr" onclick="toggleSec(this)">
+        <span class="sec-title">Meeting Dynamics &amp; Participation</span>
+        <span class="sec-toggle">&#9660;</span>
+      </div>
+      <div class="sec-body" id="mdc-body"></div>
+    </div>
+
   </div>
-  <div class="filter-bar" id="da-filter-bar">
-    <button class="fb-btn active" onclick="setDaFilter('all',this)">All Meetings</button>
-  </div>
-  <div class="sec-body" id="da-list"></div>
 </div>
 
-<div class="section">
-  <div class="sec-hdr" onclick="toggleSec(this)">
-    <span class="sec-title">Meeting Dynamics &amp; Participation</span>
-    <span class="sec-toggle">▾</span>
-  </div>
-  <div class="sec-body" id="mtg-detail-list"></div>
-</div>
-
-</div>
-</div>
-
-<!-- Notes modal -->
-<div class="modal-overlay" id="notes-modal" onclick="if(event.target===this)closeModal()">
+<div class="modal-overlay" id="modal" onclick="if(event.target===this)closeModal()">
   <div class="modal-box">
     <div class="modal-title" id="modal-title"></div>
     <div class="modal-body" id="modal-body"></div>
@@ -464,7 +392,10 @@ var MTG_DETAIL = [
    dyn:["Raghuveer carried almost all analytical weight — reading charts, identifying correlations, proposing solutions — while functional heads were passive observers.","Pattern of starting corrective initiatives in the final week of the month is recurring across 3 of 5 meetings.","Pune has had no single named owner for six months — Raghuveer asked directly and received deflection, not ownership.","Rashi had limited airtime relative to her role — ops perspective was largely filtered through Raghuveer's reading.","Insurance discussion was shallow given the steep June target (Rs 60 lakh) and known execution gap from last week."]}
 ];
 
-var LEADERS=[
+// Assign IDs if missing
+for (var _i = 0; _i < ITEMS.length; _i++) { if (!ITEMS[_i].id) ITEMS[_i].id = 'i' + _i; }
+
+var LEADERS = [
   {name:'Raghu',     role:'CEO',           color:'#4B1FA3', bg:'#EDE9FE', border:'rgba(75,31,163,0.2)'},
   {name:'Rameshwar', role:'CTO',           color:'#1D4ED8', bg:'#EFF6FF', border:'rgba(29,78,216,0.2)'},
   {name:'Rashi',     role:'COO',           color:'#0D9488', bg:'#ECFDF5', border:'rgba(13,148,136,0.2)'},
@@ -475,433 +406,418 @@ var LEADERS=[
   {name:'Tarun',     role:'Insurance',     color:'#B45309', bg:'#FFFBEB', border:'rgba(180,83,9,0.2)'}
 ];
 
-function getLeader(owner){
-  if(!owner)return 'Other';
-  var o=owner.toLowerCase();
-  if(/raghu|raghuveer|pranav singh|pranav k/.test(o))return 'Raghu';
-  if(/rameshwar|pankaj|ajit|pooja|ashish|product team|mohit|roshan|telecom/.test(o))return 'Rameshwar';
-  if(/\brashi\b|ankita|\baman\b|neerav|nagesh|arpit|varsha|arshay|training team/.test(o))return 'Rashi';
-  if(/rishab|rishabh|abdullah|\bcam\b|institutional/.test(o))return 'Rishab';
-  if(/\bvikas\b|vijay|\bnitin\b|\badi\b|aditya/.test(o))return 'Vikas';
-  if(/\bankit\b|ishant|ishaan|darshan|avinash|prabhat|devesh|devjyoti|e2e team/.test(o))return 'Ankit';
-  if(/khyati/.test(o))return 'Khyati';
-  if(/tarun|hitesh/.test(o))return 'Tarun';
+function getLeader(owner) {
+  if (!owner) return 'Other';
+  var o = owner.toLowerCase();
+  if (/raghu|raghuveer|pranav singh|pranav k/.test(o)) return 'Raghu';
+  if (/rameshwar|pankaj|ajit|pooja|ashish|product team|mohit|roshan|telecom/.test(o)) return 'Rameshwar';
+  if (/rashi|ankita|neerav|nagesh|arpit|varsha|arshay|training team/.test(o)) return 'Rashi';
+  if (/rishab|rishabh|abdullah|institutional/.test(o)) return 'Rishab';
+  if (/vikas|vijay|nitin/.test(o)) return 'Vikas';
+  if (/ankit|ishant|ishaan|darshan|avinash|prabhat|devesh|devjyoti|e2e team/.test(o)) return 'Ankit';
+  if (/khyati/.test(o)) return 'Khyati';
+  if (/tarun|hitesh/.test(o)) return 'Tarun';
   return 'Other';
 }
 
-function getLs(name){
-  for(var i=0;i<LEADERS.length;i++){if(LEADERS[i].name===name)return LEADERS[i];}
+function getLs(name) {
+  for (var i = 0; i < LEADERS.length; i++) { if (LEADERS[i].name === name) return LEADERS[i]; }
   return null;
 }
 
-var DONE_KEY='ambak_done_items';
-var today=new Date();
-var NOTES_KEY='ambak_notes_'+today.getFullYear()+'-'+String(today.getMonth()+1).padStart(2,'0')+'-'+String(today.getDate()).padStart(2,'0');
-var AI_FILTER='all', REM_FILTER='all', DA_FILTER='all';
-var LO_COLLAPSED=false;
+var DONE_KEY = 'ambak_done_items';
+var _td = new Date();
+var NOTES_KEY = 'ambak_notes_' + _td.getFullYear() + '-' + String(_td.getMonth()+1).padStart(2,'0') + '-' + String(_td.getDate()).padStart(2,'0');
+var AI_FILTER = 'all', REM_FILTER = 'all', DA_FILTER = 'all';
+var LO_HIDDEN = false;
 
-// Assign IDs
-for(var i=0;i<ITEMS.length;i++){if(!ITEMS[i].id)ITEMS[i].id='i'+i;}
+function gd() {
+  try { var v = JSON.parse(localStorage.getItem(DONE_KEY) || '[]'); return Array.isArray(v) ? v : []; }
+  catch(e) { return []; }
+}
+function sd(d) { localStorage.setItem(DONE_KEY, JSON.stringify(d)); }
 
-window.onerror=function(msg,src,line){
-  var el=document.getElementById('hi');
-  if(el)el.innerHTML='<div style="padding:20px;color:red;font-weight:bold">JS ERROR: '+msg+' (line '+line+')</div>';
-  return false;
-};
-
-function gd(){try{var v=JSON.parse(localStorage.getItem(DONE_KEY)||'[]');return Array.isArray(v)?v:[];}catch(e){return[];}}
-function sd(d){localStorage.setItem(DONE_KEY,JSON.stringify(d));}
-
-function switchTab(t){
-  document.getElementById('tab-ops').style.display=t==='ops'?'':'none';
-  document.getElementById('tab-intel').style.display=t==='intel'?'':'none';
-  document.getElementById('tab-ops-btn').classList.toggle('active',t==='ops');
-  document.getElementById('tab-intel-btn').classList.toggle('active',t==='intel');
+function switchTab(t) {
+  document.getElementById('tab-ops').style.display = t === 'ops' ? '' : 'none';
+  document.getElementById('tab-intel').style.display = t === 'intel' ? '' : 'none';
+  document.getElementById('tab-ops-btn').classList.toggle('active', t === 'ops');
+  document.getElementById('tab-intel-btn').classList.toggle('active', t === 'intel');
 }
 
-function toggleSec(hdr){
-  hdr.parentElement.classList.toggle('collapsed');
+function toggleSec(hdr) { hdr.parentElement.classList.toggle('collapsed'); }
+function toggleLow() {
+  LO_HIDDEN = !LO_HIDDEN;
+  var lo = document.getElementById('lo');
+  var btn = document.getElementById('lo-btn');
+  if (lo) lo.style.display = LO_HIDDEN ? 'none' : '';
+  if (btn) btn.textContent = LO_HIDDEN ? 'Expand' : 'Collapse';
 }
 
-function setAiFilter(l,btn){
-  AI_FILTER=l;
-  document.querySelectorAll('#ai-filter-bar .fb-btn').forEach(function(b){b.classList.remove('active');});
-  if(btn)btn.classList.add('active');
+function setAiFilter(l, btn) {
+  AI_FILTER = l;
+  document.querySelectorAll('#ai-filter-bar .fb-btn').forEach(function(b) { b.classList.remove('active'); });
+  if (btn) btn.classList.add('active');
   render();
 }
-function setRemFilter(l,btn){
-  REM_FILTER=l;
-  document.querySelectorAll('#rem-filter-bar .fb-btn').forEach(function(b){b.classList.remove('active');});
-  if(btn)btn.classList.add('active');
+function setRemFilter(l, btn) {
+  REM_FILTER = l;
+  document.querySelectorAll('#rem-filter-bar .fb-btn').forEach(function(b) { b.classList.remove('active'); });
+  if (btn) btn.classList.add('active');
   renderReminders();
 }
-function setDaFilter(l,btn){
-  DA_FILTER=l;
-  document.querySelectorAll('#da-filter-bar .fb-btn').forEach(function(b){b.classList.remove('active');});
-  if(btn)btn.classList.add('active');
+function setDaFilter(l, btn) {
+  DA_FILTER = l;
+  document.querySelectorAll('#da-filter-bar .fb-btn').forEach(function(b) { b.classList.remove('active'); });
+  if (btn) btn.classList.add('active');
   renderDa();
 }
 
-function toggleLow(){
-  LO_COLLAPSED=!LO_COLLAPSED;
-  var lo=document.getElementById('lo');
-  var btn=document.getElementById('lo-expand-btn');
-  if(lo)lo.style.display=LO_COLLAPSED?'none':'';
-  if(btn)btn.textContent=LO_COLLAPSED?'Expand':'Collapse';
+// Use data-id on elements, no inline string quoting needed
+function toggleHistory(id) {
+  var el = document.getElementById('hd-' + id);
+  var btn = document.getElementById('hb-' + id);
+  if (!el) return;
+  var open = el.classList.toggle('open');
+  if (btn) btn.classList.toggle('active', open);
+}
+function markDone(id, chk) {
+  var d = gd();
+  if (chk && !d.includes(id)) d.push(id);
+  else { var idx = d.indexOf(id); if (idx > -1) d.splice(idx, 1); }
+  sd(d); render();
+  toast(chk ? 'Moved to completed' : 'Restored to action items');
 }
 
-function toggleHistory(id){
-  var el=document.getElementById('hd-'+id);
-  var btn=document.getElementById('hb-'+id);
-  if(!el)return;
-  var open=el.classList.toggle('open');
-  if(btn)btn.classList.toggle('active',open);
+function toast(msg) {
+  var el = document.getElementById('toast');
+  el.textContent = msg; el.style.opacity = '1';
+  setTimeout(function() { el.style.opacity = '0'; }, 2200);
 }
 
-function markDone(id,chk){
-  var d=gd();
-  if(chk&&!d.includes(id))d.push(id);
-  else{var idx=d.indexOf(id);if(idx>-1)d.splice(idx,1);}
-  sd(d);render();
-  toast(chk?'Moved to completed':'Restored to action items');
+function isOver(due) {
+  if (!due || due === 'No date mentioned') return false;
+  var d = new Date(due); d.setHours(0,0,0,0);
+  var t = new Date(); t.setHours(0,0,0,0);
+  return d < t;
 }
 
-function toast(msg){
-  var el=document.getElementById('toast');
-  el.textContent=msg;el.style.opacity='1';
-  setTimeout(function(){el.style.opacity='0';},2000);
+function esc(s) {
+  if (!s) return '';
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 }
 
-function isOver(due){
-  if(!due||due==='No date mentioned')return false;
-  return new Date(due)<new Date(today.toDateString());
-}
+function buildCard(it, done) {
+  var ldr = getLeader(it.owner);
+  var ls = getLs(ldr);
+  var over = isOver(it.due_date) && !done;
+  var hist = it.history || [];
 
-function buildCard(it,done){
-  var ldr=getLeader(it.owner);
-  var ls=getLs(ldr);
-  var over=isOver(it.due_date)&&!done;
-  var hist=it.history||[];
-  var hBtns=hist.length?'<button class="btn-hist" id="hb-'+it.id+'" onclick="toggleHistory(''+it.id+'')">&#9201; History ('+hist.length+')</button>':'';
-  var hDraw='<div class="hist-drawer" id="hd-'+it.id+'">'+(hist.length?hist.map(function(h){return '<div class="hist-entry"><span class="hist-type ht-'+(h.type||'note')+'">'+(h.type||'note')+'</span><span>'+esc(h.date)+' — '+esc(h.detail||'')+'</span></div>';}).join(''):'')+'</div>';
+  var leaderBadge = ls ? '<span class="badge" style="background:' + ls.bg + ';color:' + ls.color + ';border:1px solid ' + ls.border + '">' + ldr + '</span>' : '';
+  var badges = '<div class="badges">'
+    + (done ? '' : (it.priority === 'HIGH' ? '<span class="badge b-high">HIGH</span>' : '<span class="badge b-low">LOW</span>'))
+    + (over ? '<span class="badge b-over">OVERDUE</span>' : '')
+    + (it.due_date && it.due_date !== 'No date mentioned' ? '<span class="badge b-date">' + esc(it.due_date) + '</span>' : '')
+    + (it.related_topic ? '<span class="badge b-topic">' + esc(it.related_topic) + '</span>' : '')
+    + (it.source_meeting ? '<span class="badge b-mtg">' + esc(it.source_meeting) + '</span>' : '')
+    + leaderBadge
+    + '</div>';
 
-  var leaderBadge=ls?'<span class="b-leader badge" style="background:'+ls.bg+';color:'+ls.color+';border:1px solid '+ls.border+'">'+ldr+'</span>':'';
-  var badges='<div class="badges">'
-    +(done?'':it.priority==='HIGH'?'<span class="badge b-high">HIGH</span>':'<span class="badge b-low">LOW</span>')
-    +(over?'<span class="badge b-over">OVERDUE</span>':'')
-    +(it.due_date&&it.due_date!=='No date mentioned'?'<span class="badge b-date">'+it.due_date+'</span>':'')
-    +(it.related_topic?'<span class="badge b-topic">'+esc(it.related_topic)+'</span>':'')
-    +(it.source_meeting?'<span class="badge b-mtg">'+esc(it.source_meeting)+'</span>':'')
-    +leaderBadge
-    +'</div>';
-
-  if(done){
-    return '<div class="card done-card">'
-      +'<div class="card-owner">'+esc(it.owner)+'</div>'
-      +'<div class="card-task done-text">'+esc(it.task)+'</div>'
-      +badges
-      +'<div class="card-actions"><button class="btn-undo" onclick="markDone(''+it.id+'',false)">Undo</button>'+hBtns+'</div>'
-      +hDraw
-      +'</div>';
+  var histHtml = '';
+  if (hist.length) {
+    histHtml = '<div class="hist-drawer" id="hd-' + it.id + '">'
+      + hist.map(function(h) {
+          return '<div class="hist-entry"><span class="hist-type ht-' + (h.type||'note') + '">' + (h.type||'note') + '</span><span>' + esc(h.date) + ' — ' + esc(h.detail||'') + '</span></div>';
+        }).join('')
+      + '</div>';
   }
-  return '<div class="card '+(it.priority==='HIGH'?'hi-card':'lo-card')+'">'
-    +'<div class="card-top">'
-    +'<input class="card-cb" type="checkbox" onchange="markDone(''+it.id+'',this.checked)">'
-    +'<div style="flex:1">'
-    +'<div class="card-owner">'+esc(it.owner)+'</div>'
-    +'<div class="card-task">'+esc(it.task)+'</div>'
-    +'</div></div>'
-    +badges
-    +'<div class="card-actions">'+hBtns+'</div>'
-    +hDraw
-    +'</div>';
+
+  if (done) {
+    return '<div class="card done-card">'
+      + '<div class="card-owner">' + esc(it.owner) + '</div>'
+      + '<div class="card-task done-text">' + esc(it.task) + '</div>'
+      + badges
+      + '<div class="card-actions">'
+      + '<button class="btn-undo" data-id="' + it.id + '" onclick="markDone(this.dataset.id,false)">Undo</button>'
+      + (hist.length ? '<button class="btn-hist" id="hb-' + it.id + '" data-id="' + it.id + '" onclick="toggleHistory(this.dataset.id)">&#9201; History (' + hist.length + ')</button>' : '')
+      + '</div>'
+      + histHtml
+      + '</div>';
+  }
+
+  return '<div class="card ' + (it.priority === 'HIGH' ? 'hi-card' : 'lo-card') + '">'
+    + '<div class="card-top">'
+    + '<input class="card-cb" type="checkbox" data-id="' + it.id + '" onchange="markDone(this.dataset.id,this.checked)">'
+    + '<div style="flex:1"><div class="card-owner">' + esc(it.owner) + '</div>'
+    + '<div class="card-task">' + esc(it.task) + '</div></div></div>'
+    + badges
+    + '<div class="card-actions">'
+    + (hist.length ? '<button class="btn-hist" id="hb-' + it.id + '" data-id="' + it.id + '" onclick="toggleHistory(this.dataset.id)">&#9201; History (' + hist.length + ')</button>' : '')
+    + '</div>'
+    + histHtml
+    + '</div>';
 }
 
-function esc(s){
-  if(!s)return'';
-  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
-}
+function render() {
+  var done = gd();
+  var active = ITEMS.filter(function(it) { return !done.includes(it.id); });
+  var filtered = AI_FILTER === 'all' ? active : active.filter(function(it) { return getLeader(it.owner) === AI_FILTER; });
+  var hi = filtered.filter(function(it) { return it.priority === 'HIGH'; });
+  var lo = filtered.filter(function(it) { return it.priority !== 'HIGH'; });
+  var di = ITEMS.filter(function(it) { return done.includes(it.id); });
 
-function render(){
-  var done=gd();
-  var active=ITEMS.filter(function(it){return!done.includes(it.id);});
-  var filtered=AI_FILTER==='all'?active:active.filter(function(it){return getLeader(it.owner)===AI_FILTER;});
-  var hi=filtered.filter(function(it){return it.priority==='HIGH';});
-  var lo=filtered.filter(function(it){return it.priority!=='HIGH';});
-  var di=ITEMS.filter(function(it){return done.includes(it.id);});
+  var hiEl = document.getElementById('hi');
+  var loEl = document.getElementById('lo');
+  var dlEl = document.getElementById('done-list');
+  if (hiEl) hiEl.innerHTML = hi.length ? hi.map(function(it) { return buildCard(it, false); }).join('') : '<div style="color:var(--muted);font-size:13px;padding:8px 0">No items</div>';
+  if (loEl) loEl.innerHTML = lo.length ? lo.map(function(it) { return buildCard(it, false); }).join('') : '<div style="color:var(--muted);font-size:13px;padding:8px 0">No items</div>';
+  if (dlEl) dlEl.innerHTML = di.map(function(it) { return buildCard(it, true); }).join('');
 
-  var hiEl=document.getElementById('hi');
-  var loEl=document.getElementById('lo');
-  var dlEl=document.getElementById('done-list');
-  if(hiEl)hiEl.innerHTML=hi.length?hi.map(function(it){return buildCard(it,false);}).join(''):'<div style="color:var(--muted);font-size:13px;padding:8px 0;">No items</div>';
-  if(loEl)loEl.innerHTML=lo.length?lo.map(function(it){return buildCard(it,false);}).join(''):'<div style="color:var(--muted);font-size:13px;padding:8px 0;">No items</div>';
-  if(dlEl)dlEl.innerHTML=di.map(function(it){return buildCard(it,true);}).join('');
+  var hiCnt = document.getElementById('hi-cnt');
+  var loCnt = document.getElementById('lo-cnt');
+  var aiBadge = document.getElementById('ai-badge');
+  if (hiCnt) hiCnt.textContent = hi.length;
+  if (loCnt) loCnt.textContent = lo.length;
+  if (aiBadge) aiBadge.textContent = (hi.length + lo.length) + ' items';
 
-  var hiCnt=document.getElementById('hi-cnt');
-  var loCnt=document.getElementById('lo-cnt');
-  var aiBadge=document.getElementById('ai-count-badge');
-  if(hiCnt)hiCnt.textContent=hi.length;
-  if(loCnt)loCnt.textContent=lo.length;
-  if(aiBadge)aiBadge.textContent=(hi.length+lo.length)+' items';
+  var doneSec = document.getElementById('done-sec');
+  if (doneSec) doneSec.style.display = di.length > 0 ? 'block' : 'none';
+  var dBadge = document.getElementById('done-badge');
+  if (dBadge) dBadge.textContent = di.length;
+  var dPill = document.getElementById('done-pill-top');
+  if (dPill) dPill.textContent = di.length + ' done';
 
-  var doneSec=document.getElementById('done-sec');
-  if(doneSec)doneSec.style.display=di.length>0?'block':'none';
-  var dBadge=document.getElementById('done-badge');
-  if(dBadge)dBadge.textContent=di.length;
-  var dPill=document.getElementById('done-pill-top');
-  if(dPill)dPill.textContent=di.length+' done';
-
-  // Overdue check
-  var overCount=active.filter(function(it){return isOver(it.due_date);}).length;
-  var ab=document.getElementById('alert-banner');
-  if(ab)ab.style.display=overCount>0?'block':'none';
+  var overCount = active.filter(function(it) { return isOver(it.due_date); }).length;
+  var ab = document.getElementById('alert-banner');
+  if (ab) ab.style.display = overCount > 0 ? 'block' : 'none';
 
   // KPIs
-  var openCount=active.length;
-  var highCount=active.filter(function(it){return it.priority==='HIGH';}).length;
-  var lowCount=active.filter(function(it){return it.priority!=='HIGH';}).length;
-  var overPct=openCount>0?Math.round(overCount/openCount*100):0;
-  var sevenDaysAgo=new Date(today);sevenDaysAgo.setDate(sevenDaysAgo.getDate()-7);
-  var recentMtgs=MEETINGS.filter(function(m){return new Date(m.date)>=sevenDaysAgo;}).length;
-  var kRow=document.getElementById('kpi-row');
-  if(kRow)kRow.innerHTML=[
-    {l:'Meetings (7d)',v:recentMtgs,s:'last 7 days'},
-    {l:'Open Items',v:openCount,s:'action items'},
-    {l:'HIGH Priority',v:highCount,s:'need attention'},
-    {l:'LOW Priority',v:lowCount,s:'in pipeline'},
-    {l:'% Overdue',v:overPct+'%',s:overCount+' items overdue'},
-    {l:'Open Questions',v:QUESTIONS.length,s:'across all meetings'}
-  ].map(function(k){
-    return '<div class="kpi"><div class="kl">'+k.l+'</div><div class="kv">'+k.v+'</div><div class="ks">'+k.s+'</div></div>';
+  var sevenAgo = new Date(); sevenAgo.setDate(sevenAgo.getDate() - 7);
+  var recentMtgs = MEETINGS.filter(function(m) { return new Date(m.date) >= sevenAgo; }).length;
+  var highCount = active.filter(function(it) { return it.priority === 'HIGH'; }).length;
+  var lowCount = active.filter(function(it) { return it.priority !== 'HIGH'; }).length;
+  var overPct = active.length > 0 ? Math.round(overCount / active.length * 100) : 0;
+  var kRow = document.getElementById('kpi-row');
+  if (kRow) kRow.innerHTML = [
+    {l:'Meetings (7d)', v:recentMtgs, s:'last 7 days'},
+    {l:'Open Items',    v:active.length, s:'action items'},
+    {l:'HIGH Priority', v:highCount, s:'need attention'},
+    {l:'LOW Priority',  v:lowCount, s:'in pipeline'},
+    {l:'% Overdue',     v:overPct+'%', s:overCount+' items overdue'},
+    {l:'Open Questions',v:QUESTIONS.length, s:'across all meetings'}
+  ].map(function(k) {
+    return '<div class="kpi"><div class="kl">' + k.l + '</div><div class="kv">' + k.v + '</div><div class="ks">' + k.s + '</div></div>';
   }).join('');
 
   // Topbar meta
-  var meta=document.getElementById('tb-meta');
-  if(meta)meta.textContent='| Updated '+today.toLocaleDateString('en-IN',{day:'numeric',month:'short',year:'numeric'})+' · '+MEETINGS.length+' meetings · '+openCount+' open';
+  var meta = document.getElementById('tb-meta');
+  if (meta) meta.textContent = '| ' + _td.toLocaleDateString('en-IN',{day:'numeric',month:'short',year:'numeric'}) + ' · ' + MEETINGS.length + ' meetings · ' + active.length + ' open';
 
   // Focus strip
-  var fs=document.getElementById('focus-strip');
-  if(fs){
-    var top5=active.filter(function(it){return it.priority==='HIGH';}).slice(0,5);
-    fs.innerHTML=top5.map(function(it){
-      return '<div class="focus-card"><div class="fc-owner">'+esc(it.owner)+'</div><div class="fc-task">'+esc(it.task.substring(0,80))+(it.task.length>80?'…':'')+'</div></div>';
+  var fs = document.getElementById('focus-strip');
+  if (fs) {
+    var top5 = active.filter(function(it) { return it.priority === 'HIGH'; }).slice(0, 5);
+    fs.innerHTML = top5.map(function(it) {
+      return '<div class="focus-card"><div class="fc-owner">' + esc(it.owner) + '</div><div class="fc-task">' + esc(it.task.substring(0,85)) + (it.task.length > 85 ? '&hellip;' : '') + '</div></div>';
     }).join('');
   }
 }
 
-function renderDecisions(){
-  var dl=document.getElementById('dec-list');
-  if(!dl)return;
-  var db=document.getElementById('dec-badge');
-  if(db)db.textContent=DECISIONS.length;
-  dl.innerHTML=DECISIONS.map(function(d){
-    return '<div class="dec-item"><div class="dec-text">'+esc(d.text)+'</div><div class="dec-tags"><span class="badge b-mtg">'+esc(d.meeting)+'</span><span class="badge b-date">'+esc(d.date)+'</span></div></div>';
+function renderDecisions() {
+  var dl = document.getElementById('dec-list');
+  var db = document.getElementById('dec-badge');
+  if (db) db.textContent = DECISIONS.length;
+  if (dl) dl.innerHTML = DECISIONS.map(function(d) {
+    return '<div class="dec-item"><div class="dec-text">' + esc(d.text) + '</div>'
+      + '<div class="dec-tags"><span class="badge b-mtg">' + esc(d.meeting) + '</span><span class="badge b-date">' + esc(d.date) + '</span></div></div>';
   }).join('');
 }
 
-function renderReminders(){
-  var done=gd();
-  function filterRem(arr){
-    if(REM_FILTER==='all')return arr;
-    return arr.filter(function(it){return getLeader(it.owner)===REM_FILTER;});
+function renderReminders() {
+  function filterR(arr) {
+    return REM_FILTER === 'all' ? arr : arr.filter(function(it) { return getLeader(it.owner) === REM_FILTER; });
   }
-  var ov=filterRem(REM_OV);
-  var tt=filterRem(REM_TT);
-  var wk=filterRem(REM_WEEK);
-  var ag=filterRem(REM_AGED);
-  var total=ov.length+tt.length+wk.length+ag.length;
-  var rb=document.getElementById('rem-badge');
-  if(rb)rb.textContent=total+' items';
-
-  function remItem(it){
-    return '<div class="rem-item"><strong>'+esc(it.owner)+'</strong> — '+esc(it.task)
-      +(it.due_date&&it.due_date!=='No date mentioned'?' <span style="color:var(--muted);font-size:11px;">('+it.due_date+')</span>':'')+'</div>';
+  var ov = filterR(REM_OV), tt = filterR(REM_TT), wk = filterR(REM_WEEK), ag = filterR(REM_AGED);
+  var total = ov.length + tt.length + wk.length + ag.length;
+  var rb = document.getElementById('rem-badge');
+  if (rb) rb.textContent = total + ' items';
+  function remItem(it) {
+    return '<div class="rem-item"><strong>' + esc(it.owner) + '</strong> — ' + esc(it.task)
+      + (it.due_date && it.due_date !== 'No date mentioned' ? ' <span style="color:var(--muted);font-size:11px">(' + esc(it.due_date) + ')</span>' : '') + '</div>';
   }
-  var html='';
-  if(ov.length){html+='<div class="rem-group"><span class="rem-group-title rgt-red">Overdue ('+ov.length+')</span>'+ov.map(remItem).join('')+'</div>';}
-  if(tt.length){html+='<div class="rem-group"><span class="rem-group-title rgt-amber">Due Today / Tomorrow ('+tt.length+')</span>'+tt.map(remItem).join('')+'</div>';}
-  if(wk.length){html+='<div class="rem-group"><span class="rem-group-title rgt-blue">Due This Week ('+wk.length+')</span>'+wk.map(remItem).join('')+'</div>';}
-  if(ag.length){html+='<div class="rem-group"><span class="rem-group-title rgt-purple">Aged Items ('+ag.length+')</span>'+ag.map(remItem).join('')+'</div>';}
-  if(!html)html='<div style="color:var(--muted);font-size:13px;">No reminders.</div>';
-  var rb2=document.getElementById('rem-body');
-  if(rb2)rb2.innerHTML=html;
+  var html = '';
+  if (ov.length) html += '<div class="rem-group"><span class="rem-group-title rgt-red">Overdue (' + ov.length + ')</span>' + ov.map(remItem).join('') + '</div>';
+  if (tt.length) html += '<div class="rem-group"><span class="rem-group-title rgt-amber">Due Today / Tomorrow (' + tt.length + ')</span>' + tt.map(remItem).join('') + '</div>';
+  if (wk.length) html += '<div class="rem-group"><span class="rem-group-title rgt-blue">Due This Week (' + wk.length + ')</span>' + wk.map(remItem).join('') + '</div>';
+  if (ag.length) html += '<div class="rem-group"><span class="rem-group-title rgt-purple">Aged Items (' + ag.length + ')</span>' + ag.map(remItem).join('') + '</div>';
+  if (!html) html = '<div style="color:var(--muted);font-size:13px">No reminders.</div>';
+  var rb2 = document.getElementById('rem-body');
+  if (rb2) rb2.innerHTML = html;
 }
 
-function renderSc(){
-  var done=gd();
-  var active=ITEMS.filter(function(it){return!done.includes(it.id);});
-  var stats={};
-  LEADERS.forEach(function(l){stats[l.name]={total:0,high:0,over:0};});
-  active.forEach(function(it){
-    var l=getLeader(it.owner);
-    if(!stats[l])return;
+function renderSc() {
+  var done = gd();
+  var active = ITEMS.filter(function(it) { return !done.includes(it.id); });
+  var stats = {};
+  LEADERS.forEach(function(l) { stats[l.name] = {total:0, high:0, over:0}; });
+  active.forEach(function(it) {
+    var l = getLeader(it.owner);
+    if (!stats[l]) return;
     stats[l].total++;
-    if(it.priority==='HIGH')stats[l].high++;
-    if(isOver(it.due_date))stats[l].over++;
+    if (it.priority === 'HIGH') stats[l].high++;
+    if (isOver(it.due_date)) stats[l].over++;
   });
-  var sorted=LEADERS.slice().sort(function(a,b){return stats[b.name].high-stats[a.name].high;});
-  var sg=document.getElementById('sc-grid');
-  if(sg)sg.innerHTML=sorted.map(function(l){
-    var s=stats[l.name];
-    return '<div class="sc-card" style="border-top:3px solid '+l.color+'">'
-      +'<div class="sc-name" style="color:'+l.color+'">'+l.name+'</div>'
-      +'<div class="sc-role">'+l.role+'</div>'
-      +'<div class="sc-stats">'
-      +'<div class="sc-stat"><div class="sv">'+s.total+'</div><div class="sl">Open</div></div>'
-      +'<div class="sc-stat"><div class="sv" style="color:var(--high)">'+s.high+'</div><div class="sl">HIGH</div></div>'
-      +'<div class="sc-stat"><div class="sv" style="color:var(--warn)">'+s.over+'</div><div class="sl">Overdue</div></div>'
-      +'</div></div>';
+  var sorted = LEADERS.slice().sort(function(a,b) { return stats[b.name].high - stats[a.name].high; });
+  var sg = document.getElementById('sc-grid');
+  if (sg) sg.innerHTML = sorted.map(function(l) {
+    var s = stats[l.name];
+    return '<div class="sc-card" style="border-top:3px solid ' + l.color + '">'
+      + '<div class="sc-name" style="color:' + l.color + '">' + l.name + '</div>'
+      + '<div class="sc-role">' + l.role + '</div>'
+      + '<div class="sc-stats">'
+      + '<div class="sc-stat"><div class="sv">' + s.total + '</div><div class="sl">Open</div></div>'
+      + '<div class="sc-stat"><div class="sv" style="color:var(--high)">' + s.high + '</div><div class="sl">HIGH</div></div>'
+      + '<div class="sc-stat"><div class="sv" style="color:var(--warn)">' + s.over + '</div><div class="sl">Overdue</div></div>'
+      + '</div></div>';
   }).join('');
 }
 
-function renderQ(){
-  var ql=document.getElementById('q-list');
-  var qb=document.getElementById('q-badge');
-  if(qb)qb.textContent=QUESTIONS.length;
-  if(ql)ql.innerHTML=QUESTIONS.map(function(q){
-    return '<div class="q-item"><div class="q-text">'+esc(q.q)+'</div><div class="q-meta">Raised by: '+esc(q.by)+' | Expected owner: '+esc(q.owner||q.expected_owner||'—')+' | '+esc(q.meeting)+' ('+esc(q.date)+')</div></div>';
+function renderQ() {
+  var qb = document.getElementById('q-badge');
+  var qBody = document.getElementById('q-body');
+  if (qb) qb.textContent = QUESTIONS.length;
+  if (qBody) qBody.innerHTML = QUESTIONS.map(function(q) {
+    return '<div class="q-item"><div class="q-text">' + esc(q.q) + '</div>'
+      + '<div class="q-meta">Raised by: ' + esc(q.by) + ' &nbsp;|&nbsp; Owner: ' + esc(q.owner || q.expected_owner || '—') + ' &nbsp;|&nbsp; ' + esc(q.meeting) + ' (' + esc(q.date) + ')</div></div>';
   }).join('');
 }
 
-function renderMtg(){
-  var tb=document.querySelector('#mtg-table tbody');
-  var mb=document.getElementById('mtg-badge');
-  if(mb)mb.textContent=MEETINGS.length;
-  if(tb)tb.innerHTML=MEETINGS.map(function(m){
-    return '<tr><td>'+esc(m.date)+'</td><td>'+esc(m.name)+'</td><td>'+m.actions+'</td><td>'+m.decisions+'</td><td>'+m.questions+'</td></tr>';
+function renderMtg() {
+  var mb = document.getElementById('mtg-badge');
+  var tb = document.getElementById('mtg-tbody');
+  if (mb) mb.textContent = MEETINGS.length;
+  if (tb) tb.innerHTML = MEETINGS.map(function(m) {
+    return '<tr><td>' + esc(m.date) + '</td><td>' + esc(m.name) + '</td><td>' + m.actions + '</td><td>' + m.decisions + '</td><td>' + m.questions + '</td></tr>';
   }).join('');
 }
 
-// Build leader filter pills
-function buildFilterPills(barId,setFn){
-  var bar=document.getElementById(barId);
-  if(!bar)return;
-  LEADERS.forEach(function(l){
-    var btn=document.createElement('button');
-    btn.className='fb-btn';
-    btn.textContent=l.name+' ('+l.role+')';
-    btn.style.borderColor=l.border;
-    btn.onclick=function(){setFn(l.name,btn);};
+function buildFilterPills(barId, setFn) {
+  var bar = document.getElementById(barId);
+  if (!bar) return;
+  LEADERS.forEach(function(l) {
+    var btn = document.createElement('button');
+    btn.className = 'fb-btn';
+    btn.textContent = l.name + ' · ' + l.role;
+    btn.style.borderColor = l.border;
+    btn.addEventListener('click', function() { setFn(l.name, btn); });
     bar.appendChild(btn);
   });
 }
 
-// Decision Anatomy (Tab 2)
-function renderDa(){
-  var list=document.getElementById('da-list');
-  var badge=document.getElementById('da-badge');
-  if(!list)return;
-  var data=DA_FILTER==='all'?DEC_ANATOMY:DEC_ANATOMY.filter(function(d){return(d.m||d.meeting)===DA_FILTER;});
-  if(badge)badge.textContent=data.length+' decisions';
-  list.innerHTML=data.map(function(d){
-    var parts=d.participants||d.roles||[];
-    var rChips=parts.map(function(p){
-      var r=p.r||p.role;
-      return '<span class="da-role-chip dr-'+r+'">'+(p.n||p.name)+' <em style="font-style:normal;opacity:0.7">('+r+')</em></span>';
+function renderDa() {
+  var body = document.getElementById('da-body');
+  var badge = document.getElementById('da-badge');
+  if (!body) return;
+  var data = DA_FILTER === 'all' ? DEC_ANATOMY : DEC_ANATOMY.filter(function(d) { return (d.m || d.meeting) === DA_FILTER; });
+  if (badge) badge.textContent = data.length + ' decisions';
+  body.innerHTML = data.map(function(d) {
+    var parts = d.roles || d.participants || [];
+    var chips = parts.map(function(p) {
+      var r = p.r || p.role;
+      return '<span class="da-chip dr-' + r + '">' + esc(p.n || p.name) + ' <span style="opacity:0.65">(' + r + ')</span></span>';
     }).join('');
-    return '<div class="da-card">'
-      +'<span class="da-mtg-tag">'+(d.m||d.meeting||'')+'</span>'
-      +'<div class="da-decision">'+esc(d.d||d.decision)+'</div>'
-      +'<div class="da-roles">'+rChips+'</div>'
-      +'</div>';
+    return '<div class="da-card"><span class="da-mtg-tag">' + esc(d.m || d.meeting || '') + '</span>'
+      + '<div class="da-decision">' + esc(d.d || d.decision) + '</div>'
+      + '<div class="da-roles">' + chips + '</div></div>';
   }).join('');
 }
 
-// Build DA filter pills
-function buildDaFilterPills(){
-  var bar=document.getElementById('da-filter-bar');
-  if(!bar)return;
-  var meetings=[...new Set(DEC_ANATOMY.map(function(d){return d.m||d.meeting||'';}))];
-  meetings.forEach(function(m){
-    var btn=document.createElement('button');
-    btn.className='fb-btn';
-    btn.textContent=m;
-    btn.onclick=function(){setDaFilter(m,btn);};
+function buildDaFilter() {
+  var bar = document.getElementById('da-filter-bar');
+  if (!bar) return;
+  var meetings = [];
+  DEC_ANATOMY.forEach(function(d) { var m = d.m || d.meeting || ''; if (m && meetings.indexOf(m) < 0) meetings.push(m); });
+  meetings.forEach(function(m) {
+    var btn = document.createElement('button');
+    btn.className = 'fb-btn';
+    btn.textContent = m;
+    btn.addEventListener('click', function() { setDaFilter(m, btn); });
     bar.appendChild(btn);
   });
 }
 
-// Meeting Dynamics & Participation (Tab 2)
-function renderMtgDetail(){
-  var list=document.getElementById('mtg-detail-list');
-  if(!list)return;
-  list.innerHTML=MTG_DETAIL.map(function(m){
-    var parts=m.part||m.participants||[];
-    var maxQ=Math.max.apply(null,parts.map(function(p){return p.q||p.questions_raised||0;}),1);
-    var bars=parts.map(function(p){
-      var q=p.q||p.questions_raised||0;
-      var pct=maxQ>0?Math.round(q/maxQ*100):0;
-      return '<div class="part-row"><span class="part-name">'+(p.n||p.name)+'</span>'
-        +'<div class="part-bar-wrap"><div class="part-bar" style="width:'+pct+'%"></div></div>'
-        +'<span class="part-q">'+q+'</span></div>';
+function renderMdc() {
+  var body = document.getElementById('mdc-body');
+  if (!body) return;
+  body.innerHTML = MTG_DETAIL.map(function(m) {
+    var parts = m.part || m.participants || [];
+    var maxQ = Math.max.apply(null, parts.map(function(p) { return p.q || 0; }).concat([1]));
+    var bars = parts.map(function(p) {
+      var q = p.q || 0;
+      var pct = Math.round(q / maxQ * 100);
+      return '<div class="part-row"><span class="part-name">' + esc(p.n || p.name) + '</span>'
+        + '<div class="part-bar-wrap"><div class="part-bar" style="width:' + pct + '%"></div></div>'
+        + '<span class="part-q">' + q + '</span></div>';
     }).join('');
-    var dyns=(m.dynamics||[]).map(function(d){return '<li>'+esc(d)+'</li>';}).join('');
-    return '<div class="mtg-detail-card">'
-      +'<div class="mdc-title">'+(m.name||m.meeting)+'</div>'
-      +'<div class="mdc-date">'+(m.date||'')+'</div>'
-      +'<div style="font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:6px;">Participation (questions raised)</div>'
-      +'<div class="part-bars">'+bars+'</div>'
-      +(dyns?'<div style="font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:4px;">Dynamics</div><ul class="dyn-list">'+dyns+'</ul>':'')
-      +'</div>';
+    var dyns = (m.dynamics || []).map(function(d) { return '<li>' + esc(d) + '</li>'; }).join('');
+    return '<div class="mdc-card"><div class="mdc-title">' + esc(m.name || m.meeting) + '</div>'
+      + '<div class="mdc-date">' + esc(m.date || '') + '</div>'
+      + '<div style="font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:5px">Participation (questions raised)</div>'
+      + '<div class="part-bars">' + bars + '</div>'
+      + (dyns ? '<div style="font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:0.05em;margin:8px 0 4px">Dynamics</div><ul class="dyn-list">' + dyns + '</ul>' : '')
+      + '</div>';
   }).join('');
 }
 
-// Notes
-function saveNotes(){
-  var ta=document.getElementById('notes-ta');
-  if(ta)localStorage.setItem(NOTES_KEY,ta.value);
-}
-function loadNotes(){
-  var ta=document.getElementById('notes-ta');
-  if(ta)ta.value=localStorage.getItem(NOTES_KEY)||'';
-  var past=[];
-  for(var k in localStorage){
-    if(k.startsWith('ambak_notes_')&&k!==NOTES_KEY){
-      var v=localStorage.getItem(k);
-      if(v&&v.trim())past.push({key:k,date:k.replace('ambak_notes_',''),text:v});
+function loadNotes() {
+  var ta = document.getElementById('notes-ta');
+  if (ta) ta.value = localStorage.getItem(NOTES_KEY) || '';
+  var past = [];
+  for (var k in localStorage) {
+    if (k.indexOf('ambak_notes_') === 0 && k !== NOTES_KEY) {
+      var v = localStorage.getItem(k);
+      if (v && v.trim()) past.push({date: k.replace('ambak_notes_',''), text: v});
     }
   }
-  past.sort(function(a,b){return b.date.localeCompare(a.date);});
-  var pl=document.getElementById('past-notes-list');
-  if(pl){
-    if(past.length===0){
-      pl.innerHTML='<div style="color:var(--muted);font-size:13px;">No past notes yet.</div>';
-    } else {
-      pl.innerHTML=past.map(function(p){
-        return '<div class="past-note-item" onclick="openModal(''+p.date+'',''+encodeURIComponent(p.text)+'')">'
-          +'<span class="pn-date">'+p.date+'</span>'
-          +'<span class="pn-preview">'+esc(p.text.substring(0,80))+'</span>'
-          +'</div>';
-      }).join('');
-    }
+  past.sort(function(a,b) { return b.date.localeCompare(a.date); });
+  var pl = document.getElementById('past-list');
+  if (pl) {
+    pl.innerHTML = past.length ? past.map(function(p) {
+      return '<div class="past-item" data-date="' + esc(p.date) + '" data-text="' + esc(p.text) + '" onclick="openModal(this.dataset.date, this.dataset.text)">'
+        + '<span class="past-date">' + esc(p.date) + '</span>'
+        + '<span class="past-preview">' + esc(p.text.substring(0, 80)) + '</span></div>';
+    }).join('') : '<div style="color:var(--muted);font-size:13px">No past notes yet.</div>';
   }
 }
-function openModal(date,encoded){
-  document.getElementById('modal-title').textContent='Notes — '+date;
-  document.getElementById('modal-body').textContent=decodeURIComponent(encoded);
-  document.getElementById('notes-modal').classList.add('open');
+
+function saveNotes() {
+  var ta = document.getElementById('notes-ta');
+  if (ta) localStorage.setItem(NOTES_KEY, ta.value);
 }
-function closeModal(){
-  document.getElementById('notes-modal').classList.remove('open');
+function openModal(date, text) {
+  document.getElementById('modal-title').textContent = 'Notes — ' + date;
+  document.getElementById('modal-body').textContent = text;
+  document.getElementById('modal').classList.add('open');
+}
+function closeModal() { document.getElementById('modal').classList.remove('open'); }
+
+function exportNotes() {
+  var ta = document.getElementById('notes-ta');
+  var txt = 'AMBAK LEADERSHIP NOTES - exported ' + NOTES_KEY.replace('ambak_notes_','') + '\n\n' + (ta ? ta.value : '');
+  navigator.clipboard.writeText(txt).then(function() { toast('Notes copied to clipboard'); });
+}
+function exportDone() {
+  var done = gd();
+  var items = ITEMS.filter(function(it) { return done.includes(it.id); });
+  var txt = 'AMBAK COMPLETED ITEMS - ' + _td.toISOString().split('T')[0] + '\n'
+    + items.map(function(it) { return '- [x] ' + it.owner + ' - ' + it.task + ' (done: ' + _td.toISOString().split('T')[0] + ')'; }).join('\n');
+  navigator.clipboard.writeText(txt).then(function() { toast('Copied ' + items.length + ' done items'); });
 }
 
-function exportNotes(){
-  var ta=document.getElementById('notes-ta');
-  var txt='AMBAK LEADERSHIP NOTES - exported '+NOTES_KEY.replace('ambak_notes_','')+'\n\n'+(ta?ta.value:'');
-  navigator.clipboard.writeText(txt).then(function(){toast('Notes copied to clipboard');});
-}
-function exportDone(){
-  var done=gd();
-  var items=ITEMS.filter(function(it){return done.includes(it.id);});
-  var txt='AMBAK COMPLETED ITEMS - '+today.toISOString().split('T')[0]+'\n'+items.map(function(it){return'- [x] '+it.owner+' - '+it.task+' (done: '+today.toISOString().split('T')[0]+')';}).join('\n');
-  navigator.clipboard.writeText(txt).then(function(){toast('Copied '+items.length+' done items');});
-}
-
-function initDashboard(){
-  try{
-    buildFilterPills('ai-filter-bar',setAiFilter);
-    buildFilterPills('rem-filter-bar',setRemFilter);
-    buildDaFilterPills();
+function init() {
+  try {
+    buildFilterPills('ai-filter-bar', setAiFilter);
+    buildFilterPills('rem-filter-bar', setRemFilter);
+    buildDaFilter();
     render();
     renderDecisions();
     renderReminders();
@@ -909,15 +825,17 @@ function initDashboard(){
     renderQ();
     renderMtg();
     renderDa();
-    renderMtgDetail();
+    renderMdc();
     loadNotes();
-  }catch(e){
-    var el=document.getElementById('hi');
-    if(el)el.innerHTML='<div style="padding:20px;color:red;font-weight:bold">RENDER ERROR: '+e.message+'</div>';
+  } catch(e) {
+    var el = document.getElementById('hi');
+    if (el) el.innerHTML = '<div style="padding:16px;color:red;font-weight:bold">ERROR: ' + e.message + '</div>';
+    console.error(e);
   }
 }
-if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',initDashboard);}
-else{initDashboard();}
+
+if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', init); }
+else { init(); }
 </script>
 </body>
 </html>
