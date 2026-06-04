@@ -166,6 +166,55 @@ textarea.notes-ta:focus{border-color:var(--brand);box-shadow:0 0 0 3px rgba(91,3
 .dyn-list li{font-size:12px;color:var(--muted);padding:3px 0 3px 13px;position:relative;border-bottom:1px solid var(--border);}
 .dyn-list li:last-child{border-bottom:none;}
 .dyn-list li::before{content:"\2022";position:absolute;left:0;color:var(--brand-mid);}
+
+/* Decision Anatomy Table */
+.da-meeting-block { margin-bottom: 28px; }
+.da-meeting-hdr { display:flex; align-items:center; gap:10px; margin-bottom:10px; padding-bottom:8px; border-bottom:2px solid var(--border); }
+.da-meeting-name { font-size:14px; font-weight:800; color:var(--text); }
+.da-meeting-date { font-size:11px; color:var(--muted); font-weight:600; }
+.da-table { width:100%; border-collapse:collapse; font-size:12px; }
+.da-table th { text-align:left; padding:7px 10px; background:var(--brand-soft); font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; color:var(--muted); border-bottom:2px solid var(--border); }
+.da-table th:first-child { border-radius:var(--radius-sm) 0 0 0; }
+.da-table th:last-child { border-radius:0 var(--radius-sm) 0 0; }
+.da-table td { padding:9px 10px; border-bottom:1px solid var(--border); vertical-align:top; }
+.da-table tr:last-child td { border-bottom:none; }
+.da-table tr:hover td { background:var(--brand-soft); }
+.da-table td:first-child { font-size:12px; font-weight:500; color:var(--text); line-height:1.5; width:38%; }
+.role-chips { display:flex; flex-wrap:wrap; gap:3px; }
+.rchip { padding:2px 7px; border-radius:100px; font-size:11px; font-weight:700; }
+.rchip.decider { background:#EDE9FE; color:#4B1FA3; }
+.rchip.problem { background:#FEF3C7; color:#92400E; }
+.rchip.contributor { background:#EFF6FF; color:#1D4ED8; }
+.rchip.silent { background:#F3F4F6; color:#9CA3AF; font-weight:500; }
+.da-legend { display:flex; gap:10px; flex-wrap:wrap; margin-bottom:14px; }
+.da-legend-item { display:flex; align-items:center; gap:5px; font-size:11px; color:var(--muted); }
+
+/* Meeting Participation + Dynamics */
+.mdc-card { background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); margin-bottom:14px; box-shadow:var(--shadow); overflow:hidden; }
+.mdc-card-hdr { padding:13px 16px; border-bottom:1px solid var(--border); display:flex; align-items:center; gap:10px; }
+.mdc-card-title { font-size:14px; font-weight:800; color:var(--text); }
+.mdc-card-date { font-size:11px; color:var(--muted); font-weight:600; }
+.mdc-body { display:grid; grid-template-columns:1fr 1fr; gap:0; }
+@media(max-width:700px){ .mdc-body { grid-template-columns:1fr; } }
+.mdc-part { padding:13px 16px; border-right:1px solid var(--border); }
+.mdc-dyn { padding:13px 16px; }
+.mdc-sub-label { font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:0.07em; color:var(--muted); margin-bottom:9px; }
+.part-row { display:flex; align-items:center; gap:8px; margin-bottom:5px; }
+.part-name { width:90px; font-size:12px; font-weight:600; flex-shrink:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.part-bar-wrap { flex:1; background:#F3F4F6; border-radius:100px; height:7px; overflow:hidden; }
+.part-bar { height:7px; border-radius:100px; }
+.part-lv { width:58px; font-size:10px; font-weight:700; text-align:right; flex-shrink:0; }
+.lv-dominant { color:#DC2626; }
+.lv-active { color:#059669; }
+.lv-moderate { color:#2563EB; }
+.lv-passive { color:#B45309; }
+.lv-silent { color:#9CA3AF; }
+.dyn-item { display:flex; gap:8px; padding:5px 0; border-bottom:1px solid var(--border); font-size:12px; color:var(--text); line-height:1.45; }
+.dyn-item:last-child { border-bottom:none; }
+.dyn-dot { width:6px; height:6px; border-radius:50%; flex-shrink:0; margin-top:5px; }
+.dyn-dot.warn { background:#DC2626; }
+.dyn-dot.note { background:#B45309; }
+.dyn-dot.ok { background:#059669; }
 </style>
 </head>
 <body>
@@ -314,12 +363,21 @@ textarea.notes-ta:focus{border-color:var(--brand);box-shadow:0 0 0 3px rgba(91,3
       <div class="filter-bar" id="da-filter-bar">
         <button class="fb-btn active" onclick="setDaFilter('all',this)">All Meetings</button>
       </div>
-      <div class="sec-body" id="da-body"></div>
+      <div class="sec-body">
+        <div class="da-legend">
+          <div class="da-legend-item"><span class="rchip decider">Decider</span> Made or ratified the call</div>
+          <div class="da-legend-item"><span class="rchip problem">Problem Framer</span> Raised or defined the issue</div>
+          <div class="da-legend-item"><span class="rchip contributor">Contributor</span> Actively shaped the decision</div>
+          <div class="da-legend-item"><span class="rchip silent">Silent</span> Present, did not contribute</div>
+        </div>
+        <div id="da-body"></div>
+      </div>
     </div>
 
     <div class="section">
       <div class="sec-hdr" onclick="toggleSec(this)">
         <span class="sec-title">Meeting Dynamics &amp; Participation</span>
+        <span class="sec-badge" id="mdc-badge">0 meetings</span>
         <span class="sec-toggle">&#9660;</span>
       </div>
       <div class="sec-body" id="mdc-body"></div>
@@ -719,15 +777,39 @@ function renderDa() {
   if (!body) return;
   var data = DA_FILTER === 'all' ? DEC_ANATOMY : DEC_ANATOMY.filter(function(d) { return (d.m || d.meeting) === DA_FILTER; });
   if (badge) badge.textContent = data.length + ' decisions';
-  body.innerHTML = data.map(function(d) {
-    var parts = d.roles || d.participants || [];
-    var chips = parts.map(function(p) {
-      var r = p.r || p.role;
-      return '<span class="da-chip dr-' + r + '">' + esc(p.n || p.name) + ' <span style="opacity:0.65">(' + r + ')</span></span>';
+
+  // Group by meeting
+  var meetings = [];
+  var byMtg = {};
+  data.forEach(function(d) {
+    var m = d.m || d.meeting || 'Unknown';
+    if (!byMtg[m]) { byMtg[m] = []; meetings.push(m); }
+    byMtg[m].push(d);
+  });
+
+  body.innerHTML = meetings.map(function(mtg) {
+    var decisions = byMtg[mtg];
+    var rows = decisions.map(function(d) {
+      var parts = d.roles || d.participants || [];
+      function getRole(r) { return parts.filter(function(p){ return (p.r||p.role)===r; }).map(function(p){ return '<span class="rchip '+r+'">' + esc(p.n||p.name) + '</span>'; }).join(' '); }
+      var deciders = getRole('decider');
+      var framers  = getRole('problem');
+      var contribs = getRole('contributor');
+      var silent   = getRole('silent');
+      return '<tr>'
+        + '<td>' + esc(d.d || d.decision) + '</td>'
+        + '<td><div class="role-chips">' + (deciders||'<span style="color:var(--muted);font-size:11px">—</span>') + '</div></td>'
+        + '<td><div class="role-chips">' + (framers||'<span style="color:var(--muted);font-size:11px">—</span>') + '</div></td>'
+        + '<td><div class="role-chips">' + (contribs||'<span style="color:var(--muted);font-size:11px">—</span>') + '</div></td>'
+        + '<td><div class="role-chips">' + (silent||'<span style="color:var(--muted);font-size:11px">—</span>') + '</div></td>'
+        + '</tr>';
     }).join('');
-    return '<div class="da-card"><span class="da-mtg-tag">' + esc(d.m || d.meeting || '') + '</span>'
-      + '<div class="da-decision">' + esc(d.d || d.decision) + '</div>'
-      + '<div class="da-roles">' + chips + '</div></div>';
+
+    return '<div class="da-meeting-block">'
+      + '<div class="da-meeting-hdr"><span class="da-meeting-name">' + esc(mtg) + '</span><span class="da-meeting-date">' + decisions.length + ' decisions</span></div>'
+      + '<table class="da-table"><thead><tr>'
+      + '<th>Decision</th><th>Decider</th><th>Problem Framer</th><th>Contributor</th><th>Silent</th>'
+      + '</tr></thead><tbody>' + rows + '</tbody></table></div>';
   }).join('');
 }
 
@@ -747,24 +829,66 @@ function buildDaFilter() {
 
 function renderMdc() {
   var body = document.getElementById('mdc-body');
+  var badge = document.getElementById('mdc-badge');
   if (!body) return;
+  if (badge) badge.textContent = MTG_DETAIL.length + ' meetings';
+
+  var LV_COLORS = {dominant:'#DC2626', active:'#059669', moderate:'#2563EB', passive:'#B45309', silent:'#9CA3AF'};
+  var LV_BG     = {dominant:'#FEF2F2', active:'#F0FDF4', moderate:'#EFF6FF', passive:'#FFFBEB', silent:'#F9FAFB'};
+
   body.innerHTML = MTG_DETAIL.map(function(m) {
     var parts = m.part || m.participants || [];
-    var maxQ = Math.max.apply(null, parts.map(function(p) { return p.q || 0; }).concat([1]));
+    var dyns  = m.dyn  || m.dynamics    || [];
+    var maxQ  = Math.max.apply(null, parts.map(function(p){ return p.q||0; }).concat([1]));
+
+    var dominantCount  = parts.filter(function(p){ return (p.lv||'')==='dominant'; }).length;
+    var activeCount    = parts.filter(function(p){ return (p.lv||'')=== 'active'||p.q>0; }).length;
+    var silentCount    = parts.filter(function(p){ return (p.lv||p.q||0)===0||(p.lv||'')=== 'silent'; }).length;
+
     var bars = parts.map(function(p) {
-      var q = p.q || 0;
+      var q   = p.q || 0;
+      var lv  = p.lv || (q===0?'silent':q>=10?'dominant':q>=3?'active':q>=1?'moderate':'silent');
       var pct = Math.round(q / maxQ * 100);
-      return '<div class="part-row"><span class="part-name">' + esc(p.n || p.name) + '</span>'
-        + '<div class="part-bar-wrap"><div class="part-bar" style="width:' + pct + '%"></div></div>'
-        + '<span class="part-q">' + q + '</span></div>';
+      var col = LV_COLORS[lv] || '#7C3AED';
+      var bg  = LV_BG[lv]     || '#EDE9FE';
+      return '<div class="part-row">'+
+        '<span class="part-name">' + esc(p.n||p.name) + '</span>'+
+        '<div class="part-bar-wrap"><div class="part-bar" style="width:'+pct+'%;background:'+col+'"></div></div>'+
+        '<span class="part-lv lv-'+lv+'">'+lv+'</span>'+
+        '</div>';
     }).join('');
-    var dyns = (m.dynamics || []).map(function(d) { return '<li>' + esc(d) + '</li>'; }).join('');
-    return '<div class="mdc-card"><div class="mdc-title">' + esc(m.name || m.meeting) + '</div>'
-      + '<div class="mdc-date">' + esc(m.date || '') + '</div>'
-      + '<div style="font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:5px">Participation (questions raised)</div>'
-      + '<div class="part-bars">' + bars + '</div>'
-      + (dyns ? '<div style="font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:0.05em;margin:8px 0 4px">Dynamics</div><ul class="dyn-list">' + dyns + '</ul>' : '')
-      + '</div>';
+
+    var dynItems = dyns.map(function(d) {
+      var txt = d.toLowerCase();
+      var dotClass = (txt.indexOf('raghu') >= 0 && (txt.indexOf('all') >= 0 || txt.indexOf('sole') >= 0 || txt.indexOf('only') >= 0)) ? 'warn'
+                   : (txt.indexOf('silent') >= 0 || txt.indexOf('passive') >= 0 || txt.indexOf('reactive') >= 0) ? 'warn'
+                   : (txt.indexOf('well') >= 0 || txt.indexOf('good') >= 0) ? 'ok' : 'note';
+      return '<div class="dyn-item"><div class="dyn-dot '+dotClass+'"></div><div>'+esc(d)+'</div></div>';
+    }).join('');
+
+    var totalQ = parts.reduce(function(s,p){ return s+(p.q||0); },0);
+    var raghuQ = 0;
+    parts.forEach(function(p){ if((p.n||p.name||'')=== 'Raghu')raghuQ=p.q||0; });
+    var raghuPct = totalQ > 0 ? Math.round(raghuQ/totalQ*100) : 0;
+    var dominanceWarn = raghuPct >= 55 ?
+      '<div style="background:#FEF2F2;border:1px solid rgba(220,38,38,0.2);border-radius:8px;padding:6px 10px;font-size:11px;color:#DC2626;font-weight:600;margin-bottom:8px">'+
+      'Raghu asked '+raghuPct+'% of all questions — '+silentCount+' participant'+(silentCount!==1?'s':'')+' asked none.'+
+      '</div>' : '';
+
+    return '<div class="mdc-card">'+
+      '<div class="mdc-card-hdr"><span class="mdc-card-title">'+esc(m.name||m.meeting)+'</span><span class="mdc-card-date">'+esc(m.date||'')+'</span></div>'+
+      '<div class="mdc-body">'+
+        '<div class="mdc-part">'+
+          '<div class="mdc-sub-label">Participation (questions raised)</div>'+
+          dominanceWarn+
+          bars+
+        '</div>'+
+        '<div class="mdc-dyn">'+
+          '<div class="mdc-sub-label">Meeting dynamics</div>'+
+          dynItems+
+        '</div>'+
+      '</div>'+
+    '</div>';
   }).join('');
 }
 
