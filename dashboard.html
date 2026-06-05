@@ -467,14 +467,22 @@ var LEADERS = [
 function getLeader(owner) {
   if (!owner) return 'Other';
   var o = owner.toLowerCase();
-  if (/raghu|raghuveer|pranav singh|pranav k/.test(o)) return 'Raghu';
-  if (/rameshwar|pankaj|ajit|pooja|ashish|product team|mohit|roshan|telecom/.test(o)) return 'Rameshwar';
-  if (/rashi|ankita|neerav|nagesh|arpit|varsha|arshay|training team/.test(o)) return 'Rashi';
-  if (/rishab|rishabh|abdullah|institutional/.test(o)) return 'Rishab';
-  if (/vikas|vijay|nitin/.test(o)) return 'Vikas';
-  if (/ankit|ishant|ishaan|darshan|avinash|prabhat|devesh|devjyoti|e2e team/.test(o)) return 'Ankit';
-  if (/khyati/.test(o)) return 'Khyati';
-  if (/tarun|hitesh/.test(o)) return 'Tarun';
+  // Raghu — CEO, Founders Office, Finance
+  if (/raghu|raghuveer|pranav khattar|ashish lohia|pranav jai|pranav singh/.test(o)) return 'Raghu';
+  // Rameshwar — Product, Tech, HR
+  if (/rameshwar|pankaj vashisht|ajit kumar|ajit satapathy|pooja dudani|\bpooja\b|arpit lalani|\barpit\b|sanjog katyal|sanjog|bhavye arora|bhavye|aliya aslam|aliya|shashikant|harpreet|vipul kumar|vipul|sarthak|mahar tiwedi|riddhi|shivam dubey|kunal saini|uttara soni|uttara|mohit jain|sanyam gaur|sanyam|saksham jain|dhairya rastogi|dhairya|tenishi|product team|roshan|telecom|\bmohit\b/.test(o)) return 'Rameshwar';
+  // Rishab — Institutional Business
+  if (/rishab|rishabh|muhammed|\babdullah\b|ishant shekhar|\bishant\b|\bishaan\b|prabhat singh negi|\bprabhat\b|shashank mishra|dharmendra pal|apoorva tripathi|sahil indukar|pragya kathuria|shivam kumar|avnash kumar|\bavnash\b|devesh chaluvedi|suresh borugadda|ajay singh|vishal nandwani|institutional/.test(o)) return 'Rishab';
+  // Vikas — Aggregation, Retail Sales
+  if (/\bvikas\b|vikas mohan|vijay tomar|\bvijay\b|aditya naulekha|nitin kumar bittel|\bnitin\b|aditya jaiswal|\badi\b|\baditya\b|harsh jain/.test(o)) return 'Vikas';
+  // Ankit — Ops & E2E, Fulfillment
+  if (/\bankit\b|ankit kumar|himank kumar|himank|\bkhushboo\b|hitesh deka|puneet ranjan|\bpuneet\b|mohit singh chouhan|mohit singh|lukman qureshi|lukman|devadyuti nag|devadyuti|darshan|\bavinash\b|devjyoti|e2e team/.test(o)) return 'Ankit';
+  // Khyati — D2C & Marketing
+  if (/khyati|krish wadhwa|rakhi mishra/.test(o)) return 'Khyati';
+  // Tarun — Insurance
+  if (/\btarun\b|\bhitesh\b/.test(o)) return 'Tarun';
+  // Rashi — COO, Ops, Business Development
+  if (/\brashi\b|shivay bhateja|\bshivay\b|aman ranjan|\baman\b|mayank drolia|mayank kumar drolia|\bmayank\b|sayali patil|sayali|shalini roy|\barsh\b|pankaj rajput|divyanshu malhotra|divyanshu|virendra singh|virendra|ayush choudhary|\bayush\b|neerav|nagesh|ankita|varsha|arshay|training team/.test(o)) return 'Rashi';
   return 'Other';
 }
 
