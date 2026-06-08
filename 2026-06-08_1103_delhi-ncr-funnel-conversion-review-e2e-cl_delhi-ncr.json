@@ -1,0 +1,375 @@
+{
+  "personas": [
+    {
+      "id": "raghu",
+      "probable_name": "Raghuveer Malik",
+      "role": "Founder & CEO",
+      "organisation": "Ambak",
+      "focus_areas": [
+        "strategy",
+        "goal accountability",
+        "conversion metrics"
+      ],
+      "inference_reason": "Called 'Raghu', challenges team on missing goals, senior authority"
+    },
+    {
+      "id": "pranav",
+      "probable_name": "Pranav Khattar",
+      "role": "Co-founder / CoS",
+      "organisation": "Ambak",
+      "focus_areas": [
+        "meeting agenda",
+        "Delhi NCR",
+        "format"
+      ],
+      "inference_reason": "Drives meeting structure, called 'Pranav', references 'last meeting'"
+    },
+    {
+      "id": "ankit",
+      "probable_name": "Ankit",
+      "role": "E2E / Ops Lead",
+      "organisation": "Ambak",
+      "focus_areas": [
+        "logins",
+        "FBM teams",
+        "disbursement pipeline"
+      ],
+      "inference_reason": "Presents ops numbers, owns FBM/fulfillment teams"
+    },
+    {
+      "id": "ishant",
+      "probable_name": "Ishant Shekhar",
+      "role": "Delhi NCR Institutional Head",
+      "organisation": "Ambak",
+      "focus_areas": [
+        "Delhi NCR",
+        "onboarding to activation",
+        "partner meetings"
+      ],
+      "inference_reason": "Owns Delhi NCR institutional, called out by Raghu for missing targets"
+    },
+    {
+      "id": "rishab",
+      "probable_name": "Rishab",
+      "role": "Institutional Business Head",
+      "organisation": "Ambak",
+      "focus_areas": [
+        "institutional funnel",
+        "city-wise conversion"
+      ],
+      "inference_reason": "Oversees institutional side; Ishant reports to Rishab"
+    },
+    {
+      "id": "vikas",
+      "probable_name": "Vikas",
+      "role": "E2E / Aggregation Lead",
+      "organisation": "Ambak",
+      "focus_areas": [
+        "E2E disbursals",
+        "LAP",
+        "lender consolidation",
+        "June targets"
+      ],
+      "inference_reason": "Presents May closure and June E2E projections"
+    },
+    {
+      "id": "rashi",
+      "probable_name": "Rashi Garg",
+      "role": "Co-founder / COO",
+      "organisation": "Ambak",
+      "focus_areas": [
+        "ops",
+        "conversion ratios"
+      ],
+      "inference_reason": "Called 'Rashi', asked to analyze funnel misses"
+    },
+    {
+      "id": "devesh",
+      "probable_name": "Devesh",
+      "role": "Institutional Sales - Bangalore",
+      "organisation": "Ambak",
+      "focus_areas": [
+        "Bangalore ops-sales coordination"
+      ],
+      "inference_reason": "Mentioned coordinating with Mayank; works Bangalore institutional"
+    },
+    {
+      "id": "vishal",
+      "probable_name": "Vishal",
+      "role": "Bangalore City Head",
+      "organisation": "Ambak",
+      "focus_areas": [
+        "Bangalore logins",
+        "ops-sales coordination"
+      ],
+      "inference_reason": "Reports on Bangalore ATS improvement and login growth"
+    },
+    {
+      "id": "jay_singh",
+      "probable_name": "Jay Singh",
+      "role": "Institutional Team",
+      "organisation": "Ambak",
+      "focus_areas": [
+        "Delhi NCR actionables"
+      ],
+      "inference_reason": "Called out by Pranav for not sharing meeting notes"
+    }
+  ],
+  "key_points": [
+    "Delhi NCR institutional: 24 QLs done vs 126 target — consistently missing 4-5 months; Raghu directly challenged Ishant on urgency",
+    "May closure: 935 crore confirmed (888 verified); positive month vs prior",
+    "June target: 1200 crore overall; E2E 110 crore (50-50 NCR/rest); tracking ahead of plan in first 10 days (76 Cr vs 146 target)",
+    "E2E verified number only 68% vs 94% overall — Raghu flagged as 'a bit scary'",
+    "LAP % dropped to 21% from 24-25%; 9 crore pipeline didn't convert; needs partner-level deep dive",
+    "Lender consolidation: 45% concentration with top 7 lenders vs 55% target (doubled from last month)",
+    "Pune: 6 FBMs now (3 new including 2 ex-bankers from RM team); Lukman leading; lead routing fixed",
+    "Login funnel: Ankit targeting improvement on partial→complete login (stuck at 68%), ITC + whitelist number live to cut 20% connectivity loss",
+    "Funnel conversion misses by city not tracked in ready view — Raghu pushed for this to be built",
+    "Insurance is the only business stream not yet process-oriented — Vikas to align with Tarun",
+    "Drip campaign vendor identified to convert marketing→transactional messages; lead bucketization (20% late-stage priority, 80% drip) planned"
+  ],
+  "decisions": [
+    "Noida: 2 dedicated FBMs assigned for Noida leads only; Delhi FBMs receive only NCR leads going forward",
+    "Pune FBM team expanded to 6 (3 existing + 2 ex-RMs + 1 new hire); Lukman leads all input/output metrics",
+    "E2E pods: Gaurav and Manoj providing pod-level targets for June — 82 crore lead pipeline visible, 34 leads to Ankit team",
+    "May closure confirmed at 935 crore (888 verified); remaining 45 crore to close by Jun 9",
+    "June E2E target: 110 crore with 50-50 split NCR/rest; overall target 1200 crore",
+    "Lead bucketization: 20% late-stage leads get priority treatment; 80% go into drip campaign loop",
+    "Missing mandatory fields (OC pay, registration date) to be made compulsory in lead journey for data capture"
+  ],
+  "action_items": [
+    {
+      "owner": "Jay Singh",
+      "task": "Share previous meeting notes and actionables with Rishab/Pranav; build habit of post-meeting follow-up",
+      "due_date": "2026-06-08",
+      "related_topic": "Delhi NCR institutional follow-up",
+      "source_meeting": "Delhi NCR Funnel Conversion Review + E2E Closure Check",
+      "source_meeting_date": "2026-06-08",
+      "priority": "HIGH",
+      "verbal_completion": false,
+      "verbal_completion_note": "",
+      "deadline_change": null
+    },
+    {
+      "owner": "Ishant",
+      "task": "Prioritize Delhi NCR onboarding-to-activation; give full download at June 11 meeting",
+      "due_date": "2026-06-11",
+      "related_topic": "Delhi NCR partner activation",
+      "source_meeting": "Delhi NCR Funnel Conversion Review + E2E Closure Check",
+      "source_meeting_date": "2026-06-08",
+      "priority": "HIGH",
+      "verbal_completion": false,
+      "verbal_completion_note": "",
+      "deadline_change": null
+    },
+    {
+      "owner": "Ishant",
+      "task": "Travel to Delhi Friday Jun 13 and complete partner meetings; report outcomes",
+      "due_date": "2026-06-13",
+      "related_topic": "Delhi NCR partner meetings",
+      "source_meeting": "Delhi NCR Funnel Conversion Review + E2E Closure Check",
+      "source_meeting_date": "2026-06-08",
+      "priority": "HIGH",
+      "verbal_completion": false,
+      "verbal_completion_note": "",
+      "deadline_change": null
+    },
+    {
+      "owner": "Vikas",
+      "task": "Calculate lender consolidation impact on net revenue/pay-in for May — share findings today",
+      "due_date": "2026-06-08",
+      "related_topic": "Lender consolidation revenue impact",
+      "source_meeting": "Delhi NCR Funnel Conversion Review + E2E Closure Check",
+      "source_meeting_date": "2026-06-08",
+      "priority": "HIGH",
+      "verbal_completion": false,
+      "verbal_completion_note": "",
+      "deadline_change": null
+    },
+    {
+      "owner": "Vikas",
+      "task": "Deep dive on LAP % drop — understand why lab partners inactive in May, get partner-level details from Naveen",
+      "due_date": "2026-06-11",
+      "related_topic": "LAP performance analysis",
+      "source_meeting": "Delhi NCR Funnel Conversion Review + E2E Closure Check",
+      "source_meeting_date": "2026-06-08",
+      "priority": "HIGH",
+      "verbal_completion": false,
+      "verbal_completion_note": "",
+      "deadline_change": null
+    },
+    {
+      "owner": "Vikas",
+      "task": "Align with Tarun on insurance visibility — bridge gap between Raghu's view and Tarun's view",
+      "due_date": "2026-06-11",
+      "related_topic": "Insurance process & visibility",
+      "source_meeting": "Delhi NCR Funnel Conversion Review + E2E Closure Check",
+      "source_meeting_date": "2026-06-08",
+      "priority": "HIGH",
+      "verbal_completion": false,
+      "verbal_completion_note": "",
+      "deadline_change": null
+    },
+    {
+      "owner": "Vikas",
+      "task": "Build pipeline plan for June 11-20 bracket targeting 250 crore by June 18",
+      "due_date": "2026-06-09",
+      "related_topic": "June E2E pipeline planning",
+      "source_meeting": "Delhi NCR Funnel Conversion Review + E2E Closure Check",
+      "source_meeting_date": "2026-06-08",
+      "priority": "HIGH",
+      "verbal_completion": false,
+      "verbal_completion_note": "",
+      "deadline_change": null
+    },
+    {
+      "owner": "Ankit",
+      "task": "Re-evaluate June disbursement goal and gap — 175 Cr institutional + 80-90 Cr retail; identify shortfalls",
+      "due_date": "2026-06-11",
+      "related_topic": "June disbursement targets",
+      "source_meeting": "Delhi NCR Funnel Conversion Review + E2E Closure Check",
+      "source_meeting_date": "2026-06-08",
+      "priority": "HIGH",
+      "verbal_completion": false,
+      "verbal_completion_note": "",
+      "deadline_change": null
+    },
+    {
+      "owner": "Ankit",
+      "task": "Improve partial-to-complete login conversion (stuck at 68%); daily ops reviews, coordinate registration timelines",
+      "due_date": "2026-06-15",
+      "related_topic": "Login funnel improvement",
+      "source_meeting": "Delhi NCR Funnel Conversion Review + E2E Closure Check",
+      "source_meeting_date": "2026-06-08",
+      "priority": "HIGH",
+      "verbal_completion": false,
+      "verbal_completion_note": "",
+      "deadline_change": null
+    },
+    {
+      "owner": "Ankit",
+      "task": "Improve E2E verified number — currently 68% vs 94% overall; strengthen governance and closure process",
+      "due_date": "2026-06-15",
+      "related_topic": "E2E closure verification",
+      "source_meeting": "Delhi NCR Funnel Conversion Review + E2E Closure Check",
+      "source_meeting_date": "2026-06-08",
+      "priority": "HIGH",
+      "verbal_completion": false,
+      "verbal_completion_note": "",
+      "deadline_change": null
+    },
+    {
+      "owner": "Rishab",
+      "task": "Build ready view of funnel conversion misses by stage and city (QL→login, login→sanction, sanction→disbursal) for Bangalore, Mumbai, Pune",
+      "due_date": "2026-06-15",
+      "related_topic": "Funnel conversion analysis",
+      "source_meeting": "Delhi NCR Funnel Conversion Review + E2E Closure Check",
+      "source_meeting_date": "2026-06-08",
+      "priority": "HIGH",
+      "verbal_completion": false,
+      "verbal_completion_note": "",
+      "deadline_change": null
+    },
+    {
+      "owner": "Rameshwar",
+      "task": "Make missing lead journey fields mandatory (OC pay amount, registration date) for funnel behavior analysis",
+      "due_date": "2026-06-30",
+      "related_topic": "Data capture for funnel analysis",
+      "source_meeting": "Delhi NCR Funnel Conversion Review + E2E Closure Check",
+      "source_meeting_date": "2026-06-08",
+      "priority": "LOW",
+      "verbal_completion": false,
+      "verbal_completion_note": "",
+      "deadline_change": null
+    },
+    {
+      "owner": "Rameshwar",
+      "task": "Integrate drip campaign vendor; finalize lead bucketization (20% late-stage priority treatment, 80% into drip loop)",
+      "due_date": "2026-06-30",
+      "related_topic": "Customer engagement / early-stage lead conversion",
+      "source_meeting": "Delhi NCR Funnel Conversion Review + E2E Closure Check",
+      "source_meeting_date": "2026-06-08",
+      "priority": "LOW",
+      "verbal_completion": false,
+      "verbal_completion_note": "",
+      "deadline_change": null
+    }
+  ],
+  "open_questions": [
+    {
+      "question": "Why did LAP partners go less active in May? Is this industry-level or Ambak-specific?",
+      "raised_by": "Raghu",
+      "expected_owner": "Vikas"
+    },
+    {
+      "question": "E2E verified % is only 68% vs 94% overall — what process change will fix this?",
+      "raised_by": "Raghu",
+      "expected_owner": "Vikas / Ankit"
+    },
+    {
+      "question": "Why are we missing funnel conversion targets in Bangalore, Mumbai, Pune — what's the root cause by stage?",
+      "raised_by": "Raghu",
+      "expected_owner": "Rishab / Ankit"
+    },
+    {
+      "question": "How do we create hooks to retain early-stage customers (property report, legal support, voucher)?",
+      "raised_by": "Raghu",
+      "expected_owner": "Product / Ops"
+    },
+    {
+      "question": "Is the gap between Raghu and Tarun on insurance visibility due to definition or data?",
+      "raised_by": "Raghu",
+      "expected_owner": "Vikas / Tarun"
+    }
+  ],
+  "risks": [
+    "Delhi NCR has been missing institutional goals for 4-5 months — systemic, not one-off",
+    "E2E verified % at 68% vs 94% overall: control gap in high-priority pipeline segment",
+    "LAP % dropped 4 points in final days of May — 9 crore pipeline did not convert; root cause unknown",
+    "Funnel conversion AOP targets not being taken as actual targets in June (Bangalore 33% vs 42% AOP goal for QL-to-login)",
+    "Insurance the only stream without process structure — risk of repeating E2E/Delhi NCR pattern",
+    "Early-stage lead engagement not robust — 8 months of discussion without systematic drip campaign in place"
+  ],
+  "meeting_dynamics": [
+    "Raghu directly challenged Ishant: 4-5 months of missing Delhi NCR goals, called it 'absolute slip' — strongest accountability moment in this transcript",
+    "Jay Singh called out by Pranav for not sharing meeting notes — basic execution gap flagged publicly",
+    "Vikas presented May closure data clearly; Raghu kept probing on LAP and E2E verified % — data-driven but incomplete",
+    "Ankit and Rishab both present but Ankit carried most of the ops detail; Rishab relatively passive",
+    "Raghu pushed for root cause on funnel misses but team gave process answers without underlying analysis ready",
+    "Good coordination signal: Devesh-Mayank-Ankit alignment on Pune/Bangalore mentioned explicitly"
+  ],
+  "participation": [
+    {
+      "name": "Raghu",
+      "questions_raised": 22
+    },
+    {
+      "name": "Pranav",
+      "questions_raised": 8
+    },
+    {
+      "name": "Ankit",
+      "questions_raised": 4
+    },
+    {
+      "name": "Vikas",
+      "questions_raised": 3
+    },
+    {
+      "name": "Rishab",
+      "questions_raised": 2
+    },
+    {
+      "name": "Ishant",
+      "questions_raised": 2
+    },
+    {
+      "name": "Rashi",
+      "questions_raised": 1
+    },
+    {
+      "name": "Vishal",
+      "questions_raised": 1
+    }
+  ]
+}

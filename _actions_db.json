@@ -1050,14 +1050,20 @@
       "priority": "HIGH",
       "created_at": "2026-06-01",
       "last_reminded_at": "2026-06-01",
-      "completed": null,
-      "completed_at": null,
+      "completed": true,
+      "completed_at": "2026-06-08",
       "history": [
         {
           "date": "2026-06-01",
           "meeting": "May Funnel Review: Google Shift, Login-to-Disbursal Gaps, and City-Level Execution",
           "type": "created",
           "detail": "First captured from May Funnel Review on 2026-06-01"
+        },
+        {
+          "date": "2026-06-08",
+          "meeting": "Delhi NCR Funnel Conversion Review + E2E Closure Check",
+          "type": "completed",
+          "detail": "Noida FBM-RM coordination resolved: 2 dedicated FBMs for Noida, lead routing fixed"
         }
       ],
       "id": "i47"
@@ -1094,14 +1100,20 @@
       "priority": "HIGH",
       "created_at": "2026-06-01",
       "last_reminded_at": null,
-      "completed": null,
-      "completed_at": null,
+      "completed": true,
+      "completed_at": "2026-06-08",
       "history": [
         {
           "date": "2026-06-01",
           "meeting": "May Funnel Review: Google Shift, Login-to-Disbursal Gaps, and City-Level Execution",
           "type": "created",
           "detail": "First captured from May Funnel Review on 2026-06-01"
+        },
+        {
+          "date": "2026-06-08",
+          "meeting": "Delhi NCR Funnel Conversion Review + E2E Closure Check",
+          "type": "completed",
+          "detail": "June 11 meeting confirmed in transcript: Ishant commits to give download at that meeting"
         }
       ],
       "id": "i49"
@@ -1457,6 +1469,292 @@
         }
       ],
       "id": "i65"
+    },
+    {
+      "id": "i66",
+      "owner": "Jay Singh",
+      "task": "Share previous meeting notes and actionables with Rishab/Pranav; ensure follow-up is placed after every meeting",
+      "due_date": "2026-06-08",
+      "related_topic": "Delhi NCR institutional follow-up",
+      "source_meeting": "Delhi NCR Funnel Conversion Review + E2E Closure Check",
+      "source_meeting_date": "2026-06-08",
+      "priority": "HIGH",
+      "created_at": "2026-06-08",
+      "last_reminded_at": null,
+      "completed": null,
+      "completed_at": null,
+      "history": [
+        {
+          "date": "2026-06-08",
+          "meeting": "Delhi NCR Funnel Conversion Review + E2E Closure Check",
+          "type": "created",
+          "detail": "Raghu called out absolute slip \u2014 Jay Singh failed to share notes from last meeting"
+        }
+      ]
+    },
+    {
+      "id": "i67",
+      "owner": "Ishant",
+      "task": "Prioritize Delhi NCR onboarding-to-activation; give full download at June 11 meeting on what is working and how",
+      "due_date": "2026-06-11",
+      "related_topic": "Delhi NCR partner activation",
+      "source_meeting": "Delhi NCR Funnel Conversion Review + E2E Closure Check",
+      "source_meeting_date": "2026-06-08",
+      "priority": "HIGH",
+      "created_at": "2026-06-08",
+      "last_reminded_at": null,
+      "completed": null,
+      "completed_at": null,
+      "history": [
+        {
+          "date": "2026-06-08",
+          "meeting": "Delhi NCR Funnel Conversion Review + E2E Closure Check",
+          "type": "created",
+          "detail": "Raghu flagged 4-5 months of missing Delhi NCR goals; Ishant committed to June 11 download"
+        }
+      ]
+    },
+    {
+      "id": "i68",
+      "owner": "Ishant",
+      "task": "Travel to Delhi Friday (Jun 13) and complete meetings with institutional partners; report outcomes",
+      "due_date": "2026-06-13",
+      "related_topic": "Delhi NCR institutional partner meetings",
+      "source_meeting": "Delhi NCR Funnel Conversion Review + E2E Closure Check",
+      "source_meeting_date": "2026-06-08",
+      "priority": "HIGH",
+      "created_at": "2026-06-08",
+      "last_reminded_at": null,
+      "completed": null,
+      "completed_at": null,
+      "history": [
+        {
+          "date": "2026-06-08",
+          "meeting": "Delhi NCR Funnel Conversion Review + E2E Closure Check",
+          "type": "created",
+          "detail": "Ishant confirmed travel to Delhi this Friday"
+        }
+      ]
+    },
+    {
+      "id": "i69",
+      "owner": "Vikas",
+      "task": "Calculate lender consolidation impact on net revenue and pay-in for May \u2014 share findings today",
+      "due_date": "2026-06-08",
+      "related_topic": "Lender consolidation revenue impact",
+      "source_meeting": "Delhi NCR Funnel Conversion Review + E2E Closure Check",
+      "source_meeting_date": "2026-06-08",
+      "priority": "HIGH",
+      "created_at": "2026-06-08",
+      "last_reminded_at": null,
+      "completed": null,
+      "completed_at": null,
+      "history": [
+        {
+          "date": "2026-06-08",
+          "meeting": "Delhi NCR Funnel Conversion Review + E2E Closure Check",
+          "type": "created",
+          "detail": "Vikas committed: \"I will do that today\" \u2014 45% concentration achieved vs 55% target"
+        }
+      ]
+    },
+    {
+      "id": "i70",
+      "owner": "Vikas",
+      "task": "Deep dive on LAP % drop (21% vs 25-30% mid-month) \u2014 understand why lab partners were inactive in May, get partner-level details from Naveen",
+      "due_date": "2026-06-11",
+      "related_topic": "LAP performance analysis",
+      "source_meeting": "Delhi NCR Funnel Conversion Review + E2E Closure Check",
+      "source_meeting_date": "2026-06-08",
+      "priority": "HIGH",
+      "created_at": "2026-06-08",
+      "last_reminded_at": null,
+      "completed": null,
+      "completed_at": null,
+      "history": [
+        {
+          "date": "2026-06-08",
+          "meeting": "Delhi NCR Funnel Conversion Review + E2E Closure Check",
+          "type": "created",
+          "detail": "9 crore pipeline did not convert; Danish, Naveen, Nagesh all hit"
+        }
+      ]
+    },
+    {
+      "id": "i71",
+      "owner": "Vikas",
+      "task": "Align with Tarun on insurance visibility \u2014 bridge gap between Raghu's view and Tarun's view; bring insurance into same dashboard/process framework",
+      "due_date": "2026-06-11",
+      "related_topic": "Insurance process & visibility",
+      "source_meeting": "Delhi NCR Funnel Conversion Review + E2E Closure Check",
+      "source_meeting_date": "2026-06-08",
+      "priority": "HIGH",
+      "created_at": "2026-06-08",
+      "last_reminded_at": null,
+      "completed": null,
+      "completed_at": null,
+      "history": [
+        {
+          "date": "2026-06-08",
+          "meeting": "Delhi NCR Funnel Conversion Review + E2E Closure Check",
+          "type": "created",
+          "detail": "Raghu: insurance is the only piece not yet process-oriented; Vikas to meet Tarun"
+        }
+      ]
+    },
+    {
+      "id": "i72",
+      "owner": "Vikas",
+      "task": "Build pipeline plan for June 11-20 bracket targeting 250 crore by June 18",
+      "due_date": "2026-06-09",
+      "related_topic": "June E2E pipeline planning",
+      "source_meeting": "Delhi NCR Funnel Conversion Review + E2E Closure Check",
+      "source_meeting_date": "2026-06-08",
+      "priority": "HIGH",
+      "created_at": "2026-06-08",
+      "last_reminded_at": null,
+      "completed": null,
+      "completed_at": null,
+      "history": [
+        {
+          "date": "2026-06-08",
+          "meeting": "Delhi NCR Funnel Conversion Review + E2E Closure Check",
+          "type": "created",
+          "detail": "Day-by-day planning cycle moves to next 10-day bracket from tomorrow"
+        }
+      ]
+    },
+    {
+      "id": "i73",
+      "owner": "Ankit",
+      "task": "Re-evaluate June disbursement goal and gap \u2014 currently projecting 175 Cr institutional + 80-90 Cr retail; identify what is falling short",
+      "due_date": "2026-06-11",
+      "related_topic": "June disbursement targets",
+      "source_meeting": "Delhi NCR Funnel Conversion Review + E2E Closure Check",
+      "source_meeting_date": "2026-06-08",
+      "priority": "HIGH",
+      "created_at": "2026-06-08",
+      "last_reminded_at": null,
+      "completed": null,
+      "completed_at": null,
+      "history": [
+        {
+          "date": "2026-06-08",
+          "meeting": "Delhi NCR Funnel Conversion Review + E2E Closure Check",
+          "type": "created",
+          "detail": "Raghu: \"just re-evaluate what was the goal for this month and where are we falling short\""
+        }
+      ]
+    },
+    {
+      "id": "i74",
+      "owner": "Ankit",
+      "task": "Improve partial-to-complete login conversion \u2014 currently 68%+ getting stuck; daily reviews with ops team, coordinate registration timelines",
+      "due_date": "2026-06-15",
+      "related_topic": "Login funnel improvement",
+      "source_meeting": "Delhi NCR Funnel Conversion Review + E2E Closure Check",
+      "source_meeting_date": "2026-06-08",
+      "priority": "HIGH",
+      "created_at": "2026-06-08",
+      "last_reminded_at": null,
+      "completed": null,
+      "completed_at": null,
+      "history": [
+        {
+          "date": "2026-06-08",
+          "meeting": "Delhi NCR Funnel Conversion Review + E2E Closure Check",
+          "type": "created",
+          "detail": "70-75% cases not moving from partial to complete login; registration delay is key issue"
+        }
+      ]
+    },
+    {
+      "id": "i75",
+      "owner": "Ankit",
+      "task": "Improve E2E verified number \u2014 currently 68% vs 94% overall; strengthen governance and closure process",
+      "due_date": "2026-06-15",
+      "related_topic": "E2E closure verification",
+      "source_meeting": "Delhi NCR Funnel Conversion Review + E2E Closure Check",
+      "source_meeting_date": "2026-06-08",
+      "priority": "HIGH",
+      "created_at": "2026-06-08",
+      "last_reminded_at": null,
+      "completed": null,
+      "completed_at": null,
+      "history": [
+        {
+          "date": "2026-06-08",
+          "meeting": "Delhi NCR Funnel Conversion Review + E2E Closure Check",
+          "type": "created",
+          "detail": "Raghu flagged this as \"a bit scary\" \u2014 E2E should be higher control"
+        }
+      ]
+    },
+    {
+      "id": "i76",
+      "owner": "Rishab",
+      "task": "Build ready view of funnel conversion misses by stage and city (QL\u2192login, login\u2192sanction, sanction\u2192disbursal) for Bangalore, Mumbai, Pune",
+      "due_date": "2026-06-15",
+      "related_topic": "Funnel conversion analysis",
+      "source_meeting": "Delhi NCR Funnel Conversion Review + E2E Closure Check",
+      "source_meeting_date": "2026-06-08",
+      "priority": "HIGH",
+      "created_at": "2026-06-08",
+      "last_reminded_at": null,
+      "completed": null,
+      "completed_at": null,
+      "history": [
+        {
+          "date": "2026-06-08",
+          "meeting": "Delhi NCR Funnel Conversion Review + E2E Closure Check",
+          "type": "created",
+          "detail": "Raghu: \"I don't think we have a ready view for that... it will help you have more educated conversations\""
+        }
+      ]
+    },
+    {
+      "id": "i77",
+      "owner": "Rameshwar",
+      "task": "Make lead journey fields mandatory \u2014 OC pay amount, registration date, other missing data points \u2014 to enable funnel behavior analysis",
+      "due_date": "2026-06-30",
+      "related_topic": "Data capture for funnel analysis",
+      "source_meeting": "Delhi NCR Funnel Conversion Review + E2E Closure Check",
+      "source_meeting_date": "2026-06-08",
+      "priority": "LOW",
+      "created_at": "2026-06-08",
+      "last_reminded_at": null,
+      "completed": null,
+      "completed_at": null,
+      "history": [
+        {
+          "date": "2026-06-08",
+          "meeting": "Delhi NCR Funnel Conversion Review + E2E Closure Check",
+          "type": "created",
+          "detail": "Step 1 being executed; without this data, conversion behavior cannot be analyzed"
+        }
+      ]
+    },
+    {
+      "id": "i78",
+      "owner": "Rameshwar",
+      "task": "Integrate drip campaign vendor \u2014 convert marketing messages to transactional for early-stage leads; finalize lead bucketization (20% late-stage priority, 80% drip)",
+      "due_date": "2026-06-30",
+      "related_topic": "Customer engagement / lead conversion",
+      "source_meeting": "Delhi NCR Funnel Conversion Review + E2E Closure Check",
+      "source_meeting_date": "2026-06-08",
+      "priority": "LOW",
+      "created_at": "2026-06-08",
+      "last_reminded_at": null,
+      "completed": null,
+      "completed_at": null,
+      "history": [
+        {
+          "date": "2026-06-08",
+          "meeting": "Delhi NCR Funnel Conversion Review + E2E Closure Check",
+          "type": "created",
+          "detail": "Vendor identified; integration underway this month; Raghu: figure out the hook for early-stage customers"
+        }
+      ]
     }
   ]
 }
