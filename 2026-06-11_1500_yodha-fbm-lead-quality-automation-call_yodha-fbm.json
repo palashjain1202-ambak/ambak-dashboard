@@ -5,7 +5,11 @@
       "probable_name": "Raghuveer Malik",
       "role": "Founder & CEO",
       "organisation": "Ambak",
-      "focus_areas": ["AI product", "automation", "call connectivity"],
+      "focus_areas": [
+        "AI product",
+        "automation",
+        "call connectivity"
+      ],
       "inference_reason": "Senior authority; steers product roadmap discussion"
     },
     {
@@ -13,7 +17,12 @@
       "probable_name": "Rameshwar",
       "role": "Product / Tech Head",
       "organisation": "Ambak",
-      "focus_areas": ["Yodha", "auto dialer", "DID", "AI pipeline"],
+      "focus_areas": [
+        "Yodha",
+        "auto dialer",
+        "DID",
+        "AI pipeline"
+      ],
       "inference_reason": "Presents Yodha product updates and AI initiative roadmap"
     },
     {
@@ -21,7 +30,11 @@
       "probable_name": "Pankaj",
       "role": "CTO / Product Lead",
       "organisation": "Ambak",
-      "focus_areas": ["DRE", "CAM automation", "system builds"],
+      "focus_areas": [
+        "DRE",
+        "CAM automation",
+        "system builds"
+      ],
       "inference_reason": "Owns backend development; discusses DRE tagging, CAM automation"
     },
     {
@@ -29,7 +42,11 @@
       "probable_name": "Ankit",
       "role": "E2E / Ops Lead",
       "organisation": "Ambak",
-      "focus_areas": ["FBM productivity", "call connect", "auto dialer impact"],
+      "focus_areas": [
+        "FBM productivity",
+        "call connect",
+        "auto dialer impact"
+      ],
       "inference_reason": "Operator of FBM team; validated auto-dialer improvement on calls/day"
     },
     {
@@ -37,7 +54,10 @@
       "probable_name": "Vikas",
       "role": "E2E / LAP Lead",
       "organisation": "Ambak",
-      "focus_areas": ["builder tool", "mandate partners"],
+      "focus_areas": [
+        "builder tool",
+        "mandate partners"
+      ],
       "inference_reason": "Discussed 'proper' builder tool for mandate partners"
     }
   ],
@@ -166,10 +186,101 @@
     "Meeting moved efficiently through product pipeline; builder tool got most discussion time"
   ],
   "participation": [
-    { "name": "Raghu", "questions_raised": 12 },
-    { "name": "Rameshwar", "questions_raised": 9 },
-    { "name": "Pankaj", "questions_raised": 7 },
-    { "name": "Ankit", "questions_raised": 5 },
-    { "name": "Vikas", "questions_raised": 2 }
+    {
+      "name": "Raghu",
+      "questions_raised": 12
+    },
+    {
+      "name": "Rameshwar",
+      "questions_raised": 9
+    },
+    {
+      "name": "Pankaj",
+      "questions_raised": 7
+    },
+    {
+      "name": "Ankit",
+      "questions_raised": 5
+    },
+    {
+      "name": "Vikas",
+      "questions_raised": 2
+    }
+  ],
+  "decision_anatomy": [
+    {
+      "d": "DID 924 series confirmed live; DID rotation logic to follow in next dev cycle",
+      "roles": [
+        {
+          "n": "Raghu",
+          "r": "decider"
+        },
+        {
+          "n": "Rameshwar",
+          "r": "problem",
+          "note": "Presented connectivity data"
+        },
+        {
+          "n": "Pankaj",
+          "r": "contributor",
+          "note": "Owns rotation logic"
+        }
+      ]
+    },
+    {
+      "d": "Auto dialer to remain active; target further improvement to 250+ calls/day",
+      "roles": [
+        {
+          "n": "Ankit",
+          "r": "decider"
+        },
+        {
+          "n": "Rameshwar",
+          "r": "problem",
+          "note": "150→220+ calls/day improvement shown"
+        },
+        {
+          "n": "Pankaj",
+          "r": "contributor"
+        }
+      ]
+    },
+    {
+      "d": "Builder tool Phase 1 for mandate partners: delivery date set June 22-23",
+      "roles": [
+        {
+          "n": "Raghu",
+          "r": "decider"
+        },
+        {
+          "n": "Vikas",
+          "r": "problem",
+          "note": "Mandate partner need identified"
+        },
+        {
+          "n": "Rameshwar",
+          "r": "contributor",
+          "note": "Owns delivery"
+        }
+      ]
+    },
+    {
+      "d": "CAM semi-automation to proceed to completion in current sprint; project doc DB to follow",
+      "roles": [
+        {
+          "n": "Raghu",
+          "r": "decider"
+        },
+        {
+          "n": "Pankaj",
+          "r": "problem",
+          "note": "In-dev, needs completion"
+        },
+        {
+          "n": "Rameshwar",
+          "r": "contributor"
+        }
+      ]
+    }
   ]
 }

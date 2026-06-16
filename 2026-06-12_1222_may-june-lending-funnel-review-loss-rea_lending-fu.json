@@ -5,7 +5,11 @@
       "probable_name": "Raghuveer Malik",
       "role": "Founder & CEO",
       "organisation": "Ambak",
-      "focus_areas": ["loss reason analysis", "funnel scale", "marketing budget"],
+      "focus_areas": [
+        "loss reason analysis",
+        "funnel scale",
+        "marketing budget"
+      ],
       "inference_reason": "Drives cohort analysis push, marketing budget decisions, BRE logic"
     },
     {
@@ -13,7 +17,10 @@
       "probable_name": "Rashi Garg",
       "role": "Co-founder / COO",
       "organisation": "Ambak",
-      "focus_areas": ["login-to-sanction funnel", "customer pending analysis"],
+      "focus_areas": [
+        "login-to-sanction funnel",
+        "customer pending analysis"
+      ],
       "inference_reason": "Presents login-to-sanction breakdown and Khyati BR update"
     },
     {
@@ -21,7 +28,11 @@
       "probable_name": "Khyati",
       "role": "Ops / Analytics Lead",
       "organisation": "Ambak",
-      "focus_areas": ["BR rules", "bank shortlisting", "loss reason audit"],
+      "focus_areas": [
+        "BR rules",
+        "bank shortlisting",
+        "loss reason audit"
+      ],
       "inference_reason": "Presented BR rule engine updates and bank shortlisting logic"
     },
     {
@@ -29,7 +40,10 @@
       "probable_name": "Ankit",
       "role": "E2E / Ops Lead",
       "organisation": "Ambak",
-      "focus_areas": ["sanction conversion", "cohort recovery"],
+      "focus_areas": [
+        "sanction conversion",
+        "cohort recovery"
+      ],
       "inference_reason": "Asked to lead cohort analysis for loss recovery"
     },
     {
@@ -37,7 +51,10 @@
       "probable_name": "Mayank",
       "role": "Operations / Product",
       "organisation": "Ambak",
-      "focus_areas": ["dedicated hours for loss reason analysis", "SME coordination"],
+      "focus_areas": [
+        "dedicated hours for loss reason analysis",
+        "SME coordination"
+      ],
       "inference_reason": "Assigned to lead weekly loss reason deep-dive sessions"
     },
     {
@@ -45,7 +62,11 @@
       "probable_name": "Pankaj",
       "role": "CTO / Product Lead",
       "organisation": "Ambak",
-      "focus_areas": ["CRIF integration", "BRE", "Sangam access control"],
+      "focus_areas": [
+        "CRIF integration",
+        "BRE",
+        "Sangam access control"
+      ],
       "inference_reason": "Owns tech for credit bureau, BRE, Sangam data"
     },
     {
@@ -53,7 +74,12 @@
       "probable_name": "Rameshwar",
       "role": "Product / Tech Head",
       "organisation": "Ambak",
-      "focus_areas": ["marketing", "SEO", "Sangam", "influencer"],
+      "focus_areas": [
+        "marketing",
+        "SEO",
+        "Sangam",
+        "influencer"
+      ],
       "inference_reason": "Presents marketing channel performance and SEO updates"
     },
     {
@@ -61,7 +87,10 @@
       "probable_name": "Anu",
       "role": "Data / Analytics",
       "organisation": "Ambak",
-      "focus_areas": ["D2C dashboard", "GA/GTM tracking"],
+      "focus_areas": [
+        "D2C dashboard",
+        "GA/GTM tracking"
+      ],
       "inference_reason": "Built D2C dashboard with GA+GTM+DB integration"
     },
     {
@@ -69,7 +98,11 @@
       "probable_name": "Saurabh",
       "role": "Marketing",
       "organisation": "Ambak",
-      "focus_areas": ["Google ads", "Meta", "influencer strategy"],
+      "focus_areas": [
+        "Google ads",
+        "Meta",
+        "influencer strategy"
+      ],
       "inference_reason": "Executing marketing plan; in plan for influencer collab"
     },
     {
@@ -77,7 +110,10 @@
       "probable_name": "Karina",
       "role": "Content / Design",
       "organisation": "Ambak",
-      "focus_areas": ["homepage redesign", "messaging"],
+      "focus_areas": [
+        "homepage redesign",
+        "messaging"
+      ],
       "inference_reason": "Finalized homepage content and messaging direction"
     }
   ],
@@ -266,15 +302,182 @@
     "Sangam access issue raised by Raghu directly from live experience — team acknowledged it as known but unresolved"
   ],
   "participation": [
-    { "name": "Raghu", "questions_raised": 25 },
-    { "name": "Rashi", "questions_raised": 10 },
-    { "name": "Khyati", "questions_raised": 8 },
-    { "name": "Pankaj", "questions_raised": 6 },
-    { "name": "Rameshwar", "questions_raised": 6 },
-    { "name": "Ankit", "questions_raised": 5 },
-    { "name": "Mayank", "questions_raised": 4 },
-    { "name": "Saurabh", "questions_raised": 3 },
-    { "name": "Anu", "questions_raised": 2 },
-    { "name": "Karina", "questions_raised": 2 }
+    {
+      "name": "Raghu",
+      "questions_raised": 25
+    },
+    {
+      "name": "Rashi",
+      "questions_raised": 10
+    },
+    {
+      "name": "Khyati",
+      "questions_raised": 8
+    },
+    {
+      "name": "Pankaj",
+      "questions_raised": 6
+    },
+    {
+      "name": "Rameshwar",
+      "questions_raised": 6
+    },
+    {
+      "name": "Ankit",
+      "questions_raised": 5
+    },
+    {
+      "name": "Mayank",
+      "questions_raised": 4
+    },
+    {
+      "name": "Saurabh",
+      "questions_raised": 3
+    },
+    {
+      "name": "Anu",
+      "questions_raised": 2
+    },
+    {
+      "name": "Karina",
+      "questions_raised": 2
+    }
+  ],
+  "decision_anatomy": [
+    {
+      "d": "One-time CRIF credit bureau scrape approved for lost lead cohort (~Rs 80/query, 2000-3000 leads)",
+      "roles": [
+        {
+          "n": "Raghu",
+          "r": "decider"
+        },
+        {
+          "n": "Rameshwar",
+          "r": "problem",
+          "note": "Had discussed 2 weeks prior — delayed"
+        },
+        {
+          "n": "Pankaj",
+          "r": "contributor",
+          "note": "Owns tech execution"
+        },
+        {
+          "n": "Rashi",
+          "r": "silent"
+        }
+      ]
+    },
+    {
+      "d": "Sub-status reason for 'customer not interested' going live today to improve loss reason granularity",
+      "roles": [
+        {
+          "n": "Khyati",
+          "r": "decider"
+        },
+        {
+          "n": "Raghu",
+          "r": "problem",
+          "note": "Pushed for trend identification"
+        },
+        {
+          "n": "Pankaj",
+          "r": "contributor"
+        }
+      ]
+    },
+    {
+      "d": "Google marketing budget to increase from 7L to 10-14L if June hits 150 logins at 40% sanction",
+      "roles": [
+        {
+          "n": "Raghu",
+          "r": "decider"
+        },
+        {
+          "n": "Rashi",
+          "r": "problem",
+          "note": "Presented Google funnel data"
+        },
+        {
+          "n": "Saurabh",
+          "r": "contributor"
+        }
+      ]
+    },
+    {
+      "d": "Homepage redesign to go live this sprint: terracotta colors, people images, partner section, CIBIL linked",
+      "roles": [
+        {
+          "n": "Raghu",
+          "r": "decider"
+        },
+        {
+          "n": "Karina",
+          "r": "problem",
+          "note": "Led content and design finalization"
+        },
+        {
+          "n": "Rameshwar",
+          "r": "contributor"
+        }
+      ]
+    },
+    {
+      "d": "Disbursement reports to segregate fresh loans vs tranches going forward to fix double-counting",
+      "roles": [
+        {
+          "n": "Raghu",
+          "r": "decider"
+        },
+        {
+          "n": "Pankaj",
+          "r": "problem",
+          "note": "4-5 tranches out of 31 disbursals in May"
+        },
+        {
+          "n": "Rashi",
+          "r": "contributor"
+        }
+      ]
+    },
+    {
+      "d": "Sangam data access controls to be audited and restricted by role and team",
+      "roles": [
+        {
+          "n": "Raghu",
+          "r": "decider"
+        },
+        {
+          "n": "Pankaj",
+          "r": "problem",
+          "note": "Raghu saw entire company data on one user ID"
+        },
+        {
+          "n": "Rameshwar",
+          "r": "contributor"
+        }
+      ]
+    },
+    {
+      "d": "D2C dashboard (Anu's GA+DB build) to be validated by Ankit and Khyati before use in WBRs/MBRs",
+      "roles": [
+        {
+          "n": "Raghu",
+          "r": "decider"
+        },
+        {
+          "n": "Anu",
+          "r": "problem",
+          "note": "Built dashboard"
+        },
+        {
+          "n": "Ankit",
+          "r": "contributor"
+        },
+        {
+          "n": "Khyati",
+          "r": "contributor"
+        }
+      ]
+    }
   ]
 }

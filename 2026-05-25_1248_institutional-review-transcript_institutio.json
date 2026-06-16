@@ -5,7 +5,12 @@
       "probable_name": "Raghu",
       "role": "Founder and CEO",
       "organisation": "Ambak",
-      "focus_areas": ["NR waterfall clarity", "one-team operating model", "review quality", "structural cohesiveness"],
+      "focus_areas": [
+        "NR waterfall clarity",
+        "one-team operating model",
+        "review quality",
+        "structural cohesiveness"
+      ],
       "inference_reason": "Drives the agenda throughout; repeatedly probes the NR miss and pushes for the one-team structural change. Consistent with CEO roster entry."
     },
     {
@@ -13,7 +18,12 @@
       "probable_name": "Ishaan",
       "role": "Institutional Business Lead",
       "organisation": "Ambak",
-      "focus_areas": ["institutional partners", "large accounts", "CAMP program", "sales review"],
+      "focus_areas": [
+        "institutional partners",
+        "large accounts",
+        "CAMP program",
+        "sales review"
+      ],
       "inference_reason": "Named in the room; presents the institutional side and candidly rates the meeting 2 out of 10 on insight. Accountable for the institutional review."
     },
     {
@@ -21,7 +31,11 @@
       "probable_name": "Ankit",
       "role": "E2E Business Lead",
       "organisation": "Ambak",
-      "focus_areas": ["E2E funnel", "QL-to-disbursal conversion", "May disbursal targets"],
+      "focus_areas": [
+        "E2E funnel",
+        "QL-to-disbursal conversion",
+        "May disbursal targets"
+      ],
       "inference_reason": "Referenced as the counterpart to Ishaan ('Ankit tells another story'); tied to the E2E disbursal narrative and May login and disbursal targets."
     },
     {
@@ -29,7 +43,11 @@
       "probable_name": "Rishabh",
       "role": "E2E and QL Lead",
       "organisation": "Ambak",
-      "focus_areas": ["QL generation", "funnel ownership", "QL-to-login conversion"],
+      "focus_areas": [
+        "QL generation",
+        "funnel ownership",
+        "QL-to-login conversion"
+      ],
       "inference_reason": "Named as the person Raghu wants to answer funnel questions; Raghu wants to sit with Rishabh to define what the institutional review should drive."
     },
     {
@@ -37,7 +55,10 @@
       "probable_name": "Akash",
       "role": "Finance and FP&A",
       "organisation": "Ambak",
-      "focus_areas": ["payout analysis", "month-on-month numbers"],
+      "focus_areas": [
+        "payout analysis",
+        "month-on-month numbers"
+      ],
       "inference_reason": "Addressed directly to pull March comparison numbers ('Akash, we should also look at what March numbers were'), indicating an FP&A role."
     },
     {
@@ -45,7 +66,12 @@
       "probable_name": "Arvind",
       "role": "Training Lead",
       "organisation": "Ambak",
-      "focus_areas": ["HAPA framework", "LST revamp", "assessment results", "masterclass cadence"],
+      "focus_areas": [
+        "HAPA framework",
+        "LST revamp",
+        "assessment results",
+        "masterclass cadence"
+      ],
       "inference_reason": "Addressed by name ('Got it Arvind'); presents the training update, HAPA framework results, and next-month roadmap."
     },
     {
@@ -53,7 +79,12 @@
       "probable_name": "",
       "role": "Institutional Marketing Lead",
       "organisation": "Ambak",
-      "focus_areas": ["RM events", "impact stories", "LinkedIn B2B partnerships", "playbook"],
+      "focus_areas": [
+        "RM events",
+        "impact stories",
+        "LinkedIn B2B partnerships",
+        "playbook"
+      ],
       "inference_reason": "Presents the RM event, playbook, 12 impact stories and marketing plan. Could not be matched to a name due to weak diarization."
     },
     {
@@ -61,7 +92,11 @@
       "probable_name": "",
       "role": "CAM / Operations Lead",
       "organisation": "Ambak",
-      "focus_areas": ["CAM roles framework", "joint Cam-Ops governance", "large-partner cadence"],
+      "focus_areas": [
+        "CAM roles framework",
+        "joint Cam-Ops governance",
+        "large-partner cadence"
+      ],
       "inference_reason": "Presents the CAM roles-and-responsibilities framework; could not be matched to a name due to weak diarization."
     }
   ],
@@ -232,5 +267,35 @@
     "Joint review and WBR/MBR restructure agreed in principle without a firm owner, format, or transition plan.",
     "Marketing presented output metrics enthusiastically; Raghu redirected to business lift measurement - same pattern as retail review.",
     "Several large-partner and CAM items discussed at length and parked without named owners."
+  ],
+  "participation": [
+    {
+      "name": "Raghu",
+      "questions_raised": 20
+    },
+    {
+      "name": "Ishaan",
+      "questions_raised": 8
+    },
+    {
+      "name": "Ankit",
+      "questions_raised": 5
+    },
+    {
+      "name": "Rishabh",
+      "questions_raised": 4
+    },
+    {
+      "name": "Rashi",
+      "questions_raised": 3
+    },
+    {
+      "name": "Pranav",
+      "questions_raised": 2
+    },
+    {
+      "name": "Akash",
+      "questions_raised": 2
+    }
   ]
 }

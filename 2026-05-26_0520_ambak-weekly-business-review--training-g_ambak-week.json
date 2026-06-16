@@ -5,7 +5,13 @@
       "probable_name": "Raghu",
       "role": "Founder and CEO",
       "organisation": "Ambak",
-      "focus_areas": ["overall business accountability", "DSA-level intelligence", "city scaling", "compounding strategy", "investor narrative"],
+      "focus_areas": [
+        "overall business accountability",
+        "DSA-level intelligence",
+        "city scaling",
+        "compounding strategy",
+        "investor narrative"
+      ],
       "inference_reason": "Addressed directly by name throughout; drives all probing; sets the strategic direction; drops off for investor meeting at 11:43. Consistent with CEO roster entry."
     },
     {
@@ -13,7 +19,13 @@
       "probable_name": "Rashi",
       "role": "Co-founder, Operations and Distribution",
       "organisation": "Ambak",
-      "focus_areas": ["E2E pipeline reconciliation", "QL format ownership", "Mumbai/West ops", "lender consolidation", "extended-timeline problem"],
+      "focus_areas": [
+        "E2E pipeline reconciliation",
+        "QL format ownership",
+        "Mumbai/West ops",
+        "lender consolidation",
+        "extended-timeline problem"
+      ],
       "inference_reason": "Referenced by name ('Rashi, if you want the ownership'); takes over chairing after Raghu drops; owns E2E visibility calls. Consistent with Co-founder Ops roster entry."
     },
     {
@@ -21,7 +33,12 @@
       "probable_name": "Vikas",
       "role": "Retail and E2E Business Head",
       "organisation": "Ambak",
-      "focus_areas": ["E2E monthly target", "city team gaps", "high-margin tracking", "scaling plan"],
+      "focus_areas": [
+        "E2E monthly target",
+        "city team gaps",
+        "high-margin tracking",
+        "scaling plan"
+      ],
       "inference_reason": "Referenced as E2E team lead alongside Vijay; presents city-wise AOP and E2E mindset changes over the past month. Consistent with Retail Business Head from Retail Review."
     },
     {
@@ -29,7 +46,11 @@
       "probable_name": "Vijay",
       "role": "BD and Data Lead",
       "organisation": "Ambak",
-      "focus_areas": ["DRR and E2E pipeline presentation", "insurance data coordination", "lender consolidation tracking"],
+      "focus_areas": [
+        "DRR and E2E pipeline presentation",
+        "insurance data coordination",
+        "lender consolidation tracking"
+      ],
       "inference_reason": "Presents E2E numbers and DID throughout; handles insurance coordination with Tarun/Hitesh; asked to run alignment calls. Consistent with BD/Lender role from Retail Review."
     },
     {
@@ -37,7 +58,12 @@
       "probable_name": "Ankit",
       "role": "Institutional and E2E Sales Lead",
       "organisation": "Ambak",
-      "focus_areas": ["QL/login conversion", "Delhi and Mumbai disbursement pipeline", "DSA understanding", "MAHADA leads"],
+      "focus_areas": [
+        "QL/login conversion",
+        "Delhi and Mumbai disbursement pipeline",
+        "DSA understanding",
+        "MAHADA leads"
+      ],
       "inference_reason": "Central figure for disbursement numbers; receives Raghu's direct performance critique; owns MAHADA ring-fence; reconciles pipeline with Vijay and Rashi post-call."
     },
     {
@@ -45,7 +71,12 @@
       "probable_name": "Ishant",
       "role": "Institutional Business Lead",
       "organisation": "Ambak",
-      "focus_areas": ["190 QL target this week", "680-700 MTD range", "800 QL ramp next month", "training integration"],
+      "focus_areas": [
+        "190 QL target this week",
+        "680-700 MTD range",
+        "800 QL ramp next month",
+        "training integration"
+      ],
       "inference_reason": "Named and directly addressed for QL targets; presents institutional numbers; drops off mid-call. Consistent with institutional team lead pattern."
     },
     {
@@ -53,7 +84,11 @@
       "probable_name": "Rishab",
       "role": "E2E and QL Lead",
       "organisation": "Ambak",
-      "focus_areas": ["unassigned leads", "QL pipeline", "institutional disbursement confidence"],
+      "focus_areas": [
+        "unassigned leads",
+        "QL pipeline",
+        "institutional disbursement confidence"
+      ],
       "inference_reason": "Named directly ('Rishab, this is what I was referring to in the morning'); handles unassigned lead stock; drops off mid-call."
     },
     {
@@ -61,7 +96,12 @@
       "probable_name": "Aditya",
       "role": "Data and Analytics",
       "organisation": "Ambak",
-      "focus_areas": ["screen sharing", "WBR format", "city-wise targets", "E2E splits"],
+      "focus_areas": [
+        "screen sharing",
+        "WBR format",
+        "city-wise targets",
+        "E2E splits"
+      ],
       "inference_reason": "Called 'Adi' and asked to show screens, city-wise AOP, and pivot tables throughout the call."
     },
     {
@@ -69,7 +109,10 @@
       "probable_name": "Prabhat",
       "role": "Data Support",
       "organisation": "Ambak",
-      "focus_areas": ["QL format updates", "sheet management"],
+      "focus_areas": [
+        "QL format updates",
+        "sheet management"
+      ],
       "inference_reason": "Named and asked to show specific sheets, make format changes, and update tracking views."
     },
     {
@@ -77,7 +120,11 @@
       "probable_name": "Pooja",
       "role": "Training Lead",
       "organisation": "Ambak",
-      "focus_areas": ["train-the-trainer program", "scheduling", "assessment reliability"],
+      "focus_areas": [
+        "train-the-trainer program",
+        "scheduling",
+        "assessment reliability"
+      ],
       "inference_reason": "Referenced by Raghu as the person whose intervention is needed on training; asked to double-click on three specific areas."
     },
     {
@@ -85,7 +132,11 @@
       "probable_name": "Akash",
       "role": "Pune City Lead",
       "organisation": "Ambak",
-      "focus_areas": ["Pune QL marking", "document collection", "Pune-Delhi coordination"],
+      "focus_areas": [
+        "Pune QL marking",
+        "document collection",
+        "Pune-Delhi coordination"
+      ],
       "inference_reason": "Named directly ('Akash, how is the support in Pune now?'); presents Pune's login improvement and coordination friction."
     },
     {
@@ -93,7 +144,11 @@
       "probable_name": "Neerav",
       "role": "Ahmedabad City Head",
       "organisation": "Ambak",
-      "focus_areas": ["Gujarat pipeline", "team building", "ABM hiring"],
+      "focus_areas": [
+        "Gujarat pipeline",
+        "team building",
+        "ABM hiring"
+      ],
       "inference_reason": "Named directly and challenged by Raghu on Ahmedabad underperformance; commits to ABM finalization this week."
     },
     {
@@ -101,7 +156,11 @@
       "probable_name": "Nagesh",
       "role": "Bangalore Region Head",
       "organisation": "Ambak",
-      "focus_areas": ["Bangalore disbursements", "team scaling", "hiring completion by month end"],
+      "focus_areas": [
+        "Bangalore disbursements",
+        "team scaling",
+        "hiring completion by month end"
+      ],
       "inference_reason": "Named directly; presents 70 CR AOP target and hiring plan. Raghu referenced private conversation with Nagesh about scaling."
     },
     {
@@ -109,7 +168,10 @@
       "probable_name": "Danish",
       "role": "Gujarat City Head",
       "organisation": "Ambak",
-      "focus_areas": ["Gujarat disbursement", "100+ CR target this month"],
+      "focus_areas": [
+        "Gujarat disbursement",
+        "100+ CR target this month"
+      ],
       "inference_reason": "Named by Vijay in city-wise MTD breakdown; asked directly and confirms 100+ CR target."
     },
     {
@@ -117,7 +179,9 @@
       "probable_name": "Deepak",
       "role": "Delhi Institutional City Lead",
       "organisation": "Ambak",
-      "focus_areas": ["Delhi 19.6 CR disbursement visibility"],
+      "focus_areas": [
+        "Delhi 19.6 CR disbursement visibility"
+      ],
       "inference_reason": "Named in disbursement confidence check; states Delhi number is 100% going to land."
     },
     {
@@ -125,7 +189,10 @@
       "probable_name": "Puneet",
       "role": "Mumbai Institutional City Lead",
       "organisation": "Ambak",
-      "focus_areas": ["Mumbai 40 CR institutional target", "31+ CR minimum commitment"],
+      "focus_areas": [
+        "Mumbai 40 CR institutional target",
+        "31+ CR minimum commitment"
+      ],
       "inference_reason": "Named directly in disbursement confidence section; commits to 31 CR minimum despite spill."
     }
   ],
@@ -339,5 +406,43 @@
     "Neerav gave consistent reassurance on Ahmedabad without structural solutions; ABM hiring has been discussed for multiple cycles with no post-mortem on why it has not closed.",
     "Insurance was visibly unready - Tarun and Hitesh were not added to the call; no one owned this preparation failure.",
     "MAHADA 2600 leads received fewer than 5 minutes of discussion despite Raghu flagging it as an insanely large opportunity; bandwidth concerns were raised without escalation or resolution."
+  ],
+  "participation": [
+    {
+      "name": "Raghu",
+      "questions_raised": 22
+    },
+    {
+      "name": "Vijay",
+      "questions_raised": 8
+    },
+    {
+      "name": "Rashi",
+      "questions_raised": 7
+    },
+    {
+      "name": "Ankit",
+      "questions_raised": 5
+    },
+    {
+      "name": "Prabhat",
+      "questions_raised": 4
+    },
+    {
+      "name": "Neerav",
+      "questions_raised": 3
+    },
+    {
+      "name": "Akash",
+      "questions_raised": 2
+    },
+    {
+      "name": "Tarun",
+      "questions_raised": 2
+    },
+    {
+      "name": "Nagesh",
+      "questions_raised": 1
+    }
   ]
 }

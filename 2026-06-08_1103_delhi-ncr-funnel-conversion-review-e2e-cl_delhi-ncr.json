@@ -371,5 +371,138 @@
       "name": "Vishal",
       "questions_raised": 1
     }
+  ],
+  "decision_anatomy": [
+    {
+      "d": "Noida: 2 dedicated FBMs assigned for Noida leads only; Delhi FBMs receive only NCR leads going forward",
+      "roles": [
+        {
+          "n": "Raghu",
+          "r": "decider"
+        },
+        {
+          "n": "Ankit",
+          "r": "problem",
+          "note": "Presented Noida coordination gap"
+        },
+        {
+          "n": "Pranav",
+          "r": "contributor",
+          "note": "Flagged Jay Singh follow-up failure"
+        },
+        {
+          "n": "Ishant",
+          "r": "silent"
+        }
+      ]
+    },
+    {
+      "d": "Pune FBM team expanded to 6 (3 existing + 2 ex-bankers from RM team + 1 new hire); Lukman leads all metrics",
+      "roles": [
+        {
+          "n": "Raghu",
+          "r": "decider"
+        },
+        {
+          "n": "Ankit",
+          "r": "problem",
+          "note": "Executed expansion"
+        },
+        {
+          "n": "Rashi",
+          "r": "contributor"
+        }
+      ]
+    },
+    {
+      "d": "May closure confirmed at 935 crore (888 verified); remaining 45 crore to close by June 9",
+      "roles": [
+        {
+          "n": "Vikas",
+          "r": "decider"
+        },
+        {
+          "n": "Raghu",
+          "r": "problem",
+          "note": "Pushed for final number"
+        },
+        {
+          "n": "Ankit",
+          "r": "contributor"
+        }
+      ]
+    },
+    {
+      "d": "June E2E target: 110 crore with 50-50 NCR/rest split; overall target 1200 crore",
+      "roles": [
+        {
+          "n": "Raghu",
+          "r": "decider"
+        },
+        {
+          "n": "Vikas",
+          "r": "problem",
+          "note": "Presented pipeline visibility"
+        },
+        {
+          "n": "Ankit",
+          "r": "contributor"
+        }
+      ]
+    },
+    {
+      "d": "Lead bucketization: 20% late-stage leads get priority treatment; 80% go into drip campaign loop",
+      "roles": [
+        {
+          "n": "Raghu",
+          "r": "decider"
+        },
+        {
+          "n": "Rameshwar",
+          "r": "problem",
+          "note": "Vendor identified"
+        },
+        {
+          "n": "Vikas",
+          "r": "contributor"
+        }
+      ]
+    },
+    {
+      "d": "Missing mandatory lead journey fields (OC pay, registration date) to be made compulsory in Sangam",
+      "roles": [
+        {
+          "n": "Raghu",
+          "r": "decider"
+        },
+        {
+          "n": "Rameshwar",
+          "r": "problem",
+          "note": "Step 1 already executing"
+        },
+        {
+          "n": "Ankit",
+          "r": "contributor"
+        }
+      ]
+    },
+    {
+      "d": "Funnel conversion misses by city and stage to be built as a ready view (not ad hoc)",
+      "roles": [
+        {
+          "n": "Raghu",
+          "r": "decider"
+        },
+        {
+          "n": "Rishab",
+          "r": "problem",
+          "note": "Assigned to build the view"
+        },
+        {
+          "n": "Ankit",
+          "r": "silent"
+        }
+      ]
+    }
   ]
 }

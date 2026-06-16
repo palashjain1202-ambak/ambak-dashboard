@@ -5,7 +5,11 @@
       "probable_name": "Raghuveer Malik",
       "role": "Founder & CEO",
       "organisation": "Ambak",
-      "focus_areas": ["E2E funnel", "insurance", "institutional review"],
+      "focus_areas": [
+        "E2E funnel",
+        "insurance",
+        "institutional review"
+      ],
       "inference_reason": "Senior authority; drives accountability on targets and process gaps"
     },
     {
@@ -13,7 +17,11 @@
       "probable_name": "Ankit",
       "role": "E2E / Ops Lead",
       "organisation": "Ambak",
-      "focus_areas": ["logins", "sanction funnel", "E2E classification"],
+      "focus_areas": [
+        "logins",
+        "sanction funnel",
+        "E2E classification"
+      ],
       "inference_reason": "Presents institutional and E2E ops numbers"
     },
     {
@@ -21,7 +29,11 @@
       "probable_name": "Vikas",
       "role": "E2E / LAP Lead",
       "organisation": "Ambak",
-      "focus_areas": ["E2E disbursals", "insurance visibility", "LAP channel"],
+      "focus_areas": [
+        "E2E disbursals",
+        "insurance visibility",
+        "LAP channel"
+      ],
       "inference_reason": "Owns E2E pipeline and June targets"
     },
     {
@@ -29,7 +41,10 @@
       "probable_name": "Vijay",
       "role": "Sales / FBM Head",
       "organisation": "Ambak",
-      "focus_areas": ["FBM coordination", "E2E sync"],
+      "focus_areas": [
+        "FBM coordination",
+        "E2E sync"
+      ],
       "inference_reason": "Part of weekly E2E sync proposed by Raghu"
     },
     {
@@ -37,7 +52,10 @@
       "probable_name": "Rashi Garg",
       "role": "Co-founder / COO",
       "organisation": "Ambak",
-      "focus_areas": ["ops coordination", "E2E process"],
+      "focus_areas": [
+        "ops coordination",
+        "E2E process"
+      ],
       "inference_reason": "Called in for insurance kickoff and E2E sync"
     },
     {
@@ -45,7 +63,11 @@
       "probable_name": "Ishaan",
       "role": "Institutional Business Lead",
       "organisation": "Ambak",
-      "focus_areas": ["institutional funnel", "logins", "sanction conversion"],
+      "focus_areas": [
+        "institutional funnel",
+        "logins",
+        "sanction conversion"
+      ],
       "inference_reason": "Presenting institutional MBR numbers"
     },
     {
@@ -53,7 +75,10 @@
       "probable_name": "Tarun",
       "role": "Insurance Head",
       "organisation": "Ambak",
-      "focus_areas": ["insurance", "Settlin"],
+      "focus_areas": [
+        "insurance",
+        "Settlin"
+      ],
       "inference_reason": "Raghu pushing Vikas to align with Tarun on insurance"
     },
     {
@@ -61,7 +86,10 @@
       "probable_name": "Avinash",
       "role": "Institutional Sales",
       "organisation": "Ambak",
-      "focus_areas": ["self-sourced leads", "Delhi NCR"],
+      "focus_areas": [
+        "self-sourced leads",
+        "Delhi NCR"
+      ],
       "inference_reason": "His self-sourced leads flagged as not being registered in system"
     }
   ],
@@ -174,13 +202,115 @@
     "Insurance discussion: Raghu clearly frustrated; Vikas and Tarun needed nudge to align"
   ],
   "participation": [
-    { "name": "Raghu", "questions_raised": 18 },
-    { "name": "Ankit", "questions_raised": 7 },
-    { "name": "Vikas", "questions_raised": 6 },
-    { "name": "Ishaan", "questions_raised": 5 },
-    { "name": "Rashi", "questions_raised": 3 },
-    { "name": "Vijay", "questions_raised": 2 },
-    { "name": "Tarun", "questions_raised": 2 },
-    { "name": "Avinash", "questions_raised": 1 }
+    {
+      "name": "Raghu",
+      "questions_raised": 18
+    },
+    {
+      "name": "Ankit",
+      "questions_raised": 7
+    },
+    {
+      "name": "Vikas",
+      "questions_raised": 6
+    },
+    {
+      "name": "Ishaan",
+      "questions_raised": 5
+    },
+    {
+      "name": "Rashi",
+      "questions_raised": 3
+    },
+    {
+      "name": "Vijay",
+      "questions_raised": 2
+    },
+    {
+      "name": "Tarun",
+      "questions_raised": 2
+    },
+    {
+      "name": "Avinash",
+      "questions_raised": 1
+    }
+  ],
+  "decision_anatomy": [
+    {
+      "d": "E2E classification rule: documents received = E2E; no documents = aggregation",
+      "roles": [
+        {
+          "n": "Raghu",
+          "r": "decider"
+        },
+        {
+          "n": "Ankit",
+          "r": "problem",
+          "note": "Identified classification confusion"
+        },
+        {
+          "n": "Vikas",
+          "r": "contributor"
+        }
+      ]
+    },
+    {
+      "d": "Weekly E2E sync established: Vikas, Vijay, Ankit, Rashi to meet every week",
+      "roles": [
+        {
+          "n": "Raghu",
+          "r": "decider"
+        },
+        {
+          "n": "Vikas",
+          "r": "problem",
+          "note": "E2E gap vs target flagged"
+        },
+        {
+          "n": "Ankit",
+          "r": "contributor"
+        },
+        {
+          "n": "Vijay",
+          "r": "contributor"
+        }
+      ]
+    },
+    {
+      "d": "Avinash self-sourced leads must be registered in Ambak system going forward — no exceptions",
+      "roles": [
+        {
+          "n": "Raghu",
+          "r": "decider"
+        },
+        {
+          "n": "Avinash",
+          "r": "problem",
+          "note": "Called out publicly for gap"
+        },
+        {
+          "n": "Ankit",
+          "r": "silent"
+        }
+      ]
+    },
+    {
+      "d": "Vikas and Tarun to hold insurance alignment call next day to bridge process visibility gap",
+      "roles": [
+        {
+          "n": "Raghu",
+          "r": "decider"
+        },
+        {
+          "n": "Vikas",
+          "r": "problem",
+          "note": "Insurance process not structured"
+        },
+        {
+          "n": "Tarun",
+          "r": "contributor"
+        }
+      ]
+    }
   ]
 }
