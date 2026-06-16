@@ -1,0 +1,186 @@
+{
+  "personas": [
+    {
+      "id": "raghu",
+      "probable_name": "Raghuveer Malik",
+      "role": "Founder & CEO",
+      "organisation": "Ambak",
+      "focus_areas": ["E2E funnel", "insurance", "institutional review"],
+      "inference_reason": "Senior authority; drives accountability on targets and process gaps"
+    },
+    {
+      "id": "ankit",
+      "probable_name": "Ankit",
+      "role": "E2E / Ops Lead",
+      "organisation": "Ambak",
+      "focus_areas": ["logins", "sanction funnel", "E2E classification"],
+      "inference_reason": "Presents institutional and E2E ops numbers"
+    },
+    {
+      "id": "vikas",
+      "probable_name": "Vikas",
+      "role": "E2E / LAP Lead",
+      "organisation": "Ambak",
+      "focus_areas": ["E2E disbursals", "insurance visibility", "LAP channel"],
+      "inference_reason": "Owns E2E pipeline and June targets"
+    },
+    {
+      "id": "vijay",
+      "probable_name": "Vijay",
+      "role": "Sales / FBM Head",
+      "organisation": "Ambak",
+      "focus_areas": ["FBM coordination", "E2E sync"],
+      "inference_reason": "Part of weekly E2E sync proposed by Raghu"
+    },
+    {
+      "id": "rashi",
+      "probable_name": "Rashi Garg",
+      "role": "Co-founder / COO",
+      "organisation": "Ambak",
+      "focus_areas": ["ops coordination", "E2E process"],
+      "inference_reason": "Called in for insurance kickoff and E2E sync"
+    },
+    {
+      "id": "ishaan",
+      "probable_name": "Ishaan",
+      "role": "Institutional Business Lead",
+      "organisation": "Ambak",
+      "focus_areas": ["institutional funnel", "logins", "sanction conversion"],
+      "inference_reason": "Presenting institutional MBR numbers"
+    },
+    {
+      "id": "tarun",
+      "probable_name": "Tarun",
+      "role": "Insurance Head",
+      "organisation": "Ambak",
+      "focus_areas": ["insurance", "Settlin"],
+      "inference_reason": "Raghu pushing Vikas to align with Tarun on insurance"
+    },
+    {
+      "id": "avinash",
+      "probable_name": "Avinash",
+      "role": "Institutional Sales",
+      "organisation": "Ambak",
+      "focus_areas": ["self-sourced leads", "Delhi NCR"],
+      "inference_reason": "His self-sourced leads flagged as not being registered in system"
+    }
+  ],
+  "key_points": [
+    "Institutional login funnel: 123 MTD vs 150 target — running behind for June",
+    "Sanction rate holding at 39-40% — on track but needs scale",
+    "E2E disbursals only 15 CR vs 248 CR June target — massive gap flagged",
+    "E2E vs aggregation classification clarified: documents received = E2E; no docs = aggregation",
+    "Insurance: 15L June target; Raghu pushing Vikas and Tarun to align on process and visibility",
+    "Settlin Bangalore payout issue: they are not receiving payout, Raghu flagged as partnership risk",
+    "Avinash's self-sourced leads not entering Ambak system — Raghu called this out directly",
+    "Weekly E2E sync proposed: Vikas, Vijay, Ankit, Rashi to meet every week",
+    "High ticket lag 40% — large-ticket cases are disproportionately slow"
+  ],
+  "decisions": [
+    "E2E classification rule: cases with documents submitted = E2E; cases without documents = aggregation",
+    "Weekly E2E sync to be established with Vikas, Vijay, Ankit, Rashi",
+    "Tarun and Vikas to align on insurance by the next day",
+    "Self-sourced leads by Avinash must be registered in Ambak system going forward"
+  ],
+  "action_items": [
+    {
+      "owner": "Vikas, Vijay, Ankit, Rashi",
+      "task": "Set up and run weekly E2E sync meeting",
+      "due_date": "2026-06-17",
+      "related_topic": "E2E coordination",
+      "source_meeting": "June MBR — Institutional Funnel, E2E, Insurance",
+      "source_meeting_date": "2026-06-10",
+      "priority": "HIGH",
+      "verbal_completion": false,
+      "verbal_completion_note": "",
+      "deadline_change": null
+    },
+    {
+      "owner": "Ankit",
+      "task": "Enforce E2E vs aggregation classification in Sangam — docs present = E2E, no docs = aggregation",
+      "due_date": "2026-06-15",
+      "related_topic": "E2E classification",
+      "source_meeting": "June MBR — Institutional Funnel, E2E, Insurance",
+      "source_meeting_date": "2026-06-10",
+      "priority": "HIGH",
+      "verbal_completion": false,
+      "verbal_completion_note": "",
+      "deadline_change": null
+    },
+    {
+      "owner": "Raghu / Rashi",
+      "task": "Resolve Settlin Bangalore payout issue — they are not receiving payments; address before partnership is damaged",
+      "due_date": "2026-06-15",
+      "related_topic": "Settlin partnership",
+      "source_meeting": "June MBR — Institutional Funnel, E2E, Insurance",
+      "source_meeting_date": "2026-06-10",
+      "priority": "HIGH",
+      "verbal_completion": false,
+      "verbal_completion_note": "",
+      "deadline_change": null
+    },
+    {
+      "owner": "Avinash",
+      "task": "Register all self-sourced leads in Ambak system immediately; ensure no self-sourced case goes untracked",
+      "due_date": "2026-06-11",
+      "related_topic": "Lead tracking discipline",
+      "source_meeting": "June MBR — Institutional Funnel, E2E, Insurance",
+      "source_meeting_date": "2026-06-10",
+      "priority": "HIGH",
+      "verbal_completion": false,
+      "verbal_completion_note": "",
+      "deadline_change": null
+    },
+    {
+      "owner": "Vikas, Tarun",
+      "task": "Hold insurance alignment call to bridge gap on visibility and process structure",
+      "due_date": "2026-06-11",
+      "related_topic": "Insurance process",
+      "source_meeting": "June MBR — Institutional Funnel, E2E, Insurance",
+      "source_meeting_date": "2026-06-10",
+      "priority": "HIGH",
+      "verbal_completion": false,
+      "verbal_completion_note": "",
+      "deadline_change": null
+    }
+  ],
+  "open_questions": [
+    {
+      "question": "Why is E2E disbursal only 15 CR of the 248 CR June target — is this a pipeline or conversion problem?",
+      "raised_by": "Raghu",
+      "expected_owner": "Vikas"
+    },
+    {
+      "question": "High ticket lag is 40% — what specific stage are high-ticket cases stalling at?",
+      "raised_by": "Raghu",
+      "expected_owner": "Ankit"
+    },
+    {
+      "question": "Is the Settlin payout issue a system configuration issue or a policy decision?",
+      "raised_by": "Raghu",
+      "expected_owner": "Rashi"
+    }
+  ],
+  "risks": [
+    "E2E disbursals at 15 CR vs 248 CR June target — structural gap, not execution variability",
+    "Settlin Bangalore payout pending — channel partner at risk if not resolved",
+    "Self-sourced leads not in system = revenue leakage and reporting blindspot",
+    "Insurance pipeline not visible or process-managed — same pattern as prior E2E issues"
+  ],
+  "meeting_dynamics": [
+    "Raghu pushed hard on E2E gap — 15 CR vs 248 CR is too large to be a data issue; pressed Vikas directly",
+    "Avinash called out publicly for not registering self-sourced leads — accountability moment",
+    "Weekly sync established in meeting room — Raghu did not leave it as a suggestion, made it a commitment",
+    "Insurance discussion: Raghu clearly frustrated; Vikas and Tarun needed nudge to align"
+  ],
+  "participation": [
+    { "name": "Raghu", "questions_raised": 18 },
+    { "name": "Ankit", "questions_raised": 7 },
+    { "name": "Vikas", "questions_raised": 6 },
+    { "name": "Ishaan", "questions_raised": 5 },
+    { "name": "Rashi", "questions_raised": 3 },
+    { "name": "Vijay", "questions_raised": 2 },
+    { "name": "Tarun", "questions_raised": 2 },
+    { "name": "Avinash", "questions_raised": 1 }
+  ]
+}

@@ -1,0 +1,175 @@
+{
+  "personas": [
+    {
+      "id": "raghu",
+      "probable_name": "Raghuveer Malik",
+      "role": "Founder & CEO",
+      "organisation": "Ambak",
+      "focus_areas": ["AI product", "automation", "call connectivity"],
+      "inference_reason": "Senior authority; steers product roadmap discussion"
+    },
+    {
+      "id": "rameshwar",
+      "probable_name": "Rameshwar",
+      "role": "Product / Tech Head",
+      "organisation": "Ambak",
+      "focus_areas": ["Yodha", "auto dialer", "DID", "AI pipeline"],
+      "inference_reason": "Presents Yodha product updates and AI initiative roadmap"
+    },
+    {
+      "id": "pankaj",
+      "probable_name": "Pankaj",
+      "role": "CTO / Product Lead",
+      "organisation": "Ambak",
+      "focus_areas": ["DRE", "CAM automation", "system builds"],
+      "inference_reason": "Owns backend development; discusses DRE tagging, CAM automation"
+    },
+    {
+      "id": "ankit",
+      "probable_name": "Ankit",
+      "role": "E2E / Ops Lead",
+      "organisation": "Ambak",
+      "focus_areas": ["FBM productivity", "call connect", "auto dialer impact"],
+      "inference_reason": "Operator of FBM team; validated auto-dialer improvement on calls/day"
+    },
+    {
+      "id": "vikas",
+      "probable_name": "Vikas",
+      "role": "E2E / LAP Lead",
+      "organisation": "Ambak",
+      "focus_areas": ["builder tool", "mandate partners"],
+      "inference_reason": "Discussed 'proper' builder tool for mandate partners"
+    }
+  ],
+  "key_points": [
+    "Yodha auto-triggers deployed: FBMs get contextual assistance when handling leads",
+    "Auto dialer: calls/day improved from 150 to 220+ after DID 924 series went live",
+    "924 DID series confirmed live — +5-6% call connectivity improvement vs unknown numbers",
+    "DID rotation logic in development: system will cycle numbers to avoid spam flagging",
+    "Bot first-connect rate 56.3% vs human 42% on DDA leads — bots outperforming humans on first contact",
+    "DRE tagging improved: salary profile 75%, self-employed 64% — better eligibility pre-screening",
+    "Non-English property documents issue: scraping returns regional-language docs; no translation/handling yet",
+    "Project-level document database proposed: RERA numbers stored once, reused across all cases for that project",
+    "CAM semi-automation in development: reduces manual effort in Credit Application Memo preparation",
+    "Sanction letter scraping capability live or in pipeline",
+    "AI initiative pipeline: talent acquisition tool, 11 Labs voice bot pilot, bureau syndicate",
+    "RM buddy feature conceptualized to assist relationship managers",
+    "Builder tool Phase 1 for mandate partners planned for June 22-23 launch"
+  ],
+  "decisions": [
+    "DID 924 series confirmed live; rotation logic to follow in dev",
+    "Auto dialer to remain active; target further improvement to 250+ calls/day",
+    "Builder tool Phase 1 delivery date set: June 22-23 for mandate partners",
+    "CAM semi-automation to proceed to completion in current sprint"
+  ],
+  "action_items": [
+    {
+      "owner": "Product/Tech (Pankaj/Rameshwar)",
+      "task": "Ship DID rotation logic — cycle through numbers to avoid spam flagging and maintain connectivity gains",
+      "due_date": "2026-06-22",
+      "related_topic": "Call connectivity",
+      "source_meeting": "Yodha-FBM Lead Quality, Automation, Call Connectivity, and AI Product Pipeline Review",
+      "source_meeting_date": "2026-06-11",
+      "priority": "HIGH",
+      "verbal_completion": false,
+      "verbal_completion_note": "",
+      "deadline_change": null
+    },
+    {
+      "owner": "Product/Tech",
+      "task": "Handle non-English property documents — build translation pipeline or regional-language support for scraped docs",
+      "due_date": "",
+      "related_topic": "Document processing",
+      "source_meeting": "Yodha-FBM Lead Quality, Automation, Call Connectivity, and AI Product Pipeline Review",
+      "source_meeting_date": "2026-06-11",
+      "priority": "HIGH",
+      "verbal_completion": false,
+      "verbal_completion_note": "",
+      "deadline_change": null
+    },
+    {
+      "owner": "Product/Tech (Pankaj)",
+      "task": "Build project-level document database: store RERA numbers and project docs once; auto-reuse across all cases for same project",
+      "due_date": "",
+      "related_topic": "Document reuse / CAM efficiency",
+      "source_meeting": "Yodha-FBM Lead Quality, Automation, Call Connectivity, and AI Product Pipeline Review",
+      "source_meeting_date": "2026-06-11",
+      "priority": "HIGH",
+      "verbal_completion": false,
+      "verbal_completion_note": "",
+      "deadline_change": null
+    },
+    {
+      "owner": "Product/Tech (Pankaj)",
+      "task": "Complete CAM semi-automation — reduce manual effort in Credit Application Memo preparation",
+      "due_date": "2026-06-30",
+      "related_topic": "CAM automation",
+      "source_meeting": "Yodha-FBM Lead Quality, Automation, Call Connectivity, and AI Product Pipeline Review",
+      "source_meeting_date": "2026-06-11",
+      "priority": "HIGH",
+      "verbal_completion": false,
+      "verbal_completion_note": "",
+      "deadline_change": null
+    },
+    {
+      "owner": "Rameshwar / Product",
+      "task": "Launch builder tool Phase 1 for mandate partners by June 22-23",
+      "due_date": "2026-06-23",
+      "related_topic": "Builder tool / mandate partners",
+      "source_meeting": "Yodha-FBM Lead Quality, Automation, Call Connectivity, and AI Product Pipeline Review",
+      "source_meeting_date": "2026-06-11",
+      "priority": "HIGH",
+      "verbal_completion": false,
+      "verbal_completion_note": "",
+      "deadline_change": null
+    },
+    {
+      "owner": "Rameshwar / Product",
+      "task": "Initiate 11 Labs voice bot pilot for early-stage lead engagement",
+      "due_date": "",
+      "related_topic": "AI voice bot",
+      "source_meeting": "Yodha-FBM Lead Quality, Automation, Call Connectivity, and AI Product Pipeline Review",
+      "source_meeting_date": "2026-06-11",
+      "priority": "LOW",
+      "verbal_completion": false,
+      "verbal_completion_note": "",
+      "deadline_change": null
+    }
+  ],
+  "open_questions": [
+    {
+      "question": "Bot outperforms human on first-connect (56.3% vs 42%) — should we shift more DDA leads to bot-first flow?",
+      "raised_by": "Raghu",
+      "expected_owner": "Rameshwar / Ankit"
+    },
+    {
+      "question": "Can project-level doc database be built before CAM automation, or are they sequenced?",
+      "raised_by": "Pankaj",
+      "expected_owner": "Pankaj"
+    },
+    {
+      "question": "What is the rollout plan for 11 Labs pilot — how many leads, which segment, what success metric?",
+      "raised_by": "Raghu",
+      "expected_owner": "Rameshwar"
+    }
+  ],
+  "risks": [
+    "Non-English property docs not handled — scraping pipeline returns unreadable documents for some projects",
+    "DID rotation logic not yet live — without rotation, numbers may get spam-flagged and undo connectivity gains",
+    "Builder tool Phase 1 set for June 22-23 — tight timeline"
+  ],
+  "meeting_dynamics": [
+    "Rameshwar drove most of the product update presentation — confident and data-driven on dialer/DID numbers",
+    "Raghu engaged closely on AI pipeline, asked pointed questions on bot vs human first-connect data",
+    "Pankaj anchored the dev side — CAM automation and project DB were his items",
+    "Ankit validated field impact of auto dialer — gave Raghu the ground-level confirmation needed",
+    "Meeting moved efficiently through product pipeline; builder tool got most discussion time"
+  ],
+  "participation": [
+    { "name": "Raghu", "questions_raised": 12 },
+    { "name": "Rameshwar", "questions_raised": 9 },
+    { "name": "Pankaj", "questions_raised": 7 },
+    { "name": "Ankit", "questions_raised": 5 },
+    { "name": "Vikas", "questions_raised": 2 }
+  ]
+}

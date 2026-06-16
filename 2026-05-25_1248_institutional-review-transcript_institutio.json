@@ -1,0 +1,236 @@
+{
+  "personas": [
+    {
+      "id": "raghu",
+      "probable_name": "Raghu",
+      "role": "Founder and CEO",
+      "organisation": "Ambak",
+      "focus_areas": ["NR waterfall clarity", "one-team operating model", "review quality", "structural cohesiveness"],
+      "inference_reason": "Drives the agenda throughout; repeatedly probes the NR miss and pushes for the one-team structural change. Consistent with CEO roster entry."
+    },
+    {
+      "id": "ishaan",
+      "probable_name": "Ishaan",
+      "role": "Institutional Business Lead",
+      "organisation": "Ambak",
+      "focus_areas": ["institutional partners", "large accounts", "CAMP program", "sales review"],
+      "inference_reason": "Named in the room; presents the institutional side and candidly rates the meeting 2 out of 10 on insight. Accountable for the institutional review."
+    },
+    {
+      "id": "ankit",
+      "probable_name": "Ankit",
+      "role": "E2E Business Lead",
+      "organisation": "Ambak",
+      "focus_areas": ["E2E funnel", "QL-to-disbursal conversion", "May disbursal targets"],
+      "inference_reason": "Referenced as the counterpart to Ishaan ('Ankit tells another story'); tied to the E2E disbursal narrative and May login and disbursal targets."
+    },
+    {
+      "id": "rishabh",
+      "probable_name": "Rishabh",
+      "role": "E2E and QL Lead",
+      "organisation": "Ambak",
+      "focus_areas": ["QL generation", "funnel ownership", "QL-to-login conversion"],
+      "inference_reason": "Named as the person Raghu wants to answer funnel questions; Raghu wants to sit with Rishabh to define what the institutional review should drive."
+    },
+    {
+      "id": "akash",
+      "probable_name": "Akash",
+      "role": "Finance and FP&A",
+      "organisation": "Ambak",
+      "focus_areas": ["payout analysis", "month-on-month numbers"],
+      "inference_reason": "Addressed directly to pull March comparison numbers ('Akash, we should also look at what March numbers were'), indicating an FP&A role."
+    },
+    {
+      "id": "arvind",
+      "probable_name": "Arvind",
+      "role": "Training Lead",
+      "organisation": "Ambak",
+      "focus_areas": ["HAPA framework", "LST revamp", "assessment results", "masterclass cadence"],
+      "inference_reason": "Addressed by name ('Got it Arvind'); presents the training update, HAPA framework results, and next-month roadmap."
+    },
+    {
+      "id": "institutional-marketing-lead",
+      "probable_name": "",
+      "role": "Institutional Marketing Lead",
+      "organisation": "Ambak",
+      "focus_areas": ["RM events", "impact stories", "LinkedIn B2B partnerships", "playbook"],
+      "inference_reason": "Presents the RM event, playbook, 12 impact stories and marketing plan. Could not be matched to a name due to weak diarization."
+    },
+    {
+      "id": "cam-ops-lead",
+      "probable_name": "",
+      "role": "CAM / Operations Lead",
+      "organisation": "Ambak",
+      "focus_areas": ["CAM roles framework", "joint Cam-Ops governance", "large-partner cadence"],
+      "inference_reason": "Presents the CAM roles-and-responsibilities framework; could not be matched to a name due to weak diarization."
+    }
+  ],
+  "key_points": [
+    "April EPS 55 lakhs, payout volume 30 lakhs, average payout 50 points; incentives linked to RMC payouts.",
+    "JFM 200+ crore disbursed but only ~1.8 lakhs incentive paid; insurance attachment 27% with 2.7-2.8 lakhs premium closed.",
+    "Net revenue not growing despite QLs on track; reasons: high payouts, financial NBA mechanics, and weak QL-to-login conversion.",
+    "QL-to-login fell to ~25% from historic 40%; M0 disbursals hit; May recovering (172 logins vs 170 for all of April).",
+    "Headcount 61 vs 77 expected; heavy 0-3 month churn; end-May target 82.",
+    "3-6 month cohort productivity jumped from 7 to 15 - driven by December-January cohort maturing.",
+    "66% of QLs from repeat partners (Akash to verify); repeat partners flat at 52-56 despite active partners growing 233 to 245.",
+    "Onboarding trend: Jan 113, Feb 171, March 208, April 261; onboarding-to-activation time ~7.8 days (80% reduction since year start).",
+    "Core structural directive: institutional and E2E to stop running as two teams; joint first-of-month review from June.",
+    "Ishaan rated meeting 2/10 for insight; said finance review was more informative.",
+    "CAMP accounts: Thinker, Aspect, QACR, Suarez; Proptiger splitting wallet share with Bipartomoney.",
+    "CAM framework proposed: builders owned by CAM, homebuyers by Ops, joint Cam-Ops governance.",
+    "Product roadmap: one-click dialer testing, website partner notification live, spot calling and queue logic, vertical sales app in development.",
+    "Institutional marketing: RM event done, playbook ready, 12 impact stories collected; Raghu pushed for 2-month business lift measurement.",
+    "Government drive targeting 110 disbursals vs 90; board members pursuing partners directly.",
+    "Training: HAPA feedback 3.74/4, 81% refresh attendance, LST revamp 70% complete, LPL quizzes launching."
+  ],
+  "decisions": [
+    "Institutional and E2E move to a joint first-of-month review; WBR and MBR framework to be restructured.",
+    "MBR flow reversed to lead with P&L and drivers before initiatives.",
+    "HDFC Gross scheme likely to be removed next month."
+  ],
+  "action_items": [
+    {
+      "owner": "Ankit, Ishaan",
+      "task": "Run a joint institutional and E2E review of the full funnel on the first of the month",
+      "due_date": "2026-06-01",
+      "related_topic": "One-team operating model",
+      "source_meeting": "Institutional Review",
+      "source_meeting_date": "2026-05-25",
+      "priority": "HIGH"
+    },
+    {
+      "owner": "Rishabh, E2E team",
+      "task": "Complete RCA on QL-to-login falling to 25% from historic 40%; specify support required",
+      "due_date": "",
+      "related_topic": "Funnel conversion",
+      "source_meeting": "Institutional Review",
+      "source_meeting_date": "2026-05-25",
+      "priority": "HIGH"
+    },
+    {
+      "owner": "Ishaan, Ankit",
+      "task": "Hit the May commitment of 250-plus logins and the 110 disbursal number",
+      "due_date": "2026-05-31",
+      "related_topic": "May targets",
+      "source_meeting": "Institutional Review",
+      "source_meeting_date": "2026-05-25",
+      "priority": "HIGH"
+    },
+    {
+      "owner": "Raghu, Arvind",
+      "task": "Catch up next Wednesday for a full update on D2C, ops, institutional, and retail",
+      "due_date": "2026-05-27",
+      "related_topic": "Cross-function review",
+      "source_meeting": "Institutional Review",
+      "source_meeting_date": "2026-05-25",
+      "priority": "HIGH"
+    },
+    {
+      "owner": "Training team",
+      "task": "Close the revamped LST with Vishal and Ishaan; prepare for next-month go-live",
+      "due_date": "",
+      "related_topic": "Training rollout",
+      "source_meeting": "Institutional Review",
+      "source_meeting_date": "2026-05-25",
+      "priority": "HIGH"
+    },
+    {
+      "owner": "Akash",
+      "task": "Double-check the 66% repeat-partner QL figure and compare April against March numbers",
+      "due_date": "",
+      "related_topic": "Retention metrics",
+      "source_meeting": "Institutional Review",
+      "source_meeting_date": "2026-05-25",
+      "priority": "LOW"
+    },
+    {
+      "owner": "Raghu, Rishabh",
+      "task": "Sit together to define what the institutional review should drive out",
+      "due_date": "",
+      "related_topic": "Review structure",
+      "source_meeting": "Institutional Review",
+      "source_meeting_date": "2026-05-25",
+      "priority": "LOW"
+    },
+    {
+      "owner": "Pankaj, institutional team",
+      "task": "Build a CAM-style large-partner tracking structure with a requisition form in the CRM",
+      "due_date": "",
+      "related_topic": "Large-partner tracking",
+      "source_meeting": "Institutional Review",
+      "source_meeting_date": "2026-05-25",
+      "priority": "LOW"
+    },
+    {
+      "owner": "CAM / Ops Lead",
+      "task": "Finalise the CAM roles-and-responsibilities framework with named owner, lead, and cadence",
+      "due_date": "",
+      "related_topic": "CAM governance",
+      "source_meeting": "Institutional Review",
+      "source_meeting_date": "2026-05-25",
+      "priority": "LOW"
+    },
+    {
+      "owner": "Institutional Marketing Lead",
+      "task": "Track the 2-month business lift in logins and disbursals after RM events",
+      "due_date": "",
+      "related_topic": "Marketing measurement",
+      "source_meeting": "Institutional Review",
+      "source_meeting_date": "2026-05-25",
+      "priority": "LOW"
+    },
+    {
+      "owner": "Institutional Marketing Lead",
+      "task": "Amplify the 12 high-impact stories and build the LinkedIn plan for large B2B partnerships",
+      "due_date": "",
+      "related_topic": "Marketing",
+      "source_meeting": "Institutional Review",
+      "source_meeting_date": "2026-05-25",
+      "priority": "LOW"
+    }
+  ],
+  "open_questions": [
+    {
+      "question": "Why is net revenue not increasing when QLs are on track and the product is good?",
+      "raised_by": "Raghu",
+      "expected_owner": "Ankit and Ishaan"
+    },
+    {
+      "question": "Why did E2E QL-to-login fall to 25% from a historic 40%?",
+      "raised_by": "Raghu",
+      "expected_owner": "Rishabh and the E2E team"
+    },
+    {
+      "question": "Why are repeat partners flat at 52-56 while active partners grew ~25%?",
+      "raised_by": "Raghu",
+      "expected_owner": "Institutional onboarding lead"
+    },
+    {
+      "question": "What is the right structure and ownership for the cross-team E2E review?",
+      "raised_by": "Raghu",
+      "expected_owner": "Ankit and Ishaan"
+    },
+    {
+      "question": "Will new joiners be capable enough after training to pitch confidently to a customer or partner?",
+      "raised_by": "Raghu",
+      "expected_owner": "Arvind and the training team"
+    }
+  ],
+  "risks": [
+    "Institutional and E2E still operate as two teams after 1.5 years; the missing single business story is the biggest structural watch item.",
+    "Net revenue stuck around 30-40% retention with no visible waterfall - leadership cannot attribute the miss.",
+    "High payouts continue to erode NR; incentives are linked to payout, reinforcing the problem.",
+    "QL-to-login conversion collapsed from 40% to 25%; RCA and fix are still outstanding.",
+    "Headcount 61 vs 77 plan; heavy early-tenure churn; May target of 82 requires adding 21 people by month end.",
+    "Repeat partners stagnant (52-56) despite 25% active-partner growth - retention quality concern.",
+    "Large-partner and CAMP accounts not structured in CRM - accountability is fragile."
+  ],
+  "meeting_dynamics": [
+    "Raghu carried nearly all the probing and the push for structural change; functional leads were largely reactive.",
+    "Ishaan's live 2/10 insight rating was the most candid self-assessment in the meeting - acknowledged but not resolved in-room.",
+    "The institutional-vs-E2E divide surfaced repeatedly as competing narratives and was deferred to a future restructure.",
+    "Joint review and WBR/MBR restructure agreed in principle without a firm owner, format, or transition plan.",
+    "Marketing presented output metrics enthusiastically; Raghu redirected to business lift measurement - same pattern as retail review.",
+    "Several large-partner and CAM items discussed at length and parked without named owners."
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "personas": [
+    {
+      "id": "unknown_a",
+      "probable_name": "Unknown A",
+      "role": "Placement coach / session facilitator",
+      "focus_areas": ["resume structure", "recruiter-lens framing", "bullet writing", "live resume critique"],
+      "inference_reason": "Speaks throughout in an instructional voice, sets the agenda, shares the screen, and frames recruiter expectations. Owns delivery of the session."
+    },
+    {
+      "id": "unknown_b",
+      "probable_name": "Unknown B (placecom members)",
+      "role": "Placement committee student volunteers",
+      "focus_areas": ["providing example resumes", "supporting session logistics"],
+      "inference_reason": "Speaker explicitly says placecom members have agreed to let their resumes be used as examples in the group critique segment."
+    },
+    {
+      "id": "unknown_c",
+      "probable_name": "Unknown C (student attendees)",
+      "role": "Job-seeking students attending for CPP credit and placement prep",
+      "focus_areas": ["applying to consulting / FMCG / HR / finance roles", "resume rewrites", "shortlisting"],
+      "inference_reason": "Addressed in second person throughout. One student is referenced as having posted a question in chat about defining a perfect role."
+    }
+  ],
+  "key_points": [
+    "Session logistics: camera off, take extensive notes, ask questions via chat only.",
+    "CPP attendance is mandatory but does not guarantee shortlisting; students must actually rework resumes.",
+    "Session structure: objective, sections and frameworks, examples, live placecom resume critique.",
+    "Resume principles are pitched as sector-agnostic across consulting, FMCG, HR, finance.",
+    "Core thesis: every resume must tell a story of fit for the role.",
+    "Students should be emotionally detached from past projects when writing bullets.",
+    "Every bullet must be legible to the recruiter, not just descriptive of the activity.",
+    "Dashboard example used to contrast weak versus strong bullet writing.",
+    "Placecom members will have their resumes used as live examples in a group walkthrough.",
+    "Student question raised in chat about how to define a perfect role for a human, deferred to end of session."
+  ],
+  "decisions": [],
+  "action_items": [
+    {
+      "owner": "Student attendees",
+      "task": "Rework resumes using storytelling and recruiter-lens framing",
+      "due_date": "No date mentioned",
+      "related_topic": "Placement prep"
+    },
+    {
+      "owner": "Student attendees",
+      "task": "Submit questions via chat during the session",
+      "due_date": "Same session",
+      "related_topic": "Session logistics"
+    },
+    {
+      "owner": "Placecom members",
+      "task": "Have resumes ready for live walkthrough",
+      "due_date": "Same session",
+      "related_topic": "Resume examples"
+    },
+    {
+      "owner": "Unknown A (facilitator)",
+      "task": "Share on-screen notes doc in lieu of a deck",
+      "due_date": "Same session",
+      "related_topic": "Session delivery"
+    }
+  ],
+  "open_questions": [
+    {
+      "question": "How do you define a perfect role as a human?",
+      "raised_by": "Student attendee in chat",
+      "expected_owner": "Unknown A (facilitator), to address by end of session"
+    },
+    {
+      "question": "Which specific resume bullets pass the recruiter lens test?",
+      "raised_by": "Implicit across attendees",
+      "expected_owner": "Unknown A, via the live placecom walkthrough"
+    }
+  ],
+  "risks": [
+    "Students treat CPP attendance as sufficient and skip the resume rework.",
+    "Early tech issues compress the live walkthrough segment.",
+    "Resistance to editing emotionally valued bullets reduces uptake of the framework.",
+    "Public critique of real placecom resumes may land personally rather than instructionally.",
+    "Sector-agnostic framing may under-serve specialised roles like quant finance or technical PM.",
+    "Without a deck or distributed notes, post-session reference material will be thin."
+  ]
+}

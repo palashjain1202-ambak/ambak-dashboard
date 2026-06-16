@@ -1,0 +1,280 @@
+{
+  "personas": [
+    {
+      "id": "raghu",
+      "probable_name": "Raghuveer Malik",
+      "role": "Founder & CEO",
+      "organisation": "Ambak",
+      "focus_areas": ["loss reason analysis", "funnel scale", "marketing budget"],
+      "inference_reason": "Drives cohort analysis push, marketing budget decisions, BRE logic"
+    },
+    {
+      "id": "rashi",
+      "probable_name": "Rashi Garg",
+      "role": "Co-founder / COO",
+      "organisation": "Ambak",
+      "focus_areas": ["login-to-sanction funnel", "customer pending analysis"],
+      "inference_reason": "Presents login-to-sanction breakdown and Khyati BR update"
+    },
+    {
+      "id": "khyati",
+      "probable_name": "Khyati",
+      "role": "Ops / Analytics Lead",
+      "organisation": "Ambak",
+      "focus_areas": ["BR rules", "bank shortlisting", "loss reason audit"],
+      "inference_reason": "Presented BR rule engine updates and bank shortlisting logic"
+    },
+    {
+      "id": "ankit",
+      "probable_name": "Ankit",
+      "role": "E2E / Ops Lead",
+      "organisation": "Ambak",
+      "focus_areas": ["sanction conversion", "cohort recovery"],
+      "inference_reason": "Asked to lead cohort analysis for loss recovery"
+    },
+    {
+      "id": "mayank",
+      "probable_name": "Mayank",
+      "role": "Operations / Product",
+      "organisation": "Ambak",
+      "focus_areas": ["dedicated hours for loss reason analysis", "SME coordination"],
+      "inference_reason": "Assigned to lead weekly loss reason deep-dive sessions"
+    },
+    {
+      "id": "pankaj",
+      "probable_name": "Pankaj",
+      "role": "CTO / Product Lead",
+      "organisation": "Ambak",
+      "focus_areas": ["CRIF integration", "BRE", "Sangam access control"],
+      "inference_reason": "Owns tech for credit bureau, BRE, Sangam data"
+    },
+    {
+      "id": "rameshwar",
+      "probable_name": "Rameshwar",
+      "role": "Product / Tech Head",
+      "organisation": "Ambak",
+      "focus_areas": ["marketing", "SEO", "Sangam", "influencer"],
+      "inference_reason": "Presents marketing channel performance and SEO updates"
+    },
+    {
+      "id": "anu",
+      "probable_name": "Anu",
+      "role": "Data / Analytics",
+      "organisation": "Ambak",
+      "focus_areas": ["D2C dashboard", "GA/GTM tracking"],
+      "inference_reason": "Built D2C dashboard with GA+GTM+DB integration"
+    },
+    {
+      "id": "saurabh",
+      "probable_name": "Saurabh",
+      "role": "Marketing",
+      "organisation": "Ambak",
+      "focus_areas": ["Google ads", "Meta", "influencer strategy"],
+      "inference_reason": "Executing marketing plan; in plan for influencer collab"
+    },
+    {
+      "id": "karina",
+      "probable_name": "Karina",
+      "role": "Content / Design",
+      "organisation": "Ambak",
+      "focus_areas": ["homepage redesign", "messaging"],
+      "inference_reason": "Finalized homepage content and messaging direction"
+    }
+  ],
+  "key_points": [
+    "Loss reason audit: 40 cases reviewed in 'customer not interested post offer' — no single trend found; market conditions varied",
+    "Sub-status reason for 'customer not interested' going live today to improve loss reason granularity",
+    "Credit bureau check (CRIF ~Rs 80/query) proposed for lost leads to understand how many went elsewhere — Raghu approved one-time scrape; system feature to follow",
+    "Login-to-sanction: May at 17% — 32% pending on customer, 17% pending on banker; rejection and loss not rising",
+    "Wrong bank selection 5-7% of cases addressed by new SME check before offer send; data collection this month to refine BRE",
+    "Bank shortlisting logic in BRE: June-end target; reduces all-bank list to top 3-5 filtered by relationship and profile",
+    "Google: 7L spend in May, CPL 375, lead-to-login 2%, sanction 48%; 25% impression share — 4x scale possible",
+    "If 150 logins this month at 40% sanction, eligible to scale Google budget from 7L to 10-14L",
+    "Meta: 1.3L spent; Beti campaign CPL 130, better ATS and sanction than generic; lead-to-login better but sanction lower overall",
+    "Alliances: Willcut consistent at 20 logins/month; Pocket/Sure in progress; API exposure for doc collection underway with Willcut",
+    "SEO: LAB bank pages not indexed yet — last week submitted; city comparison and project pages gaining impressions",
+    "D2C dashboard built by Anu: unified GA+DB tracking; both product and business to use same numbers",
+    "Homepage redesign finalized: terracotta colors, people images, WhatsApp/call buttons prominent, partner section added, CIBIL linked",
+    "Sangam data access issue: Raghu could see all team data on a user's login — urgent access control audit required",
+    "Disbursements need fresh vs tranches split in all reporting — currently double-counting cases"
+  ],
+  "decisions": [
+    "One-time CRIF credit bureau scrape approved for lost lead cohort (~Rs 80/query, 2000-3000 customers)",
+    "Sub-status reason for 'customer not interested' going live today",
+    "Google budget to increase from 7L to 10-14L if June hits 150 logins at 40% sanction",
+    "Homepage redesign to go live this sprint",
+    "D2C dashboard to be validated by Ankit and Khyati before reporting freeze",
+    "Disbursement reports to segregate fresh loans vs tranches going forward",
+    "Sangam access controls to be audited and restricted by role/team"
+  ],
+  "action_items": [
+    {
+      "owner": "Pankaj / Product",
+      "task": "Execute one-time CRIF credit bureau scrape for lost lead cohort (~2000-3000 leads, Rs 80/query) to understand how many went elsewhere; build system feature for ongoing opt-in bureau check",
+      "due_date": "2026-06-20",
+      "related_topic": "Loss reason intelligence",
+      "source_meeting": "May-June Lending Funnel Review: Loss Reasons, BR Rules, and Marketing Scale-Up",
+      "source_meeting_date": "2026-06-12",
+      "priority": "HIGH",
+      "verbal_completion": false,
+      "verbal_completion_note": "",
+      "deadline_change": null
+    },
+    {
+      "owner": "Mayank / Ankit / Rashi / Khyati",
+      "task": "Dedicate structured hours each Saturday to cohort-level loss reason analysis; identify 2-3 recoverable cohorts and attack sequentially over next 3 months",
+      "due_date": "",
+      "related_topic": "Funnel recovery cohorts",
+      "source_meeting": "May-June Lending Funnel Review: Loss Reasons, BR Rules, and Marketing Scale-Up",
+      "source_meeting_date": "2026-06-12",
+      "priority": "HIGH",
+      "verbal_completion": false,
+      "verbal_completion_note": "",
+      "deadline_change": null
+    },
+    {
+      "owner": "Mayank / Product",
+      "task": "Close bank shortlisting logic with Ankit this week; finalize 2-3 BRE rule patterns and code into system by June end",
+      "due_date": "2026-06-30",
+      "related_topic": "BR engine improvement",
+      "source_meeting": "May-June Lending Funnel Review: Loss Reasons, BR Rules, and Marketing Scale-Up",
+      "source_meeting_date": "2026-06-12",
+      "priority": "HIGH",
+      "verbal_completion": false,
+      "verbal_completion_note": "",
+      "deadline_change": null
+    },
+    {
+      "owner": "Ankit / Rashi / Mayank",
+      "task": "Call audit on 'already logged elsewhere' cases — call customers to understand why they chose a competitor; use findings to improve pitch and TAT",
+      "due_date": "2026-06-20",
+      "related_topic": "Competitive loss analysis",
+      "source_meeting": "May-June Lending Funnel Review: Loss Reasons, BR Rules, and Marketing Scale-Up",
+      "source_meeting_date": "2026-06-12",
+      "priority": "HIGH",
+      "verbal_completion": false,
+      "verbal_completion_note": "",
+      "deadline_change": null
+    },
+    {
+      "owner": "Product / Ops",
+      "task": "Map KYC, income, and property documents available online vs automated; implement auto-fetch for all automatable docs in E2E journey",
+      "due_date": "2026-06-30",
+      "related_topic": "E2E doc collection",
+      "source_meeting": "May-June Lending Funnel Review: Loss Reasons, BR Rules, and Marketing Scale-Up",
+      "source_meeting_date": "2026-06-12",
+      "priority": "HIGH",
+      "verbal_completion": false,
+      "verbal_completion_note": "",
+      "deadline_change": null
+    },
+    {
+      "owner": "Pankaj / Product",
+      "task": "Segregate disbursements into fresh loans vs tranches in all funnel reports — currently double-counting distorts conversion rates",
+      "due_date": "2026-06-20",
+      "related_topic": "Funnel reporting accuracy",
+      "source_meeting": "May-June Lending Funnel Review: Loss Reasons, BR Rules, and Marketing Scale-Up",
+      "source_meeting_date": "2026-06-12",
+      "priority": "HIGH",
+      "verbal_completion": false,
+      "verbal_completion_note": "",
+      "deadline_change": null
+    },
+    {
+      "owner": "Rameshwar / Pankaj",
+      "task": "Audit Sangam data access controls — restrict data visibility by team/role; no cross-team data leakage; prepare for data privacy compliance",
+      "due_date": "2026-06-20",
+      "related_topic": "Data privacy / Sangam access",
+      "source_meeting": "May-June Lending Funnel Review: Loss Reasons, BR Rules, and Marketing Scale-Up",
+      "source_meeting_date": "2026-06-12",
+      "priority": "HIGH",
+      "verbal_completion": false,
+      "verbal_completion_note": "",
+      "deadline_change": null
+    },
+    {
+      "owner": "Anu / Product",
+      "task": "Get D2C dashboard validated by Ankit and Khyati — ensure business and product are aligned on same numbers before using in WBRs/MBRs",
+      "due_date": "2026-06-20",
+      "related_topic": "D2C dashboard",
+      "source_meeting": "May-June Lending Funnel Review: Loss Reasons, BR Rules, and Marketing Scale-Up",
+      "source_meeting_date": "2026-06-12",
+      "priority": "HIGH",
+      "verbal_completion": false,
+      "verbal_completion_note": "",
+      "deadline_change": null
+    },
+    {
+      "owner": "Rameshwar / Saurabh",
+      "task": "Reach out to Ankur Warikoo for influencer marketing collaboration on home loan content",
+      "due_date": "",
+      "related_topic": "Influencer marketing",
+      "source_meeting": "May-June Lending Funnel Review: Loss Reasons, BR Rules, and Marketing Scale-Up",
+      "source_meeting_date": "2026-06-12",
+      "priority": "LOW",
+      "verbal_completion": false,
+      "verbal_completion_note": "",
+      "deadline_change": null
+    },
+    {
+      "owner": "Product / SEO",
+      "task": "Expedite LAB bank page indexing via XML sitemap submission in Google Search Console; complete within this week",
+      "due_date": "2026-06-19",
+      "related_topic": "SEO indexing",
+      "source_meeting": "May-June Lending Funnel Review: Loss Reasons, BR Rules, and Marketing Scale-Up",
+      "source_meeting_date": "2026-06-12",
+      "priority": "LOW",
+      "verbal_completion": false,
+      "verbal_completion_note": "",
+      "deadline_change": null
+    }
+  ],
+  "open_questions": [
+    {
+      "question": "Can the sanction rate improve from 40% to 45-48% with better bank shortlisting — what's the model?",
+      "raised_by": "Raghu",
+      "expected_owner": "Khyati / Mayank"
+    },
+    {
+      "question": "If Google can 4x and conversion holds, what is the true ceiling of this channel?",
+      "raised_by": "Raghu",
+      "expected_owner": "Saurabh / Rashi"
+    },
+    {
+      "question": "Is 'already logged elsewhere' a TAT problem or a pitch problem? Do customers get better terms elsewhere?",
+      "raised_by": "Raghu",
+      "expected_owner": "Ankit / Rashi"
+    },
+    {
+      "question": "Which cohort of 'lost after offer' cases is most recoverable and should be attacked first?",
+      "raised_by": "Raghu",
+      "expected_owner": "Mayank / Ankit"
+    }
+  ],
+  "risks": [
+    "Login-to-sanction only 17% completed in May — 32% customer-pending creates large dropout risk",
+    "Bank shortlisting not in BRE yet — agents defaulting to favorites and human bias, not data",
+    "Google at only 25% impression share — significant scale possible but needs sanction rate to hold",
+    "Sangam data leakage: cross-team visibility on customer data is a privacy and compliance risk",
+    "Disbursement double-counting via tranches inflating conversion metrics"
+  ],
+  "meeting_dynamics": [
+    "Raghu steered toward systemic fixes — pushed cohort approach strongly, not individual case resolution",
+    "Khyati gave clear BR engine update — Raghu pushed for faster release cadence (weekly not monthly)",
+    "Loss reason audit showed intellectual honesty — 40 cases, no dominant trend, team didn't manufacture an answer",
+    "Marketing section was optimistic — 9CR potential from Google if metrics hold; Raghu approved scale but wanted process right first",
+    "Sangam access issue raised by Raghu directly from live experience — team acknowledged it as known but unresolved"
+  ],
+  "participation": [
+    { "name": "Raghu", "questions_raised": 25 },
+    { "name": "Rashi", "questions_raised": 10 },
+    { "name": "Khyati", "questions_raised": 8 },
+    { "name": "Pankaj", "questions_raised": 6 },
+    { "name": "Rameshwar", "questions_raised": 6 },
+    { "name": "Ankit", "questions_raised": 5 },
+    { "name": "Mayank", "questions_raised": 4 },
+    { "name": "Saurabh", "questions_raised": 3 },
+    { "name": "Anu", "questions_raised": 2 },
+    { "name": "Karina", "questions_raised": 2 }
+  ]
+}

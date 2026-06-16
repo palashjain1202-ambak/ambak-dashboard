@@ -1,0 +1,477 @@
+{
+  "personas": [
+    {
+      "id": "raghuveer",
+      "probable_name": "Raghuveer",
+      "role": "Founder and CEO",
+      "organisation": "Ambak",
+      "focus_areas": ["strategy", "investor narrative", "disbursement unit economics", "cross-team accountability", "product quality"],
+      "inference_reason": "Addressed as 'Ragu/Raghu' throughout. Makes final calls on all strategic questions, directly references conversations with investors as personal commitments. Drives the entire meeting with pointed data challenges."
+    },
+    {
+      "id": "pranav",
+      "probable_name": "Pranav",
+      "role": "Co-founder / Chief of Staff",
+      "organisation": "Ambak",
+      "focus_areas": ["follow-up tracking", "micro-market data ownership", "CAM report design", "meeting management"],
+      "inference_reason": "Addressed as 'Pranav' and assigned ownership of cross-cutting follow-up items. Matches CoS profile - translating between functions, owning agenda tracking, assigned design of client report format."
+    },
+    {
+      "id": "rashi",
+      "probable_name": "Rashi",
+      "role": "Co-founder (Operations and Distribution)",
+      "organisation": "Ambak",
+      "focus_areas": ["E2E ops", "investor reporting", "insurance payout process", "Pune resolution", "manpower planning"],
+      "inference_reason": "Addressed as 'Rashi' and placed alongside Ankit and Ishant on ops decisions. Owns investor narrative alignment and insurance payout structuring. Matches Rashi Garg's known focus areas."
+    },
+    {
+      "id": "ankit",
+      "probable_name": "Ankit",
+      "role": "E2E Operations Head",
+      "organisation": "Ambak",
+      "focus_areas": ["login-to-sanction-to-disbursal pipeline", "FBM management", "partial login bucket", "ITC task creation", "city-wise disbursal"],
+      "inference_reason": "Presents E2E disbursal data city-wise, manages FBMs, owns the ITC task system rollout, and is the primary counterpart to Raghuveer's operational challenges throughout the meeting."
+    },
+    {
+      "id": "ishant",
+      "probable_name": "Ishant",
+      "role": "National Sales Lead",
+      "organisation": "Ambak",
+      "focus_areas": ["QL targets", "pod owner management", "RM ramp-up", "Delhi activation"],
+      "inference_reason": "Presents QL numbers and manages pod owners (Devesh, Abdullah, Avinash, Vishal). Coordinates with RMs on onboarding and activation. Acts as the senior sales leader across cities."
+    },
+    {
+      "id": "rishabh",
+      "probable_name": "Rishabh",
+      "role": "Delhi Sales Lead",
+      "organisation": "Ambak",
+      "focus_areas": ["Delhi NCR QL performance", "partner activation", "manpower planning"],
+      "inference_reason": "Consistently grouped with Ishant on Delhi decisions and manpower planning. Asked directly about Delhi NCR planning issues alongside Ishant."
+    },
+    {
+      "id": "vikas",
+      "probable_name": "Vikas",
+      "role": "E2E and Institutional Disbursement Lead",
+      "organisation": "Ambak",
+      "focus_areas": ["E2E vs high margin case classification", "disbursement pipeline", "net retention", "lender coordination"],
+      "inference_reason": "Presents E2E disbursement numbers including the Rs 958 CR aggregation number and Rs 62 CR E2E breakdown. Owns lender-side retention analysis and investor-facing E2E narrative."
+    },
+    {
+      "id": "vijay",
+      "probable_name": "Vijay",
+      "role": "Insurance and Institutional Team Lead",
+      "organisation": "Ambak",
+      "focus_areas": ["insurance issuance", "LMTD disbursement", "JFM payout correction", "institutional pipeline"],
+      "inference_reason": "Presents insurance issuance numbers, LMTD city-wise figures, and corrective actions on JFM deal payout issues. Cross-functional between insurance and institutional disbursement."
+    },
+    {
+      "id": "devesh",
+      "probable_name": "Devesh",
+      "role": "Pod Owner (Bangalore)",
+      "organisation": "Ambak",
+      "focus_areas": ["partner wallet share", "CAM account development", "client reporting"],
+      "inference_reason": "Mentioned as one of Ishant's pod owners, based in Bangalore. Owns the wallet share strategy and is working on CAM client system with Pankaj and Rameshwar support."
+    },
+    {
+      "id": "abdullah",
+      "probable_name": "Abdullah",
+      "role": "Pod Owner (Lucknow / Delhi)",
+      "organisation": "Ambak",
+      "focus_areas": ["partner wallet share", "CAM SLAs", "Lucknow disbursement"],
+      "inference_reason": "Presents his QL numbers (82 count, 84 CR amount), focuses on 100% wallet share of top partners, and owns CAM account coordination. Lucknow disbursal confirmed at Rs 4.32 CR."
+    },
+    {
+      "id": "avinash",
+      "probable_name": "Avinash",
+      "role": "RM / Pod Owner (Delhi NCR - Gurgaon / Noida)",
+      "organisation": "Ambak",
+      "focus_areas": ["Delhi NCR QL volume", "Noida FBM coordination gap", "partner activation"],
+      "inference_reason": "Presents Delhi NCR QL numbers (target 94, achieved 82), owns the Noida coverage gap, and discusses coordination issues with Ankit's FBMs. Most of his open pipeline is in login stage."
+    },
+    {
+      "id": "pooja",
+      "probable_name": "Pooja",
+      "role": "Training and People Head",
+      "organisation": "Ambak",
+      "focus_areas": ["sales training", "onsite resource SLA", "hiring", "collateral creation"],
+      "inference_reason": "Directly addressed about the training piece on the CAM call. Asked to back up onsite resource SLA commitments and coordinate training notes. Described as a good sales person who can help train."
+    },
+    {
+      "id": "pankaj",
+      "probable_name": "Pankaj",
+      "role": "Lending Operations",
+      "organisation": "Ambak",
+      "focus_areas": ["ops support for CAM accounts", "banker coordination for Mahada"],
+      "inference_reason": "Mentioned as ops-side support for Abdullah's CAM structure. Coordinates banker outreach for Mahada alongside Aman."
+    },
+    {
+      "id": "arpit",
+      "probable_name": "Arpit",
+      "role": "Training Team Lead",
+      "organisation": "Ambak",
+      "focus_areas": ["call calibration", "refresher sessions", "training calendar"],
+      "inference_reason": "Team credited for QA score improvement (48 to 57). Runs training sessions and calibration for FBMs and SMEs. Needs alignment with sales team on structured feedback format."
+    },
+    {
+      "id": "aman",
+      "probable_name": "Aman",
+      "role": "Banker Relationships Lead (Special Projects)",
+      "organisation": "Ambak",
+      "focus_areas": ["Mahada banker scheme negotiation", "DDA alignment"],
+      "inference_reason": "Named as the person approaching Easy IFL, Vasu, IIC, and IIC for Mahada special schemes. Has already sent project details and spoken to bankers as of last Friday."
+    },
+    {
+      "id": "devjyoti",
+      "probable_name": "Devjyoti",
+      "role": "E2E Ops (Bangalore)",
+      "organisation": "Ambak",
+      "focus_areas": ["Bangalore disbursement", "banker and sales team coordination"],
+      "inference_reason": "Asked directly by Raghuveer about product knowledge and banker relationships in Bangalore. Completed a full login-to-disbursal cycle in one week last month as cited example."
+    },
+    {
+      "id": "rameshwar",
+      "probable_name": "Rameshwar",
+      "role": "Co-founder (Credit / Risk / Lending Partnerships)",
+      "organisation": "Ambak",
+      "focus_areas": ["lender relationships", "CAM value proposition", "Mahada banker outreach"],
+      "inference_reason": "Addressed as 'Rameshwar sir'. Asked to help Pankaj explain CAM value proposition to Abdullah. Matches known co-founder profile."
+    }
+  ],
+  "key_points": [
+    "Meta-to-Google budget shift reduced lead volume but improved ticket size and customer intent (pull vs push). Google CPA is Rs 400 vs Meta Rs 100.",
+    "Cost per login is Rs 8,500 overall, trending down to Rs 6,500 in April week 3/4 as lead-to-login conversion improved.",
+    "M0 sanction rate is critically low at 13%, historically correlated with total login-to-sanction not exceeding 28-30%.",
+    "30% of the login bucket remains partial or semi-complete at any point, taking 15-20 days to convert and drifting to M2/M3.",
+    "QL achievement: 621 vs 727 target (85% count), amount target achieved. Per-RM rate ~9.5; 3-6 month cohort performing best.",
+    "Delhi NCR QL gap: 64 vs 136 target. Root causes - no FBM for Noida, team mostly 0-3 months, low onboarding-to-activation.",
+    "Pune has missed targets for 6+ consecutive months. Rs 13.5 CR visibility on May 25 ended at Rs 6.2 CR disbursal.",
+    "45 QLs remain unassigned; only Rs 88 lakh disbursed from Delhi unassigned bucket, Rs 4.32 CR from Lucknow.",
+    "May E2E disbursement Rs 62 CR: Rs 25 CR high margin, Rs ~37 CR pure E2E. Three-column product tray to be built by June second week.",
+    "Mahada project leads expected by June 15; Aman approaching bankers for special schemes, clarity by Wednesday.",
+    "CAM structure discussion: Abdullah needs SLA agreements, client report format, NPS mechanism, product-tech value prop.",
+    "Insurance: Rs 14 lakh issued, Rs 16 lakh target achieved. June target Rs 60 lakh. Partner payout process needs streamlining.",
+    "June aggregate targets: ~750 QLs, ~370 logins, Rs 250 CR E2E disbursal, Rs 1,165 CR aggregation.",
+    "Weekly cadence on partial login tracking and pipeline agreed; monthly reviews cannot be the only check-in.",
+    "Raghuveer pushed the entire org to crunch timelines - weeks into days, days into hours - and stop reactive month-end scrambles."
+  ],
+  "decisions": [
+    "Weekly tracking of partial login percentage. Rashi and Ankit to run a weekly cadence call on the E2E funnel.",
+    "Delhi three-point plan: FBM-RM coordination fix for Noida (Ankit+Avinash), hiring review with Pooja, 3-day partner sprint. Review meeting June 11.",
+    "QL incentives for next quarter to be gated on QL-to-login AOP target achievement per city.",
+    "Product to build three-column disbursal tray (self / high margin / pure E2E) by June second week.",
+    "Pranav to own research on city-wise builder/project/unit data from real estate analyst firms.",
+    "Insurance sales collateral to go out today. E2E insurance kickoff call this week.",
+    "Cross-team Pune resolution session: Rashi to convene Rishab, Ankit, Ishant, Vikas, Shalesh."
+  ],
+  "action_items": [
+    {
+      "owner": "Ankit",
+      "task": "Review 25 planned sanctions from last week and identify root cause of only 4 completions",
+      "due_date": "",
+      "related_topic": "Sanction conversion accountability",
+      "source_meeting": "May Funnel Review: Google Shift, Login-to-Disbursal Gaps, and City-Level Execution",
+      "source_meeting_date": "2026-06-01",
+      "priority": "HIGH",
+      "verbal_completion": false,
+      "verbal_completion_note": "",
+      "deadline_change": null
+    },
+    {
+      "owner": "Ankit",
+      "task": "Sit with Avinash to solve FBM-RM coordination gap for Noida cases",
+      "due_date": "2026-06-01",
+      "related_topic": "Delhi NCR execution",
+      "source_meeting": "May Funnel Review: Google Shift, Login-to-Disbursal Gaps, and City-Level Execution",
+      "source_meeting_date": "2026-06-01",
+      "priority": "HIGH",
+      "verbal_completion": false,
+      "verbal_completion_note": "",
+      "deadline_change": null
+    },
+    {
+      "owner": "Ankit",
+      "task": "Circle off all confirmed May disbursement numbers by end of today",
+      "due_date": "2026-06-01",
+      "related_topic": "May disbursement close",
+      "source_meeting": "May Funnel Review: Google Shift, Login-to-Disbursal Gaps, and City-Level Execution",
+      "source_meeting_date": "2026-06-01",
+      "priority": "HIGH",
+      "verbal_completion": false,
+      "verbal_completion_note": "",
+      "deadline_change": null
+    },
+    {
+      "owner": "Ishant",
+      "task": "Set up June 11 meeting with Pranav, Pooja, Ankit, and Rashi for Delhi three-point plan review",
+      "due_date": "2026-06-02",
+      "related_topic": "Delhi NCR follow-up",
+      "source_meeting": "May Funnel Review: Google Shift, Login-to-Disbursal Gaps, and City-Level Execution",
+      "source_meeting_date": "2026-06-01",
+      "priority": "HIGH",
+      "verbal_completion": false,
+      "verbal_completion_note": "",
+      "deadline_change": null
+    },
+    {
+      "owner": "Rashi",
+      "task": "Convene cross-team Pune accountability session (Rishab, Ankit, Ishant, Vikas, Shalesh)",
+      "due_date": "",
+      "related_topic": "Pune resolution",
+      "source_meeting": "May Funnel Review: Google Shift, Login-to-Disbursal Gaps, and City-Level Execution",
+      "source_meeting_date": "2026-06-01",
+      "priority": "HIGH",
+      "verbal_completion": false,
+      "verbal_completion_note": "",
+      "deadline_change": null
+    },
+    {
+      "owner": "Aman",
+      "task": "Get banker scheme clarity from Easy IFL, Vasu, and IIC for Mahada leads",
+      "due_date": "2026-06-03",
+      "related_topic": "Mahada project",
+      "source_meeting": "May Funnel Review: Google Shift, Login-to-Disbursal Gaps, and City-Level Execution",
+      "source_meeting_date": "2026-06-01",
+      "priority": "HIGH",
+      "verbal_completion": false,
+      "verbal_completion_note": "",
+      "deadline_change": null
+    },
+    {
+      "owner": "Devesh",
+      "task": "Close pending Rs 1.25 CR Mahada disbursal case by Saturday",
+      "due_date": "2026-06-07",
+      "related_topic": "Mahada pipeline",
+      "source_meeting": "May Funnel Review: Google Shift, Login-to-Disbursal Gaps, and City-Level Execution",
+      "source_meeting_date": "2026-06-01",
+      "priority": "HIGH",
+      "verbal_completion": false,
+      "verbal_completion_note": "",
+      "deadline_change": null
+    },
+    {
+      "owner": "Vikas",
+      "task": "Confirm final May E2E disbursement number (Rs 68 CR target) and resolve Naveen's 6 CR confirmation today",
+      "due_date": "2026-06-01",
+      "related_topic": "E2E disbursement close",
+      "source_meeting": "May Funnel Review: Google Shift, Login-to-Disbursal Gaps, and City-Level Execution",
+      "source_meeting_date": "2026-06-01",
+      "priority": "HIGH",
+      "verbal_completion": false,
+      "verbal_completion_note": "",
+      "deadline_change": null
+    },
+    {
+      "owner": "Tarun and Vijay",
+      "task": "Send insurance sales collateral to all RMs and partners",
+      "due_date": "2026-06-01",
+      "related_topic": "Insurance scaling",
+      "source_meeting": "May Funnel Review: Google Shift, Login-to-Disbursal Gaps, and City-Level Execution",
+      "source_meeting_date": "2026-06-01",
+      "priority": "HIGH",
+      "verbal_completion": false,
+      "verbal_completion_note": "",
+      "deadline_change": null
+    },
+    {
+      "owner": "Abdullah",
+      "task": "Prepare answers to four CAM structure questions by end of week: (1) SLA for onsite/offsite resources with Pooja/Arpit/Sanjog sign-off, (2) live client report sample for Pranav to design, (3) NPS mechanism, (4) product-tech value prop for CAM",
+      "due_date": "2026-06-05",
+      "related_topic": "CAM structure",
+      "source_meeting": "May Funnel Review: Google Shift, Login-to-Disbursal Gaps, and City-Level Execution",
+      "source_meeting_date": "2026-06-01",
+      "priority": "HIGH",
+      "verbal_completion": false,
+      "verbal_completion_note": "",
+      "deadline_change": null
+    },
+    {
+      "owner": "Pranav",
+      "task": "Own sourcing of city-wise builder/project/unit/delivery date data from real estate analyst firms or rating agencies",
+      "due_date": "",
+      "related_topic": "Micro-market targeting",
+      "source_meeting": "May Funnel Review: Google Shift, Login-to-Disbursal Gaps, and City-Level Execution",
+      "source_meeting_date": "2026-06-01",
+      "priority": "HIGH",
+      "verbal_completion": false,
+      "verbal_completion_note": "",
+      "deadline_change": null
+    },
+    {
+      "owner": "Vikas, Rashi, Ankit, Hitesh",
+      "task": "Set up insurance kickoff call for E2E channel this week",
+      "due_date": "2026-06-05",
+      "related_topic": "Insurance in E2E",
+      "source_meeting": "May Funnel Review: Google Shift, Login-to-Disbursal Gaps, and City-Level Execution",
+      "source_meeting_date": "2026-06-01",
+      "priority": "HIGH",
+      "verbal_completion": false,
+      "verbal_completion_note": "",
+      "deadline_change": null
+    },
+    {
+      "owner": "Vijay",
+      "task": "Coordinate with Rashi on insurance payout process streamlining (mirror lending payout discipline)",
+      "due_date": "2026-06-05",
+      "related_topic": "Insurance payout",
+      "source_meeting": "May Funnel Review: Google Shift, Login-to-Disbursal Gaps, and City-Level Execution",
+      "source_meeting_date": "2026-06-01",
+      "priority": "HIGH",
+      "verbal_completion": false,
+      "verbal_completion_note": "",
+      "deadline_change": null
+    },
+    {
+      "owner": "Ankit and Ishant",
+      "task": "Finalise June disbursement targets with M0/M1/M2 pipeline visibility and share with Rashi",
+      "due_date": "2026-06-01",
+      "related_topic": "June planning",
+      "source_meeting": "May Funnel Review: Google Shift, Login-to-Disbursal Gaps, and City-Level Execution",
+      "source_meeting_date": "2026-06-01",
+      "priority": "HIGH",
+      "verbal_completion": false,
+      "verbal_completion_note": "",
+      "deadline_change": null
+    },
+    {
+      "owner": "Arpit",
+      "task": "Increase refresher training session frequency for 3-month+ RMs in coordination with Ishant and Devesh",
+      "due_date": "",
+      "related_topic": "RM productivity",
+      "source_meeting": "May Funnel Review: Google Shift, Login-to-Disbursal Gaps, and City-Level Execution",
+      "source_meeting_date": "2026-06-01",
+      "priority": "LOW",
+      "verbal_completion": false,
+      "verbal_completion_note": "",
+      "deadline_change": null
+    },
+    {
+      "owner": "Ankit",
+      "task": "Create structured weekly call audit format with pod owners (5 calls/week each, structured feedback to sales team)",
+      "due_date": "2026-06-07",
+      "related_topic": "Call quality program",
+      "source_meeting": "May Funnel Review: Google Shift, Login-to-Disbursal Gaps, and City-Level Execution",
+      "source_meeting_date": "2026-06-01",
+      "priority": "LOW",
+      "verbal_completion": false,
+      "verbal_completion_note": "",
+      "deadline_change": null
+    },
+    {
+      "owner": "Ankit / Sunny",
+      "task": "Share training calendar with sales team and start weekly master class sessions across three verticals this week",
+      "due_date": "2026-06-07",
+      "related_topic": "Training cadence",
+      "source_meeting": "May Funnel Review: Google Shift, Login-to-Disbursal Gaps, and City-Level Execution",
+      "source_meeting_date": "2026-06-01",
+      "priority": "LOW",
+      "verbal_completion": false,
+      "verbal_completion_note": "",
+      "deadline_change": null
+    },
+    {
+      "owner": "Avinash and Ishant/Rishabh",
+      "task": "Conduct 3-day partner activation sprint for Delhi in first 10 days of June",
+      "due_date": "2026-06-10",
+      "related_topic": "Delhi activation",
+      "source_meeting": "May Funnel Review: Google Shift, Login-to-Disbursal Gaps, and City-Level Execution",
+      "source_meeting_date": "2026-06-01",
+      "priority": "LOW",
+      "verbal_completion": false,
+      "verbal_completion_note": "",
+      "deadline_change": null
+    },
+    {
+      "owner": "Prabhat",
+      "task": "Update unassigned QL tracking format to include all cities including Lucknow with conversion breakup",
+      "due_date": "2026-06-01",
+      "related_topic": "QL reporting clarity",
+      "source_meeting": "May Funnel Review: Google Shift, Login-to-Disbursal Gaps, and City-Level Execution",
+      "source_meeting_date": "2026-06-01",
+      "priority": "LOW",
+      "verbal_completion": false,
+      "verbal_completion_note": "",
+      "deadline_change": null
+    },
+    {
+      "owner": "Devesh / Pankaj / Rameshwar",
+      "task": "Continue building CAM account process and tech for the large client (2-3 month horizon)",
+      "due_date": "",
+      "related_topic": "CAM development",
+      "source_meeting": "May Funnel Review: Google Shift, Login-to-Disbursal Gaps, and City-Level Execution",
+      "source_meeting_date": "2026-06-01",
+      "priority": "LOW",
+      "verbal_completion": false,
+      "verbal_completion_note": "",
+      "deadline_change": null
+    }
+  ],
+  "open_questions": [
+    {
+      "question": "What is the exact composition and conversion rate of the 45 unassigned QLs by city and pipeline stage?",
+      "raised_by": "Raghuveer",
+      "expected_owner": "Ankit / Prabhat"
+    },
+    {
+      "question": "Why is onboarding-to-activation so low in Delhi despite 100+ partner onboardings in April/early May? What is missing in the pitch post-onboarding?",
+      "raised_by": "Raghuveer",
+      "expected_owner": "Ishant / Rishabh / Avinash"
+    },
+    {
+      "question": "What did Ankit's team do on the 7th, 14th, and 21st of May to prevent the month-end sanction shortfall?",
+      "raised_by": "Raghuveer",
+      "expected_owner": "Ankit"
+    },
+    {
+      "question": "Is the national call center pilot in Pune showing any early positive signals after 15 days? What data exists?",
+      "raised_by": "Raghuveer",
+      "expected_owner": "Vikas / Ankit"
+    },
+    {
+      "question": "What is the correct boundary definition between high margin and pure E2E cases for investor reporting?",
+      "raised_by": "Rashi",
+      "expected_owner": "Vikas / Rashi / Raghuveer"
+    },
+    {
+      "question": "What is DDA's updated lead format and who is the correct contact for alignment after the leadership change there?",
+      "raised_by": "Ankit",
+      "expected_owner": "Raghuveer / Ankit"
+    },
+    {
+      "question": "What is the June insurance pipeline from BM and partner leads (visibility expected end of week)?",
+      "raised_by": "Raghuveer",
+      "expected_owner": "Vijay / Tarun"
+    }
+  ],
+  "risks": [
+    "M0 sanction rate at 13% is structurally broken - historical data shows total sanction cannot exceed 30% at this M0 level",
+    "Pune has missed for 6+ consecutive months with no single named owner - risk of month 7 repeat in June",
+    "45 unassigned QLs with near-zero conversion are inflating QL headline numbers and masking true capacity gaps",
+    "Delhi QL count declined month-on-month (67 to 64) despite new hiring - team composition risk with 70% under 3 months tenure",
+    "June E2E disbursal target of Rs 250 CR is Rs 90 CR above May likely outcome - depends on Pune fix, Delhi recovery, and Mahada all landing simultaneously",
+    "E2E vs high margin classification unresolved in investor reporting until product tray is built (June second week)",
+    "Insurance payout process for partners is not streamlined - repeat churn risk for partners who contributed in Jan-Mar",
+    "LAP retention was problematic in April due to JFM payout mismanagement - corrective steps taken May 17; results not yet confirmed"
+  ],
+  "meeting_dynamics": [
+    "Raghuveer carried almost all analytical weight - reading charts, identifying correlations, drawing conclusions. Functional leads responded reactively rather than surfacing patterns proactively.",
+    "Pattern of starting corrective initiatives in the final week of the month is recurring and was explicitly called out - no structural fix was proposed by anyone.",
+    "Pune has had no single named owner for six months - Raghuveer asked directly and the answer was diffuse across multiple people.",
+    "Avinash and Abdullah asked to reconcile city-level discrepancies mid-meeting without data at hand - monthly reviews should not be the first time pod owners face these numbers.",
+    "Rashi had limited airtime relative to her role - ops perspective was largely filtered through Ankit.",
+    "Insurance discussion was shallow given the steep June target (Rs 60 lakh) and known payout process problems."
+  ],
+  "participation": [
+    {"name": "Raghuveer", "questions_raised": 22},
+    {"name": "Rashi", "questions_raised": 3},
+    {"name": "Ankit", "questions_raised": 2},
+    {"name": "Ishant", "questions_raised": 1},
+    {"name": "Vikas", "questions_raised": 1},
+    {"name": "Devjyoti", "questions_raised": 0},
+    {"name": "Avinash", "questions_raised": 0},
+    {"name": "Abdullah", "questions_raised": 0},
+    {"name": "Vijay", "questions_raised": 0},
+    {"name": "Devesh", "questions_raised": 0},
+    {"name": "Pooja", "questions_raised": 0},
+    {"name": "Pranav", "questions_raised": 0}
+  ]
+}

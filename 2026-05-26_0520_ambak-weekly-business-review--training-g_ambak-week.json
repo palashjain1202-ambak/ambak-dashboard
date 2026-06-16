@@ -1,0 +1,343 @@
+{
+  "personas": [
+    {
+      "id": "raghu",
+      "probable_name": "Raghu",
+      "role": "Founder and CEO",
+      "organisation": "Ambak",
+      "focus_areas": ["overall business accountability", "DSA-level intelligence", "city scaling", "compounding strategy", "investor narrative"],
+      "inference_reason": "Addressed directly by name throughout; drives all probing; sets the strategic direction; drops off for investor meeting at 11:43. Consistent with CEO roster entry."
+    },
+    {
+      "id": "rashi",
+      "probable_name": "Rashi",
+      "role": "Co-founder, Operations and Distribution",
+      "organisation": "Ambak",
+      "focus_areas": ["E2E pipeline reconciliation", "QL format ownership", "Mumbai/West ops", "lender consolidation", "extended-timeline problem"],
+      "inference_reason": "Referenced by name ('Rashi, if you want the ownership'); takes over chairing after Raghu drops; owns E2E visibility calls. Consistent with Co-founder Ops roster entry."
+    },
+    {
+      "id": "vikas",
+      "probable_name": "Vikas",
+      "role": "Retail and E2E Business Head",
+      "organisation": "Ambak",
+      "focus_areas": ["E2E monthly target", "city team gaps", "high-margin tracking", "scaling plan"],
+      "inference_reason": "Referenced as E2E team lead alongside Vijay; presents city-wise AOP and E2E mindset changes over the past month. Consistent with Retail Business Head from Retail Review."
+    },
+    {
+      "id": "vijay",
+      "probable_name": "Vijay",
+      "role": "BD and Data Lead",
+      "organisation": "Ambak",
+      "focus_areas": ["DRR and E2E pipeline presentation", "insurance data coordination", "lender consolidation tracking"],
+      "inference_reason": "Presents E2E numbers and DID throughout; handles insurance coordination with Tarun/Hitesh; asked to run alignment calls. Consistent with BD/Lender role from Retail Review."
+    },
+    {
+      "id": "ankit",
+      "probable_name": "Ankit",
+      "role": "Institutional and E2E Sales Lead",
+      "organisation": "Ambak",
+      "focus_areas": ["QL/login conversion", "Delhi and Mumbai disbursement pipeline", "DSA understanding", "MAHADA leads"],
+      "inference_reason": "Central figure for disbursement numbers; receives Raghu's direct performance critique; owns MAHADA ring-fence; reconciles pipeline with Vijay and Rashi post-call."
+    },
+    {
+      "id": "ishant",
+      "probable_name": "Ishant",
+      "role": "Institutional Business Lead",
+      "organisation": "Ambak",
+      "focus_areas": ["190 QL target this week", "680-700 MTD range", "800 QL ramp next month", "training integration"],
+      "inference_reason": "Named and directly addressed for QL targets; presents institutional numbers; drops off mid-call. Consistent with institutional team lead pattern."
+    },
+    {
+      "id": "rishab",
+      "probable_name": "Rishab",
+      "role": "E2E and QL Lead",
+      "organisation": "Ambak",
+      "focus_areas": ["unassigned leads", "QL pipeline", "institutional disbursement confidence"],
+      "inference_reason": "Named directly ('Rishab, this is what I was referring to in the morning'); handles unassigned lead stock; drops off mid-call."
+    },
+    {
+      "id": "aditya",
+      "probable_name": "Aditya",
+      "role": "Data and Analytics",
+      "organisation": "Ambak",
+      "focus_areas": ["screen sharing", "WBR format", "city-wise targets", "E2E splits"],
+      "inference_reason": "Called 'Adi' and asked to show screens, city-wise AOP, and pivot tables throughout the call."
+    },
+    {
+      "id": "prabhat",
+      "probable_name": "Prabhat",
+      "role": "Data Support",
+      "organisation": "Ambak",
+      "focus_areas": ["QL format updates", "sheet management"],
+      "inference_reason": "Named and asked to show specific sheets, make format changes, and update tracking views."
+    },
+    {
+      "id": "pooja",
+      "probable_name": "Pooja",
+      "role": "Training Lead",
+      "organisation": "Ambak",
+      "focus_areas": ["train-the-trainer program", "scheduling", "assessment reliability"],
+      "inference_reason": "Referenced by Raghu as the person whose intervention is needed on training; asked to double-click on three specific areas."
+    },
+    {
+      "id": "akash",
+      "probable_name": "Akash",
+      "role": "Pune City Lead",
+      "organisation": "Ambak",
+      "focus_areas": ["Pune QL marking", "document collection", "Pune-Delhi coordination"],
+      "inference_reason": "Named directly ('Akash, how is the support in Pune now?'); presents Pune's login improvement and coordination friction."
+    },
+    {
+      "id": "neerav",
+      "probable_name": "Neerav",
+      "role": "Ahmedabad City Head",
+      "organisation": "Ambak",
+      "focus_areas": ["Gujarat pipeline", "team building", "ABM hiring"],
+      "inference_reason": "Named directly and challenged by Raghu on Ahmedabad underperformance; commits to ABM finalization this week."
+    },
+    {
+      "id": "nagesh",
+      "probable_name": "Nagesh",
+      "role": "Bangalore Region Head",
+      "organisation": "Ambak",
+      "focus_areas": ["Bangalore disbursements", "team scaling", "hiring completion by month end"],
+      "inference_reason": "Named directly; presents 70 CR AOP target and hiring plan. Raghu referenced private conversation with Nagesh about scaling."
+    },
+    {
+      "id": "danish",
+      "probable_name": "Danish",
+      "role": "Gujarat City Head",
+      "organisation": "Ambak",
+      "focus_areas": ["Gujarat disbursement", "100+ CR target this month"],
+      "inference_reason": "Named by Vijay in city-wise MTD breakdown; asked directly and confirms 100+ CR target."
+    },
+    {
+      "id": "deepak",
+      "probable_name": "Deepak",
+      "role": "Delhi Institutional City Lead",
+      "organisation": "Ambak",
+      "focus_areas": ["Delhi 19.6 CR disbursement visibility"],
+      "inference_reason": "Named in disbursement confidence check; states Delhi number is 100% going to land."
+    },
+    {
+      "id": "puneet",
+      "probable_name": "Puneet",
+      "role": "Mumbai Institutional City Lead",
+      "organisation": "Ambak",
+      "focus_areas": ["Mumbai 40 CR institutional target", "31+ CR minimum commitment"],
+      "inference_reason": "Named directly in disbursement confidence section; commits to 31 CR minimum despite spill."
+    }
+  ],
+  "key_points": [
+    "Training scheduling stretches from 12 to 16+ days due to trainer unavailability; city-specific knowledge gaps persist in NCR-based trainers covering West markets.",
+    "Institutional QL MTD at 79% (404 leads), retail QL at 40%; Ishant targets 190 QLs this week to reach 680-700 MTD.",
+    "Logins running at 82-84 per week vs higher targets; Bangalore has 7-8 files ready but login blocked by customer consent and property doc pendency.",
+    "Pune-Delhi coordination friction on QL marking (refundable/non-refundable token); Ankit acknowledges room for improvement on both sides.",
+    "Delhi retail QL achievement 34%, visibility 6.3 CR against 21.9 CR target; Mumbai retail 10 CR visibility sourced by Delhi team.",
+    "Raghu challenged Ankit directly on DSA-level understanding: 3-4 DSA operators do 50 CR with less; Ambak pays above market but lacks empathetic frontline intelligence.",
+    "Delhi institutional: Deepak confident of 19.6 CR landing; Mumbai: Puneet confident of 31+ CR; institutional projection ~90-100 CR best case.",
+    "Ahmedabad fully red P&L in April; no ABM in place despite multiple review cycles; Neerav commits to ABM finalization this week.",
+    "Bangalore profitable on RM productivity but no scale; city head offer out, 2 ABM offers, 6 RM offers closing by month end per Nagesh.",
+    "Monthly growth targets May-August: 26%, 26%, 40%, 17%; October AOP NCR 1225 CR, Danish (Gujarat) 286 CR, Neerav (Ahmedabad) 85 CR.",
+    "Pan-India E2E MTD: 473 CR vs 324 CR same period last month; E2E target 76 CR; in-system achievement 22.82 CR as of call.",
+    "Vijay pipeline 55+ CR, Ankit tracking 16.4 CR; gap due to source vs fulfillment city attribution confusion; Rashi led case-by-case DID review post-call.",
+    "MAHADA 2600 leads expected first week of June (1.2 CR data); tracker, scripts, and banker training in place but no dedicated review cadence confirmed.",
+    "Insurance: Tarun/Hitesh not initially on call; data needed for Raghu's 2 PM investor meeting was unavailable; Vijay to collect update by afternoon.",
+    "Lender consolidation: ICICI 80%, HDFC 70% targets; currently 28% overall vs 55% month-end goal.",
+    "E2E cases tagged as self-fulfillment (~20 CR) need to be moved in-system today; Rashi confirmed daily DRR target tracking to be added to existing sheet."
+  ],
+  "decisions": [
+    "Rashi takes final ownership of the QL tracking format; Prabhat to implement central-allocated vs Lucknow vs unassigned vs self split view today.",
+    "Rashi to create baseline this week on extended-timeline problem (property finalization, registry delays) and convene wider stakeholder session next week.",
+    "Post-WBR alignment call at 11:30 between Rashi, Vijay, and Ankit to reconcile the 76 CR E2E pipeline case by case.",
+    "E2E DRR daily number to be tracked alongside self-fulfillment in Aditya's existing self-tracking sheet.",
+    "20 CR of E2E out-of-system or self-tagged cases to be moved in-system today."
+  ],
+  "action_items": [
+    {
+      "owner": "Prabhat",
+      "task": "Update QL tracking format to show central-allocated vs Lucknow vs unassigned vs self; implement today",
+      "due_date": "2026-05-26",
+      "related_topic": "QL tracking format",
+      "source_meeting": "Ambak WBR - Training, QL, E2E, City Scale",
+      "source_meeting_date": "2026-05-26",
+      "priority": "HIGH"
+    },
+    {
+      "owner": "Rashi",
+      "task": "Create baseline document on extended-timeline problem (property finalization, registry delays, customer WIP); consult Rishab, Khyati, Riddhi, Pankaj, Ankit, Puneet, Devjyoti this week; wider group session next week",
+      "due_date": "2026-05-31",
+      "related_topic": "Extended-timeline product and comms problem",
+      "source_meeting": "Ambak WBR - Training, QL, E2E, City Scale",
+      "source_meeting_date": "2026-05-26",
+      "priority": "HIGH"
+    },
+    {
+      "owner": "Vijay/Aditya",
+      "task": "Send last 12 weeks of QL data (simple weekly numbers) to Raghu",
+      "due_date": "2026-05-26",
+      "related_topic": "QL tracking",
+      "source_meeting": "Ambak WBR - Training, QL, E2E, City Scale",
+      "source_meeting_date": "2026-05-26",
+      "priority": "HIGH"
+    },
+    {
+      "owner": "Ankit",
+      "task": "Share timelines by tomorrow for hacky checklist and bank-wise case handling approach (what to offer first, what documents to send, when to escalate to banker, at what stage to stop on a customer)",
+      "due_date": "2026-05-27",
+      "related_topic": "DSA-level execution intelligence",
+      "source_meeting": "Ambak WBR - Training, QL, E2E, City Scale",
+      "source_meeting_date": "2026-05-26",
+      "priority": "HIGH"
+    },
+    {
+      "owner": "Vijay/Ankit",
+      "task": "Ring-fence MAHADA 2600 leads; ensure Aman and banker coordination in place with dedicated review cadence before first-week-June delivery",
+      "due_date": "2026-06-01",
+      "related_topic": "MAHADA leads",
+      "source_meeting": "Ambak WBR - Training, QL, E2E, City Scale",
+      "source_meeting_date": "2026-05-26",
+      "priority": "HIGH"
+    },
+    {
+      "owner": "Tarun/Hitesh (via Vijay)",
+      "task": "Send Raghu insurance waterfall update (issued, pipeline, login stage, lead stage, May confidence) by 2 PM today",
+      "due_date": "2026-05-26",
+      "related_topic": "Insurance tracking",
+      "source_meeting": "Ambak WBR - Training, QL, E2E, City Scale",
+      "source_meeting_date": "2026-05-26",
+      "priority": "HIGH"
+    },
+    {
+      "owner": "Rashi",
+      "task": "Share comfort level on 76 CR E2E number to Raghu by evening today",
+      "due_date": "2026-05-26",
+      "related_topic": "E2E pipeline confirmation",
+      "source_meeting": "Ambak WBR - Training, QL, E2E, City Scale",
+      "source_meeting_date": "2026-05-26",
+      "priority": "HIGH"
+    },
+    {
+      "owner": "Vijay/E2E team",
+      "task": "Move 20 CR of E2E cases (currently self-tagged or out-of-system) into system today",
+      "due_date": "2026-05-26",
+      "related_topic": "E2E in-system tracking",
+      "source_meeting": "Ambak WBR - Training, QL, E2E, City Scale",
+      "source_meeting_date": "2026-05-26",
+      "priority": "HIGH"
+    },
+    {
+      "owner": "Neerav",
+      "task": "Finalize ABM hire for Ahmedabad this week; two ABM offers going out in next 1-2 days",
+      "due_date": "2026-05-31",
+      "related_topic": "Ahmedabad team build",
+      "source_meeting": "Ambak WBR - Training, QL, E2E, City Scale",
+      "source_meeting_date": "2026-05-26",
+      "priority": "HIGH"
+    },
+    {
+      "owner": "Nagesh",
+      "task": "Close Bangalore hiring (city head, 2 ABMs, RMs) by month end",
+      "due_date": "2026-05-31",
+      "related_topic": "Bangalore team build",
+      "source_meeting": "Ambak WBR - Training, QL, E2E, City Scale",
+      "source_meeting_date": "2026-05-26",
+      "priority": "HIGH"
+    },
+    {
+      "owner": "Ankit/Rishab",
+      "task": "Ensure 7 Bangalore ready-to-log files are logged this week; resolve consent and property doc pendency",
+      "due_date": "2026-05-31",
+      "related_topic": "Bangalore logins",
+      "source_meeting": "Ambak WBR - Training, QL, E2E, City Scale",
+      "source_meeting_date": "2026-05-26",
+      "priority": "HIGH"
+    },
+    {
+      "owner": "Pooja",
+      "task": "Double-click this week on three training areas: (1) train-the-trainer content and city-specific nuances, (2) scheduling consistency fix, (3) assessment reliability",
+      "due_date": "2026-05-31",
+      "related_topic": "Training quality",
+      "source_meeting": "Ambak WBR - Training, QL, E2E, City Scale",
+      "source_meeting_date": "2026-05-26",
+      "priority": "HIGH"
+    },
+    {
+      "owner": "Ankit",
+      "task": "Visit DSA partners regularly and share weekly update on learnings (what they do differently, hacky solutions, bank-specific tricks that help close cases faster)",
+      "due_date": "",
+      "related_topic": "DSA-level understanding",
+      "source_meeting": "Ambak WBR - Training, QL, E2E, City Scale",
+      "source_meeting_date": "2026-05-26",
+      "priority": "LOW"
+    },
+    {
+      "owner": "Akash",
+      "task": "Post 2-3 lead IDs from last 3-4 days where Pune-Delhi coordination was weak to the messaging group; Rashi and Ankit to review",
+      "due_date": "2026-05-26",
+      "related_topic": "Pune-Delhi coordination",
+      "source_meeting": "Ambak WBR - Training, QL, E2E, City Scale",
+      "source_meeting_date": "2026-05-26",
+      "priority": "LOW"
+    },
+    {
+      "owner": "Vijay",
+      "task": "Track daily E2E DRR number alongside self-fulfillment in Aditya's existing self-tracking sheet",
+      "due_date": "2026-05-26",
+      "related_topic": "E2E daily tracking",
+      "source_meeting": "Ambak WBR - Training, QL, E2E, City Scale",
+      "source_meeting_date": "2026-05-26",
+      "priority": "LOW"
+    }
+  ],
+  "open_questions": [
+    {
+      "question": "Why is retail QL achievement in Delhi stuck at 34% despite pipeline discussions every week?",
+      "raised_by": "Raghu",
+      "expected_owner": "Ankit and Rashi"
+    },
+    {
+      "question": "Why is Ahmedabad business not shaping up despite above-market salary, most aggressive incentives, and Neerav's experience? What is the root cause?",
+      "raised_by": "Raghu",
+      "expected_owner": "Neerav and Pooja"
+    },
+    {
+      "question": "When will insurance data tracking be consistently delivered daily (waterfall, issued, pipeline, login, lead stage)?",
+      "raised_by": "Raghu",
+      "expected_owner": "Tarun/Hitesh/Vijay"
+    },
+    {
+      "question": "What is the correct model for E2E business sourced by one city but fulfilled by another - how should it be attributed in reporting?",
+      "raised_by": "Rashi",
+      "expected_owner": "Pankaj/Aditya"
+    },
+    {
+      "question": "How does Ambak compound beyond the 2026 AOP targets - when do strategic accounts and builder relationships become the dominant revenue driver?",
+      "raised_by": "Raghu",
+      "expected_owner": "Raghu, Rishab, Pranav"
+    },
+    {
+      "question": "Will the institutional and E2E joint first-of-month review (decided yesterday) actually happen with a format and owner?",
+      "raised_by": "Raghu (in prior meeting)",
+      "expected_owner": "Ankit and Ishant"
+    }
+  ],
+  "risks": [
+    "Retail QL collapse in Delhi (34%) will create a June disbursement gap - no clear recovery plan.",
+    "Ahmedabad has no ABM after multiple review cycles; October AOP assumes 85 CR from a city that has not consistently crossed 20 CR.",
+    "Training scheduling gaps (12-day programs stretching to 16+ days) directly impair RM ramp time when 26% monthly growth requires rapid onboarding.",
+    "Out-of-system E2E cases (~20 CR) are creating visibility blackouts; Rashi and Vijay cannot reconcile numbers without manual case reviews.",
+    "MAHADA 2600 leads arriving first week of June risk being absorbed into the general pipeline and under-executed without a dedicated campaign structure.",
+    "26% monthly growth targets May-August are extremely aggressive given Delhi stagnation, Ahmedabad underperformance, and Bangalore not yet scaled.",
+    "Insurance visibility was absent before investor meeting at 2 PM - if insurance is material to May P&L story, this is a significant gap."
+  ],
+  "meeting_dynamics": [
+    "Raghu carried all critical probing for 80+ minutes; functional leads and city heads were reactive, not proactive - third straight meeting with this pattern.",
+    "E2E pipeline reconciliation consumed 30+ minutes without in-room resolution; 76 CR target should not require a manual case-by-case review 2 weeks before month end.",
+    "Raghu's direct critique of Ankit ('efforts are kam, understanding is weak') was unusually personal and specific; Ankit's response pattern (partial acknowledgment + reference to ongoing actions) was mild deflection.",
+    "Neerav gave consistent reassurance on Ahmedabad without structural solutions; ABM hiring has been discussed for multiple cycles with no post-mortem on why it has not closed.",
+    "Insurance was visibly unready - Tarun and Hitesh were not added to the call; no one owned this preparation failure.",
+    "MAHADA 2600 leads received fewer than 5 minutes of discussion despite Raghu flagging it as an insanely large opportunity; bandwidth concerns were raised without escalation or resolution."
+  ]
+}

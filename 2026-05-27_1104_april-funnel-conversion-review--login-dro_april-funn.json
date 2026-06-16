@@ -1,0 +1,234 @@
+{
+  "personas": [
+    {
+      "id": "ankita",
+      "probable_name": "Ankita",
+      "role": "Head of Institutional/E2E Operations",
+      "organisation": "Ambak",
+      "focus_areas": ["funnel conversion", "M0 login tracking", "capacity planning", "DID rollout", "FBM productivity"],
+      "inference_reason": "Directly addressed by name ('Ankita ek aur cheez dekh lo'). Primary presenter of funnel data, RCA on April login drop, capacity metrics, and first-call follow-up numbers. Owns institutional channel performance."
+    },
+    {
+      "id": "raghu",
+      "probable_name": "Raghuveer Malik",
+      "role": "Founder and CEO",
+      "organisation": "Ambak",
+      "focus_areas": ["contingency planning", "AOP target accountability", "cross-pitch strategy", "funnel quality"],
+      "inference_reason": "Referred to as 'Raghu sir' by participants. Drives all strategic challenges - contingency plan failure, AOP gaps, cross-pitch opportunity. Voice and authority pattern matches CEO role."
+    },
+    {
+      "id": "rashi",
+      "probable_name": "Rashi",
+      "role": "Co-founder (Operations/Distribution)",
+      "organisation": "Ambak",
+      "focus_areas": ["distribution quality", "cross-pitch execution", "lead handling standards"],
+      "inference_reason": "Addressed as 'Mam' by participants. Raises cross-pitch audit point and pushes on lead handling quality. Consistent with co-founder (ops/distribution) role pattern."
+    },
+    {
+      "id": "arpit",
+      "probable_name": "Arpit",
+      "role": "Training and L&D Lead",
+      "organisation": "Ambak",
+      "focus_areas": ["e-learning", "escalation training", "call audit", "June training plan", "LPL gamification"],
+      "inference_reason": "Takes over meeting in second half to present training AOP outcomes and June plan. Presents 6-session coverage data, escalation tracking, and detailed next-month training calendar."
+    },
+    {
+      "id": "rishabh",
+      "probable_name": "Rishabh",
+      "role": "E2E Operations Manager",
+      "organisation": "Ambak",
+      "focus_areas": ["Mada lead data", "capacity planning", "team allocation"],
+      "inference_reason": "Called out by name explicitly ('Rishabh ek baar Monday ko bata do'). Owns Mada partner relationship and capacity planning decisions for institutional team."
+    },
+    {
+      "id": "ankit",
+      "probable_name": "Ankit",
+      "role": "Sales Operations Lead",
+      "organisation": "Ambak",
+      "focus_areas": ["bank handling approach", "calibration sessions", "Bangalore training"],
+      "inference_reason": "Mentioned multiple times in context of bank-wise case handling approach and calibration sessions with Raghu. Consistent with sales ops lead role from prior meetings."
+    },
+    {
+      "id": "darshan",
+      "probable_name": "Darshan",
+      "role": "Operations/Audit Lead",
+      "organisation": "Ambak",
+      "focus_areas": ["case audit", "deal cancel/postpone analysis"],
+      "inference_reason": "Called specifically to sit for joint re-audit of deal cancel/postpone cases. Name used directly."
+    },
+    {
+      "id": "avinash",
+      "probable_name": "Avinash",
+      "role": "Sales Quality/Training",
+      "organisation": "Ambak",
+      "focus_areas": ["lead audit", "cross-pitch quality", "case quality review"],
+      "inference_reason": "Named as the person to perform audit of 'logged with another bank' cases and cross-pitch quality. Also did prior audit of 20 deal cancel cases."
+    }
+  ],
+  "key_points": [
+    "Best conversion cohort (750+ CIBIL, salaried, 50L+) shows 69% QL-to-login but cohort contribution dropped from 26% to 13%",
+    "April M0 login drop (18%) caused by tenured FBMs on simultaneous planned leave and PSU ROI confirmation delays",
+    "May recovery underway - M0 at ~22%, heading back to Feb level of 31%",
+    "Overall QL-to-login at 54-55% on mature pipeline vs AOP target of 65-70%; blockers: 15% not responding, 28% deal cancel, 16% ineligible",
+    "DID phone numbers arriving in 2-3 days; system config by Wednesday, roll-out by Thursday June 4",
+    "Call timestamp bug (end time vs start time) inflating delay metrics by ~5-7%; immediate product fix required",
+    "Sanction pool aging in Mumbai/Pune - M5/M6 TAT for direct allotment cases stuck on builder CC/RERA clearances",
+    "Mada partner data quality degraded - missing allotment/booking dates for 2-3 months; Rishabh to investigate Monday",
+    "Cross-pitch gap: 17-31% of leads already logged with another bank (mostly SBI); agents not consistently cross-pitching",
+    "Training e-learning module 1 launched: 63% pass rate, escalations down from 33 to 11, 94% headcount coverage",
+    "June training plan includes communication workshops, NHT e-learning, buddy program, cross-function mock calls, Learning Premier League on Kahoot",
+    "AOP call audit target: 65-70%; escalation training is first confirmed initiative, new topics being added"
+  ],
+  "decisions": [
+    "DID numbers to be configured and rolled out by June 4 once vendor delivers",
+    "Monthly planning review on May 27 with Himang; June targets to be presented to city heads on June 1",
+    "Auto-dialer to remain live across all channels; routed to inbound Mada leads while partner data is stale",
+    "Bulk/cold calling lead data to be handled separately from regular FBM queue going forward"
+  ],
+  "action_items": [
+    {
+      "owner": "Ankita",
+      "task": "Review complete May data with Himang today (May 27); present RCA, initiative performance and June targets to city heads by June 1",
+      "due_date": "2026-06-01",
+      "related_topic": "Monthly target planning",
+      "source_meeting": "April Funnel Conversion Review - Login RCA - Training AOP",
+      "source_meeting_date": "2026-05-27",
+      "priority": "HIGH",
+      "verbal_completion": false,
+      "verbal_completion_note": "",
+      "deadline_change": null
+    },
+    {
+      "owner": "Product (Mohit/Roshan)",
+      "task": "Fix call timestamp to use call start time (not end time) in first-call follow-up reports",
+      "due_date": "",
+      "related_topic": "Reporting accuracy",
+      "source_meeting": "April Funnel Conversion Review - Login RCA - Training AOP",
+      "source_meeting_date": "2026-05-27",
+      "priority": "HIGH",
+      "verbal_completion": false,
+      "verbal_completion_note": "",
+      "deadline_change": null
+    },
+    {
+      "owner": "Product team",
+      "task": "Implement immediate fix: show missed call notifications to FBMs in real-time on system ID so they can call back without missing customer",
+      "due_date": "",
+      "related_topic": "Missed call visibility",
+      "source_meeting": "April Funnel Conversion Review - Login RCA - Training AOP",
+      "source_meeting_date": "2026-05-27",
+      "priority": "HIGH",
+      "verbal_completion": false,
+      "verbal_completion_note": "",
+      "deadline_change": null
+    },
+    {
+      "owner": "Telecom/Ops",
+      "task": "Receive DID mobile numbers from vendor (2-3 days), configure in system within 1 day, roll out by Thursday June 4",
+      "due_date": "2026-06-04",
+      "related_topic": "Number whitelisting",
+      "source_meeting": "April Funnel Conversion Review - Login RCA - Training AOP",
+      "source_meeting_date": "2026-05-27",
+      "priority": "HIGH",
+      "verbal_completion": false,
+      "verbal_completion_note": "",
+      "deadline_change": null
+    },
+    {
+      "owner": "Rishabh",
+      "task": "Meet Mada/partner on Monday to understand lead data quality gap (missing allotment/booking dates in new format); report back with prediction on conversion potential",
+      "due_date": "2026-06-02",
+      "related_topic": "Lead data quality",
+      "source_meeting": "April Funnel Conversion Review - Login RCA - Training AOP",
+      "source_meeting_date": "2026-05-27",
+      "priority": "HIGH",
+      "verbal_completion": false,
+      "verbal_completion_note": "",
+      "deadline_change": null
+    },
+    {
+      "owner": "Darshan",
+      "task": "Sit for joint re-audit of deal cancel/postpone cases across cities; validate 28% figure and identify major contribution cities and root causes",
+      "due_date": "",
+      "related_topic": "Funnel drop-off audit",
+      "source_meeting": "April Funnel Conversion Review - Login RCA - Training AOP",
+      "source_meeting_date": "2026-05-27",
+      "priority": "HIGH",
+      "verbal_completion": false,
+      "verbal_completion_note": "",
+      "deadline_change": null
+    },
+    {
+      "owner": "Avinash",
+      "task": "Audit 'logged with another bank' cases for cross-pitch attempts; check if agents are pitching competitive rates vs SBI and identify pitch training gaps",
+      "due_date": "",
+      "related_topic": "Cross-pitch audit",
+      "source_meeting": "April Funnel Conversion Review - Login RCA - Training AOP",
+      "source_meeting_date": "2026-05-27",
+      "priority": "LOW",
+      "verbal_completion": false,
+      "verbal_completion_note": "",
+      "deadline_change": null
+    },
+    {
+      "owner": "Arpit/Training team",
+      "task": "Launch June plan: communication + art of report + people management workshops (nomination-based); introduce e-learning in NHT, buddy program, call audits for new joiners; cross-function mock calls; Learning Premier League on Kahoot",
+      "due_date": "2026-06-30",
+      "related_topic": "June training rollout",
+      "source_meeting": "April Funnel Conversion Review - Login RCA - Training AOP",
+      "source_meeting_date": "2026-05-27",
+      "priority": "LOW",
+      "verbal_completion": false,
+      "verbal_completion_note": "",
+      "deadline_change": null
+    }
+  ],
+  "open_questions": [
+    {
+      "question": "What is the actual root cause of 28% deal cancel/postpone, split by city?",
+      "raised_by": "Raghu, Rashi",
+      "expected_owner": "Darshan (joint audit with Ankita)"
+    },
+    {
+      "question": "Why has partner (Mada) data quality dropped - missing allotment/booking dates for 2-3 months?",
+      "raised_by": "Ankita (Avinash flagged)",
+      "expected_owner": "Rishabh"
+    },
+    {
+      "question": "Are FBMs actively cross-pitching customers already logged with another bank? What is the pitch success rate?",
+      "raised_by": "Rashi",
+      "expected_owner": "Avinash"
+    },
+    {
+      "question": "What is the measurable impact of DRE/BRE automation on FBM productivity?",
+      "raised_by": "Raghu",
+      "expected_owner": "Product/Ops team"
+    }
+  ],
+  "risks": [
+    "AOP FBM productivity target at 8.11 vs 14 - ~42% miss with no clear structural fix in sight",
+    "Sanction pool aging in Mumbai/Pune - builder CC/RERA delays causing M5/M6 TAT for direct allotment cases",
+    "Partner lead data quality degraded for 2-3 months - stale leads burning FBM capacity and inflating drop-off metrics",
+    "No formal contingency plan yet for tenured FBM simultaneous leaves - same failure mode can recur",
+    "May call recording gaps have corrupted first-call follow-up and talk-time reports",
+    "QL-to-login gap still 9 points below AOP target - DID and auto-dialer are the key bets, both unproven at scale",
+    "Training AOP escalation score at 63% vs 65-70% target - margin is narrow and new topics being added may dilute"
+  ],
+  "meeting_dynamics": [
+    "Raghu drove all the tough diagnostic follow-ups; other seniors were largely in response mode",
+    "Cause-and-effect not always closed - multiple drop-off causes identified but few with confirmed owners and timelines",
+    "FBM productivity miss (8.11 vs 14 AOP) received minimal discussion despite being the most significant AOP gap",
+    "Training presenter presented well but the AOP score gap was not stress-tested in the room",
+    "Rishabh's Monday outcome was accepted without defining what decision would follow the partner meeting"
+  ],
+  "participation": [
+    {"name": "Raghu", "questions_raised": 14},
+    {"name": "Ankita", "questions_raised": 6},
+    {"name": "Rashi", "questions_raised": 3},
+    {"name": "Arpit", "questions_raised": 2},
+    {"name": "Rishabh", "questions_raised": 2},
+    {"name": "Ankit", "questions_raised": 1},
+    {"name": "Darshan", "questions_raised": 1},
+    {"name": "Avinash", "questions_raised": 0}
+  ]
+}

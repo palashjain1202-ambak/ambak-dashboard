@@ -1,0 +1,273 @@
+{
+  "personas": [
+    {
+      "id": "raghu",
+      "probable_name": "Raghu",
+      "role": "Founder and CEO",
+      "organisation": "Ambak",
+      "focus_areas": ["NR unit economics", "structural decision rights", "iteration cadence", "regional P&L accountability"],
+      "inference_reason": "Addressed directly by name throughout ('this is how we have looked at the month, Raghu'); drives every substantive question; makes final calls on decision rights and structural changes. Consistent with CEO roster entry."
+    },
+    {
+      "id": "vikas",
+      "probable_name": "Vikas",
+      "role": "Retail Business Head",
+      "organisation": "Ambak",
+      "focus_areas": ["retail P&L", "regional waterfall", "pay-in/payout", "scheme changes", "E2E volume", "headcount"],
+      "inference_reason": "Presents the P&L waterfall and owns regional NR outcomes; is asked directly whether he is happy with training; is the senior retail decision maker on scheme and headcount calls."
+    },
+    {
+      "id": "adi",
+      "probable_name": "Adi",
+      "role": "Projects and Analysis",
+      "organisation": "Ambak",
+      "focus_areas": ["NR breakdown", "universal vs special schemes", "lender consolidation", "partner segmentation"],
+      "inference_reason": "Explicitly handed the floor ('Okay, Adi, now you can give some insights'); presents granular NR and lender consolidation analysis."
+    },
+    {
+      "id": "vijay",
+      "probable_name": "Vijay",
+      "role": "BD and Lender Partnerships Lead",
+      "organisation": "Ambak",
+      "focus_areas": ["lender relationships", "pay-in intelligence", "competitor tracking", "training sign-off"],
+      "inference_reason": "Repeatedly called to account for pay-in knowledge; named as final sign-off on training content; admitted pay-in slab knowledge came late."
+    },
+    {
+      "id": "aman",
+      "probable_name": "Aman",
+      "role": "Pay-in and Lender Categorisation",
+      "organisation": "Ambak",
+      "focus_areas": ["pay-in slab management", "lender category decisions"],
+      "inference_reason": "Referenced as the person who assigns lender categories; central to the accountability dispute with the business team on NR ownership."
+    },
+    {
+      "id": "nitin",
+      "probable_name": "Nitin",
+      "role": "Retail Marketing",
+      "organisation": "Ambak",
+      "focus_areas": ["shankar events", "distribution automation", "WhatsApp outreach", "ABB calculator enablement", "QR collateral"],
+      "inference_reason": "Named and presents shankar counts, distribution automation thesis, and creative output. Owns WhatsApp periscope and QR-code collateral initiatives."
+    },
+    {
+      "id": "arpit",
+      "probable_name": "Arpit",
+      "role": "Training and Business Enablement",
+      "organisation": "Ambak",
+      "focus_areas": ["LPL", "masterclasses", "assessments", "Business Enablement rebrand"],
+      "inference_reason": "Addressed by name ('Thank you Arpit'); presents LPL, assessment results, and masterclass calendar."
+    },
+    {
+      "id": "arshay",
+      "probable_name": "Arshay",
+      "role": "Co-lending and Institutional Partnerships",
+      "organisation": "Ambak",
+      "focus_areas": ["people/Gypsy co-lending", "draft agreement", "Vriddhi/Adara/Shubham outreach"],
+      "inference_reason": "Presents co-lending pricing and draft agreement update. Name 'Varsha' also used in same context; likely the same person or a closely paired dyad. Diarization uncertain."
+    },
+    {
+      "id": "ashish",
+      "probable_name": "Ashish",
+      "role": "Co-founder, Technology",
+      "organisation": "Ambak",
+      "focus_areas": ["technology", "legal review of co-lending draft", "RM rating structure"],
+      "inference_reason": "Referenced as a co-founder whose reaction Raghu reads in the room; co-lending draft sent to him for legal review; raises the RM vintage/NR rating question. Matches co-founder roster entry."
+    },
+    {
+      "id": "pankaj",
+      "probable_name": "Pankaj",
+      "role": "Product and Systems",
+      "organisation": "Ambak",
+      "focus_areas": ["pay-in module", "CRM", "QR-code system", "out-of-system proxying"],
+      "inference_reason": "Repeatedly named as the person who can build the pay-in module, CRM requisition structure, and QR-code infrastructure."
+    },
+    {
+      "id": "tarun",
+      "probable_name": "Tarun",
+      "role": "Recent joiner, orientation",
+      "organisation": "Ambak",
+      "focus_areas": ["NR mechanics orientation"],
+      "inference_reason": "Explicitly addressed as someone being walked through basics ('Just for Tarun's reference'); no functional ownership."
+    }
+  ],
+  "key_points": [
+    "Bangalore and Gujarat deficit on top line; NCR good volume but pay-in diluted by ICICI; Bombay missed despite 42% LAP mix.",
+    "ICICI Bank ~102 crore at lowest NR; pay-in fell from JFM ~96 bps to 90 bps post 80-20 change; payouts not cut in step.",
+    "HL pay-in 92 vs 98 planned; LAP pay-in 131 vs 135 despite LAP mix rising to 31% vs 27% AOP assumption.",
+    "Aditya Birla Housing payout cap on 13 crore LAP: 96 paise pay-in but 95% payout - near-zero NR on a large case.",
+    "True Home Lab, Bajaj Housing Gross ICE, ICICI: concrete examples of category decisions made without full pay-in slab knowledge.",
+    "Raghu ruled: payout autonomy and NR ownership sit with the business team; Aman's role is pay-in information utility only.",
+    "Universal scheme rationalised from 3 to 6 slabs (effective June); special-scheme quota system launched from May.",
+    "79.8% of special deals went to sub-2-crore value-destroying partners.",
+    "E2E April pay-in 109 bps vs 91 AOP (positive surprise); but July-October AOP requires ~200 crore/month E2E throughput.",
+    "Three monthly P&L closes proposed: first-of-month, 95%-confidence, and mid-month 16th.",
+    "~50% of retail business out of system; Pankaj to proxy with discount factors and estimated closure dates.",
+    "Productivity dashboard flagged 19 people; 16 moved to exit/performance conversations.",
+    "Only 3 shankars in April; distribution automation, WhatsApp periscope, and QR-code collateral proposed.",
+    "ABB calculator praised highly by Raghu as a phenomenal product - zero partner-facing marketing material exists.",
+    "Co-lending: pricing aligned with people/Gypsy, draft sent to Ashish for legal review; Vriddhi, Adara, Shubham are live targets.",
+    "Training rebranded to Business Enablement; LPL, masterclasses, and assessment framework launching."
+  ],
+  "decisions": [
+    "Payout autonomy and NR ownership stay with the retail business team; pay-in structure unchanged.",
+    "Universal scheme rationalised from 3 to 6 slabs, effective June.",
+    "Special-scheme quota system implemented from May.",
+    "16 of 19 flagged underperformers move into exit and performance conversations.",
+    "Adopt three monthly P&L closes: first-of-month, 95%-confidence, and mid-month 16th.",
+    "Retail training team to be rebranded Business Enablement."
+  ],
+  "action_items": [
+    {
+      "owner": "Vikas, Vijay, Aman, Ashish",
+      "task": "Hold a 30-minute sync to align on pay-in changes and adjust schemes for May",
+      "due_date": "2026-05-28",
+      "related_topic": "Pay-in and payout alignment",
+      "source_meeting": "Retail Review",
+      "source_meeting_date": "2026-05-25",
+      "priority": "HIGH"
+    },
+    {
+      "owner": "Vijay, Aman",
+      "task": "Investigate True Home Lab, Bajaj Housing Gross ICE, and ICICI category and payout misallocations; report root cause to Vikas and Raghu",
+      "due_date": "",
+      "related_topic": "Net revenue leakage",
+      "source_meeting": "Retail Review",
+      "source_meeting_date": "2026-05-25",
+      "priority": "HIGH"
+    },
+    {
+      "owner": "Vikas, business team",
+      "task": "Identify remaining May levers that can still impact the May P&L before month close",
+      "due_date": "",
+      "related_topic": "May P&L recovery",
+      "source_meeting": "Retail Review",
+      "source_meeting_date": "2026-05-25",
+      "priority": "HIGH"
+    },
+    {
+      "owner": "Pankaj",
+      "task": "Build pay-in module in-system; proxy out-of-system business with discount factors and estimated closure dates to enable the three-monthly-close process",
+      "due_date": "",
+      "related_topic": "Systems and tracking",
+      "source_meeting": "Retail Review",
+      "source_meeting_date": "2026-05-25",
+      "priority": "HIGH"
+    },
+    {
+      "owner": "Arshay",
+      "task": "Run second round of people/Gypsy co-lending discussion; review product note with Rashi and Pankaj; reach out to Vriddhi",
+      "due_date": "",
+      "related_topic": "Co-lending partnerships",
+      "source_meeting": "Retail Review",
+      "source_meeting_date": "2026-05-25",
+      "priority": "HIGH"
+    },
+    {
+      "owner": "Ashish",
+      "task": "Complete legal review of the co-lending draft agreement",
+      "due_date": "",
+      "related_topic": "Co-lending partnerships",
+      "source_meeting": "Retail Review",
+      "source_meeting_date": "2026-05-25",
+      "priority": "HIGH"
+    },
+    {
+      "owner": "Adi",
+      "task": "Pick two lender-analysis metrics to automate and post regularly to the BD corporate group to maintain MBR-to-MBR continuity",
+      "due_date": "",
+      "related_topic": "Tracking discipline",
+      "source_meeting": "Retail Review",
+      "source_meeting_date": "2026-05-25",
+      "priority": "LOW"
+    },
+    {
+      "owner": "Adi",
+      "task": "Track activation and retention split by specialty vs non-specialty partners",
+      "due_date": "",
+      "related_topic": "Net revenue analysis",
+      "source_meeting": "Retail Review",
+      "source_meeting_date": "2026-05-25",
+      "priority": "LOW"
+    },
+    {
+      "owner": "Nitin",
+      "task": "Create partner-facing marketing and training material for the ABB calculator",
+      "due_date": "",
+      "related_topic": "Product enablement",
+      "source_meeting": "Retail Review",
+      "source_meeting_date": "2026-05-25",
+      "priority": "LOW"
+    },
+    {
+      "owner": "Nitin, Pankaj",
+      "task": "Pilot WhatsApp-group periscope outreach to reach partners at scale via existing BD WhatsApp groups",
+      "due_date": "",
+      "related_topic": "Marketing distribution",
+      "source_meeting": "Retail Review",
+      "source_meeting_date": "2026-05-25",
+      "priority": "LOW"
+    },
+    {
+      "owner": "Nitin, sales",
+      "task": "Launch QR-code partner collateral for builders and brokers with partner-ID-linked attribution in the system",
+      "due_date": "",
+      "related_topic": "Marketing distribution",
+      "source_meeting": "Retail Review",
+      "source_meeting_date": "2026-05-25",
+      "priority": "LOW"
+    },
+    {
+      "owner": "Vijay",
+      "task": "Own final sign-off on all training content and the delivery calendar for retail",
+      "due_date": "",
+      "related_topic": "Business Enablement",
+      "source_meeting": "Retail Review",
+      "source_meeting_date": "2026-05-25",
+      "priority": "LOW"
+    }
+  ],
+  "open_questions": [
+    {
+      "question": "Why did ICICI Bank dilute pay-in so much at that volume and what could have prevented it?",
+      "raised_by": "Raghu",
+      "expected_owner": "Vijay and Aman"
+    },
+    {
+      "question": "Why was Bombay self payout 99 bps vs 93 bps planned, and what changes for May?",
+      "raised_by": "Raghu",
+      "expected_owner": "Vikas"
+    },
+    {
+      "question": "How do we structurally fix NCR HL and LAP being a persistent NR drag at 5-6% ICICI share?",
+      "raised_by": "Raghu",
+      "expected_owner": "Vikas"
+    },
+    {
+      "question": "For RMs with 12+ months of vintage, should NR carry a higher rating weightage?",
+      "raised_by": "Ashish",
+      "expected_owner": "Vikas and Ashish"
+    },
+    {
+      "question": "How do we build the July-October E2E AOP throughput of ~200 crore/month?",
+      "raised_by": "Vikas",
+      "expected_owner": "Vikas and the business team"
+    }
+  ],
+  "risks": [
+    "April errors surfaced only on 20th-21st May; fixes started in March pay off in June at earliest, leaving May partly exposed.",
+    "~50% of retail business is out of system, making the three-close process and real-time pay-in tracking impossible until Pankaj resolves this.",
+    "July-October AOP of ~200 crore/month E2E throughput is a large, unbuilt capacity gap.",
+    "Pay-in/payout misalignment is structurally recurring; enforcement of the new structure still depends on human discipline.",
+    "79.8% of special deals concentrated in sub-2-crore value-destroying partners; quota system may face workarounds.",
+    "ABB calculator shipped with zero partner-facing enablement - strong product, idle.",
+    "Business Enablement team is committed across retail, institutional, D2C for six months simultaneously - quality risk."
+  ],
+  "meeting_dynamics": [
+    "Raghu was the sole probing engine - every substantive question, challenge, and redirect came from him.",
+    "The Aman/business-team accountability dispute required CEO intervention to settle - should have been resolved internally two years in.",
+    "Vijay admitted to learning pay-in slabs after the fact without it being treated as a serious accountability failure.",
+    "Marketing presented activity metrics throughout; Raghu redirected to outcome metrics each time.",
+    "Key distribution ideas (QR codes, WhatsApp periscope, ABB enablement) originated from Raghu, not the functional owners.",
+    "Training presented confidently but offered no before/after evidence of RM capability improvement.",
+    "Several items landed without owners or dates until Raghu explicitly pressed for accountability."
+  ]
+}
