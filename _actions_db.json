@@ -285,9 +285,9 @@
         },
         {
           "date": "2026-06-10",
-          "meeting": "June MBR — Institutional Funnel, E2E, Insurance",
+          "meeting": "June MBR \u2014 Institutional Funnel, E2E, Insurance",
           "type": "completed",
-          "detail": "June MBR on June 10 IS this joint institutional + E2E review — conducted together per i12 mandate"
+          "detail": "June MBR on June 10 IS this joint institutional + E2E review \u2014 conducted together per i12 mandate"
         }
       ],
       "id": "i12"
@@ -937,7 +937,7 @@
           "date": "2026-06-11",
           "meeting": "Yodha-FBM Lead Quality, Automation, Call Connectivity, and AI Product Pipeline Review",
           "type": "completed",
-          "detail": "924 DID series confirmed live in Yodha review; auto dialer improved from 150 to 220+ calls/day — DID rollout complete"
+          "detail": "924 DID series confirmed live in Yodha review; auto dialer improved from 150 to 220+ calls/day \u2014 DID rollout complete"
         }
       ],
       "id": "i41"
@@ -1500,7 +1500,7 @@
           "date": "2026-06-08",
           "meeting": "Delhi NCR Funnel Conversion Review + E2E Closure Check",
           "type": "created",
-          "detail": "Raghu called out absolute slip — Jay Singh failed to share notes from last meeting"
+          "detail": "Raghu called out absolute slip \u2014 Jay Singh failed to share notes from last meeting"
         }
       ]
     },
@@ -1551,7 +1551,7 @@
     {
       "id": "i69",
       "owner": "Vikas",
-      "task": "Calculate lender consolidation impact on net revenue and pay-in for May — share findings today",
+      "task": "Calculate lender consolidation impact on net revenue and pay-in for May \u2014 share findings today",
       "due_date": "2026-06-08",
       "related_topic": "Lender consolidation revenue impact",
       "source_meeting": "Delhi NCR Funnel Conversion Review + E2E Closure Check",
@@ -1566,14 +1566,14 @@
           "date": "2026-06-08",
           "meeting": "Delhi NCR Funnel Conversion Review + E2E Closure Check",
           "type": "created",
-          "detail": "Vikas committed: \"I will do that today\" — 45% concentration achieved vs 55% target"
+          "detail": "Vikas committed: \"I will do that today\" \u2014 45% concentration achieved vs 55% target"
         }
       ]
     },
     {
       "id": "i70",
       "owner": "Vikas",
-      "task": "Deep dive on LAP % drop (21% vs 25-30% mid-month) — understand why lab partners were inactive in May, get partner-level details from Naveen",
+      "task": "Deep dive on LAP % drop (21% vs 25-30% mid-month) \u2014 understand why lab partners were inactive in May, get partner-level details from Naveen",
       "due_date": "2026-06-11",
       "related_topic": "LAP performance analysis",
       "source_meeting": "Delhi NCR Funnel Conversion Review + E2E Closure Check",
@@ -1595,7 +1595,7 @@
     {
       "id": "i71",
       "owner": "Vikas",
-      "task": "Align with Tarun on insurance visibility — bridge gap between Raghu's view and Tarun's view; bring insurance into same dashboard/process framework",
+      "task": "Align with Tarun on insurance visibility \u2014 bridge gap between Raghu's view and Tarun's view; bring insurance into same dashboard/process framework",
       "due_date": "2026-06-11",
       "related_topic": "Insurance process & visibility",
       "source_meeting": "Delhi NCR Funnel Conversion Review + E2E Closure Check",
@@ -1639,7 +1639,7 @@
     {
       "id": "i73",
       "owner": "Ankit",
-      "task": "Re-evaluate June disbursement goal and gap — currently projecting 175 Cr institutional + 80-90 Cr retail; identify what is falling short",
+      "task": "Re-evaluate June disbursement goal and gap \u2014 currently projecting 175 Cr institutional + 80-90 Cr retail; identify what is falling short",
       "due_date": "2026-06-11",
       "related_topic": "June disbursement targets",
       "source_meeting": "Delhi NCR Funnel Conversion Review + E2E Closure Check",
@@ -1661,7 +1661,7 @@
     {
       "id": "i74",
       "owner": "Ankit",
-      "task": "Improve partial-to-complete login conversion — currently 68%+ getting stuck; daily reviews with ops team, coordinate registration timelines",
+      "task": "Improve partial-to-complete login conversion \u2014 currently 68%+ getting stuck; daily reviews with ops team, coordinate registration timelines",
       "due_date": "2026-06-15",
       "related_topic": "Login funnel improvement",
       "source_meeting": "Delhi NCR Funnel Conversion Review + E2E Closure Check",
@@ -1683,7 +1683,7 @@
     {
       "id": "i75",
       "owner": "Ankit",
-      "task": "Improve E2E verified number — currently 68% vs 94% overall; strengthen governance and closure process",
+      "task": "Improve E2E verified number \u2014 currently 68% vs 94% overall; strengthen governance and closure process",
       "due_date": "2026-06-15",
       "related_topic": "E2E closure verification",
       "source_meeting": "Delhi NCR Funnel Conversion Review + E2E Closure Check",
@@ -1698,14 +1698,14 @@
           "date": "2026-06-08",
           "meeting": "Delhi NCR Funnel Conversion Review + E2E Closure Check",
           "type": "created",
-          "detail": "Raghu flagged this as \"a bit scary\" — E2E should be higher control"
+          "detail": "Raghu flagged this as \"a bit scary\" \u2014 E2E should be higher control"
         }
       ]
     },
     {
       "id": "i76",
       "owner": "Rishab",
-      "task": "Build ready view of funnel conversion misses by stage and city (QL→login, login→sanction, sanction→disbursal) for Bangalore, Mumbai, Pune",
+      "task": "Build ready view of funnel conversion misses by stage and city (QL\u2192login, login\u2192sanction, sanction\u2192disbursal) for Bangalore, Mumbai, Pune",
       "due_date": "2026-06-15",
       "related_topic": "Funnel conversion analysis",
       "source_meeting": "Delhi NCR Funnel Conversion Review + E2E Closure Check",
@@ -1727,7 +1727,7 @@
     {
       "id": "i77",
       "owner": "Rameshwar",
-      "task": "Make lead journey fields mandatory — OC pay amount, registration date, other missing data points — to enable funnel behavior analysis",
+      "task": "Make lead journey fields mandatory \u2014 OC pay amount, registration date, other missing data points \u2014 to enable funnel behavior analysis",
       "due_date": "2026-06-30",
       "related_topic": "Data capture for funnel analysis",
       "source_meeting": "Delhi NCR Funnel Conversion Review + E2E Closure Check",
@@ -1749,7 +1749,7 @@
     {
       "id": "i78",
       "owner": "Rameshwar",
-      "task": "Integrate drip campaign vendor — convert marketing messages to transactional for early-stage leads; finalize lead bucketization (20% late-stage priority, 80% drip)",
+      "task": "Integrate drip campaign vendor \u2014 convert marketing messages to transactional for early-stage leads; finalize lead bucketization (20% late-stage priority, 80% drip)",
       "due_date": "2026-06-30",
       "related_topic": "Customer engagement / lead conversion",
       "source_meeting": "Delhi NCR Funnel Conversion Review + E2E Closure Check",
@@ -1774,7 +1774,7 @@
       "task": "Set up and run weekly E2E sync meeting",
       "due_date": "2026-06-17",
       "related_topic": "E2E coordination",
-      "source_meeting": "June MBR — Institutional Funnel, E2E, Insurance",
+      "source_meeting": "June MBR \u2014 Institutional Funnel, E2E, Insurance",
       "source_meeting_date": "2026-06-10",
       "priority": "HIGH",
       "created_at": "2026-06-10",
@@ -1784,9 +1784,9 @@
       "history": [
         {
           "date": "2026-06-10",
-          "meeting": "June MBR — Institutional Funnel, E2E, Insurance",
+          "meeting": "June MBR \u2014 Institutional Funnel, E2E, Insurance",
           "type": "created",
-          "detail": "Raghu mandated weekly E2E sync — Vikas, Vijay, Ankit, Rashi"
+          "detail": "Raghu mandated weekly E2E sync \u2014 Vikas, Vijay, Ankit, Rashi"
         }
       ]
     },
@@ -1796,7 +1796,7 @@
       "task": "Enforce E2E vs aggregation classification in Sangam: docs received = E2E, no docs = aggregation",
       "due_date": "2026-06-15",
       "related_topic": "E2E classification",
-      "source_meeting": "June MBR — Institutional Funnel, E2E, Insurance",
+      "source_meeting": "June MBR \u2014 Institutional Funnel, E2E, Insurance",
       "source_meeting_date": "2026-06-10",
       "priority": "HIGH",
       "created_at": "2026-06-10",
@@ -1806,7 +1806,7 @@
       "history": [
         {
           "date": "2026-06-10",
-          "meeting": "June MBR — Institutional Funnel, E2E, Insurance",
+          "meeting": "June MBR \u2014 Institutional Funnel, E2E, Insurance",
           "type": "created",
           "detail": "Classification rule decided in meeting; Ankit to enforce in Sangam tagging"
         }
@@ -1815,10 +1815,10 @@
     {
       "id": "i81",
       "owner": "Raghu / Rashi",
-      "task": "Resolve Settlin Bangalore payout issue — they are not receiving payments; fix before partnership is damaged",
+      "task": "Resolve Settlin Bangalore payout issue \u2014 they are not receiving payments; fix before partnership is damaged",
       "due_date": "2026-06-15",
       "related_topic": "Settlin partnership",
-      "source_meeting": "June MBR — Institutional Funnel, E2E, Insurance",
+      "source_meeting": "June MBR \u2014 Institutional Funnel, E2E, Insurance",
       "source_meeting_date": "2026-06-10",
       "priority": "HIGH",
       "created_at": "2026-06-10",
@@ -1828,9 +1828,9 @@
       "history": [
         {
           "date": "2026-06-10",
-          "meeting": "June MBR — Institutional Funnel, E2E, Insurance",
+          "meeting": "June MBR \u2014 Institutional Funnel, E2E, Insurance",
           "type": "created",
-          "detail": "Raghu flagged as partnership risk — Settlin not getting payout"
+          "detail": "Raghu flagged as partnership risk \u2014 Settlin not getting payout"
         }
       ]
     },
@@ -1840,7 +1840,7 @@
       "task": "Register all self-sourced leads in Ambak system immediately; no self-sourced case to go untracked",
       "due_date": "2026-06-11",
       "related_topic": "Lead tracking discipline",
-      "source_meeting": "June MBR — Institutional Funnel, E2E, Insurance",
+      "source_meeting": "June MBR \u2014 Institutional Funnel, E2E, Insurance",
       "source_meeting_date": "2026-06-10",
       "priority": "HIGH",
       "created_at": "2026-06-10",
@@ -1850,9 +1850,9 @@
       "history": [
         {
           "date": "2026-06-10",
-          "meeting": "June MBR — Institutional Funnel, E2E, Insurance",
+          "meeting": "June MBR \u2014 Institutional Funnel, E2E, Insurance",
           "type": "created",
-          "detail": "Avinash's self-sourced leads flagged as not in system — Raghu called it out directly"
+          "detail": "Avinash's self-sourced leads flagged as not in system \u2014 Raghu called it out directly"
         }
       ]
     },
@@ -1862,7 +1862,7 @@
       "task": "Hold insurance alignment call to bridge gap on visibility and process structure",
       "due_date": "2026-06-11",
       "related_topic": "Insurance process",
-      "source_meeting": "June MBR — Institutional Funnel, E2E, Insurance",
+      "source_meeting": "June MBR \u2014 Institutional Funnel, E2E, Insurance",
       "source_meeting_date": "2026-06-10",
       "priority": "HIGH",
       "created_at": "2026-06-10",
@@ -1872,7 +1872,7 @@
       "history": [
         {
           "date": "2026-06-10",
-          "meeting": "June MBR — Institutional Funnel, E2E, Insurance",
+          "meeting": "June MBR \u2014 Institutional Funnel, E2E, Insurance",
           "type": "created",
           "detail": "Raghu pushed Vikas to set up call with Tarun the next day"
         }
@@ -1881,7 +1881,7 @@
     {
       "id": "i84",
       "owner": "Product / Tech",
-      "task": "Ship DID rotation logic — cycle through numbers to avoid spam flagging and maintain connectivity gains",
+      "task": "Ship DID rotation logic \u2014 cycle through numbers to avoid spam flagging and maintain connectivity gains",
       "due_date": "2026-06-22",
       "related_topic": "Call connectivity",
       "source_meeting": "Yodha-FBM Lead Quality, Automation, Call Connectivity, and AI Product Pipeline Review",
@@ -1896,14 +1896,14 @@
           "date": "2026-06-11",
           "meeting": "Yodha-FBM Lead Quality, Automation, Call Connectivity, and AI Product Pipeline Review",
           "type": "created",
-          "detail": "DID 924 live but rotation logic still in dev — needed to prevent spam flagging"
+          "detail": "DID 924 live but rotation logic still in dev \u2014 needed to prevent spam flagging"
         }
       ]
     },
     {
       "id": "i85",
       "owner": "Product / Tech",
-      "task": "Handle non-English property documents — build translation pipeline or regional-language support for scraped docs",
+      "task": "Handle non-English property documents \u2014 build translation pipeline or regional-language support for scraped docs",
       "due_date": "",
       "related_topic": "Document processing",
       "source_meeting": "Yodha-FBM Lead Quality, Automation, Call Connectivity, and AI Product Pipeline Review",
@@ -1918,7 +1918,7 @@
           "date": "2026-06-11",
           "meeting": "Yodha-FBM Lead Quality, Automation, Call Connectivity, and AI Product Pipeline Review",
           "type": "created",
-          "detail": "Scraping returns regional-language property docs — unreadable by system"
+          "detail": "Scraping returns regional-language property docs \u2014 unreadable by system"
         }
       ]
     },
@@ -1940,14 +1940,14 @@
           "date": "2026-06-11",
           "meeting": "Yodha-FBM Lead Quality, Automation, Call Connectivity, and AI Product Pipeline Review",
           "type": "created",
-          "detail": "Currently docs fetched fresh per case — project-level DB would eliminate redundant fetching"
+          "detail": "Currently docs fetched fresh per case \u2014 project-level DB would eliminate redundant fetching"
         }
       ]
     },
     {
       "id": "i87",
       "owner": "Product / Tech (Pankaj)",
-      "task": "Complete CAM semi-automation — reduce manual effort in Credit Application Memo preparation",
+      "task": "Complete CAM semi-automation \u2014 reduce manual effort in Credit Application Memo preparation",
       "due_date": "2026-06-30",
       "related_topic": "CAM automation",
       "source_meeting": "Yodha-FBM Lead Quality, Automation, Call Connectivity, and AI Product Pipeline Review",
@@ -1962,7 +1962,7 @@
           "date": "2026-06-11",
           "meeting": "Yodha-FBM Lead Quality, Automation, Call Connectivity, and AI Product Pipeline Review",
           "type": "created",
-          "detail": "CAM semi-automation in dev — target June end"
+          "detail": "CAM semi-automation in dev \u2014 target June end"
         }
       ]
     },
@@ -2006,7 +2006,7 @@
           "date": "2026-06-11",
           "meeting": "Yodha-FBM Lead Quality, Automation, Call Connectivity, and AI Product Pipeline Review",
           "type": "created",
-          "detail": "11 Labs voice bot pilot in AI pipeline — initiate planning and partner engagement"
+          "detail": "11 Labs voice bot pilot in AI pipeline \u2014 initiate planning and partner engagement"
         }
       ]
     },
@@ -2072,14 +2072,14 @@
           "date": "2026-06-12",
           "meeting": "May-June Lending Funnel Review: Loss Reasons, BR Rules, and Marketing Scale-Up",
           "type": "created",
-          "detail": "Shortlisting discussion with Mayank ongoing; BRE currently showing all banks — need to short-list top 3-5"
+          "detail": "Shortlisting discussion with Mayank ongoing; BRE currently showing all banks \u2014 need to short-list top 3-5"
         }
       ]
     },
     {
       "id": "i93",
       "owner": "Ankit / Rashi / Mayank",
-      "task": "Call audit on 'already logged elsewhere' cases — call customers to understand why they chose a competitor; use findings to improve pitch and TAT",
+      "task": "Call audit on 'already logged elsewhere' cases \u2014 call customers to understand why they chose a competitor; use findings to improve pitch and TAT",
       "due_date": "2026-06-20",
       "related_topic": "Competitive loss analysis",
       "source_meeting": "May-June Lending Funnel Review: Loss Reasons, BR Rules, and Marketing Scale-Up",
@@ -2116,14 +2116,14 @@
           "date": "2026-06-12",
           "meeting": "May-June Lending Funnel Review: Loss Reasons, BR Rules, and Marketing Scale-Up",
           "type": "created",
-          "detail": "Raghu: 3 buckets — KYC (mostly solvable), income, property. Map what's automatable in 2026; implement"
+          "detail": "Raghu: 3 buckets \u2014 KYC (mostly solvable), income, property. Map what's automatable in 2026; implement"
         }
       ]
     },
     {
       "id": "i95",
       "owner": "Pankaj / Product",
-      "task": "Segregate disbursements into fresh loans vs tranches in all funnel reports — tranches are currently double-counting and distorting conversion metrics",
+      "task": "Segregate disbursements into fresh loans vs tranches in all funnel reports \u2014 tranches are currently double-counting and distorting conversion metrics",
       "due_date": "2026-06-20",
       "related_topic": "Funnel reporting accuracy",
       "source_meeting": "May-June Lending Funnel Review: Loss Reasons, BR Rules, and Marketing Scale-Up",
@@ -2138,14 +2138,14 @@
           "date": "2026-06-12",
           "meeting": "May-June Lending Funnel Review: Loss Reasons, BR Rules, and Marketing Scale-Up",
           "type": "created",
-          "detail": "Raghu: 4-5 tranches out of 31 disbursals in May — conversion % is wrong without split"
+          "detail": "Raghu: 4-5 tranches out of 31 disbursals in May \u2014 conversion % is wrong without split"
         }
       ]
     },
     {
       "id": "i96",
       "owner": "Rameshwar / Pankaj",
-      "task": "Audit Sangam data access controls — restrict visibility by team and role; no cross-team customer data leakage; prepare for data privacy compliance",
+      "task": "Audit Sangam data access controls \u2014 restrict visibility by team and role; no cross-team customer data leakage; prepare for data privacy compliance",
       "due_date": "2026-06-20",
       "related_topic": "Data privacy / Sangam access",
       "source_meeting": "May-June Lending Funnel Review: Loss Reasons, BR Rules, and Marketing Scale-Up",
@@ -2167,7 +2167,7 @@
     {
       "id": "i97",
       "owner": "Anu / Product",
-      "task": "Get D2C dashboard validated by Ankit and Khyati — align business and product on same numbers before using in WBRs/MBRs",
+      "task": "Get D2C dashboard validated by Ankit and Khyati \u2014 align business and product on same numbers before using in WBRs/MBRs",
       "due_date": "2026-06-20",
       "related_topic": "D2C dashboard",
       "source_meeting": "May-June Lending Funnel Review: Loss Reasons, BR Rules, and Marketing Scale-Up",
@@ -2227,6 +2227,270 @@
           "meeting": "May-June Lending Funnel Review: Loss Reasons, BR Rules, and Marketing Scale-Up",
           "type": "created",
           "detail": "LAB bank pages submitted manually last week; XML sitemap to accelerate indexing"
+        }
+      ]
+    },
+    {
+      "id": "i100",
+      "owner": "Rishab, Sanjog",
+      "task": "Start weekly attrition tracking for 0-3 month RM cohort; flag at-risk RMs before they exit",
+      "due_date": "2026-06-20",
+      "related_topic": "RM attrition control",
+      "source_meeting": "Mbr June Institutional",
+      "source_meeting_date": "2026-06-17",
+      "priority": "HIGH",
+      "created_at": "2026-06-17",
+      "last_reminded_at": null,
+      "completed": null,
+      "completed_at": null,
+      "history": [
+        {
+          "date": "2026-06-17",
+          "meeting": "Mbr June Institutional",
+          "type": "created",
+          "detail": "Raghu flagged 0-3 month RM churn as chronic; Rishab+Sanjog to track weekly"
+        }
+      ]
+    },
+    {
+      "id": "i101",
+      "owner": "Rishab",
+      "task": "Redesign institutional RM incentive structure with NR focus (not just disbursal count); align with Raghu before July launch",
+      "due_date": "2026-06-25",
+      "related_topic": "Institutional incentive redesign",
+      "source_meeting": "Mbr June Institutional",
+      "source_meeting_date": "2026-06-17",
+      "priority": "HIGH",
+      "created_at": "2026-06-17",
+      "last_reminded_at": null,
+      "completed": null,
+      "completed_at": null,
+      "history": [
+        {
+          "date": "2026-06-17",
+          "meeting": "Mbr June Institutional",
+          "type": "created",
+          "detail": "Raghu decided incentive structure must shift to NR; Rishab to own redesign"
+        }
+      ]
+    },
+    {
+      "id": "i102",
+      "owner": "Rishab",
+      "task": "Coordinate refresher training with Arpit and Mohit for at-risk RMs in 0-3 month cohort",
+      "due_date": "2026-06-24",
+      "related_topic": "RM attrition control",
+      "source_meeting": "Mbr June Institutional",
+      "source_meeting_date": "2026-06-17",
+      "priority": "HIGH",
+      "created_at": "2026-06-17",
+      "last_reminded_at": null,
+      "completed": null,
+      "completed_at": null,
+      "history": [
+        {
+          "date": "2026-06-17",
+          "meeting": "Mbr June Institutional",
+          "type": "created",
+          "detail": "Refresher training as intervention for at-risk 0-3 month RMs"
+        }
+      ]
+    },
+    {
+      "id": "i103",
+      "owner": "Abdullah, Rishab",
+      "task": "Define CAM NPS tracking mechanism, role-wise KRAs, and incentive structure; present to Raghu before next MBR",
+      "due_date": "2026-06-25",
+      "related_topic": "CAM governance",
+      "source_meeting": "Mbr June Institutional",
+      "source_meeting_date": "2026-06-17",
+      "priority": "HIGH",
+      "created_at": "2026-06-17",
+      "last_reminded_at": null,
+      "completed": null,
+      "completed_at": null,
+      "history": [
+        {
+          "date": "2026-06-17",
+          "meeting": "Mbr June Institutional",
+          "type": "created",
+          "detail": "Raghu rejected CAM presentation for lacking NPS, KRAs, incentive structure \u2014 all 3 must be defined"
+        }
+      ]
+    },
+    {
+      "id": "i104",
+      "owner": "Raghu",
+      "task": "Connect Rishab and institutional team with Nakul (PB CAM expert) for CAM framework advisory",
+      "due_date": "2026-06-22",
+      "related_topic": "CAM governance",
+      "source_meeting": "Mbr June Institutional",
+      "source_meeting_date": "2026-06-17",
+      "priority": "HIGH",
+      "created_at": "2026-06-17",
+      "last_reminded_at": null,
+      "completed": null,
+      "completed_at": null,
+      "history": [
+        {
+          "date": "2026-06-17",
+          "meeting": "Mbr June Institutional",
+          "type": "created",
+          "detail": "Raghu proposed Nakul (PB CAM expert) as advisor; will make the connection"
+        }
+      ]
+    },
+    {
+      "id": "i105",
+      "owner": "Pankaj",
+      "task": "Fix ITC (call connectivity) bug causing repeated connection failures for institutional team",
+      "due_date": "2026-06-20",
+      "related_topic": "System / connectivity",
+      "source_meeting": "Mbr June Institutional",
+      "source_meeting_date": "2026-06-17",
+      "priority": "HIGH",
+      "created_at": "2026-06-17",
+      "last_reminded_at": null,
+      "completed": null,
+      "completed_at": null,
+      "history": [
+        {
+          "date": "2026-06-17",
+          "meeting": "Mbr June Institutional",
+          "type": "created",
+          "detail": "ITC connectivity bug flagged as impacting RM effectiveness"
+        }
+      ]
+    },
+    {
+      "id": "i106",
+      "owner": "Ashish",
+      "task": "Finalise Q2 (July\u2013September) incentive math with NR linkage for Z/CH levels; share with Raghu before July launch",
+      "due_date": "2026-06-25",
+      "related_topic": "Retail incentive redesign",
+      "source_meeting": "Mbr June Retail",
+      "source_meeting_date": "2026-06-17",
+      "priority": "HIGH",
+      "created_at": "2026-06-17",
+      "last_reminded_at": null,
+      "completed": null,
+      "completed_at": null,
+      "history": [
+        {
+          "date": "2026-06-17",
+          "meeting": "Mbr June Retail",
+          "type": "created",
+          "detail": "Q2 incentive structure to link Z/CH to NR not just disbursal volume; Ashish working on math"
+        }
+      ]
+    },
+    {
+      "id": "i107",
+      "owner": "Pankaj, Vijay, Rameshwar",
+      "task": "Organise gamification and RM buddy hero-feature brainstorm session (daru pe charcha) \u2014 Tuesday evening or when Vikas is in Delhi",
+      "due_date": "2026-06-24",
+      "related_topic": "RM engagement / gamification",
+      "source_meeting": "Mbr June Retail",
+      "source_meeting_date": "2026-06-17",
+      "priority": "HIGH",
+      "created_at": "2026-06-17",
+      "last_reminded_at": null,
+      "completed": null,
+      "completed_at": null,
+      "history": [
+        {
+          "date": "2026-06-17",
+          "meeting": "Mbr June Retail",
+          "type": "created",
+          "detail": "Raghu drove agreement for informal brainstorm on incentive gamification + RM buddy hero features"
+        }
+      ]
+    },
+    {
+      "id": "i108",
+      "owner": "Rashi, Ankit",
+      "task": "Implement lost lead callback program: Mayank (or senior ops person) calls all leads lost that day between 5:00\u20135:30 PM to diagnose root cause; store structured feedback",
+      "due_date": "2026-06-20",
+      "related_topic": "Funnel loss analysis",
+      "source_meeting": "Mbr June Fulfillment",
+      "source_meeting_date": "2026-06-17",
+      "priority": "HIGH",
+      "created_at": "2026-06-17",
+      "last_reminded_at": null,
+      "completed": null,
+      "completed_at": null,
+      "history": [
+        {
+          "date": "2026-06-17",
+          "meeting": "Mbr June Fulfillment",
+          "type": "created",
+          "detail": "Raghu proposed from PB experience: only 1-2 lost leads/day, 5-min call with authority to offer cashback or direct banker"
+        }
+      ]
+    },
+    {
+      "id": "i109",
+      "owner": "Ankit",
+      "task": "Travel to Pune in June/July to personally meet PSU bankers and stabilise fulfillment operations",
+      "due_date": "2026-06-30",
+      "related_topic": "Pune stabilisation",
+      "source_meeting": "Mbr June Fulfillment",
+      "source_meeting_date": "2026-06-17",
+      "priority": "HIGH",
+      "created_at": "2026-06-17",
+      "last_reminded_at": null,
+      "completed": null,
+      "completed_at": null,
+      "history": [
+        {
+          "date": "2026-06-17",
+          "meeting": "Mbr June Fulfillment",
+          "type": "created",
+          "detail": "Ankit committed to spend June/July in Pune; already going day after tomorrow"
+        }
+      ]
+    },
+    {
+      "id": "i110",
+      "owner": "Ankit, Rashi",
+      "task": "Set up joint registration date tracking with sales team for all Mumbai and Pune sanctioned cases to unblock disbursal backlog",
+      "due_date": "2026-06-22",
+      "related_topic": "Sanction-to-disbursal conversion",
+      "source_meeting": "Mbr June Fulfillment",
+      "source_meeting_date": "2026-06-17",
+      "priority": "HIGH",
+      "created_at": "2026-06-17",
+      "last_reminded_at": null,
+      "completed": null,
+      "completed_at": null,
+      "history": [
+        {
+          "date": "2026-06-17",
+          "meeting": "Mbr June Fulfillment",
+          "type": "created",
+          "detail": "126 open May sanctions; 95% stuck on registration pending; joint tracking with sales needed"
+        }
+      ]
+    },
+    {
+      "id": "i111",
+      "owner": "Ankit, Mayank",
+      "task": "Implement cohort-based lead allocation: route 750+ civil / 1 CR+ loan / salaried leads to vintage FBMs; update Sangam allocation logic",
+      "due_date": "2026-06-30",
+      "related_topic": "Lead quality / allocation",
+      "source_meeting": "Mbr June Fulfillment",
+      "source_meeting_date": "2026-06-17",
+      "priority": "HIGH",
+      "created_at": "2026-06-17",
+      "last_reminded_at": null,
+      "completed": null,
+      "completed_at": null,
+      "history": [
+        {
+          "date": "2026-06-17",
+          "meeting": "Mbr June Fulfillment",
+          "type": "created",
+          "detail": "Cohort analysis shows 750+ civil + 1CR+ = 40% conversion vs 25% average; allocation logic to reflect this"
         }
       ]
     }

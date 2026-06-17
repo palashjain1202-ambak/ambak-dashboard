@@ -1,0 +1,168 @@
+{
+  "personas": [
+    "Raghu (CEO)",
+    "Rishab (Institutional Head)",
+    "Sanjog (Institutional Ops)",
+    "Abdullah (CAM Lead)",
+    "Akash (Institutional Analytics)",
+    "Pranav (Institutional Team)",
+    "Jay Singh (Delhi Institutional)",
+    "Pooja (Training)",
+    "Arpit (Training Head)",
+    "Pankaj (Product Head)"
+  ],
+  "key_points": [
+    "May institutional: 148 disbursals / 91 CR vs 188 / 110 CR target; NR 33L vs ~58L target; CM1 -41L.",
+    "Self-business (RM self-sourced cases): 16.5 CR in May — Raghu mandated separate tracking from E2E to measure true institutional contribution.",
+    "QL: 633, Login: 280, Disbursal: 148 — all on improving trajectory; June pipeline at ~125 CR.",
+    "Delhi pipeline: 60 CR but only 13 CR converting — Raghu pushed hard on Delhi NCR execution gaps.",
+    "0-3 month RM attrition is chronic; proposed interventions: weekly tracking, refresher training, incentive redesign.",
+    "Partner TAT improved dramatically: first QL from 33 days to 5 days; 263 active partners.",
+    "CAM function: NPS not tracked, KRAs undefined, incentive structure absent — Raghu expressed frustration with consultant-style presentation without accountability metrics.",
+    "Ambak Edge (Line Yards product): going live Monday June 22.",
+    "Nakul (PB CAM expert) identified as external advisor to help build CAM framework.",
+    "Raghu proposed Monday bounty review to accelerate June closes."
+  ],
+  "decisions": [
+    "Self-business to be reported separately from E2E institutional business going forward.",
+    "Incentive structure for institutional RMs to be redesigned with NR focus, not just disbursal count.",
+    "Attrition control program launched for 0-3 month RM cohort: Rishab + Sanjog to track weekly.",
+    "Ambak Edge (Line Yards) goes live Monday June 22.",
+    "Nakul (PB CAM expert) to be brought in as advisor for CAM framework.",
+    "Monday bounty review meeting to be set up by Akash to push June closes."
+  ],
+  "action_items": [
+    {
+      "owner": "Rishab, Sanjog",
+      "task": "Start weekly attrition tracking for 0-3 month RM cohort; flag at-risk RMs before they leave.",
+      "due_date": "2026-06-20",
+      "priority": "HIGH"
+    },
+    {
+      "owner": "Rishab",
+      "task": "Redesign institutional RM incentive structure with NR focus (not just disbursal count); align with Raghu before July launch.",
+      "due_date": "2026-06-25",
+      "priority": "HIGH"
+    },
+    {
+      "owner": "Rishab",
+      "task": "Coordinate refresher training with Arpit and Mohit for at-risk RMs in the 0-3 month cohort.",
+      "due_date": "2026-06-24",
+      "priority": "HIGH"
+    },
+    {
+      "owner": "Rishab, Ishant",
+      "task": "Set up dedicated sessions with Pooja and Jay Singh on Tuesday/Wednesday to push June pipeline conversion.",
+      "due_date": "2026-06-19",
+      "priority": "HIGH"
+    },
+    {
+      "owner": "Akash",
+      "task": "Set up Monday (June 22) Ambak Edge launch bounty review meeting.",
+      "due_date": "2026-06-19",
+      "priority": "HIGH"
+    },
+    {
+      "owner": "Raghu",
+      "task": "Connect Rishab and team with Nakul (PB CAM expert) for CAM advisory.",
+      "due_date": "2026-06-22",
+      "priority": "HIGH"
+    },
+    {
+      "owner": "Raghu, Rishab",
+      "task": "Plan Pune city visit to strengthen institutional relationships and pipeline.",
+      "due_date": "2026-06-30",
+      "priority": "MEDIUM"
+    },
+    {
+      "owner": "Abdullah, Rishab",
+      "task": "Define CAM NPS tracking mechanism, role-wise KRAs, and incentive structure; present to Raghu.",
+      "due_date": "2026-06-25",
+      "priority": "HIGH"
+    },
+    {
+      "owner": "Pankaj",
+      "task": "Fix ITC (call connectivity) bug that is causing repeated connection failures for institutional team.",
+      "due_date": "2026-06-20",
+      "priority": "HIGH"
+    }
+  ],
+  "open_questions": [
+    {
+      "question": "Why is Delhi converting only 13 CR from a 60 CR pipeline — what is the specific bottleneck?",
+      "raised_by": "Raghu",
+      "expected_owner": "Rishab, Jay Singh"
+    },
+    {
+      "question": "What are the CAM KRAs and how will NPS be tracked for partner satisfaction?",
+      "raised_by": "Raghu",
+      "expected_owner": "Abdullah"
+    },
+    {
+      "question": "How much self-business NR would be separated from E2E once reporting is split?",
+      "raised_by": "Raghu",
+      "expected_owner": "Akash"
+    },
+    {
+      "question": "What is driving the 0-3 month RM attrition — compensation, work environment, product fit?",
+      "raised_by": "Raghu",
+      "expected_owner": "Rishab, Sanjog"
+    }
+  ],
+  "risks": [
+    "CM1 at -41L for institutional — revenue well below target; structural fixes (NR incentives, CAM KRAs) not yet in place.",
+    "Delhi pipeline of 60 CR converting only 13 CR — high risk of June institutional target miss.",
+    "CAM function operating without NPS, KRAs, or incentive structure — client retention at risk.",
+    "0-3 month RM attrition is chronic; team-building ROI being destroyed repeatedly.",
+    "ITC connectivity bug unresolved — impacting call efficiency for all institutional RMs."
+  ],
+  "meeting_dynamics": [
+    "Raghu was visibly frustrated by the CAM section — called out the consultant-style slide deck without any accountability metrics.",
+    "Strong positive energy around Ambak Edge launch and Nakul advisory — seen as concrete steps forward.",
+    "Delhi conversion gap (60 CR pipeline → 13 CR) triggered direct and pointed questioning from Raghu.",
+    "Attrition discussion was candid; Raghu acknowledged structural issues not just individual failures.",
+    "Meeting ran into time and institutional team was asked to tighten future presentations."
+  ],
+  "participation": [
+    {"name": "Raghu", "questions_raised": 12},
+    {"name": "Rishab", "questions_raised": 4},
+    {"name": "Sanjog", "questions_raised": 2},
+    {"name": "Abdullah", "questions_raised": 2},
+    {"name": "Akash", "questions_raised": 2},
+    {"name": "Jay Singh", "questions_raised": 1},
+    {"name": "Pankaj", "questions_raised": 1}
+  ],
+  "decision_anatomy": [
+    {
+      "d": "Self-business to be tracked and reported separately from E2E institutional",
+      "roles": [
+        {"n": "Raghu", "r": "decider"},
+        {"n": "Rishab", "r": "problem", "note": "self-business at 16.5 CR in May was being blended into E2E numbers, masking true E2E performance"},
+        {"n": "Akash", "r": "contributor", "note": "will implement separate tracking format"}
+      ]
+    },
+    {
+      "d": "Attrition control program for 0-3 month RM cohort launched",
+      "roles": [
+        {"n": "Raghu", "r": "decider"},
+        {"n": "Rishab", "r": "contributor"},
+        {"n": "Sanjog", "r": "contributor", "note": "will own weekly tracking with Rishab"}
+      ]
+    },
+    {
+      "d": "CAM function needs NPS, defined KRAs, and incentive structure before next MBR",
+      "roles": [
+        {"n": "Raghu", "r": "decider", "note": "explicitly rejected consultant-style CAM presentation with no accountability"},
+        {"n": "Abdullah", "r": "problem", "note": "CAM being built without clear NPS or KRA framework"},
+        {"n": "Rishab", "r": "contributor"}
+      ]
+    },
+    {
+      "d": "Nakul (PB CAM expert) to advise Ambak on CAM framework",
+      "roles": [
+        {"n": "Raghu", "r": "decider"},
+        {"n": "Rishab", "r": "contributor", "note": "Raghu proposed the specific name; Rishab to coordinate"}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,142 @@
+{
+  "personas": [
+    "Raghu (CEO)",
+    "Vikas (COO / E2E)",
+    "Vijay (Sales Head)",
+    "Naveen (Regional Head NCR)",
+    "Ashish (Revenue / Finance)",
+    "Nitin (PST Head)",
+    "Pankaj (Product Head)",
+    "Rameshwar (CTO)",
+    "Arpit (Training Head)",
+    "Pooja (Training Manager)"
+  ],
+  "key_points": [
+    "May retail disbursals 902 CR vs 903 CR target (99%); NR at 74% of AOP due to LAB mix and payout leakage.",
+    "CM1 improved dramatically from -33L to -2.4L as pay-in controls and special-deal scheme tightening took effect.",
+    "LAB drop driven by Bombay + Bangalore underperformance; 40 CR spill into June with ~25 CR net benefit.",
+    "ICICI deal corrected effective June; NR from ICICI expected to nearly double going forward.",
+    "BM productivity improved from 4.44 to 5.19 logins per BM.",
+    "Scorecard system launched: every RM, BM, and sales head now receives monthly weighted NR score with rank; bottom 20-25% on intensive PIP/termination review cycle.",
+    "Out-of-system business fully eliminated from June — all cases must be in Sangam before reporting.",
+    "Q2 incentive structure (July–September) being redesigned to link Z/CH pay to NR, not just disbursement volume.",
+    "PST: 102 onboardings in May (highest ever), 12 disbursal activations. ABPS improved 3.7→5.1, AMPS 2.3→3.4. Audit tracker and PST Ops launched.",
+    "Sankalp: 33 total events, 138 CR unique disbursals, 450 CR lifetime business from those partners.",
+    "Training: NHST revamped with micro-modules; Learning Premier League (Kahoot) live; 30-day assessment launching next week; simulation videos built.",
+    "Raghu proposed cross-team LPL on shared skills (sales confidence, objection handling) to raise common bar across verticals."
+  ],
+  "decisions": [
+    "Q2 incentive structure (July–September) to link Z/CH compensation to NR, not disbursement volume; Ashish working on math.",
+    "Gamification + RM buddy hero-feature brainstorm session to be held Tuesday evening (Vikas, Vijay, Pankaj, Rameshwar); physical if Vikas in Delhi.",
+    "Out-of-system reporting permanently eliminated from June; only system-tracked cases count.",
+    "Performance scorecard released for all BMs today; sales-head scorecards also releasing today.",
+    "Bottom-performer intensive review (PIP / termination decisions) to run monthly using scorecard ratings.",
+    "PST dual-plan expansion: Plan 1 (PST + ABM model) 50% deployed in Delhi/Noida; Plan 2 (offline beat-mapping) launched."
+  ],
+  "action_items": [
+    {
+      "owner": "Ashish",
+      "task": "Finalise Q2 (July–September) incentive math with NR linkage for Z/CH levels; share with Raghu before July launch.",
+      "due_date": "2026-06-25",
+      "priority": "HIGH"
+    },
+    {
+      "owner": "Pankaj, Vijay, Rameshwar",
+      "task": "Organise gamification and RM buddy hero-feature brainstorm session (daru pe charcha) — Tuesday evening or when Vikas is in Delhi.",
+      "due_date": "2026-06-24",
+      "priority": "HIGH"
+    },
+    {
+      "owner": "Nitin",
+      "task": "Present detailed PST ops model walkthrough to Rashi and Ankit for cross-team synergy and identify shared best practices.",
+      "due_date": "2026-06-24",
+      "priority": "MEDIUM"
+    },
+    {
+      "owner": "Nitin, Vikas",
+      "task": "Discuss brand budget allocation (BTL/ATL, agency) to expand PST marketing reach beyond current model.",
+      "due_date": "2026-06-24",
+      "priority": "MEDIUM"
+    },
+    {
+      "owner": "Arpit",
+      "task": "Share Urban Company training philosophy note with all teams and schedule cross-team review session.",
+      "due_date": "2026-06-24",
+      "priority": "MEDIUM"
+    }
+  ],
+  "open_questions": [
+    {
+      "question": "When will Vikas be in Delhi for the gamification/RM buddy brainstorm? Tuesday evening viable?",
+      "raised_by": "Raghu",
+      "expected_owner": "Vikas"
+    },
+    {
+      "question": "What is the hero feature for RM buddy that will drive adoption and make it a differentiator?",
+      "raised_by": "Raghu",
+      "expected_owner": "Pankaj, Vijay"
+    },
+    {
+      "question": "Will Yodha pipeline management go live in June or July first week?",
+      "raised_by": "Raghu",
+      "expected_owner": "Pankaj"
+    },
+    {
+      "question": "What brand and marketing investments (half a crore range) should Nitin pursue to expand in non-Delhi markets?",
+      "raised_by": "Raghu",
+      "expected_owner": "Nitin, Vikas, Vijay"
+    }
+  ],
+  "risks": [
+    "NR at only 74% AOP — payout leakage (True Home, Bajaj B2B routing) not fully plugged; Bank of Baroda corporate code still 2 months away.",
+    "Z/CH incentive still volume-linked; risk that Q2 redesign is delayed past July, perpetuating wrong behaviour.",
+    "Yodha pipeline app delayed; manual sheet proliferation continues increasing MIS bandwidth cost.",
+    "RM buddy lacks identified hero feature; risk of commodity tool perception without clear differentiation."
+  ],
+  "meeting_dynamics": [
+    "Raghu focused heavily on NR quality, not just top-line volumes — pushed back on any metric that hides payout leakage.",
+    "Nitin's PST section was the highlight of the meeting; Raghu gave explicit high-ROI praise and suggested brand investment.",
+    "Training section (Arpit) got positive engagement; Raghu proposed cross-team LPL as an innovation.",
+    "Gamification/incentive discussion was energetic with Vikas and Vijay both leaning in; Tuesday brainstorm agreed informally.",
+    "Arpit's training slot was squeezed by time and moved; Raghu committed to giving him first slot in next MBR."
+  ],
+  "participation": [
+    {"name": "Raghu", "questions_raised": 9},
+    {"name": "Nitin", "questions_raised": 2},
+    {"name": "Vijay", "questions_raised": 3},
+    {"name": "Vikas", "questions_raised": 4},
+    {"name": "Ashish", "questions_raised": 2},
+    {"name": "Pankaj", "questions_raised": 3},
+    {"name": "Rameshwar", "questions_raised": 1},
+    {"name": "Arpit", "questions_raised": 2},
+    {"name": "Naveen", "questions_raised": 1}
+  ],
+  "decision_anatomy": [
+    {
+      "d": "Q2 incentive structure to link Z/CH to NR, not just disbursement volume",
+      "roles": [
+        {"n": "Raghu", "r": "decider"},
+        {"n": "Ashish", "r": "problem", "note": "raised that Z/CH incentives still disbursal-linked even after NR socialisation"},
+        {"n": "Vikas", "r": "contributor", "note": "confirmed Q2 redesign underway; July launch planned"},
+        {"n": "Vijay", "r": "contributor"}
+      ]
+    },
+    {
+      "d": "Gamification + RM buddy brainstorm session scheduled for Tuesday evening",
+      "roles": [
+        {"n": "Raghu", "r": "decider"},
+        {"n": "Pankaj", "r": "contributor", "note": "had prior module built; wants to enhance with new understanding"},
+        {"n": "Vikas", "r": "contributor"},
+        {"n": "Vijay", "r": "contributor", "note": "Vijay's team RMs already giving feedback in group"}
+      ]
+    },
+    {
+      "d": "Performance scorecard and bottom-performer monthly review process established",
+      "roles": [
+        {"n": "Vikas", "r": "decider"},
+        {"n": "Vijay", "r": "contributor"},
+        {"n": "Raghu", "r": "contributor", "note": "called out the power of comparative benchmarking across teams"}
+      ]
+    }
+  ]
+}
